@@ -6,7 +6,14 @@
     <description>Recent content on ayyzenn</description>
     <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2025 15:49:43 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/your-first-post/</link>
+      <pubDate>Sat, 01 Feb 2025 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/your-first-post/</guid>
+      <description>&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

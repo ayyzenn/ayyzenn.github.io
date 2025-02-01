@@ -29,7 +29,94 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>about</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;hey-there--im-saad-ahmad-ayyzenn&#34;&gt;Hey there! 👋 I&amp;rsquo;m Saad Ahmad (Ayyzenn)&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;A passionate DevOps enthusiast, Linux geek, and aspiring MLOps &amp;amp; System Administration expert!&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-about-me&#34;&gt;🚀 About Me&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🎓 Student at &lt;strong&gt;FAST NUCES&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;💡 Passionate about &lt;strong&gt;DevOps, Linux, MLOps, and System Administration&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🔥 Always learning and growing, eager to take on new challenges&lt;/li&gt;
+&lt;li&gt;💻 Love working with &lt;strong&gt;infrastructure, automation, and cloud technologies&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🎮 In my free time, you&amp;rsquo;ll find me &lt;strong&gt;gaming&lt;/strong&gt; or exploring &lt;strong&gt;new tech&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tech-stack&#34;&gt;🛠️ Tech Stack&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Technology&lt;/th&gt;
+          &lt;th&gt;Icon&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Python&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Anaconda&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Anaconda&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/anaconda/anaconda-original-wordmark.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Jupyter&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/jupyter/jupyter-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pandas&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Pandas&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/pandas/pandas-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;HTML5&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;HTML5&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;JavaScript&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Node.js&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Node.js&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;React&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;React&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;MongoDB&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;MongoDB&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Azure&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Azure&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/azure/azure-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Docker&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Docker&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Linux&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Linux&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Bash&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Bash&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;VS Code&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;VS Code&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Git&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;img alt=&#34;Git&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-github-stats--streak&#34;&gt;📊 GitHub Stats &amp;amp; Streak&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;GitHub Streak&#34; loading=&#34;lazy&#34; src=&#34;https://github-readme-streak-stats.herokuapp.com/?user=ayyzenn&amp;theme=dark&amp;hide_border=true&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

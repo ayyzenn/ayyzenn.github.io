@@ -1,4 +1,8 @@
-# Hugo: The Fastest Static Site Generator
++++
+date = '2020-12-03T17:07:58+05:00'
+title = 'Hugo: The Fastest Static Site Generator'
+tags = ['hugo', 'github']
++++
 
 ## What is Hugo?
 
@@ -29,11 +33,6 @@ sudo pacman -S hugo
 #### On macOS (Using Homebrew)
 ```bash
 brew install hugo
-```
-
-#### On Windows (Using Chocolatey)
-```powershell
-choco install hugo -y
 ```
 
 Alternatively, you can download the latest binary from [Hugo’s official GitHub releases](https://github.com/gohugoio/hugo/releases).

@@ -6,23 +6,32 @@
     <description>Recent content in Posts on ayyzenn</description>
     <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 17:07:58 +0500</lastBuildDate>
+    <lastBuildDate>Mon, 10 May 2021 17:07:58 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Second</title>
-      <link>http://localhost:1313/posts/second/</link>
-      <pubDate>Sat, 01 Feb 2025 17:07:58 +0500</pubDate>
-      <guid>http://localhost:1313/posts/second/</guid>
-      <description>&lt;h1 id=&#34;second&#34;&gt;Second&lt;/h1&gt;
-&lt;p&gt;this is the second file.&lt;/p&gt;</description>
+      <title>Getting started with GitHub</title>
+      <link>http://localhost:1313/posts/github/</link>
+      <pubDate>Mon, 10 May 2021 17:07:58 +0500</pubDate>
+      <guid>http://localhost:1313/posts/github/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;GitHub Logo&#34; loading=&#34;lazy&#34; src=&#34;https://ayyzenn.files.wordpress.com/2021/08/download.png?w=300&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Here we will discuss about GitHub that:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What is GitHub?&lt;/li&gt;
+&lt;li&gt;Why we use GitHub?&lt;/li&gt;
+&lt;li&gt;How to use GitHub?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-is-github&#34;&gt;What is GitHub?&lt;/h2&gt;
+&lt;p&gt;Before we know about GitHub, it is important to know about Git and Open-Source Projects.&lt;/p&gt;
+&lt;h3 id=&#34;1-git&#34;&gt;1. Git&lt;/h3&gt;
+&lt;p&gt;Git is a version control system that tracks any changes a developer makes to their projects, enabling them to revert certain changes they made or return to a past version of their project.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/posts/your-first-post/</link>
-      <pubDate>Sat, 01 Feb 2025 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/your-first-post/</guid>
-      <description>&lt;h1 id=&#34;hello&#34;&gt;Hello&lt;/h1&gt;
-&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description>
+      <link>http://localhost:1313/posts/first_post/</link>
+      <pubDate>Tue, 15 Sep 2020 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/first_post/</guid>
+      <description>&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

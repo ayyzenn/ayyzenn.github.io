@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on ayyzenn</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on ayyzenn</description>
+    <title>First on ayyzenn</title>
+    <link>http://localhost:1313/tags/first/</link>
+    <description>Recent content in First on ayyzenn</description>
     <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 17:07:58 +0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Second</title>
-      <link>http://localhost:1313/posts/second/</link>
-      <pubDate>Sat, 01 Feb 2025 17:07:58 +0500</pubDate>
-      <guid>http://localhost:1313/posts/second/</guid>
-      <description>&lt;h1 id=&#34;second&#34;&gt;Second&lt;/h1&gt;
-&lt;p&gt;this is the second file.&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Sat, 01 Feb 2025 15:49:43 +0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/first/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/your-first-post/</link>

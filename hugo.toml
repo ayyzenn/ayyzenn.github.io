@@ -14,6 +14,38 @@ theme = 'hugo-PaperMod'
     imageWidth = 200
     imageHeight = 200
 
+[[params.profileMode.buttons]]
+    name = "About Me"
+    url = "/about"
+
+[[params.profileMode.buttons]]
+    name = "Archives"
+    url = "/archives"
+  
+
+
+# And you can even create generic menu
+
+[[menu.main]]
+    name = "Tags"
+    identifier = "tags"
+    weight = 300
+    url = "/tags/"
+
+
+[[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "/posts/"
+
+[outputs]
+  home = [ "HTML", "RSS", "JSON" ]
+
+[[menu.main]]
+  name = "Search"
+  url = "/search"
+
+
 [params]
     dateform        = "Jan 2, 2006"
     dateformShort   = "Jan 2"
@@ -25,35 +57,4 @@ theme = 'hugo-PaperMod'
     ShowCodeCopyButtons = true
     taglist = true
     defaultTheme = 'dark'
-# 
-#  # Subtitle for home
-#  homeSubtitle = "First Thinker!"
-#
-#imageUrl = "https://raw.githubusercontent.com/hissamshar/hissamshar.github.io/refs/heads/master/Cropped_Image.png"
-# imageTitle = "Profile Picture"
-# imageWidth = 200
-# imageHeight = 200
-#
-
-  # And you can even create generic menu
-
-[[menu.main]]
-    identifier = "posts"
-    name       = "Posts"
-    url        = "/posts/"
-
-[[menu.main]]
-    name = "Tags"
-    identifier = "tags"
-    weight = 300
-    url = "/tags/"
-
-
-[[menu.main]]
-    name = "About me"
-    identifier = "about"
-    weight = 300
-    url = "/tags/"
-
-
 

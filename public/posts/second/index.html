@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head>
-	<meta name="generator" content="Hugo 0.139.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>ayyzenn</title>
-
-<meta name="description" content="">
+<title>Second | ayyzenn</title>
+<meta name="keywords" content="second">
+<meta name="description" content="Second
+this is the second file.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/">
+<link rel="canonical" href="http://localhost:1313/posts/second/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -19,9 +19,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
-<link rel="alternate" type="application/json" href="http://localhost:1313/index.json">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/second/">
 <noscript>
     <style>
         #theme-toggle,
@@ -33,7 +31,7 @@
 </noscript>
 </head>
 
-<body class="list dark" id="top">
+<body class=" dark" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
@@ -87,27 +85,44 @@
         </ul>
     </nav>
 </header>
-<main class="main"><div class="profile">
-    <div class="profile_inner">
-        <h1>Saad Ahmad</h1>
-        <span>The First Thinker!</span><div class="social-icons" >
-</div>
+<main class="main">
 
-        <div class="buttons">
-            <a class="button" href="/about" rel="noopener" title="About Me">
-                <span class="button-inner">
-                    About Me
-                </span>
-            </a>
-            <a class="button" href="/archives" rel="noopener" title="Archives">
-                <span class="button-inner">
-                    Archives
-                </span>
-            </a>
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Second
+    </h1>
+    <div class="post-meta"><span title='2025-02-01 17:07:58 +0500 PKT'>February 1, 2025</span>&nbsp;·&nbsp;1 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#second" aria-label="Second">Second</a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </details>
 </div>
 
+  <div class="post-content"><h1 id="second">Second<a hidden class="anchor" aria-hidden="true" href="#second">#</a></h1>
+<p>this is the second file.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/second/">Second</a></li>
+    </ul>
+  </footer>
+</article>
     </main>
     
 <footer class="footer">
@@ -178,6 +193,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

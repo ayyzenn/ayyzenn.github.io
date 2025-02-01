@@ -6,14 +6,30 @@
     <description>Recent content on ayyzenn</description>
     <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 15:49:43 +0500</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2025 17:07:58 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second</title>
+      <link>http://localhost:1313/posts/second/</link>
+      <pubDate>Sat, 01 Feb 2025 17:07:58 +0500</pubDate>
+      <guid>http://localhost:1313/posts/second/</guid>
+      <description>&lt;h1 id=&#34;second&#34;&gt;Second&lt;/h1&gt;
+&lt;p&gt;this is the second file.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/your-first-post/</link>
       <pubDate>Sat, 01 Feb 2025 15:49:43 +0500</pubDate>
       <guid>http://localhost:1313/posts/your-first-post/</guid>
-      <description>&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;hello&#34;&gt;Hello&lt;/h1&gt;
+&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>about</description>
     </item>
   </channel>
 </rss>

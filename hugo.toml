@@ -4,12 +4,11 @@ title = 'ayyzenn'
 
 theme = 'hugo-PaperMod'
 
-
-#[params]
-#    dateform        = "Jan 2, 2006"
-#    dateformShort   = "Jan 2"
-#    dateformNum     = "2006-01-02"
-#    dateformNumTime = "2006-01-02 15:04"
+[params]
+    dateform        = "Jan 2, 2006"
+    dateformShort   = "Jan 2"
+    dateformNum     = "2006-01-02"
+    dateformNumTime = "2006-01-02 15:04"
 #    ShowToc =  true
 #    ShowReadingTime = true
 #    ShowBreadCrumbs = true
@@ -17,23 +16,23 @@ theme = 'hugo-PaperMod'
 #    taglist = true
 # 
 #  # Subtitle for home
-#  homeSubtitle = "First Thinker!"
+  homeSubtitle = "First Thinker!"
 #
 #imageUrl = "https://raw.githubusercontent.com/hissamshar/hissamshar.github.io/refs/heads/master/Cropped_Image.png"
 # imageTitle = "Profile Picture"
 # imageWidth = 200
 # imageHeight = 200
 #
-#
-#  # And you can even create generic menu
-#
-#  [[menu.main]]
-#    identifier = "blog"
-#    name       = "Blog"
-#    url        = "/posts"
-#
-#  [[menu.main]]
-#    name = "Tags"
-#    identifier = "tags"
-#    weight = 300
-#    url = "/tags/"
+
+  # And you can even create generic menu
+
+[[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+
+[[menu.main]]
+    name = "Tags"
+    identifier = "tags"
+    weight = 300
+    url = "/tags/"

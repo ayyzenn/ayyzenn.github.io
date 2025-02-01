@@ -1,9 +1,9 @@
 ---
 title: "About Me"
-# layout: "about"
-# url: "/about/"
-# summary: about
-# toc: false
+layout: "about"
+url: "/about/"
+summary: about
+ShowToc: false
 ---
 
 <!-- Profile Image (Optional, Uncomment if needed) -->

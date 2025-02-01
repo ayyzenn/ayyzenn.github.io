@@ -17,7 +17,7 @@ theme = 'hugo-PaperMod'
 [[params.profileMode.buttons]]
     name = "About Me"
     url = "/about"
-    weight = 1
+    #weight = 1
 
 [[params.profileMode.buttons]]
     name = "Archives"

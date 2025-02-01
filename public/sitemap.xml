@@ -17,6 +17,12 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2021-05-10T17:07:58+05:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/hugo/</loc>
+    <lastmod>2020-12-03T17:07:58+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/hugo/</loc>
+    <lastmod>2020-12-03T17:07:58+05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/first/</loc>
     <lastmod>2020-09-15T15:49:43+05:00</lastmod>
   </url><url>

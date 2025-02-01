@@ -15,16 +15,28 @@
       <guid>http://localhost:1313/posts/github/</guid>
       <description>&lt;p&gt;&lt;img alt=&#34;GitHub Logo&#34; loading=&#34;lazy&#34; src=&#34;https://ayyzenn.files.wordpress.com/2021/08/download.png?w=300&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;Here we will discuss about GitHub that:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In this guide, we will explore GitHub, covering:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;What is GitHub?&lt;/li&gt;
-&lt;li&gt;Why we use GitHub?&lt;/li&gt;
+&lt;li&gt;Why use GitHub?&lt;/li&gt;
 &lt;li&gt;How to use GitHub?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;what-is-github&#34;&gt;What is GitHub?&lt;/h2&gt;
-&lt;p&gt;Before we know about GitHub, it is important to know about Git and Open-Source Projects.&lt;/p&gt;
+&lt;p&gt;Before diving into GitHub, it is essential to understand Git and Open-Source Projects.&lt;/p&gt;
 &lt;h3 id=&#34;1-git&#34;&gt;1. Git&lt;/h3&gt;
-&lt;p&gt;Git is a version control system that tracks any changes a developer makes to their projects, enabling them to revert certain changes they made or return to a past version of their project.&lt;/p&gt;</description>
+&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;
+&lt;h3 id=&#34;2-open-source-projects&#34;&gt;2. Open-Source Projects&lt;/h3&gt;
+&lt;p&gt;Open-source projects are software projects where the source code is publicly available, allowing anyone to use, modify, and contribute to the development.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo: The Fastest Static Site Generator</title>
+      <link>http://localhost:1313/posts/hugo/</link>
+      <pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate>
+      <guid>http://localhost:1313/posts/hugo/</guid>
+      <description>&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;
+&lt;p&gt;Hugo is an open-source static site generator (SSG) written in Go. It is designed for speed, simplicity, and flexibility, making it a popular choice for building blogs, documentation sites, and personal portfolios. Unlike traditional content management systems (CMS) like WordPress, Hugo generates static HTML files that can be served directly from any web server, eliminating the need for a database.&lt;/p&gt;
+&lt;h2 id=&#34;why-use-hugo&#34;&gt;Why Use Hugo?&lt;/h2&gt;
+&lt;p&gt;Hugo is widely used due to its numerous advantages:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,8 +4,6 @@ title = 'Getting started with GitHub'
 tags = ['github']
 +++
 
-![GitHub Logo](https://ayyzenn.files.wordpress.com/2021/08/download.png?w=300)
-
 # Introduction
 
 _In this guide, we will explore GitHub, covering:_
@@ -45,22 +43,18 @@ With millions of developers contributing to open-source projects on GitHub, it h
 
 1. Search for GitHub in your browser and navigate to the official website.
 
-   ![Search GitHub](https://ayyzenn.files.wordpress.com/2021/08/screenshot-2021-08-14-100459.png?w=640)
+   ![Search GitHub](/3-github/img1.png)
 
 2. Click on the first link in the search results to access the GitHub homepage.
 
-   ![Click first link](https://ayyzenn.files.wordpress.com/2021/08/screenshot-2021-08-14-100559.png?w=640)
+   ![Click first link](/3-github/img2.png)
 
 3. Sign in by entering your username or email address and password, then click **Sign in**.
 
-   ![Sign in](https://ayyzenn.files.wordpress.com/2021/08/screenshot-2021-08-14-100718.png?w=640)
+   ![Sign in](/3-github/img3.png)
 
 4. Once signed in, you will be directed to your GitHub dashboard.
 
-   ![GitHub Dashboard](https://ayyzenn.files.wordpress.com/2022/06/screenshot-from-2022-06-12-19-59-27.png?w=1024)
+   ![GitHub Dashboard](/3-github/img4.png)
 
-5. From the dashboard, you can create repositories, upload files, and explore other repositories to collaborate with developers worldwide.
-
-   ![Upload Files](https://ayyzenn.files.wordpress.com/2022/06/screenshot-from-2022-06-12-20-00-34.png?w=1024)
-
-By following these steps, you can effectively use GitHub to manage your projects and contribute to the open-source community.
+From the dashboard, you can create repositories, upload files, and explore other repositories to collaborate with developers worldwide. By following these steps, you can effectively use GitHub to manage your projects and contribute to the open-source community.

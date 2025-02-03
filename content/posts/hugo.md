@@ -12,12 +12,12 @@ Hugo is an open-source static site generator (SSG) written in Go. It is designed
 
 Hugo is widely used due to its numerous advantages:
 
-- **Blazing Fast** – Hugo can generate a complete website in milliseconds, making it one of the fastest static site generators.
-- **Easy to Use** – Content is written in Markdown, making it simple and portable.
-- **Flexible and Customizable** – Supports various themes, templates, and shortcodes.
-- **Secure** – No database or dynamic scripts, reducing the risk of security vulnerabilities.
-- **SEO-Friendly** – Static HTML is fast and optimized for search engines.
-- **Portable** – Websites can be hosted anywhere, including GitHub Pages, Netlify, or a simple web server.
+- **Blazing Fast** - Hugo can generate a complete website in milliseconds, making it one of the fastest static site generators.
+- **Easy to Use** - Content is written in Markdown, making it simple and portable.
+- **Flexible and Customizable** - Supports various themes, templates, and shortcodes.
+- **Secure** - No database or dynamic scripts, reducing the risk of security vulnerabilities.
+- **SEO-Friendly** - Static HTML is fast and optimized for search engines.
+- **Portable** - Websites can be hosted anywhere, including GitHub Pages, Netlify, or a simple web server.
 
 ## How to Set Up Hugo
 
@@ -35,7 +35,7 @@ sudo pacman -S hugo
 brew install hugo
 ```
 
-Alternatively, you can download the latest binary from [Hugo’s official GitHub releases](https://github.com/gohugoio/hugo/releases).
+Alternatively, you can download the latest binary from [Hugo's official GitHub releases](https://github.com/gohugoio/hugo/releases).
 
 ### 2. Create a New Hugo Site
 
@@ -89,7 +89,7 @@ To generate static files for deployment, run:
 hugo
 ```
 
-This will create a `public/` folder containing your site’s HTML files.
+This will create a `public/` folder containing your site's HTML files.
 
 ## Hosting on GitHub Pages
 

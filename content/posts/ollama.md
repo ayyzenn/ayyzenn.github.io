@@ -1,5 +1,5 @@
 +++
-date = '2025-02-3T17:07:58+05:00'
+date = '2025-02-03T17:07:58+05:00'
 title = 'Setting Up Olama with DeepSeek Coder on Manjaro: A Step-by-Step Guide'
 tags = ['langchain', 'RAG']
 +++

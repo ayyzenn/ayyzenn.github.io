@@ -8,7 +8,7 @@ theme = 'hugo-PaperMod'
 [params.profileMode]
     enabled = true
     title = "Saad Ahmad"
-    subtitle = "The First Thinker!"
+    subtitle = "Linux Nerd"
 #    imageUrl = "https://raw.githubusercontent.com/hissamshar/hissamshar.github.io/refs/heads/master/Cropped_Image.png"
     imageTitle = "Profile Picture"
     imageWidth = 200

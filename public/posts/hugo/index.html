@@ -162,12 +162,12 @@ Hugo is widely used due to its numerous advantages:">
 <h2 id="why-use-hugo">Why Use Hugo?<a hidden class="anchor" aria-hidden="true" href="#why-use-hugo">#</a></h2>
 <p>Hugo is widely used due to its numerous advantages:</p>
 <ul>
-<li><strong>Blazing Fast</strong> – Hugo can generate a complete website in milliseconds, making it one of the fastest static site generators.</li>
-<li><strong>Easy to Use</strong> – Content is written in Markdown, making it simple and portable.</li>
-<li><strong>Flexible and Customizable</strong> – Supports various themes, templates, and shortcodes.</li>
-<li><strong>Secure</strong> – No database or dynamic scripts, reducing the risk of security vulnerabilities.</li>
-<li><strong>SEO-Friendly</strong> – Static HTML is fast and optimized for search engines.</li>
-<li><strong>Portable</strong> – Websites can be hosted anywhere, including GitHub Pages, Netlify, or a simple web server.</li>
+<li><strong>Blazing Fast</strong> - Hugo can generate a complete website in milliseconds, making it one of the fastest static site generators.</li>
+<li><strong>Easy to Use</strong> - Content is written in Markdown, making it simple and portable.</li>
+<li><strong>Flexible and Customizable</strong> - Supports various themes, templates, and shortcodes.</li>
+<li><strong>Secure</strong> - No database or dynamic scripts, reducing the risk of security vulnerabilities.</li>
+<li><strong>SEO-Friendly</strong> - Static HTML is fast and optimized for search engines.</li>
+<li><strong>Portable</strong> - Websites can be hosted anywhere, including GitHub Pages, Netlify, or a simple web server.</li>
 </ul>
 <h2 id="how-to-set-up-hugo">How to Set Up Hugo<a hidden class="anchor" aria-hidden="true" href="#how-to-set-up-hugo">#</a></h2>
 <p>Follow these steps to install and set up Hugo on your system.</p>
@@ -176,7 +176,7 @@ Hugo is widely used due to its numerous advantages:">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S hugo
 </span></span></code></pre></div><h4 id="on-macos-using-homebrew">On macOS (Using Homebrew)<a hidden class="anchor" aria-hidden="true" href="#on-macos-using-homebrew">#</a></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
-</span></span></code></pre></div><p>Alternatively, you can download the latest binary from <a href="https://github.com/gohugoio/hugo/releases">Hugo’s official GitHub releases</a>.</p>
+</span></span></code></pre></div><p>Alternatively, you can download the latest binary from <a href="https://github.com/gohugoio/hugo/releases">Hugo&rsquo;s official GitHub releases</a>.</p>
 <h3 id="2-create-a-new-hugo-site">2. Create a New Hugo Site<a hidden class="anchor" aria-hidden="true" href="#2-create-a-new-hugo-site">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-blog
 </span></span><span style="display:flex;"><span>cd my-blog
@@ -198,7 +198,7 @@ Hugo is widely used due to its numerous advantages:">
 <h3 id="6-build-and-deploy">6. Build and Deploy<a hidden class="anchor" aria-hidden="true" href="#6-build-and-deploy">#</a></h3>
 <p>To generate static files for deployment, run:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
-</span></span></code></pre></div><p>This will create a <code>public/</code> folder containing your site’s HTML files.</p>
+</span></span></code></pre></div><p>This will create a <code>public/</code> folder containing your site&rsquo;s HTML files.</p>
 <h2 id="hosting-on-github-pages">Hosting on GitHub Pages<a hidden class="anchor" aria-hidden="true" href="#hosting-on-github-pages">#</a></h2>
 <p>To host your Hugo site on GitHub Pages, follow these steps:</p>
 <h3 id="1-create-a-github-repository">1. Create a GitHub Repository<a hidden class="anchor" aria-hidden="true" href="#1-create-a-github-repository">#</a></h3>
@@ -245,7 +245,7 @@ Hugo is widely used due to its numerous advantages:">
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Hugo CLI</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &amp;&amp; sudo dpkg -i ${{ runner.temp }}/hugo.deb</span>          
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &amp;&amp; sudo dpkg -i ${{ runner.temp }}/hugo.deb</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Dart Sass</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">sudo snap install dart-sass</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout Repository</span>
@@ -263,7 +263,7 @@ Hugo is widely used due to its numerous advantages:">
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">HUGO_CACHEDIR</span>: <span style="color:#ae81ff">${{ runner.temp }}/hugo_cache</span>
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">HUGO_ENVIRONMENT</span>: <span style="color:#ae81ff">production</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          hugo --gc --minify --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34;</span>          
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          hugo --gc --minify --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34;</span>
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Upload Site Artifacts</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-pages-artifact@v3</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:

@@ -4,10 +4,26 @@
     <title>Posts on ayyzenn</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on ayyzenn</description>
-    <generator>Hugo -- 0.139.4</generator>
+    <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 May 2021 17:07:58 +0500</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2025 17:07:58 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up Olama with DeepSeek Coder on Manjaro: A Step-by-Step Guide</title>
+      <link>http://localhost:1313/posts/ollama/</link>
+      <pubDate>Mon, 03 Feb 2025 17:07:58 +0500</pubDate>
+      <guid>http://localhost:1313/posts/ollama/</guid>
+      <description>&lt;h2 id=&#34;what-is-olama&#34;&gt;What is Olama?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Olama&lt;/strong&gt; is an open-source framework designed to run and manage large language models (LLMs) efficiently on local machines. It allows developers to load and interact with various AI models without relying on cloud-based APIs.&lt;/p&gt;
+&lt;h3 id=&#34;why-use-olama&#34;&gt;Why Use Olama?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt;: No data leaves your local system.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Customization&lt;/strong&gt;: Run and fine-tune models as per your requirements.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;: Optimized for running models efficiently on consumer hardware.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;note&#34;&gt;Note&lt;/h2&gt;
+&lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Getting started with GitHub</title>
       <link>http://localhost:1313/posts/github/</link>

@@ -20,6 +20,18 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/azure/</loc>
+    <lastmod>2021-08-16T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cloud/</loc>
+    <lastmod>2021-08-16T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/azure/</loc>
+    <lastmod>2021-08-16T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ssh/</loc>
+    <lastmod>2021-08-16T15:49:43+05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/dual-boot/</loc>
     <lastmod>2021-08-14T15:49:43+05:00</lastmod>
   </url><url>
@@ -27,9 +39,6 @@
     <lastmod>2021-08-14T15:49:43+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/linux/</loc>
-    <lastmod>2021-08-14T15:49:43+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
     <lastmod>2021-08-14T15:49:43+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/ssh/</loc>

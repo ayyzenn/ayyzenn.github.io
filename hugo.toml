@@ -57,7 +57,7 @@ theme = 'hugo-PaperMod'
 
 [[params.socialIcons]]
     name = "linkedin"
-    url = "https://www.linkedin.com/in/yourhandle"
+    url = "https://www.linkedin.com/in/s-ayyzenn"
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]

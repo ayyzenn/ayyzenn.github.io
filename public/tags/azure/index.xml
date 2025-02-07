@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Ssh on ayyzenn</title>
-    <link>http://localhost:1313/tags/ssh/</link>
-    <description>Recent content in Ssh on ayyzenn</description>
+    <title>Azure on ayyzenn</title>
+    <link>http://localhost:1313/tags/azure/</link>
+    <description>Recent content in Azure on ayyzenn</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Aug 2021 15:49:43 +0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a Virtual Machine on Microsoft Azure</title>
       <link>http://localhost:1313/posts/azure/</link>
@@ -17,19 +17,6 @@
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.&lt;/p&gt;
 &lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SSH: Connecting to a Remote Server in Linux</title>
-      <link>http://localhost:1313/posts/ssh/</link>
-      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/ssh/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Secure Shell (SSH)&lt;/strong&gt; for Linux-based machines&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Remote Desktop Protocol (RDP)&lt;/strong&gt; for Windows-based machines&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

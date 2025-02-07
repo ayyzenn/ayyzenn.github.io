@@ -23,6 +23,27 @@
       <description></description>
     </item>
     <item>
+      <title>Azure</title>
+      <link>http://localhost:1313/tags/azure/</link>
+      <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/azure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud</title>
+      <link>http://localhost:1313/tags/cloud/</link>
+      <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>http://localhost:1313/tags/ssh/</link>
+      <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Dual Boot</title>
       <link>http://localhost:1313/tags/dual-boot/</link>
       <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
@@ -34,13 +55,6 @@
       <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
       <guid>http://localhost:1313/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ssh</title>
-      <link>http://localhost:1313/tags/ssh/</link>
-      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/ssh/</guid>
       <description></description>
     </item>
     <item>

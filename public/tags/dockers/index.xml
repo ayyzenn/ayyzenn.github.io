@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dockers on ayyzenn</title>
+    <link>http://localhost:1313/tags/dockers/</link>
+    <description>Recent content in Dockers on ayyzenn</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Jul 2022 15:49:43 +0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dockers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker on Ubuntu</title>
+      <link>http://localhost:1313/posts/dockers/</link>
+      <pubDate>Tue, 26 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/dockers/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.&lt;/p&gt;
+&lt;p&gt;By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

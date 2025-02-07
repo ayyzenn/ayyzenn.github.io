@@ -25,6 +25,15 @@
 &lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Docker on Ubuntu</title>
+      <link>http://localhost:1313/posts/dockers/</link>
+      <pubDate>Tue, 26 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/dockers/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.&lt;/p&gt;
+&lt;p&gt;By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title>
       <link>http://localhost:1313/posts/git_tools/</link>
       <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>

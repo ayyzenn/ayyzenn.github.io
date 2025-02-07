@@ -6,12 +6,12 @@
     <description>Recent content in Dual Boot on ayyzenn</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Aug 2021 15:49:43 +0500</lastBuildDate>
+    <lastBuildDate>Fri, 13 Aug 2021 15:49:43 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/dual-boot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dual boot Ubuntu and Windows</title>
       <link>http://localhost:1313/posts/dual_boot/</link>
-      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
+      <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
       <guid>http://localhost:1313/posts/dual_boot/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;

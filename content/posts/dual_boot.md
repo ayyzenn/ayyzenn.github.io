@@ -1,5 +1,5 @@
 +++
-date = '2021-08-14T15:49:43+05:00'
+date = '2021-08-13T15:49:43+05:00'
 title = 'Dual boot Ubuntu and Windows'
 tags = ['dual boot', 'ubuntu', 'linux']
 +++

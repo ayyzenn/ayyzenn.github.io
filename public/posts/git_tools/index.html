@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens | ayyzenn</title>
+<meta name="keywords" content="gh, github, cli, pat, tokens">
+<meta name="description" content="Introduction
+GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (gh) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.
+This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.
+
+Creating a Personal Access Token (PAT)
+A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/git_tools/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/git_tools/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens
+    </h1>
+    <div class="post-meta"><span title='2021-09-04 15:49:43 +0500 PKT'>September 4, 2021</span>&nbsp;·&nbsp;3 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#creating-a-personal-access-token-pat" aria-label="Creating a Personal Access Token (PAT)">Creating a Personal Access Token (PAT)</a><ul>
+                        
+                <li>
+                    <a href="#steps-to-generate-a-pat" aria-label="Steps to Generate a PAT">Steps to Generate a PAT</a></li>
+                <li>
+                    <a href="#important-considerations" aria-label="Important Considerations">Important Considerations</a></li></ul>
+                </li>
+                <li>
+                    <a href="#why-use-github-cli" aria-label="Why Use GitHub CLI?">Why Use GitHub CLI?</a><ul>
+                        
+                <li>
+                    <a href="#key-benefits" aria-label="Key Benefits:">Key Benefits:</a></li></ul>
+                </li>
+                <li>
+                    <a href="#installing-github-cli-on-manjaro-linux" aria-label="Installing GitHub CLI on Manjaro Linux">Installing GitHub CLI on Manjaro Linux</a><ul>
+                        
+                <li>
+                    <a href="#authenticating-with-github-cli" aria-label="Authenticating with GitHub CLI">Authenticating with GitHub CLI</a></li></ul>
+                </li>
+                <li>
+                    <a href="#essential-github-cli-commands" aria-label="Essential GitHub CLI Commands">Essential GitHub CLI Commands</a><ul>
+                        
+                <li>
+                    <a href="#repository-management" aria-label="Repository Management">Repository Management</a></li>
+                <li>
+                    <a href="#managing-issues--pull-requests" aria-label="Managing Issues &amp; Pull Requests">Managing Issues &amp; Pull Requests</a></li>
+                <li>
+                    <a href="#controlling-github-actions" aria-label="Controlling GitHub Actions">Controlling GitHub Actions</a></li></ul>
+                </li>
+                <li>
+                    <a href="#using-git-github-cli-and-pat-together" aria-label="Using Git, GitHub CLI, and PAT Together">Using Git, GitHub CLI, and PAT Together</a><ul>
+                        
+                <li>
+                    <a href="#install-git-if-not-already-installed" aria-label="Install Git (if not already installed):">Install Git (if not already installed):</a></li>
+                <li>
+                    <a href="#set-up-git-and-github-cli-with-pat-authentication" aria-label="Set up Git and GitHub CLI with PAT authentication:">Set up Git and GitHub CLI with PAT authentication:</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (<code>gh</code>) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.</p>
+<p>This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.</p>
+<hr>
+<h2 id="creating-a-personal-access-token-pat">Creating a Personal Access Token (PAT)<a hidden class="anchor" aria-hidden="true" href="#creating-a-personal-access-token-pat">#</a></h2>
+<p>A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.</p>
+<h3 id="steps-to-generate-a-pat">Steps to Generate a PAT<a hidden class="anchor" aria-hidden="true" href="#steps-to-generate-a-pat">#</a></h3>
+<ol>
+<li>Navigate to the upper-right corner of your GitHub page and click on your profile photo. From the dropdown menu, select <strong>Settings</strong>.</li>
+<li>In the left sidebar, click <strong>Developer settings</strong>.</li>
+<li>Select <strong>Personal access tokens</strong>.</li>
+<li>Click <strong>Generate new token</strong>.</li>
+<li>Provide a descriptive name for your token to easily identify its purpose.</li>
+<li>Set an expiration date using the <strong>Expiration</strong> dropdown menu.</li>
+<li>Assign the necessary scopes (e.g., select <strong>repo</strong> for repository access).</li>
+<li>Click <strong>Generate token</strong>.</li>
+<li>Securely store the generated token as it will not be visible again.</li>
+</ol>
+<h3 id="important-considerations">Important Considerations<a hidden class="anchor" aria-hidden="true" href="#important-considerations">#</a></h3>
+<ul>
+<li>Treat your PAT like a password—store it securely and never share it publicly.</li>
+<li>Regularly review and regenerate tokens as needed to maintain security.</li>
+</ul>
+<hr>
+<h2 id="why-use-github-cli">Why Use GitHub CLI?<a hidden class="anchor" aria-hidden="true" href="#why-use-github-cli">#</a></h2>
+<p>The <code>gh</code> tool simplifies interactions with GitHub, making it a must-have for developers who want to manage repositories, issues, pull requests, and workflows directly from the terminal.</p>
+<h3 id="key-benefits">Key Benefits:<a hidden class="anchor" aria-hidden="true" href="#key-benefits">#</a></h3>
+<ul>
+<li><strong>Secure authentication</strong> without handling passwords or tokens manually.</li>
+<li><strong>Efficient repository management</strong> (create, clone, fork, and manage repos effortlessly).</li>
+<li><strong>Seamless collaboration</strong> (list, create, and merge pull requests and issues).</li>
+<li><strong>GitHub Actions control</strong> (trigger and monitor workflows without a web browser).</li>
+</ul>
+<hr>
+<h2 id="installing-github-cli-on-manjaro-linux">Installing GitHub CLI on Manjaro Linux<a hidden class="anchor" aria-hidden="true" href="#installing-github-cli-on-manjaro-linux">#</a></h2>
+<p>For Manjaro (and other Arch-based distributions), install <code>gh</code> using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>yay -S github-cli
+</span></span></code></pre></div><p>Verify the installation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh --version
+</span></span></code></pre></div><h3 id="authenticating-with-github-cli">Authenticating with GitHub CLI<a hidden class="anchor" aria-hidden="true" href="#authenticating-with-github-cli">#</a></h3>
+<p>Login using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh auth login
+</span></span></code></pre></div><p>Follow the interactive prompts:</p>
+<ul>
+<li>Select <strong>GitHub.com</strong> or <strong>GitHub Enterprise</strong>.</li>
+<li>Choose authentication via <strong>HTTPS</strong> or <strong>SSH</strong>.</li>
+<li>Authenticate using a one-time browser-based login or SSH key.</li>
+</ul>
+<p>To confirm authentication:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh auth status
+</span></span></code></pre></div><hr>
+<h2 id="essential-github-cli-commands">Essential GitHub CLI Commands<a hidden class="anchor" aria-hidden="true" href="#essential-github-cli-commands">#</a></h2>
+<h3 id="repository-management">Repository Management<a hidden class="anchor" aria-hidden="true" href="#repository-management">#</a></h3>
+<p>Create a new repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh repo create my-repo --public
+</span></span></code></pre></div><p>Clone an existing repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh repo clone username/repository
+</span></span></code></pre></div><p>Fork a repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh repo fork username/repository
+</span></span></code></pre></div><h3 id="managing-issues--pull-requests">Managing Issues &amp; Pull Requests<a hidden class="anchor" aria-hidden="true" href="#managing-issues--pull-requests">#</a></h3>
+<p>List open issues:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh issue list
+</span></span></code></pre></div><p>Create a new issue:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh issue create --title <span style="color:#e6db74">&#34;Bug Report&#34;</span> --body <span style="color:#e6db74">&#34;Describe the bug&#34;</span>
+</span></span></code></pre></div><p>View and merge pull requests:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh pr list
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh pr merge <span style="color:#ae81ff">123</span> --squash --delete-branch
+</span></span></code></pre></div><h3 id="controlling-github-actions">Controlling GitHub Actions<a hidden class="anchor" aria-hidden="true" href="#controlling-github-actions">#</a></h3>
+<p>List workflow runs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh run list
+</span></span></code></pre></div><p>Trigger a workflow manually:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh workflow run workflow-name.yml
+</span></span></code></pre></div><p>View detailed logs of a failed run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh run view --log
+</span></span></code></pre></div><hr>
+<h2 id="using-git-github-cli-and-pat-together">Using Git, GitHub CLI, and PAT Together<a hidden class="anchor" aria-hidden="true" href="#using-git-github-cli-and-pat-together">#</a></h2>
+<p>While <code>gh</code> is excellent for managing GitHub tasks, Git remains the foundation for version control. Here’s how they work together:</p>
+<h3 id="install-git-if-not-already-installed">Install Git (if not already installed):<a hidden class="anchor" aria-hidden="true" href="#install-git-if-not-already-installed">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo pacman -S git
+</span></span></code></pre></div><h3 id="set-up-git-and-github-cli-with-pat-authentication">Set up Git and GitHub CLI with PAT authentication:<a hidden class="anchor" aria-hidden="true" href="#set-up-git-and-github-cli-with-pat-authentication">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone https://github.com/username/repository.git
+</span></span><span style="display:flex;"><span>cd repository
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><p>If using HTTPS with PAT authentication:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git remote set-url origin https://github.com/username/repository.git
+</span></span></code></pre></div><p>Now, create a pull request using GitHub CLI:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gh pr create --title <span style="color:#e6db74">&#34;New Feature&#34;</span> --body <span style="color:#e6db74">&#34;Added a new feature to enhance performance&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>By combining Personal Access Tokens with GitHub CLI, developers gain an efficient, secure, and command-driven approach to managing repositories, collaborating on code, and automating workflows. Whether you’re authenticating via PAT, creating pull requests, or triggering GitHub Actions, this guide provides the essential tools to optimize your GitHub workflow.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/gh/">Gh</a></li>
+      <li><a href="http://localhost:1313/tags/github/">Github</a></li>
+      <li><a href="http://localhost:1313/tags/cli/">Cli</a></li>
+      <li><a href="http://localhost:1313/tags/pat/">Pat</a></li>
+      <li><a href="http://localhost:1313/tags/tokens/">Tokens</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

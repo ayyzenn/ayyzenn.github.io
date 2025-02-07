@@ -1,5 +1,5 @@
 +++
-date = '2021-09-03T15:49:43+05:00'
+date = '2021-09-04T15:49:43+05:00'
 title = 'Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens'
 tags = ['gh', 'github', 'cli', 'pat', 'tokens']
 +++

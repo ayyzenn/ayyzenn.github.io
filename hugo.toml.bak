@@ -4,6 +4,7 @@ title = 'ayyzenn'
 
 theme = 'hugo-PaperMod'
 
+
 [params.profileMode]
     enabled = true
     title = "Saad Ahmad"
@@ -20,6 +21,10 @@ theme = 'hugo-PaperMod'
 [[params.profileMode.buttons]]
     name = "Archives"
     url = "/archives"
+  
+
+
+# And you can even create generic menu
 
 [[menu.main]]
     name = "Tags"
@@ -27,14 +32,19 @@ theme = 'hugo-PaperMod'
     weight = 300
     url = "/tags/"
 
+
 [[menu.main]]
     identifier = "posts"
     name       = "Posts"
     url        = "/posts/"
 
+[outputs]
+  home = [ "HTML", "RSS", "JSON" ]
+
 [[menu.main]]
   name = "Search"
   url = "/search"
+
 
 [params]
     dateform        = "Jan 2, 2006"
@@ -47,17 +57,4 @@ theme = 'hugo-PaperMod'
     ShowCodeCopyButtons = true
     taglist = true
     defaultTheme = 'dark'
-    lazyLoadImages = true  # Improves page load speed
 
-
-
-[[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/ayyzenn"
-
-[[params.socialIcons]]
-    name = "linkedin"
-    url = "https://www.linkedin.com/in/yourhandle"
-
-[outputs]
-  home = [ "HTML", "RSS", "JSON" ]

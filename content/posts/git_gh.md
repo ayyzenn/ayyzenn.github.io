@@ -1,13 +1,8 @@
 +++
 date = '2021-09-03T15:49:43+05:00'
-title = ''
+title = 'Mastering GitHub CLI: The Power of GitHub from Your Terminal'
 tags = ['git', 'github', 'cli']
 +++
-
----
-date: "2025-01-23T14:49:19+05:00"
-title: "Mastering GitHub CLI: The Power of GitHub from Your Terminal"
----
 
 ## Introduction
 

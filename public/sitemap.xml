@@ -20,6 +20,18 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/cli/</loc>
+    <lastmod>2021-09-03T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/git_cli/</loc>
+    <lastmod>2021-09-03T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/git/</loc>
+    <lastmod>2021-09-03T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/github/</loc>
+    <lastmod>2021-09-03T15:49:43+05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/azure/</loc>
     <lastmod>2021-08-16T15:49:43+05:00</lastmod>
   </url><url>
@@ -46,12 +58,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/ubuntu/</loc>
     <lastmod>2021-08-14T15:49:43+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/github/</loc>
-    <lastmod>2021-05-10T17:07:58+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/github/</loc>
-    <lastmod>2021-05-10T17:07:58+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2020-12-03T17:07:58+05:00</lastmod>

@@ -23,6 +23,27 @@
       <description></description>
     </item>
     <item>
+      <title>Cli</title>
+      <link>http://localhost:1313/tags/cli/</link>
+      <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/tags/github/</link>
+      <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Azure</title>
       <link>http://localhost:1313/tags/azure/</link>
       <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
@@ -62,13 +83,6 @@
       <link>http://localhost:1313/tags/ubuntu/</link>
       <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
       <guid>http://localhost:1313/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Github</title>
-      <link>http://localhost:1313/tags/github/</link>
-      <pubDate>Mon, 10 May 2021 17:07:58 +0500</pubDate>
-      <guid>http://localhost:1313/tags/github/</guid>
       <description></description>
     </item>
     <item>

@@ -25,6 +25,35 @@
 &lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Setting up Puppet using Docker</title>
+      <link>http://localhost:1313/posts/puppet/</link>
+      <pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/puppet/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Puppet is one of the earliest configuration management tools and has gained a substantial community of supporters and users. It is a powerful tool for deploying, configuring, managing, and maintaining a machine or a system.&lt;/p&gt;
+&lt;h2 id=&#34;configuration-management&#34;&gt;Configuration Management&lt;/h2&gt;
+&lt;p&gt;System Administrators often perform repetitive tasks such as installing and configuring servers. While scripting can automate these tasks, managing large infrastructure manually is cumbersome.&lt;/p&gt;
+&lt;p&gt;To address this issue, &lt;strong&gt;Configuration Management&lt;/strong&gt; was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating a container in docker</title>
+      <link>http://localhost:1313/posts/container_docker/</link>
+      <pubDate>Wed, 27 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/container_docker/</guid>
+      <description>&lt;h3 id=&#34;creating-a-docker-container-with-ubuntu&#34;&gt;Creating a Docker Container with Ubuntu&lt;/h3&gt;
+&lt;p&gt;To create a Docker container, first download the Ubuntu image from &lt;a href=&#34;https://hub.docker.com/search?q=&#34;&gt;Docker Hub&lt;/a&gt;. Use the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the image is downloaded, create a new container using the command below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;key-parameters&#34;&gt;Key Parameters:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;-i&lt;/code&gt;&lt;/strong&gt;: Enables interactive mode.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;-t&lt;/code&gt;&lt;/strong&gt;: Allocates a terminal for the container.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;--name&lt;/code&gt;&lt;/strong&gt;: Assigns a custom name to the container.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Upon execution, the container will be created, and you will be logged into its environment.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Docker on Ubuntu</title>
       <link>http://localhost:1313/posts/dockers/</link>
       <pubDate>Tue, 26 Jul 2022 15:49:43 +0500</pubDate>

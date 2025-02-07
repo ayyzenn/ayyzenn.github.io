@@ -132,7 +132,7 @@ Push the file to GitHub by running:
 git push origin master
 ```
 
-You'll be prompted to enter your GitHub username and [Personal Access Token (PAT)](https://ayyzenn.wordpress.com/2021/09/03/creating-a-personal-access-token-pat/).
+You'll be prompted to enter your GitHub username and [Personal Access Token (PAT)](/posts/git_tools).
 
 Once this is done, your file is successfully uploaded to GitHub.
 

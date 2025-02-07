@@ -20,10 +20,22 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/dockers/</loc>
-    <lastmod>2022-07-26T15:49:43+05:00</lastmod>
+    <loc>http://localhost:1313/tags/containers/</loc>
+    <lastmod>2022-07-28T15:49:43+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/dockers/</loc>
+    <lastmod>2022-07-28T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/puppet/</loc>
+    <lastmod>2022-07-28T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/puppet/</loc>
+    <lastmod>2022-07-28T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/container_docker/</loc>
+    <lastmod>2022-07-27T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/dockers/</loc>
     <lastmod>2022-07-26T15:49:43+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cli/</loc>

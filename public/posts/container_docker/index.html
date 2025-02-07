@@ -5,11 +5,22 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Dockers | ayyzenn</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
+<title>Creating a container in docker | ayyzenn</title>
+<meta name="keywords" content="dockers, containers">
+<meta name="description" content="Creating a Docker Container with Ubuntu
+To create a Docker container, first download the Ubuntu image from Docker Hub. Use the following command:
+sudo docker pull ubuntu
+Once the image is downloaded, create a new container using the command below:
+sudo docker run --name my-container -it ubuntu
+Key Parameters:
+
+-i: Enables interactive mode.
+-t: Allocates a terminal for the container.
+--name: Assigns a custom name to the container.
+
+Upon execution, the container will be created, and you will be logged into its environment.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/dockers/">
+<link rel="canonical" href="http://localhost:1313/posts/container_docker/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +29,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/dockers/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/dockers/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/container_docker/">
 <noscript>
     <style>
         #theme-toggle,
@@ -31,7 +41,7 @@
 </noscript>
 </head>
 
-<body class="list dark" id="top">
+<body class=" dark" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
@@ -85,55 +95,65 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tags/">Tags</a></div>
-  <h1>
-    Dockers
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Setting up Puppet using Docker
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction Puppet is one of the earliest configuration management tools and has gained a substantial community of supporters and users. It is a powerful tool for deploying, configuring, managing, and maintaining a machine or a system.
-Configuration Management System Administrators often perform repetitive tasks such as installing and configuring servers. While scripting can automate these tasks, managing large infrastructure manually is cumbersome.
-To address this issue, Configuration Management was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-07-28 15:49:43 +0500 PKT'>July 28, 2022</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Setting up Puppet using Docker" href="http://localhost:1313/posts/puppet/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Creating a container in docker
+    </h1>
+    <div class="post-meta"><span title='2022-07-27 15:49:43 +0500 PKT'>July 27, 2022</span>&nbsp;·&nbsp;1 min
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Creating a container in docker
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Creating a Docker Container with Ubuntu To create a Docker container, first download the Ubuntu image from Docker Hub. Use the following command:
-sudo docker pull ubuntu Once the image is downloaded, create a new container using the command below:
-sudo docker run --name my-container -it ubuntu Key Parameters: -i: Enables interactive mode. -t: Allocates a terminal for the container. --name: Assigns a custom name to the container. Upon execution, the container will be created, and you will be logged into its environment.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-07-27 15:49:43 +0500 PKT'>July 27, 2022</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to Creating a container in docker" href="http://localhost:1313/posts/container_docker/"></a>
-</article>
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Docker on Ubuntu
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.
-By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
-...</p>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#creating-a-docker-container-with-ubuntu" aria-label="Creating a Docker Container with Ubuntu">Creating a Docker Container with Ubuntu</a><ul>
+                        
+                <li>
+                    <a href="#key-parameters" aria-label="Key Parameters:">Key Parameters:</a></li></ul>
+                </li>
+                <li>
+                    <a href="#working-inside-the-container" aria-label="Working Inside the Container">Working Inside the Container</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="creating-a-docker-container-with-ubuntu">Creating a Docker Container with Ubuntu<a hidden class="anchor" aria-hidden="true" href="#creating-a-docker-container-with-ubuntu">#</a></h3>
+<p>To create a Docker container, first download the Ubuntu image from <a href="https://hub.docker.com/search?q=">Docker Hub</a>. Use the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker pull ubuntu
+</span></span></code></pre></div><p>Once the image is downloaded, create a new container using the command below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker run --name my-container -it ubuntu
+</span></span></code></pre></div><h4 id="key-parameters">Key Parameters:<a hidden class="anchor" aria-hidden="true" href="#key-parameters">#</a></h4>
+<ul>
+<li><strong><code>-i</code></strong>: Enables interactive mode.</li>
+<li><strong><code>-t</code></strong>: Allocates a terminal for the container.</li>
+<li><strong><code>--name</code></strong>: Assigns a custom name to the container.</li>
+</ul>
+<p>Upon execution, the container will be created, and you will be logged into its environment.</p>
+<h3 id="working-inside-the-container">Working Inside the Container<a hidden class="anchor" aria-hidden="true" href="#working-inside-the-container">#</a></h3>
+<p>Since you are operating as the root user within the container, you can execute commands without requiring <code>sudo</code> privileges. To update and upgrade the system, run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt upgrade
+</span></span></code></pre></div><p>Your container is now fully set up and ready for use.</p>
+
+
   </div>
-  <footer class="entry-footer"><span title='2022-07-26 15:49:43 +0500 PKT'>July 26, 2022</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Docker on Ubuntu" href="http://localhost:1313/posts/dockers/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/dockers/">Dockers</a></li>
+      <li><a href="http://localhost:1313/tags/containers/">Containers</a></li>
+    </ul>
+  </footer>
 </article>
     </main>
     
@@ -205,6 +225,53 @@ By taking advantage of Docker’s methodologies for shipping, testing, and deplo
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

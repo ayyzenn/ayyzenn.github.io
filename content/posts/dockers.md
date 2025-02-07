@@ -66,5 +66,5 @@ To install Docker on Ubuntu 20.04, follow these steps:
 
 **Note:** You need to run Docker with `sudo` privileges.
 
-For creating a container, refer to my detailed blog post: [Creating a Container in Docker](https://ayyzenn.wordpress.com/2022/07/26/creating-a-container-in-docker/).
+For creating a container, refer to my detailed blog post: [Creating a Container in Docker](/posts/container_docker/).
 

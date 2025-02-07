@@ -23,6 +23,34 @@
       <description></description>
     </item>
     <item>
+      <title>Dual Boot</title>
+      <link>http://localhost:1313/tags/dual-boot/</link>
+      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/dual-boot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>http://localhost:1313/tags/ssh/</link>
+      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>http://localhost:1313/tags/ubuntu/</link>
+      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Github</title>
       <link>http://localhost:1313/tags/github/</link>
       <pubDate>Mon, 10 May 2021 17:07:58 +0500</pubDate>

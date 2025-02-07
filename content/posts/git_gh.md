@@ -1,7 +1,7 @@
 +++
 date = '2021-09-03T15:49:43+05:00'
 title = 'Mastering GitHub CLI: The Power of GitHub from Your Terminal'
-tags = ['git', 'github', 'cli']
+tags = ['gh', 'github', 'cli']
 +++
 
 ## Introduction

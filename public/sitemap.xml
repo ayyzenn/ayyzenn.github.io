@@ -2,117 +2,117 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:42921/</loc>
+    <loc>http://localhost:44495/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/langchain/</loc>
+    <loc>http://localhost:44495/tags/langchain/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/</loc>
+    <loc>http://localhost:44495/posts/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/rag/</loc>
+    <loc>http://localhost:44495/tags/rag/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/ollama/</loc>
+    <loc>http://localhost:44495/posts/ollama/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/</loc>
+    <loc>http://localhost:44495/tags/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/cli/</loc>
+    <loc>http://localhost:44495/tags/cli/</loc>
     <lastmod>2022-12-03T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/gentoo/</loc>
+    <loc>http://localhost:44495/posts/gentoo/</loc>
     <lastmod>2022-12-03T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/gentoo/</loc>
+    <loc>http://localhost:44495/tags/gentoo/</loc>
     <lastmod>2022-12-03T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/linux/</loc>
+    <loc>http://localhost:44495/tags/linux/</loc>
     <lastmod>2022-12-03T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/containers/</loc>
+    <loc>http://localhost:44495/tags/containers/</loc>
     <lastmod>2022-07-28T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/dockers/</loc>
+    <loc>http://localhost:44495/tags/dockers/</loc>
     <lastmod>2022-07-28T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/puppet/</loc>
+    <loc>http://localhost:44495/tags/puppet/</loc>
     <lastmod>2022-07-28T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/puppet/</loc>
+    <loc>http://localhost:44495/posts/puppet/</loc>
     <lastmod>2022-07-28T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/container_docker/</loc>
+    <loc>http://localhost:44495/posts/container_docker/</loc>
     <lastmod>2022-07-27T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/dockers/</loc>
+    <loc>http://localhost:44495/posts/dockers/</loc>
     <lastmod>2022-07-26T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/gh/</loc>
+    <loc>http://localhost:44495/tags/gh/</loc>
     <lastmod>2021-09-04T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/github/</loc>
+    <loc>http://localhost:44495/tags/github/</loc>
     <lastmod>2021-09-04T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/git_tools/</loc>
+    <loc>http://localhost:44495/posts/git_tools/</loc>
     <lastmod>2021-09-04T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/pat/</loc>
+    <loc>http://localhost:44495/tags/pat/</loc>
     <lastmod>2021-09-04T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/tokens/</loc>
+    <loc>http://localhost:44495/tags/tokens/</loc>
     <lastmod>2021-09-04T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/git_cli/</loc>
+    <loc>http://localhost:44495/posts/git_cli/</loc>
     <lastmod>2021-09-03T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/git/</loc>
+    <loc>http://localhost:44495/tags/git/</loc>
     <lastmod>2021-09-03T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/azure/</loc>
+    <loc>http://localhost:44495/tags/azure/</loc>
     <lastmod>2021-08-16T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/cloud/</loc>
+    <loc>http://localhost:44495/tags/cloud/</loc>
     <lastmod>2021-08-16T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/azure/</loc>
+    <loc>http://localhost:44495/posts/azure/</loc>
     <lastmod>2021-08-16T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/ssh/</loc>
+    <loc>http://localhost:44495/tags/ssh/</loc>
     <lastmod>2021-08-16T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/ssh/</loc>
+    <loc>http://localhost:44495/posts/ssh/</loc>
     <lastmod>2021-08-14T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/ubuntu/</loc>
+    <loc>http://localhost:44495/tags/ubuntu/</loc>
     <lastmod>2021-08-14T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/dual-boot/</loc>
+    <loc>http://localhost:44495/tags/dual-boot/</loc>
     <lastmod>2021-08-13T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/dual_boot/</loc>
+    <loc>http://localhost:44495/posts/dual_boot/</loc>
     <lastmod>2021-08-13T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/hugo/</loc>
+    <loc>http://localhost:44495/tags/hugo/</loc>
     <lastmod>2020-12-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/hugo/</loc>
+    <loc>http://localhost:44495/posts/hugo/</loc>
     <lastmod>2020-12-03T17:07:58+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/tags/first/</loc>
+    <loc>http://localhost:44495/tags/first/</loc>
     <lastmod>2020-09-15T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/posts/first_post/</loc>
+    <loc>http://localhost:44495/posts/first_post/</loc>
     <lastmod>2020-09-15T15:49:43+05:00</lastmod>
   </url><url>
-    <loc>http://localhost:42921/about/</loc>
+    <loc>http://localhost:44495/about/</loc>
   </url><url>
-    <loc>http://localhost:42921/archives/</loc>
+    <loc>http://localhost:44495/archives/</loc>
   </url><url>
-    <loc>http://localhost:42921/categories/</loc>
+    <loc>http://localhost:44495/categories/</loc>
   </url><url>
-    <loc>http://localhost:42921/search/</loc>
+    <loc>http://localhost:44495/search/</loc>
   </url>
 </urlset>

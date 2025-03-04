@@ -25,34 +25,19 @@ _A passionate DevOps enthusiast, Linux geek, and aspiring MLOps & System Adminis
 
 ---
 
-<!-- ## 🛠️ Tech Stack
-
-| Technology     |                                                    |
-| -------------- | -------------------------------------------------- |
-| **Python**     | ![Python](/about/python-original.svg)              |
-| **Anaconda**   | ![Anaconda](/about/anaconda-original-wordmark.svg) |
-| **Jupyter**    | ![Jupyter](/about/jupyter-original.svg)            |
-| **Pandas**     | ![Pandas](/about/pandas-original.svg)              |
-| **HTML5**      | ![HTML5](/about/html5-original.svg)                |
-| **JavaScript** | ![JavaScript](/about/javascript-original.svg)      |
-| **Node.js**    | ![Node.js](/about/nodejs-original.svg)             |
-| **React**      | ![React](/about/react-original.svg)                |
-| **MongoDB**    | ![MongoDB](/about/mongodb-original.svg)            |
-| **Azure**      | ![Azure](/about/azure-original.svg)                |
-| **Docker**     | ![Docker](/about/docker-original.svg)              |
-| **Linux**      | ![Linux](/about/linux-original.svg)                |
-| **Bash**       | ![Bash](/about/bash-original.svg)                  |
-| **VS Code**    | ![VS Code](/about/vscode-original.svg)             |
-| **Git**        | ![Git](/about/git-original.svg)                    | --> |
-
 ## 🛠️ Tech Stack
 
-| **Technology**                                   | **Technology**                                               | **Technology**                                                  | **Technology**                                      | **Technology**                                      |
-| ------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| ![Python](/about/python-original.svg) **Python** | ![Docker](/about/docker-original.svg) **Docker**             | ![Anaconda](/about/anaconda-original-wordmark.svg) **Anaconda** | ![Jupyter](/about/jupyter-original.svg) **Jupyter** | ![Pandas](/about/pandas-original.svg) **Pandas**    |
-| ![HTML5](/about/html5-original.svg) **HTML5**    | ![JavaScript](/about/javascript-original.svg) **JavaScript** | ![Node.js](/about/nodejs-original.svg) **Node.js**              | ![React](/about/react-original.svg) **React**       | ![MongoDB](/about/mongodb-original.svg) **MongoDB** |
-| ![Azure](/about/azure-original.svg) **Azure**    | ![Linux](/about/linux-original.svg) **Linux**                | ![Bash](/about/bash-original.svg) **Bash**                      | ![VS Code](/about/vscode-original.svg) **VS Code**  | ![Git](/about/git-original.svg) **Git**             |
 
+|                                                             |                                                                 |                                                        |                                                                         |                                                                |                                                              |
+| ----------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------ |
+| ![Python](/about/python-original.svg) **Python**            | ![Anaconda](/about/anaconda-original-wordmark.svg) **Anaconda** | ![Jupyter](/about/jupyter-original.svg) **Jupyter**    | ![Pandas](/about/pandas-original.svg) **Pandas**                        | ![HTML5](/about/html5-original.svg) **HTML5**                  | ![JavaScript](/about/javascript-original.svg) **JavaScript** |
+| ![Node.js](/about/nodejs-original.svg) **Node.js**          | ![React](/about/react-original.svg) **React**                   | ![MongoDB](/about/mongodb-original.svg) **MongoDB**    | ![Azure](/about/azure-original.svg) **Azure**                           | ![Docker](/about/docker-original.svg) **Docker**               | ![Linux](/about/linux-original.svg) **Linux**                |
+| ![Bash](/about/bash-original.svg) **Bash**                  | ![VS Code](/about/vscode-original.svg) **VS Code**              | ![Git](/about/git-original.svg) **Git**                | ![GitHub](/about/github-original.svg) **GitHub**                        | ![AWS](/about/amazonwebservices-original-wordmark.svg) **AWS** | ![Apache](/about/apache-original-wordmark.svg) **Apache**    |
+| ![Arch Linux](/about/archlinux-original.svg) **Arch Linux** | ![C](/about/c-original.svg) **C**                               | ![Debian](/about/debian-original.svg) **Debian**       | ![DigitalOcean](/about/digitalocean-original.svg) **DigitalOcean**      | ![Django](/about/django-plain.svg) **Django**                  | ![GCC](/about/gcc-original.svg) **GCC**                      |
+| ![Gentoo](/about/gentoo-original.svg) **Gentoo**            | ![Google](/about/google-original.svg) **Google**                | ![Grafana](/about/grafana-original.svg) **Grafana**    | ![Hadoop](/about/hadoop-original.svg) **Hadoop**                        | ![Hugo](/about/hugo-original.svg) **Hugo**                     | ![Jenkins](/about/jenkins-original.svg) **Jenkins**          |
+| ![Kaggle](/about/kaggle-original.svg) **Kaggle**            | ![Keras](/about/keras-original.svg) **Keras**                   | ![Markdown](/about/markdown-original.svg) **Markdown** | ![NumPy](/about/numpy-original.svg) **NumPy**                           | ![PHP](/about/php-original.svg) **PHP**                        | ![Rust](/about/rust-original.svg) **Rust**                   |
+| ![Selenium](/about/selenium-original.svg) **Selenium**      | ![Slack](/about/slack-original.svg) **Slack**                   | ![SSH](/about/ssh-original.svg) **SSH**                | ![Stack Overflow](/about/stackoverflow-original.svg) **Stack Overflow** | ![Terraform](/about/terraform-original.svg) **Terraform**      | ![TeX](/about/tex-original.svg) **TeX**                      |
+| ![Ubuntu](/about/ubuntu-original.svg) **Ubuntu**            | ![Unix](/about/unix-original.svg) **Unix**                      | ![Vim](/about/vim-original.svg) **Vim**                | ![WordPress](/about/wordpress-original.svg) **WordPress**               | ![YAML](/about/yaml-original.svg) **YAML**                     |                                                              |
 
 ---
 

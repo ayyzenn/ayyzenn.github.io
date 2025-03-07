@@ -185,11 +185,6 @@ jobs:
 
 ### 4. Add Files for Your Website
 
-Run the following command to initialize a Git repository in your Hugo site directory:
-
-```bash
-git init
-```
 
 Then add your Hugo-generated site files to the repository, commit, and push:
 

@@ -32,6 +32,18 @@
     <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2022-12-03T15:49:43+05:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/installation/</loc>
+    <lastmod>2022-08-11T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/odoo/</loc>
+    <lastmod>2022-08-11T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/odoo/</loc>
+    <lastmod>2022-08-11T15:49:43+05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ubuntu/</loc>
+    <lastmod>2022-08-11T15:49:43+05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/ftp/</loc>
     <lastmod>2022-08-07T15:49:43+05:00</lastmod>
   </url><url>
@@ -51,9 +63,6 @@
     <lastmod>2022-08-02T15:49:43+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/chef/</loc>
-    <lastmod>2022-08-02T15:49:43+05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ubuntu/</loc>
     <lastmod>2022-08-02T15:49:43+05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/voip/</loc>

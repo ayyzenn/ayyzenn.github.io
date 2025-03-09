@@ -39,12 +39,30 @@
 &lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Setting Up Odoo: A Beginner’s Guide</title>
+      <link>http://localhost:1313/posts/odoo/</link>
+      <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/odoo/</guid>
+      <description>&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s start by updating your package repository:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-an-odoo-user&#34;&gt;Create an Odoo User&lt;/h2&gt;
+&lt;p&gt;Run this command to create a system user for Odoo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo adduser -system -home&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/odoo -group odoo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-postgresql&#34;&gt;Install PostgreSQL&lt;/h2&gt;
+&lt;p&gt;Odoo needs PostgreSQL as its database, so install it with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install postgresql -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-a-postgresql-user-for-odoo&#34;&gt;Create a PostgreSQL User for Odoo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo su - postgres -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;createuser -s odoo&amp;#34;&lt;/span&gt; 2&amp;gt; /dev/null &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-python-dependencies&#34;&gt;Install Python Dependencies&lt;/h2&gt;
+&lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title>
       <link>http://localhost:1313/posts/proftpd/</link>
       <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
       <guid>http://localhost:1313/posts/proftpd/</guid>
-      <description>&lt;h1 id=&#34;setting-up-proftpd&#34;&gt;Setting Up ProFTPD&lt;/h1&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.&lt;/p&gt;
 &lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description>
     </item>
@@ -141,8 +159,7 @@
       <link>http://localhost:1313/posts/azure/</link>
       <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
       <guid>http://localhost:1313/posts/azure/</guid>
-      <description>&lt;h1 id=&#34;creating-a-virtual-machine-on-microsoft-azure&#34;&gt;Creating a Virtual Machine on Microsoft Azure&lt;/h1&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.&lt;/p&gt;
 &lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description>
     </item>

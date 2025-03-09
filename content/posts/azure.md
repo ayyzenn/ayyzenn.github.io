@@ -4,8 +4,6 @@ title = 'Creating a Virtual Machine on Microsoft Azure'
 tags = ['cloud', 'azure', 'ssh']
 +++
 
-# Creating a Virtual Machine on Microsoft Azure
-
 ## Introduction
 
 Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.

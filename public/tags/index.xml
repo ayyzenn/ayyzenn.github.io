@@ -44,6 +44,27 @@
       <description></description>
     </item>
     <item>
+      <title>Installation</title>
+      <link>http://localhost:1313/tags/installation/</link>
+      <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/installation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Odoo</title>
+      <link>http://localhost:1313/tags/odoo/</link>
+      <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/odoo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>http://localhost:1313/tags/ubuntu/</link>
+      <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Ftp</title>
       <link>http://localhost:1313/tags/ftp/</link>
       <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
@@ -76,13 +97,6 @@
       <link>http://localhost:1313/tags/chef/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
       <guid>http://localhost:1313/tags/chef/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ubuntu</title>
-      <link>http://localhost:1313/tags/ubuntu/</link>
-      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/ubuntu/</guid>
       <description></description>
     </item>
     <item>

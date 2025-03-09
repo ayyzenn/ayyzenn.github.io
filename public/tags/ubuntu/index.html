@@ -94,6 +94,22 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Setting Up Odoo: A Beginner’s Guide
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Update Your System Let’s start by updating your package repository:
+sudo apt update &amp;&amp; sudo apt upgrade Create an Odoo User Run this command to create a system user for Odoo:
+sudo adduser -system -home=/opt/odoo -group odoo Install PostgreSQL Odoo needs PostgreSQL as its database, so install it with:
+sudo apt-get install postgresql -y Create a PostgreSQL User for Odoo sudo su - postgres -c &#34;createuser -s odoo&#34; 2&gt; /dev/null || true Install Python Dependencies Odoo requires some Python packages. Install them with:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-08-11 15:49:43 +0500 PKT'>August 11, 2022</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Setting Up Odoo: A Beginner’s Guide" href="http://localhost:1313/posts/odoo/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Cooking Up Automation: A Guide to Chef Server &amp; Workstations
     </h2>
   </header>

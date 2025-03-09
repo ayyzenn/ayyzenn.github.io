@@ -4,8 +4,6 @@ title = 'Your Gateway to FTP: A Step-by-Step Guide to ProFTPD'
 tags = ['proftpd', 'ftp', 'linux']
 +++
 
-# Setting Up ProFTPD
-
 ## Introduction
 FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.
 

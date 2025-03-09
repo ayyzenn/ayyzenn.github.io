@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Ssh | ayyzenn</title>
+<title>Installation | ayyzenn</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/ssh/">
+<link rel="canonical" href="http://localhost:1313/tags/installation/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/ssh/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/ssh/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/installation/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/installation/">
 <noscript>
     <style>
         #theme-toggle,
@@ -88,36 +88,24 @@
 <main class="main"> 
 <header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tags/">Tags</a></div>
   <h1>
-    Ssh
+    Installation
   </h1>
 </header>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Creating a Virtual Machine on Microsoft Azure
+    <h2 class="entry-hint-parent">Setting Up Odoo: A Beginner’s Guide
     </h2>
   </header>
   <div class="entry-content">
-    <p>Introduction Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.
-In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.
+    <p>Update Your System Let’s start by updating your package repository:
+sudo apt update &amp;&amp; sudo apt upgrade Create an Odoo User Run this command to create a system user for Odoo:
+sudo adduser -system -home=/opt/odoo -group odoo Install PostgreSQL Odoo needs PostgreSQL as its database, so install it with:
+sudo apt-get install postgresql -y Create a PostgreSQL User for Odoo sudo su - postgres -c &#34;createuser -s odoo&#34; 2&gt; /dev/null || true Install Python Dependencies Odoo requires some Python packages. Install them with:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-08-16 15:49:43 +0500 PKT'>August 16, 2021</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Creating a Virtual Machine on Microsoft Azure" href="http://localhost:1313/posts/azure/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">SSH: Connecting to a Remote Server in Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:
-Secure Shell (SSH) for Linux-based machines Remote Desktop Protocol (RDP) for Windows-based machines Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2021-08-14 15:49:43 +0500 PKT'>August 14, 2021</span>&nbsp;·&nbsp;3 min</footer>
-  <a class="entry-link" aria-label="post link to SSH: Connecting to a Remote Server in Linux" href="http://localhost:1313/posts/ssh/"></a>
+  <footer class="entry-footer"><span title='2022-08-11 15:49:43 +0500 PKT'>August 11, 2022</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Setting Up Odoo: A Beginner’s Guide" href="http://localhost:1313/posts/odoo/"></a>
 </article>
     </main>
     

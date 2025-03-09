@@ -23,6 +23,16 @@
 &lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title>
+      <link>http://localhost:1313/posts/proftpd/</link>
+      <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/proftpd/</guid>
+      <description>&lt;h1 id=&#34;setting-up-proftpd&#34;&gt;Setting Up ProFTPD&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.&lt;/p&gt;
+&lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Dual boot Ubuntu and Windows</title>
       <link>http://localhost:1313/posts/dual_boot/</link>
       <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>

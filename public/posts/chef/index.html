@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations | ayyzenn</title>
+<meta name="keywords" content="chef, automation, ubuntu">
+<meta name="description" content="Introduction
+As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.
+Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/chef/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/chef/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Cooking Up Automation: A Guide to Chef Server &amp; Workstations
+    </h1>
+    <div class="post-meta"><span title='2022-08-02 15:49:43 +0500 PKT'>August 2, 2022</span>&nbsp;·&nbsp;3 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#chef-server" aria-label="Chef Server">Chef Server</a><ul>
+                        
+                <li>
+                    <a href="#install-the-chef-server" aria-label="Install the Chef Server">Install the Chef Server</a></li>
+                <li>
+                    <a href="#create-a-chef-user-and-organization" aria-label="Create a Chef User and Organization">Create a Chef User and Organization</a></li></ul>
+                </li>
+                <li>
+                    <a href="#chef-workstations" aria-label="Chef Workstations">Chef Workstations</a><ul>
+                        
+                <li>
+                    <a href="#setting-up-a-workstation" aria-label="Setting Up a Workstation">Setting Up a Workstation</a></li>
+                <li>
+                    <a href="#add-the-rsa-private-keys" aria-label="Add the RSA Private Keys">Add the RSA Private Keys</a></li></ul>
+                </li>
+                <li>
+                    <a href="#bootstrap-a-node" aria-label="Bootstrap a Node">Bootstrap a Node</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.</p>
+<p>Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.</p>
+<p>In this guide, we will set up a Chef server to store and serve configuration instructions and node profiling information. Additionally, we will configure a workstation where the administrator can manage the code base and modify the infrastructure. Finally, we will bootstrap a new node to integrate it into the Chef ecosystem.</p>
+<h2 id="chef-server">Chef Server<a hidden class="anchor" aria-hidden="true" href="#chef-server">#</a></h2>
+<p>The Chef server acts as the central hub for all workstations and nodes under Chef management. Configuration changes made on workstations are pushed to the Chef server, where they are pulled by nodes using <code>chef-client</code> to apply the configurations.</p>
+<h3 id="install-the-chef-server">Install the Chef Server<a hidden class="anchor" aria-hidden="true" href="#install-the-chef-server">#</a></h3>
+<ol>
+<li>
+<p>Download the latest Chef server core:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://packages.chef.io/files/stable/chef-server/13.1.13/ubuntu/18.04/chef-server-core_13.1.13-1_amd64.deb
+</span></span></code></pre></div></li>
+<li>
+<p>Install the server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dpkg -i chef-server-core_*.deb
+</span></span></code></pre></div></li>
+<li>
+<p>Start the Chef server services:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chef-server-ctl reconfigure
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="create-a-chef-user-and-organization">Create a Chef User and Organization<a hidden class="anchor" aria-hidden="true" href="#create-a-chef-user-and-organization">#</a></h3>
+<p>To link workstations and nodes to the Chef server, create an administrator and organization with associated RSA private keys.</p>
+<ol>
+<li>
+<p>Create a <code>.chef</code> directory to store the keys:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir ~/.chef
+</span></span></code></pre></div></li>
+<li>
+<p>Create a user with <code>chef-server-ctl</code>, replacing placeholders with your details:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chef-server-ctl user-create USER_NAME FIRST_NAME LAST_NAME EMAIL <span style="color:#e6db74">&#39;PASSWORD&#39;</span> --filename ~/.chef/USER_NAME.pem
+</span></span></code></pre></div></li>
+<li>
+<p>List all users:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chef-server-ctl user-list
+</span></span></code></pre></div></li>
+<li>
+<p>Create an organization and associate the user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chef-server-ctl org-create ORG_NAME <span style="color:#e6db74">&#34;ORG_FULL_NAME&#34;</span> --association_user USER_NAME --filename ~/.chef/ORG_NAME.pem
+</span></span></code></pre></div></li>
+<li>
+<p>List all organizations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chef-server-ctl org-list
+</span></span></code></pre></div></li>
+</ol>
+<p>With the Chef server installed and RSA keys generated, the workstation can now be configured.</p>
+<h2 id="chef-workstations">Chef Workstations<a hidden class="anchor" aria-hidden="true" href="#chef-workstations">#</a></h2>
+<p>The Chef workstation is where recipes, cookbooks, attributes, and configurations are managed. It can be a local machine or a remote server.</p>
+<h3 id="setting-up-a-workstation">Setting Up a Workstation<a hidden class="anchor" aria-hidden="true" href="#setting-up-a-workstation">#</a></h3>
+<ol>
+<li>
+<p>Download the latest Chef Workstation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://packages.chef.io/files/stable/chef-workstation/0.2.43/ubuntu/18.04/chef-workstation_0.2.43-1_amd64.deb
+</span></span></code></pre></div></li>
+<li>
+<p>Install Chef Workstation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dpkg -i chef-workstation_*.deb
+</span></span></code></pre></div></li>
+<li>
+<p>Create your Chef repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chef generate repo chef-repo
+</span></span></code></pre></div></li>
+<li>
+<p>Ensure that your workstation’s <code>/etc/hosts</code> file correctly maps IP addresses to the Chef server and workstation hostnames.</p>
+</li>
+<li>
+<p>Create a <code>.chef</code> subdirectory within <code>chef-repo</code> to store authentication files:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir ~/chef-repo/.chef
+</span></span><span style="display:flex;"><span>cd chef-repo
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="add-the-rsa-private-keys">Add the RSA Private Keys<a hidden class="anchor" aria-hidden="true" href="#add-the-rsa-private-keys">#</a></h3>
+<p>Authentication between the Chef server and workstations/nodes is performed using public-key encryption. Copy the RSA private keys from the Chef server to the workstation.</p>
+<ol>
+<li>
+<p>Generate an RSA key pair on the workstation (if not already available):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -b <span style="color:#ae81ff">4096</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Upload the workstation’s public key to the Chef server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-copy-id example_user@192.0.2.0
+</span></span></code></pre></div></li>
+<li>
+<p>Copy the <code>.pem</code> files from the Chef server to the workstation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp example_user@192.0.2.0:~/.chef/*.pem ~/chef-repo/.chef/
+</span></span></code></pre></div></li>
+<li>
+<p>Confirm the files were copied:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls ~/chef-repo/.chef
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="bootstrap-a-node">Bootstrap a Node<a hidden class="anchor" aria-hidden="true" href="#bootstrap-a-node">#</a></h2>
+<p>Bootstrapping a node installs the Chef client and validates the node, allowing it to pull and apply configurations from the Chef server.</p>
+<ol>
+<li>
+<p>Update the <code>/etc/hosts</code> file on the <strong>node</strong> to correctly identify the node, Chef server, and workstation.</p>
+</li>
+<li>
+<p>From the <strong>workstation</strong>, navigate to the <code>.chef</code> directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/chef-repo/.chef
+</span></span></code></pre></div></li>
+<li>
+<p>Bootstrap the node:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>knife bootstrap 192.0.2.0 -x root -P password --node-name nodename
+</span></span></code></pre></div></li>
+<li>
+<p>Verify the node has been bootstrapped:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>knife client list
+</span></span></code></pre></div></li>
+<li>
+<p>Add the bootstrapped node to the workstation’s <code>/etc/hosts</code> file.</p>
+</li>
+</ol>
+<p>For more detailed information, refer to the <a href="https://www.linode.com/docs/guides/install-a-chef-server-workstation-on-ubuntu-18-04/">Linode guide</a>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/chef/">Chef</a></li>
+      <li><a href="http://localhost:1313/tags/automation/">Automation</a></li>
+      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

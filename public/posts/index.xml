@@ -39,6 +39,15 @@
 &lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title>
+      <link>http://localhost:1313/posts/chef/</link>
+      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/chef/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.&lt;/p&gt;
+&lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title>
       <link>http://localhost:1313/posts/voip/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>

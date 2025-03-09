@@ -51,6 +51,20 @@
       <description></description>
     </item>
     <item>
+      <title>Automation</title>
+      <link>http://localhost:1313/tags/automation/</link>
+      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chef</title>
+      <link>http://localhost:1313/tags/chef/</link>
+      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/tags/chef/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Ubuntu</title>
       <link>http://localhost:1313/tags/ubuntu/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>

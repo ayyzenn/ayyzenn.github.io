@@ -8,7 +8,7 @@ theme = 'hugo-PaperMod'
     enabled = true
     title = "Saad Ahmad"
     subtitle = "Linux Nerd 🐧"
-    imageUrl = "img.png"
+    imageUrl = "img2.JPG"
     imageTitle = "Profile Picture"
     imageWidth = 200
     imageHeight = 200
@@ -46,7 +46,7 @@ theme = 'hugo-PaperMod'
     ShowBreadCrumbs = true
     ShowCodeCopyButtons = true
     taglist = true
-    defaultTheme = 'dark'
+    defaultTheme = 'default'
     lazyLoadImages = true  # Improves page load speed
 
 

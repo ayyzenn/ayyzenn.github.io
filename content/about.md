@@ -6,9 +6,6 @@ summary: about
 ShowToc: false
 ---
 
-<!-- Profile Image (Optional, Uncomment if needed) -->
-<!-- ![Ayyzenn](./img/img.png) -->
-
 # Hey there! 👋 I'm Saad Ahmad (Ayyzenn)
 
 _A passionate DevOps enthusiast, Linux geek, and aspiring MLOps & System Administration expert!_

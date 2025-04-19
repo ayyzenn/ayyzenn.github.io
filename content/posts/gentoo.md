@@ -2,7 +2,7 @@
 date = '2022-12-03T15:49:43+05:00'
 title = 'Conquering Gentoo: Turning the "Impossible" into Reality'
 tags = ['gentoo', 'linux', 'cli']
-draft = true
+draft = false
 +++
 ## Introduction
 

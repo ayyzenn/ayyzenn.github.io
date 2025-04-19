@@ -4,7 +4,7 @@
     <title>Posts on ayyzenn</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on ayyzenn</description>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.146.5</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Feb 2025 17:07:58 +0500</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -23,6 +23,20 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;note&#34;&gt;Note&lt;/h2&gt;
 &lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
+      <link>http://localhost:1313/posts/gentoo/</link>
+      <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
+      <guid>http://localhost:1313/posts/gentoo/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Processor:&lt;/strong&gt; Intel Core i5 4th Gen (4 cores)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; 8GB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; 256GB SSD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Setting Up Odoo: A Beginner’s Guide</title>

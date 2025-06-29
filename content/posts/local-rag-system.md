@@ -1,6 +1,6 @@
 ---
 title: "Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama & ChromaDB"
-date: 2025-01-16
+date: 2025-06-29
 description: "A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python."
 tags: ["RAG", "Ollama", "ChromaDB", "AI", "Python", "LLM", "Vector Database"]
 ---

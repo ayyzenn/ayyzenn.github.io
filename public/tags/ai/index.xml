@@ -4,7 +4,7 @@
     <title>AI on ayyzenn</title>
     <link>http://localhost:1313/tags/ai/</link>
     <description>Recent content in AI on ayyzenn</description>
-    <generator>Hugo -- 0.147.8</generator>
+    <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
@@ -14,6 +14,13 @@
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/agent/</guid>
       <description>A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.</description>
+    </item>
+    <item>
+      <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
+      <link>http://localhost:1313/posts/local-rag-system/</link>
+      <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/local-rag-system/</guid>
+      <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
     </item>
   </channel>
 </rss>

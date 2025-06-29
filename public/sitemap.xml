@@ -38,6 +38,21 @@
     <loc>http://localhost:1313/posts/ollama/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/local-rag-system/</loc>
+    <lastmod>2025-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/chromadb/</loc>
+    <lastmod>2025-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/llm/</loc>
+    <lastmod>2025-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ollama/</loc>
+    <lastmod>2025-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vector-database/</loc>
+    <lastmod>2025-01-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/cli/</loc>
     <lastmod>2022-12-03T15:49:43+05:00</lastmod>
   </url><url>

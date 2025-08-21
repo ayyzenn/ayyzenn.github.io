@@ -6,8 +6,15 @@
     <description>Recent content in RAG on ayyzenn</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Feb 2025 17:07:58 +0500</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/rag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
+      <link>http://localhost:1313/posts/local-rag-system/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/local-rag-system/</guid>
+      <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
+    </item>
     <item>
       <title>Setting Up Olama with DeepSeek Coder on Manjaro: A Step-by-Step Guide</title>
       <link>http://localhost:1313/posts/ollama/</link>
@@ -23,13 +30,6 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;note&#34;&gt;Note&lt;/h2&gt;
 &lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
-      <link>http://localhost:1313/posts/local-rag-system/</link>
-      <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/local-rag-system/</guid>
-      <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
     </item>
   </channel>
 </rss>

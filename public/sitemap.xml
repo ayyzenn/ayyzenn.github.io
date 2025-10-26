@@ -53,6 +53,18 @@
     <loc>http://localhost:1313/posts/ollama/</loc>
     <lastmod>2025-02-03T17:07:58+05:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/rag-text-to-sql-post/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/database/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sql/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/text-to-sql/</loc>
+    <lastmod>2025-01-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/cli/</loc>
     <lastmod>2022-12-03T15:49:43+05:00</lastmod>
   </url><url>

@@ -4,7 +4,7 @@
     <title>RAG on ayyzenn</title>
     <link>http://localhost:1313/tags/rag/</link>
     <description>Recent content in RAG on ayyzenn</description>
-    <generator>Hugo -- 0.147.9</generator>
+    <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/rag/index.xml" rel="self" type="application/rss+xml" />
@@ -30,6 +30,13 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;note&#34;&gt;Note&lt;/h2&gt;
 &lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama &amp; ChromaDB</title>
+      <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
+      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
     </item>
   </channel>
 </rss>

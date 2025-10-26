@@ -10,8 +10,8 @@ theme = 'hugo-PaperMod'
     subtitle = "Linux Nerd 🐧"
     imageUrl = "img3.jpeg"
     imageTitle = "Profile Picture"
-    imageWidth = 200
-    imageHeight = 200
+    imageWidth = 300
+    imageHeight = 300
 
 [[params.profileMode.buttons]]
     name = "About Me"
@@ -49,8 +49,6 @@ theme = 'hugo-PaperMod'
     defaultTheme = 'default'
     lazyLoadImages = true  # Improves page load speed
 
-
-
 [[params.socialIcons]]
     name = "github"
     url = "https://github.com/ayyzenn"
@@ -61,3 +59,4 @@ theme = 'hugo-PaperMod'
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
+

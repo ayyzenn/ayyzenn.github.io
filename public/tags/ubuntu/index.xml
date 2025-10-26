@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ubuntu on ayyzenn</title>
-    <link>http://localhost:1313/tags/ubuntu/</link>
+    <link>https://ayyzenn.github.io/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Aug 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ayyzenn.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up Odoo: A Beginner’s Guide</title>
-      <link>http://localhost:1313/posts/odoo/</link>
+      <link>https://ayyzenn.github.io/posts/odoo/</link>
       <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/odoo/</guid>
+      <guid>https://ayyzenn.github.io/posts/odoo/</guid>
       <description>&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s start by updating your package repository:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
@@ -29,18 +29,18 @@
     </item>
     <item>
       <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title>
-      <link>http://localhost:1313/posts/chef/</link>
+      <link>https://ayyzenn.github.io/posts/chef/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/chef/</guid>
+      <guid>https://ayyzenn.github.io/posts/chef/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.&lt;/p&gt;
 &lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title>
-      <link>http://localhost:1313/posts/voip/</link>
+      <link>https://ayyzenn.github.io/posts/voip/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/voip/</guid>
+      <guid>https://ayyzenn.github.io/posts/voip/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Voice over Internet Protocol (VoIP) is a technology that enables voice and video communication over the internet instead of traditional landlines. With an internet connection, users can make calls without relying on local phone services or physical copper wiring. A VoIP service provider manages the call transmission over the internet.&lt;/p&gt;
 &lt;h1 id=&#34;how-voip-works&#34;&gt;How VoIP Works&lt;/h1&gt;
@@ -48,9 +48,9 @@
     </item>
     <item>
       <title>SSH: Connecting to a Remote Server in Linux</title>
-      <link>http://localhost:1313/posts/ssh/</link>
+      <link>https://ayyzenn.github.io/posts/ssh/</link>
       <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/ssh/</guid>
+      <guid>https://ayyzenn.github.io/posts/ssh/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:&lt;/p&gt;
 &lt;ul&gt;
@@ -61,9 +61,9 @@
     </item>
     <item>
       <title>Dual boot Ubuntu and Windows</title>
-      <link>http://localhost:1313/posts/dual_boot/</link>
+      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
       <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/dual_boot/</guid>
+      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
 &lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;

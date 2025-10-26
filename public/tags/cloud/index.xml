@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Cloud on ayyzenn</title>
-    <link>http://localhost:1313/tags/cloud/</link>
+    <link>https://ayyzenn.github.io/tags/cloud/</link>
     <description>Recent content in Cloud on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Aug 2021 15:49:43 +0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ayyzenn.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a Virtual Machine on Microsoft Azure</title>
-      <link>http://localhost:1313/posts/azure/</link>
+      <link>https://ayyzenn.github.io/posts/azure/</link>
       <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/azure/</guid>
+      <guid>https://ayyzenn.github.io/posts/azure/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.&lt;/p&gt;
 &lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description>

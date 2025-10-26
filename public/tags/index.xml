@@ -2,290 +2,269 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on ayyzenn</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://ayyzenn.github.io/tags/</link>
     <description>Recent content in Tags on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ayyzenn.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
+      <link>https://ayyzenn.github.io/tags/ai/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
+      <guid>https://ayyzenn.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>ChromaDB</title>
-      <link>http://localhost:1313/tags/chromadb/</link>
+      <link>https://ayyzenn.github.io/tags/chromadb/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/chromadb/</guid>
+      <guid>https://ayyzenn.github.io/tags/chromadb/</guid>
       <description></description>
     </item>
     <item>
       <title>LLM</title>
-      <link>http://localhost:1313/tags/llm/</link>
+      <link>https://ayyzenn.github.io/tags/llm/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/llm/</guid>
+      <guid>https://ayyzenn.github.io/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>Ollama</title>
-      <link>http://localhost:1313/tags/ollama/</link>
+      <link>https://ayyzenn.github.io/tags/ollama/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ollama/</guid>
+      <guid>https://ayyzenn.github.io/tags/ollama/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>https://ayyzenn.github.io/tags/python/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>https://ayyzenn.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>RAG</title>
-      <link>http://localhost:1313/tags/rag/</link>
+      <link>https://ayyzenn.github.io/tags/rag/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rag/</guid>
+      <guid>https://ayyzenn.github.io/tags/rag/</guid>
       <description></description>
     </item>
     <item>
       <title>Vector Database</title>
-      <link>http://localhost:1313/tags/vector-database/</link>
+      <link>https://ayyzenn.github.io/tags/vector-database/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/vector-database/</guid>
+      <guid>https://ayyzenn.github.io/tags/vector-database/</guid>
       <description></description>
     </item>
     <item>
       <title>Gemini</title>
-      <link>http://localhost:1313/tags/gemini/</link>
+      <link>https://ayyzenn.github.io/tags/gemini/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gemini/</guid>
+      <guid>https://ayyzenn.github.io/tags/gemini/</guid>
       <description></description>
     </item>
     <item>
       <title>LangGraph</title>
-      <link>http://localhost:1313/tags/langgraph/</link>
+      <link>https://ayyzenn.github.io/tags/langgraph/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/langgraph/</guid>
+      <guid>https://ayyzenn.github.io/tags/langgraph/</guid>
       <description></description>
     </item>
     <item>
       <title>YouTube</title>
-      <link>http://localhost:1313/tags/youtube/</link>
+      <link>https://ayyzenn.github.io/tags/youtube/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/youtube/</guid>
+      <guid>https://ayyzenn.github.io/tags/youtube/</guid>
       <description></description>
     </item>
     <item>
-      <title>LangChain</title>
-      <link>http://localhost:1313/tags/langchain/</link>
+      <title>Langchain</title>
+      <link>https://ayyzenn.github.io/tags/langchain/</link>
       <pubDate>Mon, 03 Feb 2025 17:07:58 +0500</pubDate>
-      <guid>http://localhost:1313/tags/langchain/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Database</title>
-      <link>http://localhost:1313/tags/database/</link>
-      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/database/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SQL</title>
-      <link>http://localhost:1313/tags/sql/</link>
-      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Text-to-SQL</title>
-      <link>http://localhost:1313/tags/text-to-sql/</link>
-      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/text-to-sql/</guid>
+      <guid>https://ayyzenn.github.io/tags/langchain/</guid>
       <description></description>
     </item>
     <item>
       <title>Cli</title>
-      <link>http://localhost:1313/tags/cli/</link>
+      <link>https://ayyzenn.github.io/tags/cli/</link>
       <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/cli/</guid>
+      <guid>https://ayyzenn.github.io/tags/cli/</guid>
       <description></description>
     </item>
     <item>
       <title>Gentoo</title>
-      <link>http://localhost:1313/tags/gentoo/</link>
+      <link>https://ayyzenn.github.io/tags/gentoo/</link>
       <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/gentoo/</guid>
+      <guid>https://ayyzenn.github.io/tags/gentoo/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>https://ayyzenn.github.io/tags/linux/</link>
       <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>https://ayyzenn.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Installation</title>
-      <link>http://localhost:1313/tags/installation/</link>
+      <link>https://ayyzenn.github.io/tags/installation/</link>
       <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/installation/</guid>
+      <guid>https://ayyzenn.github.io/tags/installation/</guid>
       <description></description>
     </item>
     <item>
       <title>Odoo</title>
-      <link>http://localhost:1313/tags/odoo/</link>
+      <link>https://ayyzenn.github.io/tags/odoo/</link>
       <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/odoo/</guid>
+      <guid>https://ayyzenn.github.io/tags/odoo/</guid>
       <description></description>
     </item>
     <item>
       <title>Ubuntu</title>
-      <link>http://localhost:1313/tags/ubuntu/</link>
+      <link>https://ayyzenn.github.io/tags/ubuntu/</link>
       <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/ubuntu/</guid>
+      <guid>https://ayyzenn.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     <item>
       <title>Ftp</title>
-      <link>http://localhost:1313/tags/ftp/</link>
+      <link>https://ayyzenn.github.io/tags/ftp/</link>
       <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/ftp/</guid>
+      <guid>https://ayyzenn.github.io/tags/ftp/</guid>
       <description></description>
     </item>
     <item>
       <title>Proftpd</title>
-      <link>http://localhost:1313/tags/proftpd/</link>
+      <link>https://ayyzenn.github.io/tags/proftpd/</link>
       <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/proftpd/</guid>
+      <guid>https://ayyzenn.github.io/tags/proftpd/</guid>
       <description></description>
     </item>
     <item>
       <title>Asterisk</title>
-      <link>http://localhost:1313/tags/asterisk/</link>
+      <link>https://ayyzenn.github.io/tags/asterisk/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/asterisk/</guid>
+      <guid>https://ayyzenn.github.io/tags/asterisk/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
+      <link>https://ayyzenn.github.io/tags/automation/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/automation/</guid>
+      <guid>https://ayyzenn.github.io/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Chef</title>
-      <link>http://localhost:1313/tags/chef/</link>
+      <link>https://ayyzenn.github.io/tags/chef/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/chef/</guid>
+      <guid>https://ayyzenn.github.io/tags/chef/</guid>
       <description></description>
     </item>
     <item>
       <title>Voip</title>
-      <link>http://localhost:1313/tags/voip/</link>
+      <link>https://ayyzenn.github.io/tags/voip/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/voip/</guid>
+      <guid>https://ayyzenn.github.io/tags/voip/</guid>
       <description></description>
     </item>
     <item>
       <title>Containers</title>
-      <link>http://localhost:1313/tags/containers/</link>
+      <link>https://ayyzenn.github.io/tags/containers/</link>
       <pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/containers/</guid>
+      <guid>https://ayyzenn.github.io/tags/containers/</guid>
       <description></description>
     </item>
     <item>
       <title>Dockers</title>
-      <link>http://localhost:1313/tags/dockers/</link>
+      <link>https://ayyzenn.github.io/tags/dockers/</link>
       <pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/dockers/</guid>
+      <guid>https://ayyzenn.github.io/tags/dockers/</guid>
       <description></description>
     </item>
     <item>
       <title>Puppet</title>
-      <link>http://localhost:1313/tags/puppet/</link>
+      <link>https://ayyzenn.github.io/tags/puppet/</link>
       <pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/puppet/</guid>
+      <guid>https://ayyzenn.github.io/tags/puppet/</guid>
       <description></description>
     </item>
     <item>
       <title>Gh</title>
-      <link>http://localhost:1313/tags/gh/</link>
+      <link>https://ayyzenn.github.io/tags/gh/</link>
       <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/gh/</guid>
+      <guid>https://ayyzenn.github.io/tags/gh/</guid>
       <description></description>
     </item>
     <item>
       <title>Github</title>
-      <link>http://localhost:1313/tags/github/</link>
+      <link>https://ayyzenn.github.io/tags/github/</link>
       <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/github/</guid>
+      <guid>https://ayyzenn.github.io/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Pat</title>
-      <link>http://localhost:1313/tags/pat/</link>
+      <link>https://ayyzenn.github.io/tags/pat/</link>
       <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/pat/</guid>
+      <guid>https://ayyzenn.github.io/tags/pat/</guid>
       <description></description>
     </item>
     <item>
       <title>Tokens</title>
-      <link>http://localhost:1313/tags/tokens/</link>
+      <link>https://ayyzenn.github.io/tags/tokens/</link>
       <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/tokens/</guid>
+      <guid>https://ayyzenn.github.io/tags/tokens/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/tags/git/</link>
+      <link>https://ayyzenn.github.io/tags/git/</link>
       <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/git/</guid>
+      <guid>https://ayyzenn.github.io/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure</title>
-      <link>http://localhost:1313/tags/azure/</link>
+      <link>https://ayyzenn.github.io/tags/azure/</link>
       <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/azure/</guid>
+      <guid>https://ayyzenn.github.io/tags/azure/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>http://localhost:1313/tags/cloud/</link>
+      <link>https://ayyzenn.github.io/tags/cloud/</link>
       <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/cloud/</guid>
+      <guid>https://ayyzenn.github.io/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Ssh</title>
-      <link>http://localhost:1313/tags/ssh/</link>
+      <link>https://ayyzenn.github.io/tags/ssh/</link>
       <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/ssh/</guid>
+      <guid>https://ayyzenn.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     <item>
       <title>Dual Boot</title>
-      <link>http://localhost:1313/tags/dual-boot/</link>
+      <link>https://ayyzenn.github.io/tags/dual-boot/</link>
       <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/dual-boot/</guid>
+      <guid>https://ayyzenn.github.io/tags/dual-boot/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
+      <link>https://ayyzenn.github.io/tags/hugo/</link>
       <pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate>
-      <guid>http://localhost:1313/tags/hugo/</guid>
+      <guid>https://ayyzenn.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>First</title>
-      <link>http://localhost:1313/tags/first/</link>
+      <link>https://ayyzenn.github.io/tags/first/</link>
       <pubDate>Tue, 15 Sep 2020 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/tags/first/</guid>
+      <guid>https://ayyzenn.github.io/tags/first/</guid>
       <description></description>
     </item>
   </channel>

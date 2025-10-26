@@ -1,6 +1,6 @@
 ---
 title: "Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama & ChromaDB"
-date: 2025-01-27
+date: 2025-10-27
 description: "A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain."
 tags: ["RAG", "SQL", "Ollama", "ChromaDB", "LangChain", "Python", "Text-to-SQL", "Database", "AI"]
 ---
@@ -115,21 +115,21 @@ Genre (1) → (Many) Track
 def generate_sql_query(state: State, llm: ChatOllama, db: SQLDatabase) -> Dict[str, str]:
     """Generate SQL query from natural language question."""
     prompt_template = create_sql_prompt_template()
-    
+
     prompt = prompt_template.invoke({
         "dialect": db.dialect,
         "top_k": 10,
         "table_info": db.get_table_info(),
         "input": state["question"],
     })
-    
+
     # Use structured output for reliable SQL generation
     structured_llm = llm.with_structured_output(QueryOutput)
     result = structured_llm.invoke(prompt)
-    
+
     # Normalize table names to handle case sensitivity
     normalized_query = normalize_table_names(result["query"], db)
-    
+
     return {"query": normalized_query}
 ```
 
@@ -141,21 +141,21 @@ One of the key challenges in text-to-SQL systems is handling case sensitivity:
 def normalize_table_names(query: str, db: SQLDatabase) -> str:
     """Normalize table names in SQL query to handle case sensitivity."""
     table_names = get_table_names(db)
-    
+
     # Create mapping from lowercase to actual table names
     table_mapping = {name.lower(): name for name in table_names}
-    
+
     # Pattern to match table names in SQL (FROM, JOIN, UPDATE, etc.)
     pattern = r'\b(?:FROM|JOIN|UPDATE|INTO|TABLE)\s+([a-zA-Z_][a-zA-Z0-9_]*)'
-    
+
     def replace_in_context(match):
         keyword = match.group(0).split()[0]
         table_name = match.group(1)
-        
+
         if table_name.lower() in table_mapping:
             return f"{keyword} {table_mapping[table_name.lower()]}"
         return match.group(0)
-    
+
     return re.sub(pattern, replace_in_context, query, flags=re.IGNORECASE)
 ```
 
@@ -169,19 +169,19 @@ def normalize_table_names(query: str, db: SQLDatabase) -> str:
 def populate_vector_store(vector_store: Chroma, db: SQLDatabase) -> None:
     """Populate the vector store with proper nouns from the database."""
     proper_nouns = []
-    
+
     # Get proper nouns from various tables
     artists = db.run("SELECT Name FROM Artist WHERE Name IS NOT NULL")
     if artists:
         artists_list = eval(artists)
         proper_nouns.extend([artist[0] for artist in artists_list if artist[0]])
-    
+
     # Add albums, genres, etc.
     albums = db.run("SELECT Title FROM Album WHERE Title IS NOT NULL")
     if albums:
         albums_list = eval(albums)
         proper_nouns.extend([album[0] for album in albums_list if album[0]])
-    
+
     # Add to vector store
     if proper_nouns:
         vector_store.add_texts(proper_nouns)
@@ -195,13 +195,13 @@ The system uses ChromaDB to handle approximate spelling and fuzzy matching:
 def create_proper_noun_retriever_tool(vector_store: Chroma) -> Any:
     """Create a retriever tool for proper noun lookup."""
     retriever = vector_store.as_retriever(search_kwargs={"k": 5})
-    
+
     description = (
         "Use to look up values to filter on. Input is an approximate spelling "
         "of the proper noun, output is valid proper nouns. Use the noun most "
         "similar to the search."
     )
-    
+
     return create_retriever_tool(
         retriever,
         name="search_proper_nouns",
@@ -226,21 +226,21 @@ def interactive_mode(self):
     print("Ask questions about the Chinook database!")
     print("Type 'quit' or 'exit' to stop.")
     print("="*60)
-    
+
     while True:
         try:
             question = input("\nYour question: ").strip()
-            
+
             if question.lower() in ['quit', 'exit', 'q']:
                 print("Goodbye!")
                 break
-            
+
             result = self.process_question(question)
-            
+
             print(f"\n{'='*40}")
             print(f"ANSWER: {result['answer']}")
             print(f"{'='*40}")
-            
+
         except KeyboardInterrupt:
             print("\nGoodbye!")
             break

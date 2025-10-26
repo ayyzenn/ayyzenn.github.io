@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on ayyzenn</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>https://ayyzenn.github.io/tags/linux/</link>
     <description>Recent content in Linux on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Dec 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ayyzenn.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
-      <link>http://localhost:1313/posts/gentoo/</link>
+      <link>https://ayyzenn.github.io/posts/gentoo/</link>
       <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/gentoo/</guid>
+      <guid>https://ayyzenn.github.io/posts/gentoo/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
 &lt;ul&gt;
@@ -24,18 +24,18 @@
     </item>
     <item>
       <title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title>
-      <link>http://localhost:1313/posts/proftpd/</link>
+      <link>https://ayyzenn.github.io/posts/proftpd/</link>
       <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/proftpd/</guid>
+      <guid>https://ayyzenn.github.io/posts/proftpd/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.&lt;/p&gt;
 &lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dual boot Ubuntu and Windows</title>
-      <link>http://localhost:1313/posts/dual_boot/</link>
+      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
       <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/dual_boot/</guid>
+      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
 &lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;

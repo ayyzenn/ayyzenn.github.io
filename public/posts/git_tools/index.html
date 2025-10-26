@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens | ayyzenn</title>
 <meta name="keywords" content="gh, github, cli, pat, tokens">
 <meta name="description" content="Introduction
@@ -14,16 +14,16 @@ This guide covers everything from generating a secure PAT to leveraging GitHub C
 Creating a Personal Access Token (PAT)
 A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/git_tools/">
+<link rel="canonical" href="https://ayyzenn.github.io/posts/git_tools/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/git_tools/">
+<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/git_tools/">
 <noscript>
     <style>
         #theme-toggle,
@@ -60,7 +60,81 @@ A Personal Access Token (PAT) acts as a secure alternative to passwords for auth
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/git_tools/">
+  <meta property="og:site_name" content="ayyzenn">
+  <meta property="og:title" content="Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens">
+  <meta property="og:description" content="Introduction GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (gh) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.
+This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.
+Creating a Personal Access Token (PAT) A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-09-04T15:49:43+05:00">
+    <meta property="article:modified_time" content="2021-09-04T15:49:43+05:00">
+    <meta property="article:tag" content="Gh">
+    <meta property="article:tag" content="Github">
+    <meta property="article:tag" content="Cli">
+    <meta property="article:tag" content="Pat">
+    <meta property="article:tag" content="Tokens">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens">
+<meta name="twitter:description" content="Introduction
+GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (gh) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.
+This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.
+
+Creating a Personal Access Token (PAT)
+A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ayyzenn.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens",
+      "item": "https://ayyzenn.github.io/posts/git_tools/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens",
+  "name": "Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens",
+  "description": "Introduction GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (gh) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.\nThis guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.\nCreating a Personal Access Token (PAT) A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.\n",
+  "keywords": [
+    "gh", "github", "cli", "pat", "tokens"
+  ],
+  "articleBody": "Introduction GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (gh) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.\nThis guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.\nCreating a Personal Access Token (PAT) A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.\nSteps to Generate a PAT Navigate to the upper-right corner of your GitHub page and click on your profile photo. From the dropdown menu, select Settings. In the left sidebar, click Developer settings. Select Personal access tokens. Click Generate new token. Provide a descriptive name for your token to easily identify its purpose. Set an expiration date using the Expiration dropdown menu. Assign the necessary scopes (e.g., select repo for repository access). Click Generate token. Securely store the generated token as it will not be visible again. Important Considerations Treat your PAT like a password—store it securely and never share it publicly. Regularly review and regenerate tokens as needed to maintain security. Why Use GitHub CLI? The gh tool simplifies interactions with GitHub, making it a must-have for developers who want to manage repositories, issues, pull requests, and workflows directly from the terminal.\nKey Benefits: Secure authentication without handling passwords or tokens manually. Efficient repository management (create, clone, fork, and manage repos effortlessly). Seamless collaboration (list, create, and merge pull requests and issues). GitHub Actions control (trigger and monitor workflows without a web browser). Installing GitHub CLI on Manjaro Linux For Manjaro (and other Arch-based distributions), install gh using:\nyay -S github-cli Verify the installation:\ngh --version Authenticating with GitHub CLI Login using:\ngh auth login Follow the interactive prompts:\nSelect GitHub.com or GitHub Enterprise. Choose authentication via HTTPS or SSH. Authenticate using a one-time browser-based login or SSH key. To confirm authentication:\ngh auth status Essential GitHub CLI Commands Repository Management Create a new repository:\ngh repo create my-repo --public Clone an existing repository:\ngh repo clone username/repository Fork a repository:\ngh repo fork username/repository Managing Issues \u0026 Pull Requests List open issues:\ngh issue list Create a new issue:\ngh issue create --title \"Bug Report\" --body \"Describe the bug\" View and merge pull requests:\ngh pr list gh pr merge 123 --squash --delete-branch Controlling GitHub Actions List workflow runs:\ngh run list Trigger a workflow manually:\ngh workflow run workflow-name.yml View detailed logs of a failed run:\ngh run view --log Using Git, GitHub CLI, and PAT Together While gh is excellent for managing GitHub tasks, Git remains the foundation for version control. Here’s how they work together:\nInstall Git (if not already installed): sudo pacman -S git Set up Git and GitHub CLI with PAT authentication: git clone https://github.com/username/repository.git cd repository git add . git commit -m \"Initial commit\" git push origin main If using HTTPS with PAT authentication:\ngit remote set-url origin https://github.com/username/repository.git Now, create a pull request using GitHub CLI:\ngh pr create --title \"New Feature\" --body \"Added a new feature to enhance performance\" Conclusion By combining Personal Access Tokens with GitHub CLI, developers gain an efficient, secure, and command-driven approach to managing repositories, collaborating on code, and automating workflows. Whether you’re authenticating via PAT, creating pull requests, or triggering GitHub Actions, this guide provides the essential tools to optimize your GitHub workflow.\n",
+  "wordCount" : "575",
+  "inLanguage": "en",
+  "datePublished": "2021-09-04T15:49:43+05:00",
+  "dateModified": "2021-09-04T15:49:43+05:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ayyzenn.github.io/posts/git_tools/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ayyzenn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ayyzenn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -78,7 +152,7 @@ A Personal Access Token (PAT) acts as a secure alternative to passwords for auth
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -104,17 +178,17 @@ A Personal Access Token (PAT) acts as a secure alternative to passwords for auth
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://ayyzenn.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Posts">
+                <a href="https://ayyzenn.github.io/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -125,7 +199,7 @@ A Personal Access Token (PAT) acts as a secure alternative to passwords for auth
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens
     </h1>
@@ -285,18 +359,18 @@ A Personal Access Token (PAT) acts as a secure alternative to passwords for auth
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/gh/">Gh</a></li>
-      <li><a href="http://localhost:1313/tags/github/">Github</a></li>
-      <li><a href="http://localhost:1313/tags/cli/">Cli</a></li>
-      <li><a href="http://localhost:1313/tags/pat/">Pat</a></li>
-      <li><a href="http://localhost:1313/tags/tokens/">Tokens</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/gh/">Gh</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/github/">Github</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/cli/">Cli</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/pat/">Pat</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/tokens/">Tokens</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
+        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
 
     <span>
         Powered by

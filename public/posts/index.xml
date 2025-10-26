@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on ayyzenn</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://ayyzenn.github.io/posts/</link>
     <description>Recent content in Posts on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ayyzenn.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
-      <link>http://localhost:1313/posts/local-rag-system/</link>
+      <link>https://ayyzenn.github.io/posts/local-rag-system/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/local-rag-system/</guid>
+      <guid>https://ayyzenn.github.io/posts/local-rag-system/</guid>
       <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
     </item>
     <item>
       <title>Building a YouTube Transcript Summarizer with LangGraph and Gemini</title>
-      <link>http://localhost:1313/posts/agent/</link>
+      <link>https://ayyzenn.github.io/posts/agent/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/agent/</guid>
+      <guid>https://ayyzenn.github.io/posts/agent/</guid>
       <description>A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.</description>
     </item>
     <item>
       <title>Setting Up Olama with DeepSeek Coder on Manjaro: A Step-by-Step Guide</title>
-      <link>http://localhost:1313/posts/ollama/</link>
+      <link>https://ayyzenn.github.io/posts/ollama/</link>
       <pubDate>Mon, 03 Feb 2025 17:07:58 +0500</pubDate>
-      <guid>http://localhost:1313/posts/ollama/</guid>
+      <guid>https://ayyzenn.github.io/posts/ollama/</guid>
       <description>&lt;h2 id=&#34;what-is-olama&#34;&gt;What is Olama?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Olama&lt;/strong&gt; is an open-source framework designed to run and manage large language models (LLMs) efficiently on local machines. It allows developers to load and interact with various AI models without relying on cloud-based APIs.&lt;/p&gt;
 &lt;h3 id=&#34;why-use-olama&#34;&gt;Why Use Olama?&lt;/h3&gt;
@@ -39,17 +39,10 @@
 &lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama &amp; ChromaDB</title>
-      <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
-      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
-      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
-    </item>
-    <item>
       <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
-      <link>http://localhost:1313/posts/gentoo/</link>
+      <link>https://ayyzenn.github.io/posts/gentoo/</link>
       <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/gentoo/</guid>
+      <guid>https://ayyzenn.github.io/posts/gentoo/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
 &lt;ul&gt;
@@ -61,9 +54,9 @@
     </item>
     <item>
       <title>Setting Up Odoo: A Beginner’s Guide</title>
-      <link>http://localhost:1313/posts/odoo/</link>
+      <link>https://ayyzenn.github.io/posts/odoo/</link>
       <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/odoo/</guid>
+      <guid>https://ayyzenn.github.io/posts/odoo/</guid>
       <description>&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s start by updating your package repository:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
@@ -80,27 +73,27 @@
     </item>
     <item>
       <title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title>
-      <link>http://localhost:1313/posts/proftpd/</link>
+      <link>https://ayyzenn.github.io/posts/proftpd/</link>
       <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/proftpd/</guid>
+      <guid>https://ayyzenn.github.io/posts/proftpd/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.&lt;/p&gt;
 &lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title>
-      <link>http://localhost:1313/posts/chef/</link>
+      <link>https://ayyzenn.github.io/posts/chef/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/chef/</guid>
+      <guid>https://ayyzenn.github.io/posts/chef/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.&lt;/p&gt;
 &lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title>
-      <link>http://localhost:1313/posts/voip/</link>
+      <link>https://ayyzenn.github.io/posts/voip/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/voip/</guid>
+      <guid>https://ayyzenn.github.io/posts/voip/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Voice over Internet Protocol (VoIP) is a technology that enables voice and video communication over the internet instead of traditional landlines. With an internet connection, users can make calls without relying on local phone services or physical copper wiring. A VoIP service provider manages the call transmission over the internet.&lt;/p&gt;
 &lt;h1 id=&#34;how-voip-works&#34;&gt;How VoIP Works&lt;/h1&gt;
@@ -108,9 +101,9 @@
     </item>
     <item>
       <title>Setting up Puppet using Docker</title>
-      <link>http://localhost:1313/posts/puppet/</link>
+      <link>https://ayyzenn.github.io/posts/puppet/</link>
       <pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/puppet/</guid>
+      <guid>https://ayyzenn.github.io/posts/puppet/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Puppet is one of the earliest configuration management tools and has gained a substantial community of supporters and users. It is a powerful tool for deploying, configuring, managing, and maintaining a machine or a system.&lt;/p&gt;
 &lt;h2 id=&#34;configuration-management&#34;&gt;Configuration Management&lt;/h2&gt;
@@ -119,9 +112,9 @@
     </item>
     <item>
       <title>Creating a container in docker</title>
-      <link>http://localhost:1313/posts/container_docker/</link>
+      <link>https://ayyzenn.github.io/posts/container_docker/</link>
       <pubDate>Wed, 27 Jul 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/container_docker/</guid>
+      <guid>https://ayyzenn.github.io/posts/container_docker/</guid>
       <description>&lt;h3 id=&#34;creating-a-docker-container-with-ubuntu&#34;&gt;Creating a Docker Container with Ubuntu&lt;/h3&gt;
 &lt;p&gt;To create a Docker container, first download the Ubuntu image from &lt;a href=&#34;https://hub.docker.com/search?q=&#34;&gt;Docker Hub&lt;/a&gt;. Use the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
@@ -137,18 +130,18 @@
     </item>
     <item>
       <title>Docker on Ubuntu</title>
-      <link>http://localhost:1313/posts/dockers/</link>
+      <link>https://ayyzenn.github.io/posts/dockers/</link>
       <pubDate>Tue, 26 Jul 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/dockers/</guid>
+      <guid>https://ayyzenn.github.io/posts/dockers/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.&lt;/p&gt;
 &lt;p&gt;By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title>
-      <link>http://localhost:1313/posts/git_tools/</link>
+      <link>https://ayyzenn.github.io/posts/git_tools/</link>
       <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/git_tools/</guid>
+      <guid>https://ayyzenn.github.io/posts/git_tools/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (&lt;code&gt;gh&lt;/code&gt;) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.&lt;/p&gt;
 &lt;p&gt;This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.&lt;/p&gt;
@@ -158,9 +151,9 @@
     </item>
     <item>
       <title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title>
-      <link>http://localhost:1313/posts/git_cli/</link>
+      <link>https://ayyzenn.github.io/posts/git_cli/</link>
       <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/git_cli/</guid>
+      <guid>https://ayyzenn.github.io/posts/git_cli/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;This guide provides a comprehensive introduction to GitHub, covering:&lt;/p&gt;
 &lt;ul&gt;
@@ -177,18 +170,18 @@
     </item>
     <item>
       <title>Creating a Virtual Machine on Microsoft Azure</title>
-      <link>http://localhost:1313/posts/azure/</link>
+      <link>https://ayyzenn.github.io/posts/azure/</link>
       <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/azure/</guid>
+      <guid>https://ayyzenn.github.io/posts/azure/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.&lt;/p&gt;
 &lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description>
     </item>
     <item>
       <title>SSH: Connecting to a Remote Server in Linux</title>
-      <link>http://localhost:1313/posts/ssh/</link>
+      <link>https://ayyzenn.github.io/posts/ssh/</link>
       <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/ssh/</guid>
+      <guid>https://ayyzenn.github.io/posts/ssh/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:&lt;/p&gt;
 &lt;ul&gt;
@@ -199,9 +192,9 @@
     </item>
     <item>
       <title>Dual boot Ubuntu and Windows</title>
-      <link>http://localhost:1313/posts/dual_boot/</link>
+      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
       <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/dual_boot/</guid>
+      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
 &lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;
@@ -210,9 +203,9 @@
     </item>
     <item>
       <title>Hugo: The Fastest Static Site Generator</title>
-      <link>http://localhost:1313/posts/hugo/</link>
+      <link>https://ayyzenn.github.io/posts/hugo/</link>
       <pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate>
-      <guid>http://localhost:1313/posts/hugo/</guid>
+      <guid>https://ayyzenn.github.io/posts/hugo/</guid>
       <description>&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;
 &lt;p&gt;Hugo is an open-source static site generator (SSG) written in Go. It is designed for speed, simplicity, and flexibility, making it a popular choice for building blogs, documentation sites, and personal portfolios. Unlike traditional content management systems (CMS) like WordPress, Hugo generates static HTML files that can be served directly from any web server, eliminating the need for a database.&lt;/p&gt;
 &lt;h2 id=&#34;why-use-hugo&#34;&gt;Why Use Hugo?&lt;/h2&gt;
@@ -220,9 +213,9 @@
     </item>
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/posts/first_post/</link>
+      <link>https://ayyzenn.github.io/posts/first_post/</link>
       <pubDate>Tue, 15 Sep 2020 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/first_post/</guid>
+      <guid>https://ayyzenn.github.io/posts/first_post/</guid>
       <description>&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description>
     </item>
   </channel>

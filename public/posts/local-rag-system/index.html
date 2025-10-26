@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB | ayyzenn</title>
 <meta name="keywords" content="RAG, Ollama, ChromaDB, AI, Python, LLM, Vector Database">
 <meta name="description" content="A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/local-rag-system/">
+<link rel="canonical" href="https://ayyzenn.github.io/posts/local-rag-system/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/local-rag-system/">
+<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/local-rag-system/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +55,75 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/local-rag-system/">
+  <meta property="og:site_name" content="ayyzenn">
+  <meta property="og:title" content="Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama & ChromaDB">
+  <meta property="og:description" content="A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-29T00:00:00+00:00">
+    <meta property="article:tag" content="RAG">
+    <meta property="article:tag" content="Ollama">
+    <meta property="article:tag" content="ChromaDB">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="LLM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB">
+<meta name="twitter:description" content="A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ayyzenn.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama \u0026 ChromaDB",
+      "item": "https://ayyzenn.github.io/posts/local-rag-system/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama \u0026 ChromaDB",
+  "name": "Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama \u0026 ChromaDB",
+  "description": "A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.",
+  "keywords": [
+    "RAG", "Ollama", "ChromaDB", "AI", "Python", "LLM", "Vector Database"
+  ],
+  "articleBody": "🧠 What is RAG (Retrieval-Augmented Generation)? RAG is a powerful AI technique that combines the strengths of information retrieval with large language model generation. Instead of relying solely on the model’s training data, RAG systems can access and use external knowledge sources to provide more accurate, up-to-date, and contextually relevant responses.\nWhy Build a Local RAG System? 🔒 Privacy: Your data never leaves your machine 💰 Cost-Effective: No API fees or usage limits ⚡ Speed: No network latency for queries 🎯 Customization: Complete control over your knowledge base 🔄 Offline Access: Works without internet connectivity 🏗️ Architecture Overview My local RAG system consists of four main components:\nComponent Purpose Technology Document Processing Clean and chunk text documents Python + Regex Vector Store Store and search embeddings ChromaDB Embeddings Convert text to vectors sentence-transformers LLM Generation Generate responses Ollama + Llama3.1 🔄 How It Works Documents → Preprocessing → Embeddings → ChromaDB Storage ↓ User Query → Query Embedding → Vector Search → Context Retrieval ↓ Context + Query → Ollama LLM → Generated Response 🛠️ Technical Implementation Prerequisites Before starting, ensure you have:\nPython 3.8+ Ollama installed with llama3.1 model Virtual environment set up Dependencies pip install chromadb\u003e=0.4.0 pip install sentence-transformers\u003e=2.0.0 pip install numpy\u003e=1.21.0 pip install torch\u003e=1.9.0 📁 Project Structure rag/ ├── docs/ │ ├── about_me.txt # Personal information │ ├── education.txt # AI in education knowledge │ ├── finance.txt # AI in finance knowledge │ └── healthcare.txt # AI in healthcare knowledge ├── preprocess.py # Document preprocessing ├── rag_local_ollama.py # Main RAG system └── requirements.txt # Dependencies 💾 Document Preprocessing The preprocessing pipeline handles document cleaning and chunking:\nimport os import re def clean_text(text): # Remove HTML tags and normalize whitespace text = re.sub(r'\u003c[^\u003e]+\u003e', '', text) text = re.sub(r'\\s+', ' ', text).strip() return text def chunk_text(text, max_words=100): # Split into manageable chunks for embeddings words = text.split() return [' '.join(words[i:i+max_words]) for i in range(0, len(words), max_words)] def preprocess_documents(doc_folder): all_chunks = [] for filename in os.listdir(doc_folder): if filename.endswith(\".txt\"): # Process each document path = os.path.join(doc_folder, filename) with open(path, 'r') as f: raw = f.read() cleaned = clean_text(raw) chunks = chunk_text(cleaned) all_chunks.extend(chunks) return all_chunks 🔍 Vector Database Setup Using ChromaDB for efficient similarity search:\nimport chromadb from chromadb.config import Settings from sentence_transformers import SentenceTransformer # Initialize ChromaDB (disable telemetry for privacy) client = chromadb.Client(Settings(anonymized_telemetry=False)) collection = client.get_or_create_collection(name=\"my_knowledge\") # Initialize embedding model model = SentenceTransformer(\"all-MiniLM-L6-v2\") # Store documents with embeddings for i, doc in enumerate(documents): embedding = model.encode(doc).tolist() collection.add( documents=[doc], ids=[str(i)], embeddings=[embedding] ) 🤖 Query Processing \u0026 LLM Integration The main RAG pipeline handles user queries:\nimport subprocess # Process user query query = input(\"Ask your question: \") query_embed = model.encode(query).tolist() # Retrieve relevant context results = collection.query( query_embeddings=[query_embed], n_results=2 ) contexts = results['documents'][0] context = \"\\n\".join(contexts) # Build prompt for Ollama prompt = f\"\"\"Answer the following question using only the information in the context. Be concise and factual. Context: {context} Question: {query} Answer:\"\"\" # Generate response using Ollama result = subprocess.run( [\"ollama\", \"run\", \"llama3.1\"], input=prompt, capture_output=True, text=True ) print(\"\\n🧠 LLM Response:\") print(result.stdout.strip()) 📋 Knowledge Base Content My system includes curated information about:\n🎓 Personal Background Name: Saad Ahmad Location: Khyber Pakhtunkhwa, Pakistan Focus: AI agents and intelligent systems Skills: Python, ChromaDB, sentence-transformers, Ollama 🏫 AI in Education Personalized learning platforms Adaptive learning systems AI-powered tutoring Administrative automation Predictive analytics 💰 AI in Finance Algorithmic trading Fraud detection Credit scoring and risk assessment Robo-advisors RegTech \u0026 compliance 🏥 AI in Healthcare Medical imaging and diagnostics Predictive analytics Drug discovery Virtual health assistants Personalized treatment 🧪 Testing the System Example Queries Personal Information:\nQuery: \"What is Saad Ahmad's location and background?\" Response: \"Saad Ahmad's location is DIKhan, Khyber Pakhtunkhwa, Pakistan. His background includes being a passionate learner focused on building AI agents and intelligent systems...\" Domain Knowledge:\nQuery: \"How is AI being used in healthcare?\" Response: \"AI is revolutionizing healthcare through medical imaging for diagnostics, predictive analytics for disease onset, drug discovery acceleration, and personalized treatment plans...\" 🚀 Performance Insights ✅ What Works Well Fast Response Times: Local processing eliminates network latency Accurate Retrieval: Semantic search finds relevant context effectively Privacy Maintained: No data ever leaves the local system Cost Effective: Zero ongoing operational costs 🔧 Areas for Improvement Chunk Size Optimization: Experiment with different chunk sizes Advanced Embeddings: Try domain-specific embedding models Query Expansion: Implement query reformulation techniques Caching: Add response caching for repeated queries 🎯 Future Enhancements 📈 Planned Upgrades LangChain Integration: More sophisticated prompt management Multi-Modal Support: Add image and document processing Real-time Updates: Dynamic knowledge base updates Advanced Chunking: Semantic chunking strategies Evaluation Metrics: Implement RAG evaluation framework 🔌 Integration Possibilities Slack Bot: Deploy as a company knowledge assistant Web Interface: Build a user-friendly web dashboard API Service: Create REST API for external applications Voice Interface: Add speech-to-text capabilities 📊 Technical Specifications 🖥️ System Requirements RAM: 8GB+ (for model loading) Storage: 5GB+ (for models and embeddings) CPU: Multi-core recommended GPU: Optional (speeds up embedding generation) 📦 Model Details LLM: Llama3.1 (4.9GB) Embeddings: all-MiniLM-L6-v2 (80MB) Vector DB: ChromaDB (lightweight, embedded) 🎉 Conclusion This local RAG system demonstrates that powerful AI applications don’t require cloud dependencies or expensive APIs. With open-source tools like Ollama, ChromaDB, and sentence-transformers, you can build sophisticated knowledge systems that respect privacy while delivering excellent performance.\nThe combination of retrieval-augmented generation with local processing opens up new possibilities for personalized AI assistants, company knowledge bases, and privacy-focused applications.\n📂 Source Code The complete implementation is available on GitHub, including all preprocessing scripts, the main RAG pipeline, and sample documents for testing.\nHappy building! 🚀\n",
+  "wordCount" : "917",
+  "inLanguage": "en",
+  "datePublished": "2025-06-29T00:00:00Z",
+  "dateModified": "2025-06-29T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ayyzenn.github.io/posts/local-rag-system/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ayyzenn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ayyzenn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +141,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,17 +167,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://ayyzenn.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Posts">
+                <a href="https://ayyzenn.github.io/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -120,7 +188,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB
     </h1>
@@ -493,20 +561,20 @@ acceleration, and personalized treatment plans...&#34;
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/rag/">RAG</a></li>
-      <li><a href="http://localhost:1313/tags/ollama/">Ollama</a></li>
-      <li><a href="http://localhost:1313/tags/chromadb/">ChromaDB</a></li>
-      <li><a href="http://localhost:1313/tags/ai/">AI</a></li>
-      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
-      <li><a href="http://localhost:1313/tags/llm/">LLM</a></li>
-      <li><a href="http://localhost:1313/tags/vector-database/">Vector Database</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/rag/">RAG</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/ollama/">Ollama</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/chromadb/">ChromaDB</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/python/">Python</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/vector-database/">Vector Database</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
+        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
 
     <span>
         Powered by

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>SSH: Connecting to a Remote Server in Linux | ayyzenn</title>
 <meta name="keywords" content="ssh, ubuntu">
 <meta name="description" content="Introduction
@@ -15,16 +15,16 @@ Remote Desktop Protocol (RDP) for Windows-based machines
 
 Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.">
 <meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/ssh/">
+<link rel="canonical" href="http://localhost:1313/posts/ssh/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/ssh/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ssh/">
 <noscript>
     <style>
         #theme-toggle,
@@ -61,78 +61,7 @@ Both protocols use client and server applications to establish remote connection
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/ssh/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="SSH: Connecting to a Remote Server in Linux">
-  <meta property="og:description" content="Introduction Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:
-Secure Shell (SSH) for Linux-based machines Remote Desktop Protocol (RDP) for Windows-based machines Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-08-14T15:49:43+05:00">
-    <meta property="article:modified_time" content="2021-08-14T15:49:43+05:00">
-    <meta property="article:tag" content="Ssh">
-    <meta property="article:tag" content="Ubuntu">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SSH: Connecting to a Remote Server in Linux">
-<meta name="twitter:description" content="Introduction
-Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:
-
-Secure Shell (SSH) for Linux-based machines
-Remote Desktop Protocol (RDP) for Windows-based machines
-
-Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "SSH: Connecting to a Remote Server in Linux",
-      "item": "https://ayyzenn.github.io/posts/ssh/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "SSH: Connecting to a Remote Server in Linux",
-  "name": "SSH: Connecting to a Remote Server in Linux",
-  "description": "Introduction Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:\nSecure Shell (SSH) for Linux-based machines Remote Desktop Protocol (RDP) for Windows-based machines Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.\n",
-  "keywords": [
-    "ssh", "ubuntu"
-  ],
-  "articleBody": "Introduction Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:\nSecure Shell (SSH) for Linux-based machines Remote Desktop Protocol (RDP) for Windows-based machines Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.\nWhat is SSH? SSH (Secure Shell) is a protocol that enables secure remote access to computers. Establishing an SSH connection requires two components: a client and a corresponding server-side component.\nThe SSH client is an application installed on the computer used to initiate the connection. The SSH server runs a daemon that listens for incoming client connections on a specific TCP/IP port. When a client attempts to connect, the SSH daemon on the server responds, exchanges credentials, and, if verified, establishes a secure encrypted session.\nHow to Enable an SSH Connection? To create an SSH connection, both the client and server components must be installed on the respective machines. A widely used open-source SSH tool for Linux distributions is OpenSSH. It requires terminal access on both the local and remote machines.\nNote: Ubuntu does not have the SSH server installed by default.\nHow to Install an OpenSSH Client? Before installing an SSH client, check if it is already available on your Linux system:\nOpen a terminal by searching for “Terminal” or pressing CTRL + ALT + T.\nType the following command and press Enter:\nssh If the client is installed, you will receive a response indicating SSH usage options.\nIf the SSH client is not installed, install it using the following command based on your distribution:\nFor Debian/Ubuntu-based systems:\nsudo apt-get install openssh-client For Arch/Manjaro-based systems:\nsudo pacman -S openssh Once installed, you can SSH into any machine running an SSH server, provided you have the necessary access credentials.\nHow to Install an OpenSSH Server? To accept SSH connections, the remote machine must have the SSH server installed.\nTo check if OpenSSH server is available on your system:\nOpen a terminal on the remote machine.\nType the following command and press Enter:\nssh localhost If the SSH server is not installed, an error message will appear.\nTo install the OpenSSH server, use the appropriate command for your distribution:\nFor Debian/Ubuntu-based systems:\nsudo apt-get install openssh-server For Arch/Manjaro-based systems:\nsudo pacman -S openssh After installation, verify that the SSH service is running:\nsudo systemctl status sshd If the SSH service is active, the system is ready to accept remote connections.\nHow to Connect via SSH? With both the OpenSSH client and server installed, you can establish a secure remote connection:\nOpen a terminal on your local machine.\nRun the following command, replacing and accordingly:\nssh your_username@host_ip_address If your local username matches the server’s username, you can simply use:\nssh host_ip_address Press Enter and enter the password when prompted.\nNote: Both client and server must be on the same network.\nOn first-time connections, SSH will prompt for confirmation to continue connecting. Type yes and press Enter. This process adds the server’s ECDSA (Elliptic Curve Digital Signature Algorithm) key fingerprint to your local machine for future authentication.\nYou are now securely connected to the remote server via SSH.\nAdditional Notes Since I am primarily using Manjaro, my focus is on Arch-based systems. However, the guide includes commands for both Debian/Ubuntu-based and Arch/Manjaro-based distributions to ensure flexibility. If a command works universally across both systems, it has been mentioned once.\n",
-  "wordCount" : "618",
-  "inLanguage": "en",
-  "datePublished": "2021-08-14T15:49:43+05:00",
-  "dateModified": "2021-08-14T15:49:43+05:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/ssh/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -150,7 +79,7 @@ Both protocols use client and server applications to establish remote connection
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -176,17 +105,17 @@ Both protocols use client and server applications to establish remote connection
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -197,7 +126,7 @@ Both protocols use client and server applications to establish remote connection
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       SSH: Connecting to a Remote Server in Linux
     </h1>
@@ -336,15 +265,15 @@ Both protocols use client and server applications to establish remote connection
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/ssh/">Ssh</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/ubuntu/">Ubuntu</a></li>
+      <li><a href="http://localhost:1313/tags/ssh/">Ssh</a></li>
+      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama &amp; ChromaDB | ayyzenn</title>
+<title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB | ayyzenn</title>
 <meta name="keywords" content="RAG, SQL, Ollama, ChromaDB, LangChain, Python, Text-to-SQL, Database, AI">
 <meta name="description" content="A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.">
 <meta name="author" content="">
@@ -122,12 +122,12 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama &amp; ChromaDB
+      Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB
     </h1>
     <div class="post-description">
       A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.
     </div>
-    <div class="post-meta"><span title='2025-01-27 00:00:00 +0000 UTC'>January 27, 2025</span>&nbsp;·&nbsp;7 min
+    <div class="post-meta"><span title='2025-10-25 00:00:00 +0000 UTC'>October 25, 2025</span>&nbsp;·&nbsp;7 min
 
 </div>
   </header> <div class="toc">
@@ -364,42 +364,42 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_sql_query</span>(state: State, llm: ChatOllama, db: SQLDatabase) <span style="color:#f92672">-&gt;</span> Dict[str, str]:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Generate SQL query from natural language question.&#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    prompt_template <span style="color:#f92672">=</span> create_sql_prompt_template()
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    prompt <span style="color:#f92672">=</span> prompt_template<span style="color:#f92672">.</span>invoke({
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;dialect&#34;</span>: db<span style="color:#f92672">.</span>dialect,
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;top_k&#34;</span>: <span style="color:#ae81ff">10</span>,
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;table_info&#34;</span>: db<span style="color:#f92672">.</span>get_table_info(),
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;input&#34;</span>: state[<span style="color:#e6db74">&#34;question&#34;</span>],
 </span></span><span style="display:flex;"><span>    })
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Use structured output for reliable SQL generation</span>
 </span></span><span style="display:flex;"><span>    structured_llm <span style="color:#f92672">=</span> llm<span style="color:#f92672">.</span>with_structured_output(QueryOutput)
 </span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> structured_llm<span style="color:#f92672">.</span>invoke(prompt)
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Normalize table names to handle case sensitivity</span>
 </span></span><span style="display:flex;"><span>    normalized_query <span style="color:#f92672">=</span> normalize_table_names(result[<span style="color:#e6db74">&#34;query&#34;</span>], db)
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;query&#34;</span>: normalized_query}
 </span></span></code></pre></div><h3 id="case-sensitivity-handling">Case Sensitivity Handling<a hidden class="anchor" aria-hidden="true" href="#case-sensitivity-handling">#</a></h3>
 <p>One of the key challenges in text-to-SQL systems is handling case sensitivity:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">normalize_table_names</span>(query: str, db: SQLDatabase) <span style="color:#f92672">-&gt;</span> str:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Normalize table names in SQL query to handle case sensitivity.&#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    table_names <span style="color:#f92672">=</span> get_table_names(db)
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Create mapping from lowercase to actual table names</span>
 </span></span><span style="display:flex;"><span>    table_mapping <span style="color:#f92672">=</span> {name<span style="color:#f92672">.</span>lower(): name <span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> table_names}
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Pattern to match table names in SQL (FROM, JOIN, UPDATE, etc.)</span>
 </span></span><span style="display:flex;"><span>    pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\b(?:FROM|JOIN|UPDATE|INTO|TABLE)\s+([a-zA-Z_][a-zA-Z0-9_]*)&#39;</span>
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">replace_in_context</span>(<span style="color:#66d9ef">match</span>):
 </span></span><span style="display:flex;"><span>        keyword <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>split()[<span style="color:#ae81ff">0</span>]
 </span></span><span style="display:flex;"><span>        table_name <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> table_name<span style="color:#f92672">.</span>lower() <span style="color:#f92672">in</span> table_mapping:
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>keyword<span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{</span>table_mapping[table_name<span style="color:#f92672">.</span>lower()]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#ae81ff">0</span>)
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> re<span style="color:#f92672">.</span>sub(pattern, replace_in_context, query, flags<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>IGNORECASE)
 </span></span></code></pre></div><hr>
 <h2 id="-vector-search-integration">🔍 Vector Search Integration<a hidden class="anchor" aria-hidden="true" href="#-vector-search-integration">#</a></h2>
@@ -407,19 +407,19 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">populate_vector_store</span>(vector_store: Chroma, db: SQLDatabase) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Populate the vector store with proper nouns from the database.&#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    proper_nouns <span style="color:#f92672">=</span> []
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Get proper nouns from various tables</span>
 </span></span><span style="display:flex;"><span>    artists <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#34;SELECT Name FROM Artist WHERE Name IS NOT NULL&#34;</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> artists:
 </span></span><span style="display:flex;"><span>        artists_list <span style="color:#f92672">=</span> eval(artists)
 </span></span><span style="display:flex;"><span>        proper_nouns<span style="color:#f92672">.</span>extend([artist[<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">for</span> artist <span style="color:#f92672">in</span> artists_list <span style="color:#66d9ef">if</span> artist[<span style="color:#ae81ff">0</span>]])
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Add albums, genres, etc.</span>
 </span></span><span style="display:flex;"><span>    albums <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>run(<span style="color:#e6db74">&#34;SELECT Title FROM Album WHERE Title IS NOT NULL&#34;</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> albums:
 </span></span><span style="display:flex;"><span>        albums_list <span style="color:#f92672">=</span> eval(albums)
 </span></span><span style="display:flex;"><span>        proper_nouns<span style="color:#f92672">.</span>extend([album[<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">for</span> album <span style="color:#f92672">in</span> albums_list <span style="color:#66d9ef">if</span> album[<span style="color:#ae81ff">0</span>]])
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Add to vector store</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> proper_nouns:
 </span></span><span style="display:flex;"><span>        vector_store<span style="color:#f92672">.</span>add_texts(proper_nouns)
@@ -428,13 +428,13 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_proper_noun_retriever_tool</span>(vector_store: Chroma) <span style="color:#f92672">-&gt;</span> Any:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Create a retriever tool for proper noun lookup.&#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    retriever <span style="color:#f92672">=</span> vector_store<span style="color:#f92672">.</span>as_retriever(search_kwargs<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;k&#34;</span>: <span style="color:#ae81ff">5</span>})
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    description <span style="color:#f92672">=</span> (
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Use to look up values to filter on. Input is an approximate spelling &#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;of the proper noun, output is valid proper nouns. Use the noun most &#34;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;similar to the search.&#34;</span>
 </span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> create_retriever_tool(
 </span></span><span style="display:flex;"><span>        retriever,
 </span></span><span style="display:flex;"><span>        name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;search_proper_nouns&#34;</span>,
@@ -452,21 +452,21 @@
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Ask questions about the Chinook database!&#34;</span>)
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Type &#39;quit&#39; or &#39;exit&#39; to stop.&#34;</span>)
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;=&#34;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span>)
-</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>            question <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Your question: &#34;</span>)<span style="color:#f92672">.</span>strip()
-</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> question<span style="color:#f92672">.</span>lower() <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;quit&#39;</span>, <span style="color:#e6db74">&#39;exit&#39;</span>, <span style="color:#e6db74">&#39;q&#39;</span>]:
 </span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">&#34;Goodbye!&#34;</span>)
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>process_question(question)
-</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;=&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">40</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;ANSWER: </span><span style="color:#e6db74">{</span>result[<span style="color:#e6db74">&#39;answer&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#39;=&#39;</span><span style="color:#f92672">*</span><span style="color:#ae81ff">40</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span>:
 </span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Goodbye!&#34;</span>)
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>

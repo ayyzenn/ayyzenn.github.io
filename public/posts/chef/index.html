@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations | ayyzenn</title>
 <meta name="keywords" content="chef, automation, ubuntu">
 <meta name="description" content="Introduction
 As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.
 Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.">
 <meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/chef/">
+<link rel="canonical" href="http://localhost:1313/posts/chef/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/chef/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/chef/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,75 +57,7 @@ Configuration management solutions address these challenges by transforming infr
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/chef/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Cooking Up Automation: A Guide to Chef Server & Workstations">
-  <meta property="og:description" content="Introduction As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.
-Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-08-02T15:49:43+05:00">
-    <meta property="article:modified_time" content="2022-08-02T15:49:43+05:00">
-    <meta property="article:tag" content="Chef">
-    <meta property="article:tag" content="Automation">
-    <meta property="article:tag" content="Ubuntu">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cooking Up Automation: A Guide to Chef Server &amp; Workstations">
-<meta name="twitter:description" content="Introduction
-As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.
-Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Cooking Up Automation: A Guide to Chef Server \u0026 Workstations",
-      "item": "https://ayyzenn.github.io/posts/chef/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Cooking Up Automation: A Guide to Chef Server \u0026 Workstations",
-  "name": "Cooking Up Automation: A Guide to Chef Server \u0026 Workstations",
-  "description": "Introduction As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.\nConfiguration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.\n",
-  "keywords": [
-    "chef", "automation", "ubuntu"
-  ],
-  "articleBody": "Introduction As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.\nConfiguration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.\nIn this guide, we will set up a Chef server to store and serve configuration instructions and node profiling information. Additionally, we will configure a workstation where the administrator can manage the code base and modify the infrastructure. Finally, we will bootstrap a new node to integrate it into the Chef ecosystem.\nChef Server The Chef server acts as the central hub for all workstations and nodes under Chef management. Configuration changes made on workstations are pushed to the Chef server, where they are pulled by nodes using chef-client to apply the configurations.\nInstall the Chef Server Download the latest Chef server core:\nwget https://packages.chef.io/files/stable/chef-server/13.1.13/ubuntu/18.04/chef-server-core_13.1.13-1_amd64.deb Install the server:\nsudo dpkg -i chef-server-core_*.deb Start the Chef server services:\nsudo chef-server-ctl reconfigure Create a Chef User and Organization To link workstations and nodes to the Chef server, create an administrator and organization with associated RSA private keys.\nCreate a .chef directory to store the keys:\nmkdir ~/.chef Create a user with chef-server-ctl, replacing placeholders with your details:\nsudo chef-server-ctl user-create USER_NAME FIRST_NAME LAST_NAME EMAIL 'PASSWORD' --filename ~/.chef/USER_NAME.pem List all users:\nsudo chef-server-ctl user-list Create an organization and associate the user:\nsudo chef-server-ctl org-create ORG_NAME \"ORG_FULL_NAME\" --association_user USER_NAME --filename ~/.chef/ORG_NAME.pem List all organizations:\nsudo chef-server-ctl org-list With the Chef server installed and RSA keys generated, the workstation can now be configured.\nChef Workstations The Chef workstation is where recipes, cookbooks, attributes, and configurations are managed. It can be a local machine or a remote server.\nSetting Up a Workstation Download the latest Chef Workstation:\nwget https://packages.chef.io/files/stable/chef-workstation/0.2.43/ubuntu/18.04/chef-workstation_0.2.43-1_amd64.deb Install Chef Workstation:\nsudo dpkg -i chef-workstation_*.deb Create your Chef repository:\nchef generate repo chef-repo Ensure that your workstation’s /etc/hosts file correctly maps IP addresses to the Chef server and workstation hostnames.\nCreate a .chef subdirectory within chef-repo to store authentication files:\nmkdir ~/chef-repo/.chef cd chef-repo Add the RSA Private Keys Authentication between the Chef server and workstations/nodes is performed using public-key encryption. Copy the RSA private keys from the Chef server to the workstation.\nGenerate an RSA key pair on the workstation (if not already available):\nssh-keygen -b 4096 Upload the workstation’s public key to the Chef server:\nssh-copy-id example_user@192.0.2.0 Copy the .pem files from the Chef server to the workstation:\nscp example_user@192.0.2.0:~/.chef/*.pem ~/chef-repo/.chef/ Confirm the files were copied:\nls ~/chef-repo/.chef Bootstrap a Node Bootstrapping a node installs the Chef client and validates the node, allowing it to pull and apply configurations from the Chef server.\nUpdate the /etc/hosts file on the node to correctly identify the node, Chef server, and workstation.\nFrom the workstation, navigate to the .chef directory:\ncd ~/chef-repo/.chef Bootstrap the node:\nknife bootstrap 192.0.2.0 -x root -P password --node-name nodename Verify the node has been bootstrapped:\nknife client list Add the bootstrapped node to the workstation’s /etc/hosts file.\nFor more detailed information, refer to the Linode guide.\n",
-  "wordCount" : "540",
-  "inLanguage": "en",
-  "datePublished": "2022-08-02T15:49:43+05:00",
-  "dateModified": "2022-08-02T15:49:43+05:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/chef/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -143,7 +75,7 @@ Configuration management solutions address these challenges by transforming infr
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -169,17 +101,17 @@ Configuration management solutions address these challenges by transforming infr
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -190,7 +122,7 @@ Configuration management solutions address these challenges by transforming infr
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Cooking Up Automation: A Guide to Chef Server &amp; Workstations
     </h1>
@@ -350,16 +282,16 @@ Configuration management solutions address these challenges by transforming infr
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/chef/">Chef</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/automation/">Automation</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/ubuntu/">Ubuntu</a></li>
+      <li><a href="http://localhost:1313/tags/chef/">Chef</a></li>
+      <li><a href="http://localhost:1313/tags/automation/">Automation</a></li>
+      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

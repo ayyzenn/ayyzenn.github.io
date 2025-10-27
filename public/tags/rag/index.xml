@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>RAG on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/rag/</link>
+    <link>http://localhost:1313/tags/rag/</link>
     <description>Recent content in RAG on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/rag/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/rag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title>
+      <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
+      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
+    </item>
     <item>
       <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
-      <link>https://ayyzenn.github.io/posts/local-rag-system/</link>
+      <link>http://localhost:1313/posts/local-rag-system/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/local-rag-system/</guid>
+      <guid>http://localhost:1313/posts/local-rag-system/</guid>
       <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
     </item>
     <item>
       <title>Setting Up Olama with DeepSeek Coder on Manjaro: A Step-by-Step Guide</title>
-      <link>https://ayyzenn.github.io/posts/ollama/</link>
+      <link>http://localhost:1313/posts/ollama/</link>
       <pubDate>Mon, 03 Feb 2025 17:07:58 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/ollama/</guid>
+      <guid>http://localhost:1313/posts/ollama/</guid>
       <description>&lt;h2 id=&#34;what-is-olama&#34;&gt;What is Olama?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Olama&lt;/strong&gt; is an open-source framework designed to run and manage large language models (LLMs) efficiently on local machines. It allows developers to load and interact with various AI models without relying on cloud-based APIs.&lt;/p&gt;
 &lt;h3 id=&#34;why-use-olama&#34;&gt;Why Use Olama?&lt;/h3&gt;

@@ -1,6 +1,6 @@
 ---
-title: "Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama & ChromaDB"
-date: 2025-10-27
+title: "Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB"
+date: 2025-10-25
 description: "A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain."
 tags: ["RAG", "SQL", "Ollama", "ChromaDB", "LangChain", "Python", "Text-to-SQL", "Database", "AI"]
 ---

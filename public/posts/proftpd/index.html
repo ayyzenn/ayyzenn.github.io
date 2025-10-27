@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD | ayyzenn</title>
 <meta name="keywords" content="proftpd, ftp, linux">
 <meta name="description" content="Introduction
 FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.
 ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&rsquo;t secure by default. It&rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.">
 <meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/proftpd/">
+<link rel="canonical" href="http://localhost:1313/posts/proftpd/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/proftpd/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/proftpd/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,75 +57,7 @@ ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible 
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/proftpd/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Your Gateway to FTP: A Step-by-Step Guide to ProFTPD">
-  <meta property="og:description" content="Introduction FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.
-ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn’t secure by default. It’s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-08-07T15:49:43+05:00">
-    <meta property="article:modified_time" content="2022-08-07T15:49:43+05:00">
-    <meta property="article:tag" content="Proftpd">
-    <meta property="article:tag" content="Ftp">
-    <meta property="article:tag" content="Linux">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Your Gateway to FTP: A Step-by-Step Guide to ProFTPD">
-<meta name="twitter:description" content="Introduction
-FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.
-ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&rsquo;t secure by default. It&rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Your Gateway to FTP: A Step-by-Step Guide to ProFTPD",
-      "item": "https://ayyzenn.github.io/posts/proftpd/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Your Gateway to FTP: A Step-by-Step Guide to ProFTPD",
-  "name": "Your Gateway to FTP: A Step-by-Step Guide to ProFTPD",
-  "description": "Introduction FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.\nProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn\u0026rsquo;t secure by default. It\u0026rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.\n",
-  "keywords": [
-    "proftpd", "ftp", "linux"
-  ],
-  "articleBody": "Introduction FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.\nProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn’t secure by default. It’s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.\nInstalling ProFTPD Getting ProFTPD set up is pretty simple. Just run:\nsudo apt-get install proftpd Configuring ProFTPD Once it’s installed, you’ll need to tweak the config file. Open it up with:\nsudo nano /etc/proftpd/proftpd.conf Update the ServerName field to match your hostname:\nServerName \"test.com\" Also, uncomment this line to make sure users are restricted to their home directories:\n# Use this to jail all users in their homes DefaultRoot /home/ayyzenn/ Once you’re done, save the file and restart ProFTPD so the changes take effect:\nsudo service proftpd restart Accessing the FTP Server Now that everything is set up, you can connect to your FTP server from the command line:\nftp test.com To exit, just type:\nexit Adding a User If you want another user to access the FTP server, you’ll need to add them first. Run:\nsudo adduser Follow the prompts—it’s fine to leave the details blank if you want.\nThen, make sure they have the right permissions by adding them to the sudo group:\nsudo usermod -aG sudo username Installing FileZilla If you prefer a GUI, you can use FileZilla. Install it with:\nsudo apt install filezilla Connecting to Your FTP Server with FileZilla Open FileZilla. Enter your: Hostname or IP address Username Password Port number (default: 21) Click Quickconnect. Accept any prompts and you’re good to go! Wrapping Up That’s it! You now have a working ProFTPD server. Whether you’re using the command line or FileZilla, you can easily manage file transfers between your systems. Enjoy!\n",
-  "wordCount" : "331",
-  "inLanguage": "en",
-  "datePublished": "2022-08-07T15:49:43+05:00",
-  "dateModified": "2022-08-07T15:49:43+05:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/proftpd/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -143,7 +75,7 @@ ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible 
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -169,17 +101,17 @@ ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible 
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -190,7 +122,7 @@ ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible 
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Your Gateway to FTP: A Step-by-Step Guide to ProFTPD
     </h1>
@@ -278,16 +210,16 @@ ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible 
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/proftpd/">Proftpd</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/ftp/">Ftp</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/proftpd/">Proftpd</a></li>
+      <li><a href="http://localhost:1313/tags/ftp/">Ftp</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

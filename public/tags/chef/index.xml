@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Chef on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/chef/</link>
+    <link>http://localhost:1313/tags/chef/</link>
     <description>Recent content in Chef on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 02 Aug 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/chef/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/chef/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title>
-      <link>https://ayyzenn.github.io/posts/chef/</link>
+      <link>http://localhost:1313/posts/chef/</link>
       <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/chef/</guid>
+      <guid>http://localhost:1313/posts/chef/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.&lt;/p&gt;
 &lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description>

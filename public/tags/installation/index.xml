@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Installation on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/installation/</link>
+    <link>http://localhost:1313/tags/installation/</link>
     <description>Recent content in Installation on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Aug 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/installation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up Odoo: A Beginner’s Guide</title>
-      <link>https://ayyzenn.github.io/posts/odoo/</link>
+      <link>http://localhost:1313/posts/odoo/</link>
       <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/odoo/</guid>
+      <guid>http://localhost:1313/posts/odoo/</guid>
       <description>&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s start by updating your package repository:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade

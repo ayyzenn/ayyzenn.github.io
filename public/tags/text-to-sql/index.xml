@@ -6,12 +6,19 @@
     <description>Recent content in Text-to-SQL on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/text-to-sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama &amp; ChromaDB</title>
+      <title>A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)</title>
+      <link>http://localhost:1313/posts/llamaindex/</link>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/llamaindex/</guid>
+      <description>A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.</description>
+    </item>
+    <item>
+      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title>
       <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
-      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
       <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
     </item>

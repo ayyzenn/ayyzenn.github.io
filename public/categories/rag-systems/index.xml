@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>AI Agents on ayyzenn</title>
-    <link>http://localhost:1313/tags/ai-agents/</link>
-    <description>Recent content in AI Agents on ayyzenn</description>
+    <title>RAG Systems on ayyzenn</title>
+    <link>http://localhost:1313/categories/rag-systems/</link>
+    <description>Recent content in RAG Systems on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai-agents/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/rag-systems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture</title>
       <link>http://localhost:1313/posts/agentic_rag/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/agentic_rag/</guid>
       <description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</description>
-    </item>
-    <item>
-      <title>A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)</title>
-      <link>http://localhost:1313/posts/llamaindex/</link>
-      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/llamaindex/</guid>
-      <description>A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.</description>
     </item>
   </channel>
 </rss>

@@ -6,8 +6,15 @@
     <description>Recent content in Posts on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture</title>
+      <link>http://localhost:1313/posts/agentic_rag/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/agentic_rag/</guid>
+      <description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</description>
+    </item>
     <item>
       <title>A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)</title>
       <link>http://localhost:1313/posts/llamaindex/</link>

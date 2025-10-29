@@ -6,13 +6,20 @@
     <description>Recent content in Categories on ayyzenn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Agentic AI</title>
       <link>http://localhost:1313/categories/agentic-ai/</link>
-      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/agentic-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG Systems</title>
+      <link>http://localhost:1313/categories/rag-systems/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/rag-systems/</guid>
       <description></description>
     </item>
     <item>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL) | ayyzenn</title>
 <meta name="keywords" content="LlamaIndex, Text-to-SQL, LLM, SQL, AI Agents, LangChain">
 <meta name="description" content="A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/llamaindex/">
+<link rel="canonical" href="https://ayyzenn.github.io/posts/llamaindex/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/llamaindex/">
+<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/llamaindex/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +55,75 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/llamaindex/">
+  <meta property="og:site_name" content="ayyzenn">
+  <meta property="og:title" content="A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)">
+  <meta property="og:description" content="A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-27T00:00:00+00:00">
+    <meta property="article:tag" content="LlamaIndex">
+    <meta property="article:tag" content="Text-to-SQL">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="SQL">
+    <meta property="article:tag" content="AI Agents">
+    <meta property="article:tag" content="LangChain">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)">
+<meta name="twitter:description" content="A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ayyzenn.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "A Guide to LlamaIndex + Structured Data (Text-to-SQL)",
+      "item": "https://ayyzenn.github.io/posts/llamaindex/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "A Guide to LlamaIndex + Structured Data (Text-to-SQL)",
+  "name": "A Guide to LlamaIndex \u002b Structured Data (Text-to-SQL)",
+  "description": "A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.",
+  "keywords": [
+    "LlamaIndex", "Text-to-SQL", "LLM", "SQL", "AI Agents", "LangChain"
+  ],
+  "articleBody": " 🧠 Overview Most data-driven systems rely on structured databases such as SQLite, Postgres, or MySQL. However, interacting with these databases traditionally requires SQL knowledge. LlamaIndex bridges that gap by enabling natural language queries over your data.\nIn simple terms, it lets you talk to your database using everyday language. Behind the scenes, it converts your question into an SQL query, executes it, and interprets the result.\nLlamaIndex’s tabular data module also supports advanced workflows — like schema understanding and semantic retrieval, so your model can dynamically figure out which table or column to use.\nKey capabilities include:\nTranslating natural language into SQL queries. Converting unstructured context into structured insights. Dynamically retrieving relevant schemas or tables for complex databases. ⚠️ Note: Never expose full write-access databases to LLMs. Always use read-only credentials or sandboxed environments for safety.\n🧩 Setup: Creating a Sample Database Let’s begin with a simple in-memory SQLite database using SQLAlchemy:\nfrom sqlalchemy import create_engine, MetaData, Table, Column, String, Integer engine = create_engine(\"sqlite:///:memory:\") metadata_obj = MetaData() city_stats_table = Table( \"city_stats\", metadata_obj, Column(\"city_name\", String(16), primary_key=True), Column(\"population\", Integer), Column(\"country\", String(16), nullable=False), ) metadata_obj.create_all(engine) Add some sample rows:\nfrom sqlalchemy import insert rows = [ {\"city_name\": \"Toronto\", \"population\": 2731571, \"country\": \"Canada\"}, {\"city_name\": \"Tokyo\", \"population\": 13929286, \"country\": \"Japan\"}, {\"city_name\": \"Berlin\", \"population\": 600000, \"country\": \"Germany\"}, ] for row in rows: stmt = insert(city_stats_table).values(**row) with engine.begin() as connection: connection.execute(stmt) 🔗 Connecting with LlamaIndex Now, we’ll connect this database to LlamaIndex using its SQLDatabase wrapper:\nfrom llama_index.core import SQLDatabase sql_database = SQLDatabase(engine, include_tables=[\"city_stats\"]) This wrapper allows LlamaIndex to inspect the database schema and use it for reasoning during query generation.\n💬 Ask Questions in Natural Language LlamaIndex provides the NLSQLTableQueryEngine, which takes a question in plain English and automatically converts it to SQL:\nfrom llama_index.llms.ollama import Ollama from llama_index.embeddings.ollama import OllamaEmbedding from llama_index.core import Settings from llama_index.core.indices.struct_store import NLSQLTableQueryEngine llm = Ollama(model=\"llama3\", request_timeout=120) embed_model = OllamaEmbedding(model_name=\"nomic-embed-text\") Settings.llm = llm Settings.embed_model = embed_model query_engine = NLSQLTableQueryEngine( sql_database=sql_database, tables=[\"city_stats\"], llm=llm, embed_model=embed_model, ) response = query_engine.query(\"Which city has the highest population?\") Output:\nTokyo has the highest population.\nThis approach is perfect when your database has a small number of known tables.\n🏗️ Creating a Table Schema Index For larger databases or dynamic querying, you can create a schema index to help the model understand table structures semantically:\nfrom llama_index.core import VectorStoreIndex from llama_index.core.objects import SQLTableNodeMapping, ObjectIndex, SQLTableSchema table_node_mapping = SQLTableNodeMapping(sql_database) table_schema_objs = [SQLTableSchema(table_name=\"city_stats\")] obj_index = ObjectIndex.from_objects( table_schema_objs, table_node_mapping, VectorStoreIndex, ) This allows LlamaIndex to retrieve relevant table schemas automatically during queries.\n🔍 Schema-Aware Querying When multiple tables exist, you can use the SQLTableRetrieverQueryEngine to pick the best one:\nfrom llama_index.core.indices.struct_store import SQLTableRetrieverQueryEngine query_engine = SQLTableRetrieverQueryEngine( sql_database, obj_index.as_retriever(similarity_top_k=1) ) response = query_engine.query(\"Which city has the highest population?\") Result: Tokyo has the highest population.\n⚙️ Improving Query Accuracy 1. Row-Level Embeddings You can embed individual rows to allow semantic row retrieval:\nfrom llama_index.core.schema import TextNode with engine.connect() as connection: results = connection.execute(stmt).fetchall() city_nodes = [TextNode(text=str(t)) for t in results] city_rows_index = VectorStoreIndex(city_nodes, embed_model=embed_model) city_rows_retriever = city_rows_index.as_retriever(similarity_top_k=1) This helps for ambiguous queries like:\n“How many cities belong to a specific country?”\n2. Column-Level Embeddings Instead of indexing full rows, you can embed distinct column values for better efficiency:\nfor column_name in [\"city_name\", \"country\"]: stmt = select(city_stats_table.c[column_name]).distinct() ... 🔍 Using the Retriever Directly For more flexibility, use the NLSQLRetriever directly:\nfrom llama_index.core.retrievers import NLSQLRetriever nl_sql_retriever = NLSQLRetriever( sql_database, tables=[\"city_stats\"], llm=llm, return_raw=True ) Or pair it with a query engine:\nfrom llama_index.core.query_engine import RetrieverQueryEngine query_engine = RetrieverQueryEngine.from_args(nl_sql_retriever) response = query_engine.query( \"Return the top 5 cities with the highest population.\" ) 🧩 Summary Component Purpose SQLDatabase Wraps SQLAlchemy engine for LlamaIndex integration NLSQLTableQueryEngine Converts natural language into SQL queries ObjectIndex Stores table schemas for retrieval SQLTableRetrieverQueryEngine Combines schema retrieval and SQL generation Row/Column Retrievers Enhance accuracy using semantic similarity 🚀 Key Takeaways LlamaIndex enables conversational querying over structured databases. Supports schema understanding, reasoning, and contextual retrieval. Can dynamically select relevant tables, rows, and columns during inference. Useful for building smart analytics dashboards, internal assistants, or AI-powered data explorers. References:\nLlamaIndex Documentation GitHub Repository ",
+  "wordCount" : "668",
+  "inLanguage": "en",
+  "datePublished": "2025-10-27T00:00:00Z",
+  "dateModified": "2025-10-27T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ayyzenn.github.io/posts/llamaindex/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ayyzenn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ayyzenn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +141,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,17 +167,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://ayyzenn.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Posts">
+                <a href="https://ayyzenn.github.io/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -120,7 +188,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)
     </h1>
@@ -360,19 +428,19 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/llamaindex/">LlamaIndex</a></li>
-      <li><a href="http://localhost:1313/tags/text-to-sql/">Text-to-SQL</a></li>
-      <li><a href="http://localhost:1313/tags/llm/">LLM</a></li>
-      <li><a href="http://localhost:1313/tags/sql/">SQL</a></li>
-      <li><a href="http://localhost:1313/tags/ai-agents/">AI Agents</a></li>
-      <li><a href="http://localhost:1313/tags/langchain/">LangChain</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/llamaindex/">LlamaIndex</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/text-to-sql/">Text-to-SQL</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/sql/">SQL</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/ai-agents/">AI Agents</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/langchain/">LangChain</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
+        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
 
     <span>
         Powered by

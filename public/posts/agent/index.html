@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Building a YouTube Transcript Summarizer with LangGraph and Gemini | ayyzenn</title>
 <meta name="keywords" content="AI, LangGraph, Gemini, Python, YouTube">
 <meta name="description" content="A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/agent/">
+<link rel="canonical" href="https://ayyzenn.github.io/posts/agent/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/agent/">
+<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/agent/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +55,74 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/agent/">
+  <meta property="og:site_name" content="ayyzenn">
+  <meta property="og:title" content="Building a YouTube Transcript Summarizer with LangGraph and Gemini">
+  <meta property="og:description" content="A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-06T00:00:00+00:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LangGraph">
+    <meta property="article:tag" content="Gemini">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="YouTube">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building a YouTube Transcript Summarizer with LangGraph and Gemini">
+<meta name="twitter:description" content="A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ayyzenn.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Building a YouTube Transcript Summarizer with LangGraph and Gemini",
+      "item": "https://ayyzenn.github.io/posts/agent/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Building a YouTube Transcript Summarizer with LangGraph and Gemini",
+  "name": "Building a YouTube Transcript Summarizer with LangGraph and Gemini",
+  "description": "A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.",
+  "keywords": [
+    "AI", "LangGraph", "Gemini", "Python", "YouTube"
+  ],
+  "articleBody": "🧠 What is an Agentic Workflow? An Agentic Workflow is a system where multiple autonomous AI agents work together to solve complex tasks. Each agent is responsible for a specific role (such as fetching data, summarizing text, or answering questions), and they collaborate in a structured flow to complete the overall goal.\nThis workflow design mimics how human teams operate — with clear roles, communication, and coordination.\n🧱 Key Features of Agentic Workflows Modularity: Each agent can be independently developed and reused. Statefulness: Agents maintain and pass structured data (state) across steps. Reusability: Agents can be composed into different workflows. Autonomy: Agents can make decisions based on input and context. 🛠️ Popular Tools for Agentic Workflows Tool Description Language Best For LangGraph Graph-based AI workflow framework with state management. Python Customizable and flexible workflows CrewAI Agent orchestration tool inspired by human teams and role delegation. Python Role-based agent collaboration Autogen Microsoft’s multi-agent framework for goal-oriented dialogue and tasks. Python Conversational multi-agent systems LangChain General framework for chaining LLMs with tools, memory, and logic. Python Broader LLM apps beyond just agents AgentOps Infra layer for deploying and monitoring agentic systems. Platform Scaling, testing, and managing agents ⚙️ Why I Chose LangGraph For this project, I chose LangGraph because:\nIt offers graph-based control over the workflow between agents. It’s ideal for step-by-step pipelines, like: 👉 Get YouTube URL → Fetch transcript → Summarize → Answer questions. It natively supports state management, so agents can build on each other’s output. 🤖 Agent: YouTube Video Q\u0026A Agent This project uses a single, multifunctional agent to handle two core tasks:\nSummarizing the video transcript Answering user questions based on the video content 🧩 Responsibilities Extract the transcript from a YouTube video. Based on user input, either: Generate a summary of the content, or Answer a natural language question related to the video. Use Google’s gemini-2.0-flash model via langchain-google-genai to handle both tasks. ⚙️ How It Works Transcript Extraction\nThe agent first retrieves the transcript using the youtube-transcript-api. It parses the text into a clean format suitable for processing.\nRouting Based on User Input\nThe agent inspects the user prompt:\nIf the user types \"summary\", it sends the full transcript to Gemini with a prompt asking for a concise summary. If the user enters a specific question, it sends both the transcript and the question to Gemini, asking for an accurate, context-aware answer. Response Generation\nGemini returns either a summary or a direct answer, which is then displayed to the user.\n🛠️ Technologies Used langchain-google-genai to integrate Gemini Pro for LLM responses. youtube-transcript-api to fetch video transcripts. LangGraph to manage and run the workflow logic. dotenv for secure API key handling. 🔄 Example Workflow User enters YouTube URL → Transcript fetched → User enters \"summary\" → Gemini generates a summary OR User enters a question → Gemini answers using the transcript context 📂 Check Out the Code You can find the full source code for this project on GitHub:\nhttps://github.com/ayyzenn/youtube-video-qa.git\n",
+  "wordCount" : "494",
+  "inLanguage": "en",
+  "datePublished": "2025-06-06T00:00:00Z",
+  "dateModified": "2025-06-06T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ayyzenn.github.io/posts/agent/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ayyzenn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ayyzenn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +140,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,17 +166,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://ayyzenn.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Posts">
+                <a href="https://ayyzenn.github.io/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -120,7 +187,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Building a YouTube Transcript Summarizer with LangGraph and Gemini
     </h1>
@@ -294,18 +361,18 @@ Gemini returns either a summary or a direct answer, which is then displayed to t
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/ai/">AI</a></li>
-      <li><a href="http://localhost:1313/tags/langgraph/">LangGraph</a></li>
-      <li><a href="http://localhost:1313/tags/gemini/">Gemini</a></li>
-      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
-      <li><a href="http://localhost:1313/tags/youtube/">YouTube</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/langgraph/">LangGraph</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/gemini/">Gemini</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/python/">Python</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/youtube/">YouTube</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">ayyzenn</a></span> · 
+        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
 
     <span>
         Powered by

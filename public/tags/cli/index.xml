@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Cli on ayyzenn</title>
-    <link>http://localhost:1313/tags/cli/</link>
+    <link>https://ayyzenn.github.io/tags/cli/</link>
     <description>Recent content in Cli on ayyzenn</description>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Dec 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ayyzenn.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
-      <link>http://localhost:1313/posts/gentoo/</link>
+      <link>https://ayyzenn.github.io/posts/gentoo/</link>
       <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/gentoo/</guid>
+      <guid>https://ayyzenn.github.io/posts/gentoo/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
 &lt;ul&gt;
@@ -24,9 +24,9 @@
     </item>
     <item>
       <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title>
-      <link>http://localhost:1313/posts/git_tools/</link>
+      <link>https://ayyzenn.github.io/posts/git_tools/</link>
       <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/git_tools/</guid>
+      <guid>https://ayyzenn.github.io/posts/git_tools/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (&lt;code&gt;gh&lt;/code&gt;) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.&lt;/p&gt;
 &lt;p&gt;This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.&lt;/p&gt;
@@ -36,9 +36,9 @@
     </item>
     <item>
       <title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title>
-      <link>http://localhost:1313/posts/git_cli/</link>
+      <link>https://ayyzenn.github.io/posts/git_cli/</link>
       <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/git_cli/</guid>
+      <guid>https://ayyzenn.github.io/posts/git_cli/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;This guide provides a comprehensive introduction to GitHub, covering:&lt;/p&gt;
 &lt;ul&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Github on ayyzenn</title>
-    <link>http://localhost:1313/tags/github/</link>
+    <link>https://ayyzenn.github.io/tags/github/</link>
     <description>Recent content in Github on ayyzenn</description>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo -- 0.153.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 04 Sep 2021 15:49:43 +0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ayyzenn.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title>
-      <link>http://localhost:1313/posts/git_tools/</link>
+      <link>https://ayyzenn.github.io/posts/git_tools/</link>
       <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/git_tools/</guid>
+      <guid>https://ayyzenn.github.io/posts/git_tools/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (&lt;code&gt;gh&lt;/code&gt;) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.&lt;/p&gt;
 &lt;p&gt;This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.&lt;/p&gt;
@@ -22,9 +22,9 @@
     </item>
     <item>
       <title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title>
-      <link>http://localhost:1313/posts/git_cli/</link>
+      <link>https://ayyzenn.github.io/posts/git_cli/</link>
       <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>http://localhost:1313/posts/git_cli/</guid>
+      <guid>https://ayyzenn.github.io/posts/git_cli/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;This guide provides a comprehensive introduction to GitHub, covering:&lt;/p&gt;
 &lt;ul&gt;
@@ -41,9 +41,9 @@
     </item>
     <item>
       <title>Hugo: The Fastest Static Site Generator</title>
-      <link>http://localhost:1313/posts/hugo/</link>
+      <link>https://ayyzenn.github.io/posts/hugo/</link>
       <pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate>
-      <guid>http://localhost:1313/posts/hugo/</guid>
+      <guid>https://ayyzenn.github.io/posts/hugo/</guid>
       <description>&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;
 &lt;p&gt;Hugo is an open-source static site generator (SSG) written in Go. It is designed for speed, simplicity, and flexibility, making it a popular choice for building blogs, documentation sites, and personal portfolios. Unlike traditional content management systems (CMS) like WordPress, Hugo generates static HTML files that can be served directly from any web server, eliminating the need for a database.&lt;/p&gt;
 &lt;h2 id=&#34;why-use-hugo&#34;&gt;Why Use Hugo?&lt;/h2&gt;

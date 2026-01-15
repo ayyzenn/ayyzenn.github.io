@@ -38,7 +38,7 @@ This is exactly what I used:
 | Connection      | SSH                |
 | Automation Tool | Ansible            |
 
-Yes — **control node and managed node can be different OSes**.  
+Yes — **control node and managed node can be different OSes**.
 That’s totally normal in DevOps.
 
 ---
@@ -128,7 +128,7 @@ Means:
 
 > “Everything is already perfect. Nothing to do.”
 
-This is called **idempotency**  
+This is called **idempotency**
 (fancy word, simple idea).
 
 ---
@@ -193,9 +193,9 @@ changed=0
 
 That means:
 
-- ✅ Playbook works  
-- ✅ State is correct  
-- ✅ Automation is reliable  
+- ✅ Playbook works
+- ✅ State is correct
+- ✅ Automation is reliable
 
 ---
 
@@ -222,7 +222,7 @@ http://192.168.1.80
 # not loading (as expected)
 ```
 
-Everything matched my playbook.  
+Everything matched my playbook.
 That felt really satisfying.
 
 ---
@@ -233,30 +233,30 @@ That felt really satisfying.
   - Arch controlling Ubuntu? Totally fine.
 
 - **Managed node OS decides modules**
-  - Ubuntu → `apt`  
+  - Ubuntu → `apt`
   - Arch → `pacman`
 
 - **Idempotency is king**
-  - Same command  
-  - Same result  
+  - Same command
+  - Same result
   - No surprises
 
 - **Playbooks > manual work**
-  - Clear  
-  - Repeatable  
+  - Clear
+  - Repeatable
   - Shareable
 
 ---
 
 ## Common Beginner Confusions (That I Faced)
 
-- **“Nothing changed — is it broken?”**  
+- **“Nothing changed — is it broken?”**
   → No. That’s success.
 
-- **“Why do I need sudo password?”**  
+- **“Why do I need sudo password?”**
   → Because automation respects security.
 
-- **“Why fix Python interpreter path?”**  
+- **“Why fix Python interpreter path?”**
   → To avoid surprises later.
 
 ---
@@ -269,7 +269,7 @@ Now that the basics are solid, next steps are:
 - **Handlers** (restart services only when needed)
 - **Roles** (clean project structure)
 
-But before that — documenting this was important.  
+But before that — documenting this was important.
 Because if you can explain it simply, you actually understand it.
 
 ---
@@ -278,9 +278,9 @@ Because if you can explain it simply, you actually understand it.
 
 Ansible feels like:
 
-- Writing instructions for a very obedient robot 🤖  
-  - Who never forgets  
-  - Never gets tired  
+- Writing instructions for a very obedient robot 🤖
+  - Who never forgets
+  - Never gets tired
   - And never says “works on my machine”
 
 If you manage servers manually, Ansible is a life upgrade.

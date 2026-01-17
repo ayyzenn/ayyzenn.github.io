@@ -1,6 +1,6 @@
 ---
 title: "Ansible: Automating Docker and Kubernetes Node Setup"
-date: 2026-01-16
+date: 2026-01-17
 tags: ["ansible", "docker", "kubernetes", "devops", "automation"]
 ---
 

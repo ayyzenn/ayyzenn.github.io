@@ -1,7 +1,7 @@
 ---
 title: "Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project"
 author: Saad
-date: 2026-02-10
+date: 2026-02-9
 tags: [jenkins, devops, arch-linux, ci-cd, automation]
 ---
 

@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Hugo on ayyzenn</title><link>https://ayyzenn.github.io/tags/hugo/</link><description>Recent content in Hugo on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Thu, 03 Dec 2020 17:07:58 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo: The Fastest Static Site Generator</title><link>https://ayyzenn.github.io/posts/hugo/</link><pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate><guid>https://ayyzenn.github.io/posts/hugo/</guid><description>&lt;h2 id="what-is-hugo"&gt;What is Hugo?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Dec 2020 17:07:58 +0500</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo: The Fastest Static Site Generator</title>
+      <link>https://ayyzenn.github.io/posts/hugo/</link>
+      <pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/hugo/</guid>
+      <description>&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;
 &lt;p&gt;Hugo is an open-source static site generator (SSG) written in Go. It is designed for speed, simplicity, and flexibility, making it a popular choice for building blogs, documentation sites, and personal portfolios. Unlike traditional content management systems (CMS) like WordPress, Hugo generates static HTML files that can be served directly from any web server, eliminating the need for a database.&lt;/p&gt;
-&lt;h2 id="why-use-hugo"&gt;Why Use Hugo?&lt;/h2&gt;
-&lt;p&gt;Hugo is widely used due to its numerous advantages:&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id=&#34;why-use-hugo&#34;&gt;Why Use Hugo?&lt;/h2&gt;
+&lt;p&gt;Hugo is widely used due to its numerous advantages:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

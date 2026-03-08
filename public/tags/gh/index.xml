@@ -1,6 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Gh on ayyzenn</title><link>https://ayyzenn.github.io/tags/gh/</link><description>Recent content in Gh on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Sat, 04 Sep 2021 15:49:43 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/gh/index.xml" rel="self" type="application/rss+xml"/><item><title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title><link>https://ayyzenn.github.io/posts/git_tools/</link><pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/git_tools/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gh on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/gh/</link>
+    <description>Recent content in Gh on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Sep 2021 15:49:43 +0500</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/gh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title>
+      <link>https://ayyzenn.github.io/posts/git_tools/</link>
+      <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/git_tools/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (&lt;code&gt;gh&lt;/code&gt;) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.&lt;/p&gt;
 &lt;p&gt;This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="creating-a-personal-access-token-pat"&gt;Creating a Personal Access Token (PAT)&lt;/h2&gt;
-&lt;p&gt;A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id=&#34;creating-a-personal-access-token-pat&#34;&gt;Creating a Personal Access Token (PAT)&lt;/h2&gt;
+&lt;p&gt;A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Database on ayyzenn</title><link>https://ayyzenn.github.io/tags/database/</link><description>Recent content in Database on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Sat, 25 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/database/index.xml" rel="self" type="application/rss+xml"/><item><title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title><link>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</link><pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</guid><description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Database on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/database/</link>
+    <description>Recent content in Database on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title>
+      <link>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</guid>
+      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
+    </item>
+  </channel>
+</rss>

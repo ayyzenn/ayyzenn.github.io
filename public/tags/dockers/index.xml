@@ -1,18 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Dockers on ayyzenn</title><link>https://ayyzenn.github.io/tags/dockers/</link><description>Recent content in Dockers on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Thu, 28 Jul 2022 15:49:43 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/dockers/index.xml" rel="self" type="application/rss+xml"/><item><title>Setting up Puppet using Docker</title><link>https://ayyzenn.github.io/posts/puppet/</link><pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/puppet/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dockers on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/dockers/</link>
+    <description>Recent content in Dockers on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jul 2022 15:49:43 +0500</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/dockers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Puppet using Docker</title>
+      <link>https://ayyzenn.github.io/posts/puppet/</link>
+      <pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/puppet/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Puppet is one of the earliest configuration management tools and has gained a substantial community of supporters and users. It is a powerful tool for deploying, configuring, managing, and maintaining a machine or a system.&lt;/p&gt;
-&lt;h2 id="configuration-management"&gt;Configuration Management&lt;/h2&gt;
+&lt;h2 id=&#34;configuration-management&#34;&gt;Configuration Management&lt;/h2&gt;
 &lt;p&gt;System Administrators often perform repetitive tasks such as installing and configuring servers. While scripting can automate these tasks, managing large infrastructure manually is cumbersome.&lt;/p&gt;
-&lt;p&gt;To address this issue, &lt;strong&gt;Configuration Management&lt;/strong&gt; was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.&lt;/p&gt;</description></item><item><title>Creating a container in docker</title><link>https://ayyzenn.github.io/posts/container_docker/</link><pubDate>Wed, 27 Jul 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/container_docker/</guid><description>&lt;h3 id="creating-a-docker-container-with-ubuntu"&gt;Creating a Docker Container with Ubuntu&lt;/h3&gt;
-&lt;p&gt;To create a Docker container, first download the Ubuntu image from &lt;a href="https://hub.docker.com/search?q="&gt;Docker Hub&lt;/a&gt;. Use the following command:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo docker pull ubuntu
+&lt;p&gt;To address this issue, &lt;strong&gt;Configuration Management&lt;/strong&gt; was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating a container in docker</title>
+      <link>https://ayyzenn.github.io/posts/container_docker/</link>
+      <pubDate>Wed, 27 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/container_docker/</guid>
+      <description>&lt;h3 id=&#34;creating-a-docker-container-with-ubuntu&#34;&gt;Creating a Docker Container with Ubuntu&lt;/h3&gt;
+&lt;p&gt;To create a Docker container, first download the Ubuntu image from &lt;a href=&#34;https://hub.docker.com/search?q=&#34;&gt;Docker Hub&lt;/a&gt;. Use the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the image is downloaded, create a new container using the command below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="key-parameters"&gt;Key Parameters:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;key-parameters&#34;&gt;Key Parameters:&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;-i&lt;/code&gt;&lt;/strong&gt;: Enables interactive mode.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;-t&lt;/code&gt;&lt;/strong&gt;: Allocates a terminal for the container.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;--name&lt;/code&gt;&lt;/strong&gt;: Assigns a custom name to the container.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Upon execution, the container will be created, and you will be logged into its environment.&lt;/p&gt;</description></item><item><title>Docker on Ubuntu</title><link>https://ayyzenn.github.io/posts/dockers/</link><pubDate>Tue, 26 Jul 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/dockers/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Upon execution, the container will be created, and you will be logged into its environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker on Ubuntu</title>
+      <link>https://ayyzenn.github.io/posts/dockers/</link>
+      <pubDate>Tue, 26 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/dockers/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.&lt;/p&gt;
-&lt;p&gt;By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

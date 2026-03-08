@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Dual Boot on ayyzenn</title><link>https://ayyzenn.github.io/tags/dual-boot/</link><description>Recent content in Dual Boot on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Fri, 13 Aug 2021 15:49:43 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/dual-boot/index.xml" rel="self" type="application/rss+xml"/><item><title>Dual boot Ubuntu and Windows</title><link>https://ayyzenn.github.io/posts/dual_boot/</link><pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/dual_boot/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dual Boot on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/dual-boot/</link>
+    <description>Recent content in Dual Boot on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Aug 2021 15:49:43 +0500</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/dual-boot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dual boot Ubuntu and Windows</title>
+      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
+      <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
-&lt;h3 id="what-is-ubuntu"&gt;What is Ubuntu?&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;
 &lt;p&gt;Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.&lt;/p&gt;
-&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

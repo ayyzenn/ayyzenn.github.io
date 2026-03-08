@@ -1,4 +1,13 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Jenkins + Docker Pipeline from GitHub | ayyzenn</title><meta name=keywords content="jenkins,docker,ci-cd,github,devops"><meta name=description content="What Is This About?
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Jenkins &#43; Docker Pipeline from GitHub | ayyzenn</title>
+<meta name="keywords" content="jenkins, docker, ci-cd, github, devops">
+<meta name="description" content="What Is This About?
 In this post, I explain how I built a Jenkins pipeline that:
 
 Pulls code from GitHub
@@ -19,11 +28,75 @@ Run docker build
 Run docker run
 Check the output
 
-With Jenkins, all of this happens automatically when the pipeline runs."><meta name=author content="Saad"><link rel=canonical href=https://ayyzenn.github.io/posts/docker-pipeline-from-github/><link crossorigin=anonymous href=/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css integrity="sha256-IhHKMWS+eDACT2qtKzouUghDpk+PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as=style><link rel=icon href=https://ayyzenn.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://ayyzenn.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://ayyzenn.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://ayyzenn.github.io/apple-touch-icon.png><link rel=mask-icon href=https://ayyzenn.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://ayyzenn.github.io/posts/docker-pipeline-from-github/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/docker-pipeline-from-github/"><meta property="og:site_name" content="ayyzenn"><meta property="og:title" content="Jenkins + Docker Pipeline from GitHub"><meta property="og:description" content="What Is This About? In this post, I explain how I built a Jenkins pipeline that:
+With Jenkins, all of this happens automatically when the pipeline runs.">
+<meta name="author" content="Saad">
+<link rel="canonical" href="https://ayyzenn.github.io/posts/docker-pipeline-from-github/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/docker-pipeline-from-github/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/docker-pipeline-from-github/">
+  <meta property="og:site_name" content="ayyzenn">
+  <meta property="og:title" content="Jenkins &#43; Docker Pipeline from GitHub">
+  <meta property="og:description" content="What Is This About? In this post, I explain how I built a Jenkins pipeline that:
 Pulls code from GitHub Builds a Docker image Runs a Docker container Executes a script automatically This is a very common real-world CI/CD setup:
 Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.
 Goal: From Manual to Automatic Manually, we usually do this:
-Clone a GitHub repository Run docker build Run docker run Check the output With Jenkins, all of this happens automatically when the pipeline runs."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-02-10T00:00:00+00:00"><meta property="article:modified_time" content="2026-02-10T00:00:00+00:00"><meta property="article:tag" content="Jenkins"><meta property="article:tag" content="Docker"><meta property="article:tag" content="Ci-Cd"><meta property="article:tag" content="Github"><meta property="article:tag" content="Devops"><meta name=twitter:card content="summary"><meta name=twitter:title content="Jenkins + Docker Pipeline from GitHub"><meta name=twitter:description content="What Is This About?
+Clone a GitHub repository Run docker build Run docker run Check the output With Jenkins, all of this happens automatically when the pipeline runs.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-10T00:00:00+00:00">
+    <meta property="article:tag" content="Jenkins">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Ci-Cd">
+    <meta property="article:tag" content="Github">
+    <meta property="article:tag" content="Devops">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jenkins &#43; Docker Pipeline from GitHub">
+<meta name="twitter:description" content="What Is This About?
 In this post, I explain how I built a Jenkins pipeline that:
 
 Pulls code from GitHub
@@ -44,74 +117,520 @@ Run docker build
 Run docker run
 Check the output
 
-With Jenkins, all of this happens automatically when the pipeline runs."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://ayyzenn.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Jenkins + Docker Pipeline from GitHub","item":"https://ayyzenn.github.io/posts/docker-pipeline-from-github/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Jenkins + Docker Pipeline from GitHub","name":"Jenkins \u002b Docker Pipeline from GitHub","description":"What Is This About? In this post, I explain how I built a Jenkins pipeline that:\nPulls code from GitHub Builds a Docker image Runs a Docker container Executes a script automatically This is a very common real-world CI/CD setup:\nCode lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.\nGoal: From Manual to Automatic Manually, we usually do this:\nClone a GitHub repository Run docker build Run docker run Check the output With Jenkins, all of this happens automatically when the pipeline runs.\n","keywords":["jenkins","docker","ci-cd","github","devops"],"articleBody":"What Is This About? In this post, I explain how I built a Jenkins pipeline that:\nPulls code from GitHub Builds a Docker image Runs a Docker container Executes a script automatically This is a very common real-world CI/CD setup:\nCode lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.\nGoal: From Manual to Automatic Manually, we usually do this:\nClone a GitHub repository Run docker build Run docker run Check the output With Jenkins, all of this happens automatically when the pipeline runs.\nYou click Build Now (or trigger from GitHub), and Jenkins does the rest.\nPrerequisites (Short Version) You should already have:\nJenkins installed and working Docker installed and working Jenkins user allowed to run Docker (for example, by adding the jenkins user to the docker group) On many systems this looks like:\nsudo usermod -aG docker jenkins sudo systemctl restart jenkins Then log out and log back in, and make sure a simple docker ps works from the Jenkins environment.\nRepository Structure My GitHub repository looks like this:\njenkins-pipeline-demo/ ├── Jenkinsfile ├── Dockerfile └── app.sh Each file has a clear role:\nJenkinsfile → Jenkins pipeline steps Dockerfile → How the Docker image is built app.sh → Script that runs inside the container app.sh: The Script Inside the Container This is a simple shell script that prints some information. It proves that the container actually runs.\n#!/bin/sh echo \"Hello from GitHub + Jenkins Pipeline\" uname -a date Save this as app.sh and make it executable:\nchmod +x app.sh Dockerfile: How the Image Is Built This Dockerfile builds a small image using Alpine Linux:\nFROM alpine:latest WORKDIR /app COPY app.sh . RUN chmod +x app.sh CMD [\"./app.sh\"] Explanation:\nUses Alpine Linux, which is small and fast Copies app.sh into /app Makes it executable Runs ./app.sh when the container starts If you build and run this locally, you should see the same output that Jenkins will show later:\ndocker build -t jenkins-demo-app . docker run --rm jenkins-demo-app Jenkinsfile: The Pipeline Definition This is the Jenkins declarative pipeline stored in the repo:\npipeline { agent any stages { stage('Checkout') { steps { echo 'Code checked out from GitHub' } } stage('Build Docker Image') { steps { sh 'docker build -t jenkins-demo-app .' } } stage('Run Docker Container') { steps { sh ''' docker rm -f jenkins-demo-container || true docker run --name jenkins-demo-container jenkins-demo-app ''' } } } post { always { echo 'Cleaning up...' sh 'docker ps -a' } } } What This Pipeline Does Jenkins automatically checks out code from GitHub (handled by Jenkins when using SCM) Builds a Docker image named jenkins-demo-app Removes any old container with the same name (if it exists) Runs a new container named jenkins-demo-container After the run, prints docker ps -a so you can see container status Put the Code on GitHub In your local folder:\ngit init git add Jenkinsfile Dockerfile app.sh git commit -m \"Jenkins Docker pipeline demo\" git branch -M main git remote add origin https://github.com/your-username/jenkins-pipeline-demo.git git push -u origin main Now your GitHub repo has:\nJenkinsfile Dockerfile app.sh Create the Jenkins Pipeline Job In Jenkins:\nGo to New Item Name: docker-pipeline-demo Type: Pipeline Click OK Scroll down to the Pipeline section and set:\nDefinition: Pipeline script from SCM SCM: Git Repository URL: your GitHub repo, for example\nhttps://github.com/your-username/jenkins-pipeline-demo.git Credentials: (optional) your GitHub token, if the repo is private Branch Specifier: */main Script Path: Jenkinsfile Click Save.\nNow Jenkins knows where to pull code from and which Jenkinsfile to use.\nRun the Pipeline and Check Output From the docker-pipeline-demo job page:\nClick Build Now Click the build number (for example #1) Click Console Output In the log you should see:\nGit repository being cloned Docker image being built Docker container being started Output from app.sh, like: Hello from GitHub + Jenkins Pipeline Linux ... Mon Feb 10 12:34:56 UTC 2026 If there are Docker permission errors, check:\nJenkins user in docker group Docker daemon is running Why This Setup Is Important This pipeline is useful because:\nNo manual Docker commands: Jenkins runs them for you Same build process every time: reproducible builds Easy to extend: you can add tests, security scans, or deployments Works well with GitHub: every change in Git can trigger the same pipeline This is the base of many real CI/CD systems.\nWhat You Can Add Next From here, you can extend the pipeline to:\nPush the image to Docker Hub or another registry Use Docker Compose to run multiple services Add test stages before building or after running the container Deploy to a server, VM, or Kubernetes Trigger builds using GitHub webhooks Conclusion Using Jenkins with Docker and GitHub makes automation simple and reliable.\nOnce this base pipeline works, you can slowly turn it into a production-grade CI/CD pipeline:\nSame idea Same tools Just more stages and checks This setup is small, but very powerful.\n","wordCount":"814","inLanguage":"en","datePublished":"2026-02-10T00:00:00Z","dateModified":"2026-02-10T00:00:00Z","author":{"@type":"Person","name":"Saad"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ayyzenn.github.io/posts/docker-pipeline-from-github/"},"publisher":{"@type":"Organization","name":"ayyzenn","logo":{"@type":"ImageObject","url":"https://ayyzenn.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://ayyzenn.github.io/ accesskey=h title="ayyzenn (Alt + H)">ayyzenn</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://ayyzenn.github.io/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://ayyzenn.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://ayyzenn.github.io/search title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://ayyzenn.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://ayyzenn.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Jenkins + Docker Pipeline from GitHub</h1><div class=post-meta><span title='2026-02-10 00:00:00 +0000 UTC'>February 10, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Saad</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#what-is-this-about aria-label="What Is This About?">What Is This About?</a></li><li><a href=#goal-from-manual-to-automatic aria-label="Goal: From Manual to Automatic">Goal: From Manual to Automatic</a></li><li><a href=#prerequisites-short-version aria-label="Prerequisites (Short Version)">Prerequisites (Short Version)</a></li><li><a href=#repository-structure aria-label="Repository Structure">Repository Structure</a></li><li><a href=#appsh-the-script-inside-the-container aria-label="app.sh: The Script Inside the Container">app.sh: The Script Inside the Container</a></li><li><a href=#dockerfile-how-the-image-is-built aria-label="Dockerfile: How the Image Is Built">Dockerfile: How the Image Is Built</a></li><li><a href=#jenkinsfile-the-pipeline-definition aria-label="Jenkinsfile: The Pipeline Definition">Jenkinsfile: The Pipeline Definition</a><ul><li><a href=#what-this-pipeline-does aria-label="What This Pipeline Does">What This Pipeline Does</a></li></ul></li><li><a href=#put-the-code-on-github aria-label="Put the Code on GitHub">Put the Code on GitHub</a></li><li><a href=#create-the-jenkins-pipeline-job aria-label="Create the Jenkins Pipeline Job">Create the Jenkins Pipeline Job</a></li><li><a href=#run-the-pipeline-and-check-output aria-label="Run the Pipeline and Check Output">Run the Pipeline and Check Output</a></li><li><a href=#why-this-setup-is-important aria-label="Why This Setup Is Important">Why This Setup Is Important</a></li><li><a href=#what-you-can-add-next aria-label="What You Can Add Next">What You Can Add Next</a></li><li><a href=#conclusion aria-label=Conclusion>Conclusion</a></li></ul></div></details></div><div class=post-content><h2 id=what-is-this-about>What Is This About?<a hidden class=anchor aria-hidden=true href=#what-is-this-about>#</a></h2><p>In this post, I explain how I built a <strong>Jenkins pipeline</strong> that:</p><ul><li>Pulls code from <strong>GitHub</strong></li><li>Builds a <strong>Docker image</strong></li><li>Runs a <strong>Docker container</strong></li><li>Executes a script automatically</li></ul><p>This is a very common <strong>real-world CI/CD setup</strong>:</p><blockquote><p>Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.</p></blockquote><hr><h2 id=goal-from-manual-to-automatic>Goal: From Manual to Automatic<a hidden class=anchor aria-hidden=true href=#goal-from-manual-to-automatic>#</a></h2><p>Manually, we usually do this:</p><ol><li>Clone a GitHub repository</li><li>Run <code>docker build</code></li><li>Run <code>docker run</code></li><li>Check the output</li></ol><p>With Jenkins, all of this happens <strong>automatically</strong> when the pipeline runs.</p><p>You click <strong>Build Now</strong> (or trigger from GitHub), and Jenkins does the rest.</p><hr><h2 id=prerequisites-short-version>Prerequisites (Short Version)<a hidden class=anchor aria-hidden=true href=#prerequisites-short-version>#</a></h2><p>You should already have:</p><ul><li>Jenkins installed and working</li><li>Docker installed and working</li><li>Jenkins user allowed to run Docker (for example, by adding the <code>jenkins</code> user to the <code>docker</code> group)</li></ul><p>On many systems this looks like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>sudo usermod -aG docker jenkins
-</span></span><span style=display:flex><span>sudo systemctl restart jenkins
-</span></span></code></pre></div><p>Then log out and log back in, and make sure a simple <code>docker ps</code> works from the Jenkins environment.</p><hr><h2 id=repository-structure>Repository Structure<a hidden class=anchor aria-hidden=true href=#repository-structure>#</a></h2><p>My GitHub repository looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>jenkins-pipeline-demo/
-</span></span><span style=display:flex><span>├── Jenkinsfile
-</span></span><span style=display:flex><span>├── Dockerfile
-</span></span><span style=display:flex><span>└── app.sh
-</span></span></code></pre></div><p>Each file has a clear role:</p><ul><li><strong>Jenkinsfile</strong> → Jenkins pipeline steps</li><li><strong>Dockerfile</strong> → How the Docker image is built</li><li><strong>app.sh</strong> → Script that runs inside the container</li></ul><hr><h2 id=appsh-the-script-inside-the-container><code>app.sh</code>: The Script Inside the Container<a hidden class=anchor aria-hidden=true href=#appsh-the-script-inside-the-container>#</a></h2><p>This is a simple shell script that prints some information.
-It proves that the container actually runs.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span><span style=color:#75715e>#!/bin/sh
-</span></span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Hello from GitHub + Jenkins Pipeline&#34;</span>
-</span></span><span style=display:flex><span>uname -a
-</span></span><span style=display:flex><span>date
-</span></span></code></pre></div><p>Save this as <code>app.sh</code> and make it executable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>chmod +x app.sh
-</span></span></code></pre></div><hr><h2 id=dockerfile-how-the-image-is-built><code>Dockerfile</code>: How the Image Is Built<a hidden class=anchor aria-hidden=true href=#dockerfile-how-the-image-is-built>#</a></h2><p>This Dockerfile builds a small image using Alpine Linux:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Dockerfile data-lang=Dockerfile><span style=display:flex><span><span style=color:#66d9ef>FROM</span> <span style=color:#e6db74>alpine:latest</span><span style=color:#960050;background-color:#1e0010>
-</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
-</span></span></span><span style=display:flex><span><span style=color:#66d9ef>WORKDIR</span> <span style=color:#e6db74>/app</span><span style=color:#960050;background-color:#1e0010>
-</span></span></span><span style=display:flex><span><span style=color:#66d9ef>COPY</span> app.sh .<span style=color:#960050;background-color:#1e0010>
-</span></span></span><span style=display:flex><span><span style=color:#66d9ef>RUN</span> chmod +x app.sh<span style=color:#960050;background-color:#1e0010>
-</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
-</span></span></span><span style=display:flex><span><span style=color:#66d9ef>CMD</span> [<span style=color:#e6db74>&#34;./app.sh&#34;</span>]<span style=color:#960050;background-color:#1e0010>
-</span></span></span></code></pre></div><p>Explanation:</p><ul><li>Uses <strong>Alpine Linux</strong>, which is small and fast</li><li>Copies <code>app.sh</code> into <code>/app</code></li><li>Makes it executable</li><li>Runs <code>./app.sh</code> when the container starts</li></ul><p>If you build and run this locally, you should see the same output that Jenkins will show later:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>docker build -t jenkins-demo-app .
-</span></span><span style=display:flex><span>docker run --rm jenkins-demo-app
-</span></span></code></pre></div><hr><h2 id=jenkinsfile-the-pipeline-definition><code>Jenkinsfile</code>: The Pipeline Definition<a hidden class=anchor aria-hidden=true href=#jenkinsfile-the-pipeline-definition>#</a></h2><p>This is the Jenkins declarative pipeline stored in the repo:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-groovy data-lang=groovy><span style=display:flex><span>pipeline <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>    agent any
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    stages <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>        stage<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;Checkout&#39;</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>            steps <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>                echo <span style=color:#e6db74>&#39;Code checked out from GitHub&#39;</span>
-</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        stage<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;Build Docker Image&#39;</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>            steps <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>                sh <span style=color:#e6db74>&#39;docker build -t jenkins-demo-app .&#39;</span>
-</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        stage<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;Run Docker Container&#39;</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>            steps <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>                sh <span style=color:#e6db74>&#39;&#39;&#39;
-</span></span></span><span style=display:flex><span><span style=color:#e6db74>                docker rm -f jenkins-demo-container || true
-</span></span></span><span style=display:flex><span><span style=color:#e6db74>                docker run --name jenkins-demo-container jenkins-demo-app
-</span></span></span><span style=display:flex><span><span style=color:#e6db74>                &#39;&#39;&#39;</span>
-</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    post <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>        always <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>            echo <span style=color:#e6db74>&#39;Cleaning up...&#39;</span>
-</span></span><span style=display:flex><span>            sh <span style=color:#e6db74>&#39;docker ps -a&#39;</span>
-</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
-</span></span></code></pre></div><h3 id=what-this-pipeline-does>What This Pipeline Does<a hidden class=anchor aria-hidden=true href=#what-this-pipeline-does>#</a></h3><ul><li>Jenkins automatically checks out code from GitHub (handled by Jenkins when using SCM)</li><li>Builds a Docker image named <code>jenkins-demo-app</code></li><li>Removes any old container with the same name (if it exists)</li><li>Runs a new container named <code>jenkins-demo-container</code></li><li>After the run, prints <code>docker ps -a</code> so you can see container status</li></ul><hr><h2 id=put-the-code-on-github>Put the Code on GitHub<a hidden class=anchor aria-hidden=true href=#put-the-code-on-github>#</a></h2><p>In your local folder:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>git init
-</span></span><span style=display:flex><span>git add Jenkinsfile Dockerfile app.sh
-</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Jenkins Docker pipeline demo&#34;</span>
-</span></span><span style=display:flex><span>git branch -M main
-</span></span><span style=display:flex><span>git remote add origin https://github.com/your-username/jenkins-pipeline-demo.git
-</span></span><span style=display:flex><span>git push -u origin main
-</span></span></code></pre></div><p>Now your GitHub repo has:</p><ul><li><code>Jenkinsfile</code></li><li><code>Dockerfile</code></li><li><code>app.sh</code></li></ul><hr><h2 id=create-the-jenkins-pipeline-job>Create the Jenkins Pipeline Job<a hidden class=anchor aria-hidden=true href=#create-the-jenkins-pipeline-job>#</a></h2><p>In Jenkins:</p><ol><li>Go to <strong>New Item</strong></li><li>Name: <code>docker-pipeline-demo</code></li><li>Type: <strong>Pipeline</strong></li><li>Click <strong>OK</strong></li></ol><p>Scroll down to the <strong>Pipeline</strong> section and set:</p><ul><li><strong>Definition</strong>: <code>Pipeline script from SCM</code></li><li><strong>SCM</strong>: <code>Git</code></li><li><strong>Repository URL</strong>: your GitHub repo, for example<br><code>https://github.com/your-username/jenkins-pipeline-demo.git</code></li><li><strong>Credentials</strong>: (optional) your GitHub token, if the repo is private</li><li><strong>Branch Specifier</strong>: <code>*/main</code></li><li><strong>Script Path</strong>: <code>Jenkinsfile</code></li></ul><p>Click <strong>Save</strong>.</p><p>Now Jenkins knows where to pull code from and which <code>Jenkinsfile</code> to use.</p><hr><h2 id=run-the-pipeline-and-check-output>Run the Pipeline and Check Output<a hidden class=anchor aria-hidden=true href=#run-the-pipeline-and-check-output>#</a></h2><p>From the <code>docker-pipeline-demo</code> job page:</p><ol><li>Click <strong>Build Now</strong></li><li>Click the build number (for example <code>#1</code>)</li><li>Click <strong>Console Output</strong></li></ol><p>In the log you should see:</p><ul><li>Git repository being cloned</li><li>Docker image being built</li><li>Docker container being started</li><li>Output from <code>app.sh</code>, like:</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>Hello from GitHub + Jenkins Pipeline
-</span></span><span style=display:flex><span>Linux ...
-</span></span><span style=display:flex><span>Mon Feb 10 12:34:56 UTC 2026
-</span></span></code></pre></div><p>If there are Docker permission errors, check:</p><ul><li>Jenkins user in <code>docker</code> group</li><li>Docker daemon is running</li></ul><hr><h2 id=why-this-setup-is-important>Why This Setup Is Important<a hidden class=anchor aria-hidden=true href=#why-this-setup-is-important>#</a></h2><p>This pipeline is useful because:</p><ul><li><strong>No manual Docker commands</strong>: Jenkins runs them for you</li><li><strong>Same build process every time</strong>: reproducible builds</li><li><strong>Easy to extend</strong>: you can add tests, security scans, or deployments</li><li><strong>Works well with GitHub</strong>: every change in Git can trigger the same pipeline</li></ul><p>This is the base of many real <strong>CI/CD systems</strong>.</p><hr><h2 id=what-you-can-add-next>What You Can Add Next<a hidden class=anchor aria-hidden=true href=#what-you-can-add-next>#</a></h2><p>From here, you can extend the pipeline to:</p><ul><li>Push the image to <strong>Docker Hub</strong> or another registry</li><li>Use <strong>Docker Compose</strong> to run multiple services</li><li>Add <strong>test stages</strong> before building or after running the container</li><li>Deploy to a <strong>server</strong>, <strong>VM</strong>, or <strong>Kubernetes</strong></li><li>Trigger builds using <strong>GitHub webhooks</strong></li></ul><hr><h2 id=conclusion>Conclusion<a hidden class=anchor aria-hidden=true href=#conclusion>#</a></h2><p>Using Jenkins with Docker and GitHub makes automation simple and reliable.</p><p>Once this base pipeline works, you can slowly turn it into a <strong>production-grade CI/CD pipeline</strong>:</p><ul><li>Same idea</li><li>Same tools</li><li>Just more stages and checks</li></ul><p>This setup is small, but very powerful.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://ayyzenn.github.io/tags/jenkins/>Jenkins</a></li><li><a href=https://ayyzenn.github.io/tags/docker/>Docker</a></li><li><a href=https://ayyzenn.github.io/tags/ci-cd/>Ci-Cd</a></li><li><a href=https://ayyzenn.github.io/tags/github/>Github</a></li><li><a href=https://ayyzenn.github.io/tags/devops/>Devops</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://ayyzenn.github.io/>ayyzenn</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+With Jenkins, all of this happens automatically when the pipeline runs.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ayyzenn.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Jenkins + Docker Pipeline from GitHub",
+      "item": "https://ayyzenn.github.io/posts/docker-pipeline-from-github/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Jenkins + Docker Pipeline from GitHub",
+  "name": "Jenkins \u002b Docker Pipeline from GitHub",
+  "description": "What Is This About? In this post, I explain how I built a Jenkins pipeline that:\nPulls code from GitHub Builds a Docker image Runs a Docker container Executes a script automatically This is a very common real-world CI/CD setup:\nCode lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.\nGoal: From Manual to Automatic Manually, we usually do this:\nClone a GitHub repository Run docker build Run docker run Check the output With Jenkins, all of this happens automatically when the pipeline runs.\n",
+  "keywords": [
+    "jenkins", "docker", "ci-cd", "github", "devops"
+  ],
+  "articleBody": "What Is This About? In this post, I explain how I built a Jenkins pipeline that:\nPulls code from GitHub Builds a Docker image Runs a Docker container Executes a script automatically This is a very common real-world CI/CD setup:\nCode lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.\nGoal: From Manual to Automatic Manually, we usually do this:\nClone a GitHub repository Run docker build Run docker run Check the output With Jenkins, all of this happens automatically when the pipeline runs.\nYou click Build Now (or trigger from GitHub), and Jenkins does the rest.\nPrerequisites (Short Version) You should already have:\nJenkins installed and working Docker installed and working Jenkins user allowed to run Docker (for example, by adding the jenkins user to the docker group) On many systems this looks like:\nsudo usermod -aG docker jenkins sudo systemctl restart jenkins Then log out and log back in, and make sure a simple docker ps works from the Jenkins environment.\nRepository Structure My GitHub repository looks like this:\njenkins-pipeline-demo/ ├── Jenkinsfile ├── Dockerfile └── app.sh Each file has a clear role:\nJenkinsfile → Jenkins pipeline steps Dockerfile → How the Docker image is built app.sh → Script that runs inside the container app.sh: The Script Inside the Container This is a simple shell script that prints some information. It proves that the container actually runs.\n#!/bin/sh echo \"Hello from GitHub + Jenkins Pipeline\" uname -a date Save this as app.sh and make it executable:\nchmod +x app.sh Dockerfile: How the Image Is Built This Dockerfile builds a small image using Alpine Linux:\nFROM alpine:latest WORKDIR /app COPY app.sh . RUN chmod +x app.sh CMD [\"./app.sh\"] Explanation:\nUses Alpine Linux, which is small and fast Copies app.sh into /app Makes it executable Runs ./app.sh when the container starts If you build and run this locally, you should see the same output that Jenkins will show later:\ndocker build -t jenkins-demo-app . docker run --rm jenkins-demo-app Jenkinsfile: The Pipeline Definition This is the Jenkins declarative pipeline stored in the repo:\npipeline { agent any stages { stage('Checkout') { steps { echo 'Code checked out from GitHub' } } stage('Build Docker Image') { steps { sh 'docker build -t jenkins-demo-app .' } } stage('Run Docker Container') { steps { sh ''' docker rm -f jenkins-demo-container || true docker run --name jenkins-demo-container jenkins-demo-app ''' } } } post { always { echo 'Cleaning up...' sh 'docker ps -a' } } } What This Pipeline Does Jenkins automatically checks out code from GitHub (handled by Jenkins when using SCM) Builds a Docker image named jenkins-demo-app Removes any old container with the same name (if it exists) Runs a new container named jenkins-demo-container After the run, prints docker ps -a so you can see container status Put the Code on GitHub In your local folder:\ngit init git add Jenkinsfile Dockerfile app.sh git commit -m \"Jenkins Docker pipeline demo\" git branch -M main git remote add origin https://github.com/your-username/jenkins-pipeline-demo.git git push -u origin main Now your GitHub repo has:\nJenkinsfile Dockerfile app.sh Create the Jenkins Pipeline Job In Jenkins:\nGo to New Item Name: docker-pipeline-demo Type: Pipeline Click OK Scroll down to the Pipeline section and set:\nDefinition: Pipeline script from SCM SCM: Git Repository URL: your GitHub repo, for example\nhttps://github.com/your-username/jenkins-pipeline-demo.git Credentials: (optional) your GitHub token, if the repo is private Branch Specifier: */main Script Path: Jenkinsfile Click Save.\nNow Jenkins knows where to pull code from and which Jenkinsfile to use.\nRun the Pipeline and Check Output From the docker-pipeline-demo job page:\nClick Build Now Click the build number (for example #1) Click Console Output In the log you should see:\nGit repository being cloned Docker image being built Docker container being started Output from app.sh, like: Hello from GitHub + Jenkins Pipeline Linux ... Mon Feb 10 12:34:56 UTC 2026 If there are Docker permission errors, check:\nJenkins user in docker group Docker daemon is running Why This Setup Is Important This pipeline is useful because:\nNo manual Docker commands: Jenkins runs them for you Same build process every time: reproducible builds Easy to extend: you can add tests, security scans, or deployments Works well with GitHub: every change in Git can trigger the same pipeline This is the base of many real CI/CD systems.\nWhat You Can Add Next From here, you can extend the pipeline to:\nPush the image to Docker Hub or another registry Use Docker Compose to run multiple services Add test stages before building or after running the container Deploy to a server, VM, or Kubernetes Trigger builds using GitHub webhooks Conclusion Using Jenkins with Docker and GitHub makes automation simple and reliable.\nOnce this base pipeline works, you can slowly turn it into a production-grade CI/CD pipeline:\nSame idea Same tools Just more stages and checks This setup is small, but very powerful.\n",
+  "wordCount" : "814",
+  "inLanguage": "en",
+  "datePublished": "2026-02-10T00:00:00Z",
+  "dateModified": "2026-02-10T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Saad"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ayyzenn.github.io/posts/docker-pipeline-from-github/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ayyzenn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ayyzenn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Jenkins &#43; Docker Pipeline from GitHub
+    </h1>
+    <div class="post-meta"><span title='2026-02-10 00:00:00 +0000 UTC'>February 10, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Saad
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#what-is-this-about" aria-label="What Is This About?">What Is This About?</a></li>
+                <li>
+                    <a href="#goal-from-manual-to-automatic" aria-label="Goal: From Manual to Automatic">Goal: From Manual to Automatic</a></li>
+                <li>
+                    <a href="#prerequisites-short-version" aria-label="Prerequisites (Short Version)">Prerequisites (Short Version)</a></li>
+                <li>
+                    <a href="#repository-structure" aria-label="Repository Structure">Repository Structure</a></li>
+                <li>
+                    <a href="#appsh-the-script-inside-the-container" aria-label="app.sh: The Script Inside the Container">app.sh: The Script Inside the Container</a></li>
+                <li>
+                    <a href="#dockerfile-how-the-image-is-built" aria-label="Dockerfile: How the Image Is Built">Dockerfile: How the Image Is Built</a></li>
+                <li>
+                    <a href="#jenkinsfile-the-pipeline-definition" aria-label="Jenkinsfile: The Pipeline Definition">Jenkinsfile: The Pipeline Definition</a><ul>
+                        
+                <li>
+                    <a href="#what-this-pipeline-does" aria-label="What This Pipeline Does">What This Pipeline Does</a></li></ul>
+                </li>
+                <li>
+                    <a href="#put-the-code-on-github" aria-label="Put the Code on GitHub">Put the Code on GitHub</a></li>
+                <li>
+                    <a href="#create-the-jenkins-pipeline-job" aria-label="Create the Jenkins Pipeline Job">Create the Jenkins Pipeline Job</a></li>
+                <li>
+                    <a href="#run-the-pipeline-and-check-output" aria-label="Run the Pipeline and Check Output">Run the Pipeline and Check Output</a></li>
+                <li>
+                    <a href="#why-this-setup-is-important" aria-label="Why This Setup Is Important">Why This Setup Is Important</a></li>
+                <li>
+                    <a href="#what-you-can-add-next" aria-label="What You Can Add Next">What You Can Add Next</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="what-is-this-about">What Is This About?<a hidden class="anchor" aria-hidden="true" href="#what-is-this-about">#</a></h2>
+<p>In this post, I explain how I built a <strong>Jenkins pipeline</strong> that:</p>
+<ul>
+<li>Pulls code from <strong>GitHub</strong></li>
+<li>Builds a <strong>Docker image</strong></li>
+<li>Runs a <strong>Docker container</strong></li>
+<li>Executes a script automatically</li>
+</ul>
+<p>This is a very common <strong>real-world CI/CD setup</strong>:</p>
+<blockquote>
+<p>Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.</p>
+</blockquote>
+<hr>
+<h2 id="goal-from-manual-to-automatic">Goal: From Manual to Automatic<a hidden class="anchor" aria-hidden="true" href="#goal-from-manual-to-automatic">#</a></h2>
+<p>Manually, we usually do this:</p>
+<ol>
+<li>Clone a GitHub repository</li>
+<li>Run <code>docker build</code></li>
+<li>Run <code>docker run</code></li>
+<li>Check the output</li>
+</ol>
+<p>With Jenkins, all of this happens <strong>automatically</strong> when the pipeline runs.</p>
+<p>You click <strong>Build Now</strong> (or trigger from GitHub), and Jenkins does the rest.</p>
+<hr>
+<h2 id="prerequisites-short-version">Prerequisites (Short Version)<a hidden class="anchor" aria-hidden="true" href="#prerequisites-short-version">#</a></h2>
+<p>You should already have:</p>
+<ul>
+<li>Jenkins installed and working</li>
+<li>Docker installed and working</li>
+<li>Jenkins user allowed to run Docker (for example, by adding the <code>jenkins</code> user to the <code>docker</code> group)</li>
+</ul>
+<p>On many systems this looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo usermod -aG docker jenkins
+</span></span><span style="display:flex;"><span>sudo systemctl restart jenkins
+</span></span></code></pre></div><p>Then log out and log back in, and make sure a simple <code>docker ps</code> works from the Jenkins environment.</p>
+<hr>
+<h2 id="repository-structure">Repository Structure<a hidden class="anchor" aria-hidden="true" href="#repository-structure">#</a></h2>
+<p>My GitHub repository looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>jenkins-pipeline-demo/
+</span></span><span style="display:flex;"><span>├── Jenkinsfile
+</span></span><span style="display:flex;"><span>├── Dockerfile
+</span></span><span style="display:flex;"><span>└── app.sh
+</span></span></code></pre></div><p>Each file has a clear role:</p>
+<ul>
+<li><strong>Jenkinsfile</strong> → Jenkins pipeline steps</li>
+<li><strong>Dockerfile</strong> → How the Docker image is built</li>
+<li><strong>app.sh</strong> → Script that runs inside the container</li>
+</ul>
+<hr>
+<h2 id="appsh-the-script-inside-the-container"><code>app.sh</code>: The Script Inside the Container<a hidden class="anchor" aria-hidden="true" href="#appsh-the-script-inside-the-container">#</a></h2>
+<p>This is a simple shell script that prints some information.
+It proves that the container actually runs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Hello from GitHub + Jenkins Pipeline&#34;</span>
+</span></span><span style="display:flex;"><span>uname -a
+</span></span><span style="display:flex;"><span>date
+</span></span></code></pre></div><p>Save this as <code>app.sh</code> and make it executable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x app.sh
+</span></span></code></pre></div><hr>
+<h2 id="dockerfile-how-the-image-is-built"><code>Dockerfile</code>: How the Image Is Built<a hidden class="anchor" aria-hidden="true" href="#dockerfile-how-the-image-is-built">#</a></h2>
+<p>This Dockerfile builds a small image using Alpine Linux:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">alpine:latest</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">WORKDIR</span> <span style="color:#e6db74">/app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">COPY</span> app.sh .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN</span> chmod +x app.sh<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;./app.sh&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>Explanation:</p>
+<ul>
+<li>Uses <strong>Alpine Linux</strong>, which is small and fast</li>
+<li>Copies <code>app.sh</code> into <code>/app</code></li>
+<li>Makes it executable</li>
+<li>Runs <code>./app.sh</code> when the container starts</li>
+</ul>
+<p>If you build and run this locally, you should see the same output that Jenkins will show later:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build -t jenkins-demo-app .
+</span></span><span style="display:flex;"><span>docker run --rm jenkins-demo-app
+</span></span></code></pre></div><hr>
+<h2 id="jenkinsfile-the-pipeline-definition"><code>Jenkinsfile</code>: The Pipeline Definition<a hidden class="anchor" aria-hidden="true" href="#jenkinsfile-the-pipeline-definition">#</a></h2>
+<p>This is the Jenkins declarative pipeline stored in the repo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>pipeline <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    agent any
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    stages <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Checkout&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            steps <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                echo <span style="color:#e6db74">&#39;Code checked out from GitHub&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Build Docker Image&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            steps <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                sh <span style="color:#e6db74">&#39;docker build -t jenkins-demo-app .&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Run Docker Container&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            steps <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                sh <span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                docker rm -f jenkins-demo-container || true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                docker run --name jenkins-demo-container jenkins-demo-app
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    post <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        always <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            echo <span style="color:#e6db74">&#39;Cleaning up...&#39;</span>
+</span></span><span style="display:flex;"><span>            sh <span style="color:#e6db74">&#39;docker ps -a&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="what-this-pipeline-does">What This Pipeline Does<a hidden class="anchor" aria-hidden="true" href="#what-this-pipeline-does">#</a></h3>
+<ul>
+<li>Jenkins automatically checks out code from GitHub (handled by Jenkins when using SCM)</li>
+<li>Builds a Docker image named <code>jenkins-demo-app</code></li>
+<li>Removes any old container with the same name (if it exists)</li>
+<li>Runs a new container named <code>jenkins-demo-container</code></li>
+<li>After the run, prints <code>docker ps -a</code> so you can see container status</li>
+</ul>
+<hr>
+<h2 id="put-the-code-on-github">Put the Code on GitHub<a hidden class="anchor" aria-hidden="true" href="#put-the-code-on-github">#</a></h2>
+<p>In your local folder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add Jenkinsfile Dockerfile app.sh
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Jenkins Docker pipeline demo&#34;</span>
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/your-username/jenkins-pipeline-demo.git
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><p>Now your GitHub repo has:</p>
+<ul>
+<li><code>Jenkinsfile</code></li>
+<li><code>Dockerfile</code></li>
+<li><code>app.sh</code></li>
+</ul>
+<hr>
+<h2 id="create-the-jenkins-pipeline-job">Create the Jenkins Pipeline Job<a hidden class="anchor" aria-hidden="true" href="#create-the-jenkins-pipeline-job">#</a></h2>
+<p>In Jenkins:</p>
+<ol>
+<li>Go to <strong>New Item</strong></li>
+<li>Name: <code>docker-pipeline-demo</code></li>
+<li>Type: <strong>Pipeline</strong></li>
+<li>Click <strong>OK</strong></li>
+</ol>
+<p>Scroll down to the <strong>Pipeline</strong> section and set:</p>
+<ul>
+<li><strong>Definition</strong>: <code>Pipeline script from SCM</code></li>
+<li><strong>SCM</strong>: <code>Git</code></li>
+<li><strong>Repository URL</strong>: your GitHub repo, for example<br>
+<code>https://github.com/your-username/jenkins-pipeline-demo.git</code></li>
+<li><strong>Credentials</strong>: (optional) your GitHub token, if the repo is private</li>
+<li><strong>Branch Specifier</strong>: <code>*/main</code></li>
+<li><strong>Script Path</strong>: <code>Jenkinsfile</code></li>
+</ul>
+<p>Click <strong>Save</strong>.</p>
+<p>Now Jenkins knows where to pull code from and which <code>Jenkinsfile</code> to use.</p>
+<hr>
+<h2 id="run-the-pipeline-and-check-output">Run the Pipeline and Check Output<a hidden class="anchor" aria-hidden="true" href="#run-the-pipeline-and-check-output">#</a></h2>
+<p>From the <code>docker-pipeline-demo</code> job page:</p>
+<ol>
+<li>Click <strong>Build Now</strong></li>
+<li>Click the build number (for example <code>#1</code>)</li>
+<li>Click <strong>Console Output</strong></li>
+</ol>
+<p>In the log you should see:</p>
+<ul>
+<li>Git repository being cloned</li>
+<li>Docker image being built</li>
+<li>Docker container being started</li>
+<li>Output from <code>app.sh</code>, like:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Hello from GitHub + Jenkins Pipeline
+</span></span><span style="display:flex;"><span>Linux ...
+</span></span><span style="display:flex;"><span>Mon Feb 10 12:34:56 UTC 2026
+</span></span></code></pre></div><p>If there are Docker permission errors, check:</p>
+<ul>
+<li>Jenkins user in <code>docker</code> group</li>
+<li>Docker daemon is running</li>
+</ul>
+<hr>
+<h2 id="why-this-setup-is-important">Why This Setup Is Important<a hidden class="anchor" aria-hidden="true" href="#why-this-setup-is-important">#</a></h2>
+<p>This pipeline is useful because:</p>
+<ul>
+<li><strong>No manual Docker commands</strong>: Jenkins runs them for you</li>
+<li><strong>Same build process every time</strong>: reproducible builds</li>
+<li><strong>Easy to extend</strong>: you can add tests, security scans, or deployments</li>
+<li><strong>Works well with GitHub</strong>: every change in Git can trigger the same pipeline</li>
+</ul>
+<p>This is the base of many real <strong>CI/CD systems</strong>.</p>
+<hr>
+<h2 id="what-you-can-add-next">What You Can Add Next<a hidden class="anchor" aria-hidden="true" href="#what-you-can-add-next">#</a></h2>
+<p>From here, you can extend the pipeline to:</p>
+<ul>
+<li>Push the image to <strong>Docker Hub</strong> or another registry</li>
+<li>Use <strong>Docker Compose</strong> to run multiple services</li>
+<li>Add <strong>test stages</strong> before building or after running the container</li>
+<li>Deploy to a <strong>server</strong>, <strong>VM</strong>, or <strong>Kubernetes</strong></li>
+<li>Trigger builds using <strong>GitHub webhooks</strong></li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Using Jenkins with Docker and GitHub makes automation simple and reliable.</p>
+<p>Once this base pipeline works, you can slowly turn it into a <strong>production-grade CI/CD pipeline</strong>:</p>
+<ul>
+<li>Same idea</li>
+<li>Same tools</li>
+<li>Just more stages and checks</li>
+</ul>
+<p>This setup is small, but very powerful.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://ayyzenn.github.io/tags/jenkins/">Jenkins</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/docker/">Docker</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/ci-cd/">Ci-Cd</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/github/">Github</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/devops/">Devops</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

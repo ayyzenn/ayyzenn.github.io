@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>LLM on ayyzenn</title><link>https://ayyzenn.github.io/tags/llm/</link><description>Recent content in LLM on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml"/><item><title>A Guide to LlamaIndex + Structured Data (Text-to-SQL)</title><link>https://ayyzenn.github.io/posts/llamaindex/</link><pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/llamaindex/</guid><description>A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.</description></item><item><title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title><link>https://ayyzenn.github.io/posts/local-rag-system/</link><pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/local-rag-system/</guid><description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LLM on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/llm/</link>
+    <description>Recent content in LLM on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)</title>
+      <link>https://ayyzenn.github.io/posts/llamaindex/</link>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/llamaindex/</guid>
+      <description>A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.</description>
+    </item>
+    <item>
+      <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
+      <link>https://ayyzenn.github.io/posts/local-rag-system/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/local-rag-system/</guid>
+      <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
+    </item>
+  </channel>
+</rss>

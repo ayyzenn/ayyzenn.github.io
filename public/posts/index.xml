@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on ayyzenn</title><link>https://ayyzenn.github.io/posts/</link><description>Recent content in Posts on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Sat, 07 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB</title><link>https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/</link><pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/</guid><description>&lt;h2 id="restful-api-with-web-scraping-pipelines"&gt;RESTful API with Web Scraping Pipelines&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on ayyzenn</title>
+    <link>https://ayyzenn.github.io/posts/</link>
+    <description>Recent content in Posts on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB</title>
+      <link>https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/</link>
+      <pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/</guid>
+      <description>&lt;h2 id=&#34;restful-api-with-web-scraping-pipelines&#34;&gt;RESTful API with Web Scraping Pipelines&lt;/h2&gt;
 &lt;p&gt;This guide shows you how to build a backend API project that:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Uses FastAPI and Flask&lt;/strong&gt; for RESTful APIs&lt;/li&gt;
@@ -8,8 +23,15 @@
 &lt;/ul&gt;
 &lt;p&gt;The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="1-what-does-this-project-do-simple-explanation"&gt;1. What Does This Project Do? (Simple Explanation)&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;This project is a data aggregator backend.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Jenkins + Docker Pipeline from GitHub</title><link>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</link><pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</guid><description>&lt;h2 id="what-is-this-about"&gt;What Is This About?&lt;/h2&gt;
+&lt;h2 id=&#34;1-what-does-this-project-do-simple-explanation&#34;&gt;1. What Does This Project Do? (Simple Explanation)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;This project is a data aggregator backend.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jenkins &#43; Docker Pipeline from GitHub</title>
+      <link>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</guid>
+      <description>&lt;h2 id=&#34;what-is-this-about&#34;&gt;What Is This About?&lt;/h2&gt;
 &lt;p&gt;In this post, I explain how I built a &lt;strong&gt;Jenkins pipeline&lt;/strong&gt; that:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Pulls code from &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/li&gt;
@@ -22,7 +44,7 @@
 &lt;p&gt;Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id="goal-from-manual-to-automatic"&gt;Goal: From Manual to Automatic&lt;/h2&gt;
+&lt;h2 id=&#34;goal-from-manual-to-automatic&#34;&gt;Goal: From Manual to Automatic&lt;/h2&gt;
 &lt;p&gt;Manually, we usually do this:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Clone a GitHub repository&lt;/li&gt;
@@ -30,7 +52,14 @@
 &lt;li&gt;Run &lt;code&gt;docker run&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Check the output&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;</description></item><item><title>Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project</title><link>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</link><pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</guid><description>&lt;h2 id="jenkins-on-arch-linux-i3"&gt;Jenkins on Arch Linux (i3)&lt;/h2&gt;
+&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project</title>
+      <link>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</link>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</guid>
+      <description>&lt;h2 id=&#34;jenkins-on-arch-linux-i3&#34;&gt;Jenkins on Arch Linux (i3)&lt;/h2&gt;
 &lt;p&gt;This guide shows you how to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Install Jenkins&lt;/strong&gt; on Arch Linux (i3 window manager is fine)&lt;/li&gt;
@@ -40,7 +69,7 @@
 &lt;/ul&gt;
 &lt;p&gt;The language is simple and the examples are small and realistic.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="1-what-is-jenkins-simple-explanation"&gt;1. What is Jenkins? (Simple Explanation)&lt;/h2&gt;
+&lt;h2 id=&#34;1-what-is-jenkins-simple-explanation&#34;&gt;1. What is Jenkins? (Simple Explanation)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Jenkins is an automation server.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;You can tell Jenkins to:&lt;/p&gt;
 &lt;ul&gt;
@@ -48,7 +77,14 @@
 &lt;li&gt;Run commands (build, test, scripts)&lt;/li&gt;
 &lt;li&gt;Show you if things passed or failed&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Instead of you running commands manually every time, Jenkins does it &lt;strong&gt;automatically&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Ansible: Automating Docker and Kubernetes Node Setup</title><link>https://ayyzenn.github.io/posts/ansible_adv/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/ansible_adv/</guid><description>&lt;h2 id="why-this-post-exists"&gt;Why This Post Exists&lt;/h2&gt;
+&lt;p&gt;Instead of you running commands manually every time, Jenkins does it &lt;strong&gt;automatically&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ansible: Automating Docker and Kubernetes Node Setup</title>
+      <link>https://ayyzenn.github.io/posts/ansible_adv/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/ansible_adv/</guid>
+      <description>&lt;h2 id=&#34;why-this-post-exists&#34;&gt;Why This Post Exists&lt;/h2&gt;
 &lt;p&gt;After writing my &lt;strong&gt;first real Ansible playbook&lt;/strong&gt;, I realized something:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Installing software manually once is easy.
@@ -63,8 +99,15 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;/ul&gt;
 &lt;p&gt;This post documents that journey.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="real-setup-same-as-before"&gt;Real Setup (Same as Before)&lt;/h2&gt;
-&lt;p&gt;Nothing fancy. Just real machines.&lt;/p&gt;</description></item><item><title>Ansible for Beginners: My First Real Automation</title><link>https://ayyzenn.github.io/posts/ansible/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/ansible/</guid><description>&lt;h2 id="what-is-ansible-in-simple-words"&gt;What is Ansible? (In Simple Words)&lt;/h2&gt;
+&lt;h2 id=&#34;real-setup-same-as-before&#34;&gt;Real Setup (Same as Before)&lt;/h2&gt;
+&lt;p&gt;Nothing fancy. Just real machines.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ansible for Beginners: My First Real Automation</title>
+      <link>https://ayyzenn.github.io/posts/ansible/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/ansible/</guid>
+      <description>&lt;h2 id=&#34;what-is-ansible-in-simple-words&#34;&gt;What is Ansible? (In Simple Words)&lt;/h2&gt;
 &lt;p&gt;Think of &lt;strong&gt;Ansible as a remote control for your servers&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Instead of:&lt;/p&gt;
 &lt;ul&gt;
@@ -86,11 +129,18 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;li&gt;Very human-readable&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id="my-setup-real-world"&gt;My Setup (Real World)&lt;/h2&gt;
-&lt;p&gt;This is exactly what I used:&lt;/p&gt;</description></item><item><title>Terraform: Infrastructure as Code</title><link>https://ayyzenn.github.io/posts/terraform/</link><pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/terraform/</guid><description>&lt;h2 id="what-is-terraform"&gt;What is Terraform?&lt;/h2&gt;
+&lt;h2 id=&#34;my-setup-real-world&#34;&gt;My Setup (Real World)&lt;/h2&gt;
+&lt;p&gt;This is exactly what I used:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraform: Infrastructure as Code</title>
+      <link>https://ayyzenn.github.io/posts/terraform/</link>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/terraform/</guid>
+      <description>&lt;h2 id=&#34;what-is-terraform&#34;&gt;What is Terraform?&lt;/h2&gt;
 &lt;p&gt;Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&amp;rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.&lt;/p&gt;
 &lt;p&gt;Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.&lt;/p&gt;
-&lt;h2 id="why-use-terraform"&gt;Why Use Terraform?&lt;/h2&gt;
+&lt;h2 id=&#34;why-use-terraform&#34;&gt;Why Use Terraform?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;No More Manual Clicking&lt;/strong&gt;: Automate infrastructure setup instead of clicking through AWS&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Easy Updates&lt;/strong&gt;: Change your code and run &lt;code&gt;terraform apply&lt;/code&gt; to update everything&lt;/li&gt;
@@ -99,66 +149,178 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;li&gt;&lt;strong&gt;Cost Preview&lt;/strong&gt;: See what resources cost before you create them&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Work with Multiple Clouds&lt;/strong&gt;: Manage AWS, Azure, and Google Cloud from one tool&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="basic-concepts-made-simple"&gt;Basic Concepts (Made Simple)&lt;/h2&gt;
-&lt;h3 id="providers"&gt;Providers&lt;/h3&gt;
-&lt;p&gt;A &lt;strong&gt;provider&lt;/strong&gt; tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.&lt;/p&gt;</description></item><item><title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture</title><link>https://ayyzenn.github.io/posts/agentic_rag/</link><pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/agentic_rag/</guid><description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</description></item><item><title>A Guide to LlamaIndex + Structured Data (Text-to-SQL)</title><link>https://ayyzenn.github.io/posts/llamaindex/</link><pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/llamaindex/</guid><description>A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.</description></item><item><title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title><link>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</link><pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</guid><description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description></item><item><title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title><link>https://ayyzenn.github.io/posts/local-rag-system/</link><pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/local-rag-system/</guid><description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description></item><item><title>Building a YouTube Transcript Summarizer with LangGraph and Gemini</title><link>https://ayyzenn.github.io/posts/agent/</link><pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/agent/</guid><description>A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.</description></item><item><title>Setting Up Ollama with DeepSeek Coder on Manjaro: A Step-by-Step Guide</title><link>https://ayyzenn.github.io/posts/ollama/</link><pubDate>Mon, 03 Feb 2025 17:07:58 +0500</pubDate><guid>https://ayyzenn.github.io/posts/ollama/</guid><description>&lt;h2 id="what-is-ollama"&gt;What is Ollama?&lt;/h2&gt;
+&lt;h2 id=&#34;basic-concepts-made-simple&#34;&gt;Basic Concepts (Made Simple)&lt;/h2&gt;
+&lt;h3 id=&#34;providers&#34;&gt;Providers&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;provider&lt;/strong&gt; tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture</title>
+      <link>https://ayyzenn.github.io/posts/agentic_rag/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/agentic_rag/</guid>
+      <description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</description>
+    </item>
+    <item>
+      <title>A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)</title>
+      <link>https://ayyzenn.github.io/posts/llamaindex/</link>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/llamaindex/</guid>
+      <description>A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.</description>
+    </item>
+    <item>
+      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title>
+      <link>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</guid>
+      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
+    </item>
+    <item>
+      <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
+      <link>https://ayyzenn.github.io/posts/local-rag-system/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/local-rag-system/</guid>
+      <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
+    </item>
+    <item>
+      <title>Building a YouTube Transcript Summarizer with LangGraph and Gemini</title>
+      <link>https://ayyzenn.github.io/posts/agent/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/agent/</guid>
+      <description>A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.</description>
+    </item>
+    <item>
+      <title>Setting Up Ollama with DeepSeek Coder on Manjaro: A Step-by-Step Guide</title>
+      <link>https://ayyzenn.github.io/posts/ollama/</link>
+      <pubDate>Mon, 03 Feb 2025 17:07:58 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/ollama/</guid>
+      <description>&lt;h2 id=&#34;what-is-ollama&#34;&gt;What is Ollama?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Ollama&lt;/strong&gt; is an open-source framework designed to run and manage large language models (LLMs) efficiently on local machines. It allows developers to load and interact with various AI models without relying on cloud-based APIs.&lt;/p&gt;
-&lt;h3 id="why-use-ollama"&gt;Why Use Ollama?&lt;/h3&gt;
+&lt;h3 id=&#34;why-use-ollama&#34;&gt;Why Use Ollama?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt;: No data leaves your local system.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Customization&lt;/strong&gt;: Run and fine-tune models as per your requirements.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;: Optimized for running models efficiently on consumer hardware.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="note"&gt;Note&lt;/h2&gt;
-&lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description></item><item><title>Conquering Gentoo: Turning the "Impossible" into Reality</title><link>https://ayyzenn.github.io/posts/gentoo/</link><pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/gentoo/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;note&#34;&gt;Note&lt;/h2&gt;
+&lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
+      <link>https://ayyzenn.github.io/posts/gentoo/</link>
+      <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/gentoo/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Processor:&lt;/strong&gt; Intel Core i5 4th Gen (4 cores)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; 8GB&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; 256GB SSD&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description></item><item><title>Setting Up Odoo: A Beginner’s Guide</title><link>https://ayyzenn.github.io/posts/odoo/</link><pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/odoo/</guid><description>&lt;h2 id="update-your-system"&gt;Update Your System&lt;/h2&gt;
+&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting Up Odoo: A Beginner’s Guide</title>
+      <link>https://ayyzenn.github.io/posts/odoo/</link>
+      <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/odoo/</guid>
+      <description>&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s start by updating your package repository:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt update &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="create-an-odoo-user"&gt;Create an Odoo User&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-an-odoo-user&#34;&gt;Create an Odoo User&lt;/h2&gt;
 &lt;p&gt;Run this command to create a system user for Odoo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo adduser -system -home&lt;span style="color:#f92672"&gt;=&lt;/span&gt;/opt/odoo -group odoo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-postgresql"&gt;Install PostgreSQL&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo adduser -system -home&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/odoo -group odoo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-postgresql&#34;&gt;Install PostgreSQL&lt;/h2&gt;
 &lt;p&gt;Odoo needs PostgreSQL as its database, so install it with:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt-get install postgresql -y
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="create-a-postgresql-user-for-odoo"&gt;Create a PostgreSQL User for Odoo&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo su - postgres -c &lt;span style="color:#e6db74"&gt;&amp;#34;createuser -s odoo&amp;#34;&lt;/span&gt; 2&amp;gt; /dev/null &lt;span style="color:#f92672"&gt;||&lt;/span&gt; true
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-python-dependencies"&gt;Install Python Dependencies&lt;/h2&gt;
-&lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description></item><item><title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title><link>https://ayyzenn.github.io/posts/proftpd/</link><pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/proftpd/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install postgresql -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-a-postgresql-user-for-odoo&#34;&gt;Create a PostgreSQL User for Odoo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo su - postgres -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;createuser -s odoo&amp;#34;&lt;/span&gt; 2&amp;gt; /dev/null &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-python-dependencies&#34;&gt;Install Python Dependencies&lt;/h2&gt;
+&lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title>
+      <link>https://ayyzenn.github.io/posts/proftpd/</link>
+      <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/proftpd/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.&lt;/p&gt;
-&lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description></item><item><title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title><link>https://ayyzenn.github.io/posts/chef/</link><pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/chef/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title>
+      <link>https://ayyzenn.github.io/posts/chef/</link>
+      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/chef/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.&lt;/p&gt;
-&lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description></item><item><title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title><link>https://ayyzenn.github.io/posts/voip/</link><pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/voip/</guid><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title>
+      <link>https://ayyzenn.github.io/posts/voip/</link>
+      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/voip/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Voice over Internet Protocol (VoIP) is a technology that enables voice and video communication over the internet instead of traditional landlines. With an internet connection, users can make calls without relying on local phone services or physical copper wiring. A VoIP service provider manages the call transmission over the internet.&lt;/p&gt;
-&lt;h1 id="how-voip-works"&gt;How VoIP Works&lt;/h1&gt;
-&lt;p&gt;VoIP converts voice into a digital format, compresses it, and transmits it over the internet. A VoIP service provider facilitates the call setup. Many users prefer VoIP over traditional landlines due to its lower startup costs and reduced expenses for long-distance calls. VoIP operates using Internet Protocol, a fundamental component of modern internet infrastructure, offering significant advancements over traditional telecommunications.&lt;/p&gt;</description></item><item><title>Setting up Puppet using Docker</title><link>https://ayyzenn.github.io/posts/puppet/</link><pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/puppet/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;h1 id=&#34;how-voip-works&#34;&gt;How VoIP Works&lt;/h1&gt;
+&lt;p&gt;VoIP converts voice into a digital format, compresses it, and transmits it over the internet. A VoIP service provider facilitates the call setup. Many users prefer VoIP over traditional landlines due to its lower startup costs and reduced expenses for long-distance calls. VoIP operates using Internet Protocol, a fundamental component of modern internet infrastructure, offering significant advancements over traditional telecommunications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up Puppet using Docker</title>
+      <link>https://ayyzenn.github.io/posts/puppet/</link>
+      <pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/puppet/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Puppet is one of the earliest configuration management tools and has gained a substantial community of supporters and users. It is a powerful tool for deploying, configuring, managing, and maintaining a machine or a system.&lt;/p&gt;
-&lt;h2 id="configuration-management"&gt;Configuration Management&lt;/h2&gt;
+&lt;h2 id=&#34;configuration-management&#34;&gt;Configuration Management&lt;/h2&gt;
 &lt;p&gt;System Administrators often perform repetitive tasks such as installing and configuring servers. While scripting can automate these tasks, managing large infrastructure manually is cumbersome.&lt;/p&gt;
-&lt;p&gt;To address this issue, &lt;strong&gt;Configuration Management&lt;/strong&gt; was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.&lt;/p&gt;</description></item><item><title>Creating a container in docker</title><link>https://ayyzenn.github.io/posts/container_docker/</link><pubDate>Wed, 27 Jul 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/container_docker/</guid><description>&lt;h3 id="creating-a-docker-container-with-ubuntu"&gt;Creating a Docker Container with Ubuntu&lt;/h3&gt;
-&lt;p&gt;To create a Docker container, first download the Ubuntu image from &lt;a href="https://hub.docker.com/search?q="&gt;Docker Hub&lt;/a&gt;. Use the following command:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo docker pull ubuntu
+&lt;p&gt;To address this issue, &lt;strong&gt;Configuration Management&lt;/strong&gt; was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating a container in docker</title>
+      <link>https://ayyzenn.github.io/posts/container_docker/</link>
+      <pubDate>Wed, 27 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/container_docker/</guid>
+      <description>&lt;h3 id=&#34;creating-a-docker-container-with-ubuntu&#34;&gt;Creating a Docker Container with Ubuntu&lt;/h3&gt;
+&lt;p&gt;To create a Docker container, first download the Ubuntu image from &lt;a href=&#34;https://hub.docker.com/search?q=&#34;&gt;Docker Hub&lt;/a&gt;. Use the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once the image is downloaded, create a new container using the command below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="key-parameters"&gt;Key Parameters:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;key-parameters&#34;&gt;Key Parameters:&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;-i&lt;/code&gt;&lt;/strong&gt;: Enables interactive mode.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;-t&lt;/code&gt;&lt;/strong&gt;: Allocates a terminal for the container.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;--name&lt;/code&gt;&lt;/strong&gt;: Assigns a custom name to the container.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Upon execution, the container will be created, and you will be logged into its environment.&lt;/p&gt;</description></item><item><title>Docker on Ubuntu</title><link>https://ayyzenn.github.io/posts/dockers/</link><pubDate>Tue, 26 Jul 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/dockers/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Upon execution, the container will be created, and you will be logged into its environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker on Ubuntu</title>
+      <link>https://ayyzenn.github.io/posts/dockers/</link>
+      <pubDate>Tue, 26 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/dockers/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.&lt;/p&gt;
-&lt;p&gt;By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.&lt;/p&gt;</description></item><item><title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title><link>https://ayyzenn.github.io/posts/git_tools/</link><pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/git_tools/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title>
+      <link>https://ayyzenn.github.io/posts/git_tools/</link>
+      <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/git_tools/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (&lt;code&gt;gh&lt;/code&gt;) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.&lt;/p&gt;
 &lt;p&gt;This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="creating-a-personal-access-token-pat"&gt;Creating a Personal Access Token (PAT)&lt;/h2&gt;
-&lt;p&gt;A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.&lt;/p&gt;</description></item><item><title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title><link>https://ayyzenn.github.io/posts/git_cli/</link><pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/git_cli/</guid><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;h2 id=&#34;creating-a-personal-access-token-pat&#34;&gt;Creating a Personal Access Token (PAT)&lt;/h2&gt;
+&lt;p&gt;A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title>
+      <link>https://ayyzenn.github.io/posts/git_cli/</link>
+      <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/git_cli/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;This guide provides a comprehensive introduction to GitHub, covering:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;What is GitHub?&lt;/li&gt;
@@ -167,22 +329,60 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;li&gt;Installing and configuring Git&lt;/li&gt;
 &lt;li&gt;Uploading files to GitHub using the command line&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="what-is-github"&gt;What is GitHub?&lt;/h2&gt;
+&lt;h2 id=&#34;what-is-github&#34;&gt;What is GitHub?&lt;/h2&gt;
 &lt;p&gt;Before diving into GitHub, it is essential to understand Git and Open-Source Projects.&lt;/p&gt;
-&lt;h3 id="1-git"&gt;1. Git&lt;/h3&gt;
-&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;</description></item><item><title>Creating a Virtual Machine on Microsoft Azure</title><link>https://ayyzenn.github.io/posts/azure/</link><pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/azure/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;h3 id=&#34;1-git&#34;&gt;1. Git&lt;/h3&gt;
+&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating a Virtual Machine on Microsoft Azure</title>
+      <link>https://ayyzenn.github.io/posts/azure/</link>
+      <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/azure/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.&lt;/p&gt;
-&lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description></item><item><title>SSH: Connecting to a Remote Server in Linux</title><link>https://ayyzenn.github.io/posts/ssh/</link><pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/ssh/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH: Connecting to a Remote Server in Linux</title>
+      <link>https://ayyzenn.github.io/posts/ssh/</link>
+      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/ssh/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Secure Shell (SSH)&lt;/strong&gt; for Linux-based machines&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Remote Desktop Protocol (RDP)&lt;/strong&gt; for Windows-based machines&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.&lt;/p&gt;</description></item><item><title>Dual boot Ubuntu and Windows</title><link>https://ayyzenn.github.io/posts/dual_boot/</link><pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/dual_boot/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dual boot Ubuntu and Windows</title>
+      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
+      <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
-&lt;h3 id="what-is-ubuntu"&gt;What is Ubuntu?&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;
 &lt;p&gt;Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.&lt;/p&gt;
-&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description></item><item><title>Hugo: The Fastest Static Site Generator</title><link>https://ayyzenn.github.io/posts/hugo/</link><pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate><guid>https://ayyzenn.github.io/posts/hugo/</guid><description>&lt;h2 id="what-is-hugo"&gt;What is Hugo?&lt;/h2&gt;
+&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo: The Fastest Static Site Generator</title>
+      <link>https://ayyzenn.github.io/posts/hugo/</link>
+      <pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/hugo/</guid>
+      <description>&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;
 &lt;p&gt;Hugo is an open-source static site generator (SSG) written in Go. It is designed for speed, simplicity, and flexibility, making it a popular choice for building blogs, documentation sites, and personal portfolios. Unlike traditional content management systems (CMS) like WordPress, Hugo generates static HTML files that can be served directly from any web server, eliminating the need for a database.&lt;/p&gt;
-&lt;h2 id="why-use-hugo"&gt;Why Use Hugo?&lt;/h2&gt;
-&lt;p&gt;Hugo is widely used due to its numerous advantages:&lt;/p&gt;</description></item><item><title>My First Post</title><link>https://ayyzenn.github.io/posts/first_post/</link><pubDate>Tue, 15 Sep 2020 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/first_post/</guid><description>&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id=&#34;why-use-hugo&#34;&gt;Why Use Hugo?&lt;/h2&gt;
+&lt;p&gt;Hugo is widely used due to its numerous advantages:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>https://ayyzenn.github.io/posts/first_post/</link>
+      <pubDate>Tue, 15 Sep 2020 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/first_post/</guid>
+      <description>&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

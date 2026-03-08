@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Gemini on ayyzenn</title><link>https://ayyzenn.github.io/tags/gemini/</link><description>Recent content in Gemini on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/gemini/index.xml" rel="self" type="application/rss+xml"/><item><title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture</title><link>https://ayyzenn.github.io/posts/agentic_rag/</link><pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/agentic_rag/</guid><description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</description></item><item><title>Building a YouTube Transcript Summarizer with LangGraph and Gemini</title><link>https://ayyzenn.github.io/posts/agent/</link><pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/agent/</guid><description>A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gemini on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/gemini/</link>
+    <description>Recent content in Gemini on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/gemini/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture</title>
+      <link>https://ayyzenn.github.io/posts/agentic_rag/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/agentic_rag/</guid>
+      <description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</description>
+    </item>
+    <item>
+      <title>Building a YouTube Transcript Summarizer with LangGraph and Gemini</title>
+      <link>https://ayyzenn.github.io/posts/agent/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/agent/</guid>
+      <description>A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.</description>
+    </item>
+  </channel>
+</rss>

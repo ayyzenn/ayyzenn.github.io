@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Configuration-Management on ayyzenn</title><link>https://ayyzenn.github.io/tags/configuration-management/</link><description>Recent content in Configuration-Management on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/configuration-management/index.xml" rel="self" type="application/rss+xml"/><item><title>Ansible for Beginners: My First Real Automation</title><link>https://ayyzenn.github.io/posts/ansible/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/ansible/</guid><description>&lt;h2 id="what-is-ansible-in-simple-words"&gt;What is Ansible? (In Simple Words)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Configuration-Management on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/configuration-management/</link>
+    <description>Recent content in Configuration-Management on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/configuration-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible for Beginners: My First Real Automation</title>
+      <link>https://ayyzenn.github.io/posts/ansible/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/ansible/</guid>
+      <description>&lt;h2 id=&#34;what-is-ansible-in-simple-words&#34;&gt;What is Ansible? (In Simple Words)&lt;/h2&gt;
 &lt;p&gt;Think of &lt;strong&gt;Ansible as a remote control for your servers&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Instead of:&lt;/p&gt;
 &lt;ul&gt;
@@ -20,5 +35,8 @@
 &lt;li&gt;Very human-readable&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id="my-setup-real-world"&gt;My Setup (Real World)&lt;/h2&gt;
-&lt;p&gt;This is exactly what I used:&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id=&#34;my-setup-real-world&#34;&gt;My Setup (Real World)&lt;/h2&gt;
+&lt;p&gt;This is exactly what I used:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

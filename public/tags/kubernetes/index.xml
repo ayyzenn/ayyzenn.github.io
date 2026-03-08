@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Kubernetes on ayyzenn</title><link>https://ayyzenn.github.io/tags/kubernetes/</link><description>Recent content in Kubernetes on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>Ansible: Automating Docker and Kubernetes Node Setup</title><link>https://ayyzenn.github.io/posts/ansible_adv/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/ansible_adv/</guid><description>&lt;h2 id="why-this-post-exists"&gt;Why This Post Exists&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kubernetes on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible: Automating Docker and Kubernetes Node Setup</title>
+      <link>https://ayyzenn.github.io/posts/ansible_adv/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://ayyzenn.github.io/posts/ansible_adv/</guid>
+      <description>&lt;h2 id=&#34;why-this-post-exists&#34;&gt;Why This Post Exists&lt;/h2&gt;
 &lt;p&gt;After writing my &lt;strong&gt;first real Ansible playbook&lt;/strong&gt;, I realized something:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Installing software manually once is easy.
@@ -13,5 +28,8 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;/ul&gt;
 &lt;p&gt;This post documents that journey.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="real-setup-same-as-before"&gt;Real Setup (Same as Before)&lt;/h2&gt;
-&lt;p&gt;Nothing fancy. Just real machines.&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id=&#34;real-setup-same-as-before&#34;&gt;Real Setup (Same as Before)&lt;/h2&gt;
+&lt;p&gt;Nothing fancy. Just real machines.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

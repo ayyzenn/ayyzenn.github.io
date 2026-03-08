@@ -1,4 +1,13 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project | ayyzenn</title><meta name=keywords content="jenkins,devops,arch-linux,ci-cd,automation"><meta name=description content="Jenkins on Arch Linux (i3)
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project | ayyzenn</title>
+<meta name="keywords" content="jenkins, devops, arch-linux, ci-cd, automation">
+<meta name="description" content="Jenkins on Arch Linux (i3)
 This guide shows you how to:
 
 Install Jenkins on Arch Linux (i3 window manager is fine)
@@ -16,11 +25,75 @@ Get your code (for example from GitHub)
 Run commands (build, test, scripts)
 Show you if things passed or failed
 
-Instead of you running commands manually every time, Jenkins does it automatically."><meta name=author content="Saad"><link rel=canonical href=https://ayyzenn.github.io/posts/jenkins-on-arch-linux/><link crossorigin=anonymous href=/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css integrity="sha256-IhHKMWS+eDACT2qtKzouUghDpk+PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as=style><link rel=icon href=https://ayyzenn.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://ayyzenn.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://ayyzenn.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://ayyzenn.github.io/apple-touch-icon.png><link rel=mask-icon href=https://ayyzenn.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://ayyzenn.github.io/posts/jenkins-on-arch-linux/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/jenkins-on-arch-linux/"><meta property="og:site_name" content="ayyzenn"><meta property="og:title" content="Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project"><meta property="og:description" content="Jenkins on Arch Linux (i3) This guide shows you how to:
+Instead of you running commands manually every time, Jenkins does it automatically.">
+<meta name="author" content="Saad">
+<link rel="canonical" href="https://ayyzenn.github.io/posts/jenkins-on-arch-linux/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/jenkins-on-arch-linux/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/jenkins-on-arch-linux/">
+  <meta property="og:site_name" content="ayyzenn">
+  <meta property="og:title" content="Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project">
+  <meta property="og:description" content="Jenkins on Arch Linux (i3) This guide shows you how to:
 Install Jenkins on Arch Linux (i3 window manager is fine) Start and use Jenkins Create a simple freestyle job Create a real Jenkins Pipeline from a GitHub repo The language is simple and the examples are small and realistic.
 1. What is Jenkins? (Simple Explanation) Jenkins is an automation server.
 You can tell Jenkins to:
-Get your code (for example from GitHub) Run commands (build, test, scripts) Show you if things passed or failed Instead of you running commands manually every time, Jenkins does it automatically."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-02-09T00:00:00+00:00"><meta property="article:modified_time" content="2026-02-09T00:00:00+00:00"><meta property="article:tag" content="Jenkins"><meta property="article:tag" content="Devops"><meta property="article:tag" content="Arch-Linux"><meta property="article:tag" content="Ci-Cd"><meta property="article:tag" content="Automation"><meta name=twitter:card content="summary"><meta name=twitter:title content="Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project"><meta name=twitter:description content="Jenkins on Arch Linux (i3)
+Get your code (for example from GitHub) Run commands (build, test, scripts) Show you if things passed or failed Instead of you running commands manually every time, Jenkins does it automatically.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-09T00:00:00+00:00">
+    <meta property="article:tag" content="Jenkins">
+    <meta property="article:tag" content="Devops">
+    <meta property="article:tag" content="Arch-Linux">
+    <meta property="article:tag" content="Ci-Cd">
+    <meta property="article:tag" content="Automation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project">
+<meta name="twitter:description" content="Jenkins on Arch Linux (i3)
 This guide shows you how to:
 
 Install Jenkins on Arch Linux (i3 window manager is fine)
@@ -38,111 +111,779 @@ Get your code (for example from GitHub)
 Run commands (build, test, scripts)
 Show you if things passed or failed
 
-Instead of you running commands manually every time, Jenkins does it automatically."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://ayyzenn.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project","item":"https://ayyzenn.github.io/posts/jenkins-on-arch-linux/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project","name":"Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project","description":"Jenkins on Arch Linux (i3) This guide shows you how to:\nInstall Jenkins on Arch Linux (i3 window manager is fine) Start and use Jenkins Create a simple freestyle job Create a real Jenkins Pipeline from a GitHub repo The language is simple and the examples are small and realistic.\n1. What is Jenkins? (Simple Explanation) Jenkins is an automation server.\nYou can tell Jenkins to:\nGet your code (for example from GitHub) Run commands (build, test, scripts) Show you if things passed or failed Instead of you running commands manually every time, Jenkins does it automatically.\n","keywords":["jenkins","devops","arch-linux","ci-cd","automation"],"articleBody":"Jenkins on Arch Linux (i3) This guide shows you how to:\nInstall Jenkins on Arch Linux (i3 window manager is fine) Start and use Jenkins Create a simple freestyle job Create a real Jenkins Pipeline from a GitHub repo The language is simple and the examples are small and realistic.\n1. What is Jenkins? (Simple Explanation) Jenkins is an automation server.\nYou can tell Jenkins to:\nGet your code (for example from GitHub) Run commands (build, test, scripts) Show you if things passed or failed Instead of you running commands manually every time, Jenkins does it automatically.\nYou can think of Jenkins as:\nA small robot that runs your scripts in a safe and repeatable way.\n2. Java Requirement (Very Important) Jenkins is a Java application.\nIt needs a stable, Long-Term Support (LTS) version of Java.\nRecommended Java Versions Java Version Type Recommendation Java 17 LTS ✅ Stable Java 21 LTS ✅ Best choice Java 25 Non-LTS ❌ Not recommended In this guide we use Java 21 (LTS) on Arch.\n3. Remove Wrong Java Version (If Needed) First, check which Java version you have:\njava -version If you see something like Java 25 or a non‑LTS version, remove it:\n# Remove the current OpenJDK package (example: jdk-openjdk) sudo pacman -Rns jdk-openjdk # Optionally clean unused dependencies sudo pacman -Rns $(pacman -Qtdq) If you already have Java 21 installed, you can skip removal.\n4. Install Java 21 (LTS) on Arch Install Java 21 JDK:\nsudo pacman -S jdk21-openjdk Verify the version:\njava -version You should see something like:\nopenjdk version \"21.x.x\" 20xx-xx-xx If the version shows 21, you are good.\n5. Install Jenkins on Arch Linux Arch Linux has a jenkins package.\nInstall it:\nsudo pacman -S jenkins During installation you may see something like:\nThere are 2 providers available for java-runtime=21: 1) jdk21-openjdk 2) jre21-openjdk Choose:\n1 This means Jenkins will use the JDK 21 runtime.\n6. Start and Enable Jenkins Service Start Jenkins now:\nsudo systemctl start jenkins Enable Jenkins to start on boot:\nsudo systemctl enable jenkins Check that it is running:\nsystemctl status jenkins You should see something like:\nActive: active (running) If it is not active, read the last few lines of the status output for errors.\n7. Open Jenkins in Your Browser By default Jenkins listens on port 8080.\nOpen your browser and go to:\nhttp://localhost:8080 You should see the Jenkins unlock screen.\nIf you cannot open it:\nCheck that Jenkins is running: systemctl status jenkins Check firewall rules (if you use one) 8. Get the Jenkins Unlock Password On the first run, Jenkins asks for an initial admin password.\nGet it with:\nsudo cat /var/lib/jenkins/secrets/initialAdminPassword Copy the long string and paste it into the browser field.\nClick Continue.\n9. Jenkins Initial Setup After unlock, Jenkins will ask you how to set it up.\nClick Install suggested plugins Wait until plugins finish installing Create your admin user (username, password, email) Click Save and Finish Click Start using Jenkins Now you are on the main Jenkins Dashboard.\n10. Create a Simple Freestyle Job We will create a tiny job that prints some information.\nThis proves Jenkins is working correctly.\n10.1 Create the Job On the Jenkins dashboard, click New Item In Item name, type: hello-jenkins Select Freestyle project Click OK You are now in the job configuration page.\n10.2 Add a Build Step Scroll down to the Build section.\nClick Add build step → Execute shell In the Command box, paste: echo \"Hello Jenkins!\" echo \"Running on Arch Linux\" date whoami Click Save 11. Run the Freestyle Job From the job page for hello-jenkins:\nClick Build Now On the left side, you will see a build number, for example #1 Click on #1 Click Console Output You should see output similar to:\nHello Jenkins! Running on Arch Linux Tue Feb 10 13:00:00 PKT 2026 jenkins If you see this, your first Jenkins job is working correctly.\n12. Where Jenkins Stores Its Files (Useful Paths) Jenkins uses these main paths on Arch:\nPurpose Path Jenkins home /var/lib/jenkins Jobs /var/lib/jenkins/jobs/ Job workspace /var/lib/jenkins/workspace/ Config /etc/conf.d/jenkins Logs /var/log/jenkins/ For example, to see files for your job:\nls /var/lib/jenkins/jobs/hello-jenkins/ 13. (Optional) When Jenkins Uses a Git Repo When Jenkins checks out a Git repository for a job, it places it in the workspace folder:\n/var/lib/jenkins/workspace// Example for our later pipeline job:\n/var/lib/jenkins/workspace/github-pipeline/ This is useful when you want to debug or inspect the code that was built.\n14. Common Jenkins Service Commands Some handy commands for daily use:\n# Restart Jenkins (after config changes) sudo systemctl restart jenkins # Stop Jenkins sudo systemctl stop jenkins # Start Jenkins sudo systemctl start jenkins # Follow Jenkins logs in real-time journalctl -u jenkins -f 15. Jenkins Pipeline + GitHub (Realistic Example) Now we will set up a real Jenkins Pipeline that:\nUses a GitHub repository Stores the pipeline in a Jenkinsfile inside the repo Lets Jenkins pull and run the pipeline automatically This is how Jenkins is used in real projects.\n15.1 What We Will Build On GitHub we will have:\njenkins-pipeline-demo ├── Jenkinsfile └── app.sh Jenkins will:\nClone the repo Read the Jenkinsfile Run the script app.sh as part of the pipeline 16. Install Git (If Not Already Installed) On Arch:\nsudo pacman -S git Check Git:\ngit --version If you see a version number, Git is installed correctly.\n17. Create the GitHub Repository Go to GitHub and log in Click New repository Name it: jenkins-pipeline-demo Choose Public (easier while learning) Do not initialize with a README Click Create repository Copy the repo URL, for example:\nhttps://github.com/ayyzenn/jenkins-pipeline-demo.git 18. Prepare the Repo Locally In your terminal:\ncd ~ mkdir jenkins-pipeline-demo cd jenkins-pipeline-demo git init 18.1 Create a Simple Script Create a small script file:\nnano app.sh Paste:\n#!/bin/bash echo \"Hello from GitHub + Jenkins Pipeline\" uname -a date Save and exit. Then make it executable:\nchmod +x app.sh 19. Create the Jenkinsfile (Important) Now create a Jenkinsfile in the same folder:\nnano Jenkinsfile Paste this pipeline definition:\npipeline { agent any stages { stage('Clone') { steps { echo 'Repository cloned by Jenkins' } } stage('Run Script') { steps { sh './app.sh' } } } post { success { echo 'Pipeline finished successfully' } failure { echo 'Pipeline failed' } } } Save and exit.\nThis file tells Jenkins what to do when the pipeline runs.\n20. Push the Code to GitHub Back in the jenkins-pipeline-demo folder:\ngit add . git commit -m \"Initial Jenkins pipeline\" git branch -M main git remote add origin https://github.com/ayyzenn/jenkins-pipeline-demo.git git push -u origin main Now GitHub has:\napp.sh Jenkinsfile 21. Create a GitHub Token for Jenkins Jenkins needs permission to pull from your private or API-protected repos.\nOn GitHub, go to Settings → Developer settings → Personal access tokens Create a new token (classic or fine-grained) Give it repo access Copy the token (keep it secret) You will use this token as a password in Jenkins credentials.\n22. Add GitHub Credentials to Jenkins In Jenkins:\nGo to Manage Jenkins → Credentials Select a (global) domain (or create one) Click Add Credentials Fill in:\nKind: Username with password Username: your GitHub username Password: the GitHub token you created ID: github-token (easy to remember) Click OK / Save.\n23. Create a Jenkins Pipeline Job (From SCM) Back in the Jenkins dashboard:\nClick New Item Name it: github-pipeline Select Pipeline Click OK You are now in the job configuration.\n24. Configure the Pipeline (From Git) Scroll down to the Pipeline section.\nSet:\nDefinition: Pipeline script from SCM SCM: Git Then fill in:\nRepository URL:\nhttps://github.com/ayyzenn/jenkins-pipeline-demo.git Credentials: select github-token\nBranch Specifier:\n*/main Script Path:\nJenkinsfile Click Save.\nNow Jenkins knows:\nWhich repo to clone Which branch to use Which file (Jenkinsfile) describes the pipeline 25. Run the Jenkins Pipeline From the github-pipeline job page:\nClick Build Now Click the build number (for example #1) Click Console Output You should see logs similar to:\nCloning the remote Git repository Repository cloned by Jenkins [Pipeline] sh + ./app.sh Hello from GitHub + Jenkins Pipeline ... (system info and date) ... Pipeline finished successfully Finished: SUCCESS If you see Finished: SUCCESS, your GitHub-based Jenkins Pipeline is working.\n26. What You Learned (Summary) You now know how to:\nInstall Java 21 and Jenkins on Arch Linux Start and manage the jenkins systemd service Create a freestyle job that runs shell commands Understand where Jenkins stores its jobs and workspaces Put your pipeline definition in a GitHub repo as a Jenkinsfile Create a Jenkins Pipeline job that reads from SCM (Git) This is the same pattern teams use in real projects:\nCode + Jenkinsfile live in Git Jenkins pulls the repo Jenkins runs the pipeline defined in the repo ","wordCount":"1443","inLanguage":"en","datePublished":"2026-02-09T00:00:00Z","dateModified":"2026-02-09T00:00:00Z","author":{"@type":"Person","name":"Saad"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ayyzenn.github.io/posts/jenkins-on-arch-linux/"},"publisher":{"@type":"Organization","name":"ayyzenn","logo":{"@type":"ImageObject","url":"https://ayyzenn.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://ayyzenn.github.io/ accesskey=h title="ayyzenn (Alt + H)">ayyzenn</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://ayyzenn.github.io/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://ayyzenn.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://ayyzenn.github.io/search title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://ayyzenn.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://ayyzenn.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project</h1><div class=post-meta><span title='2026-02-09 00:00:00 +0000 UTC'>February 9, 2026</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Saad</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#jenkins-on-arch-linux-i3 aria-label="Jenkins on Arch Linux (i3)">Jenkins on Arch Linux (i3)</a></li><li><a href=#1-what-is-jenkins-simple-explanation aria-label="1. What is Jenkins? (Simple Explanation)">1. What is Jenkins? (Simple Explanation)</a></li><li><a href=#2-java-requirement-very-important aria-label="2. Java Requirement (Very Important)">2. Java Requirement (Very Important)</a><ul><li><a href=#recommended-java-versions aria-label="Recommended Java Versions">Recommended Java Versions</a></li></ul></li><li><a href=#3-remove-wrong-java-version-if-needed aria-label="3. Remove Wrong Java Version (If Needed)">3. Remove Wrong Java Version (If Needed)</a></li><li><a href=#4-install-java-21-lts-on-arch aria-label="4. Install Java 21 (LTS) on Arch">4. Install Java 21 (LTS) on Arch</a></li><li><a href=#5-install-jenkins-on-arch-linux aria-label="5. Install Jenkins on Arch Linux">5. Install Jenkins on Arch Linux</a></li><li><a href=#6-start-and-enable-jenkins-service aria-label="6. Start and Enable Jenkins Service">6. Start and Enable Jenkins Service</a></li><li><a href=#7-open-jenkins-in-your-browser aria-label="7. Open Jenkins in Your Browser">7. Open Jenkins in Your Browser</a></li><li><a href=#8-get-the-jenkins-unlock-password aria-label="8. Get the Jenkins Unlock Password">8. Get the Jenkins Unlock Password</a></li><li><a href=#9-jenkins-initial-setup aria-label="9. Jenkins Initial Setup">9. Jenkins Initial Setup</a></li><li><a href=#10-create-a-simple-freestyle-job aria-label="10. Create a Simple Freestyle Job">10. Create a Simple Freestyle Job</a><ul><li><a href=#101-create-the-job aria-label="10.1 Create the Job">10.1 Create the Job</a></li><li><a href=#102-add-a-build-step aria-label="10.2 Add a Build Step">10.2 Add a Build Step</a></li></ul></li><li><a href=#11-run-the-freestyle-job aria-label="11. Run the Freestyle Job">11. Run the Freestyle Job</a></li><li><a href=#12-where-jenkins-stores-its-files-useful-paths aria-label="12. Where Jenkins Stores Its Files (Useful Paths)">12. Where Jenkins Stores Its Files (Useful Paths)</a></li><li><a href=#13-optional-when-jenkins-uses-a-git-repo aria-label="13. (Optional) When Jenkins Uses a Git Repo">13. (Optional) When Jenkins Uses a Git Repo</a></li><li><a href=#14-common-jenkins-service-commands aria-label="14. Common Jenkins Service Commands">14. Common Jenkins Service Commands</a></li><li><a href=#15-jenkins-pipeline--github-realistic-example aria-label="15. Jenkins Pipeline + GitHub (Realistic Example)">15. Jenkins Pipeline + GitHub (Realistic Example)</a><ul><li><a href=#151-what-we-will-build aria-label="15.1 What We Will Build">15.1 What We Will Build</a></li></ul></li><li><a href=#16-install-git-if-not-already-installed aria-label="16. Install Git (If Not Already Installed)">16. Install Git (If Not Already Installed)</a></li><li><a href=#17-create-the-github-repository aria-label="17. Create the GitHub Repository">17. Create the GitHub Repository</a></li><li><a href=#18-prepare-the-repo-locally aria-label="18. Prepare the Repo Locally">18. Prepare the Repo Locally</a><ul><li><a href=#181-create-a-simple-script aria-label="18.1 Create a Simple Script">18.1 Create a Simple Script</a></li></ul></li><li><a href=#19-create-the-jenkinsfile-important aria-label="19. Create the Jenkinsfile (Important)">19. Create the Jenkinsfile (Important)</a></li><li><a href=#20-push-the-code-to-github aria-label="20. Push the Code to GitHub">20. Push the Code to GitHub</a></li><li><a href=#21-create-a-github-token-for-jenkins aria-label="21. Create a GitHub Token for Jenkins">21. Create a GitHub Token for Jenkins</a></li><li><a href=#22-add-github-credentials-to-jenkins aria-label="22. Add GitHub Credentials to Jenkins">22. Add GitHub Credentials to Jenkins</a></li><li><a href=#23-create-a-jenkins-pipeline-job-from-scm aria-label="23. Create a Jenkins Pipeline Job (From SCM)">23. Create a Jenkins Pipeline Job (From SCM)</a></li><li><a href=#24-configure-the-pipeline-from-git aria-label="24. Configure the Pipeline (From Git)">24. Configure the Pipeline (From Git)</a></li><li><a href=#25-run-the-jenkins-pipeline aria-label="25. Run the Jenkins Pipeline">25. Run the Jenkins Pipeline</a></li><li><a href=#26-what-you-learned-summary aria-label="26. What You Learned (Summary)">26. What You Learned (Summary)</a></li></ul></div></details></div><div class=post-content><h2 id=jenkins-on-arch-linux-i3>Jenkins on Arch Linux (i3)<a hidden class=anchor aria-hidden=true href=#jenkins-on-arch-linux-i3>#</a></h2><p>This guide shows you how to:</p><ul><li><strong>Install Jenkins</strong> on Arch Linux (i3 window manager is fine)</li><li><strong>Start and use Jenkins</strong></li><li><strong>Create a simple freestyle job</strong></li><li><strong>Create a real Jenkins Pipeline from a GitHub repo</strong></li></ul><p>The language is simple and the examples are small and realistic.</p><hr><h2 id=1-what-is-jenkins-simple-explanation>1. What is Jenkins? (Simple Explanation)<a hidden class=anchor aria-hidden=true href=#1-what-is-jenkins-simple-explanation>#</a></h2><p><strong>Jenkins is an automation server.</strong></p><p>You can tell Jenkins to:</p><ul><li>Get your code (for example from GitHub)</li><li>Run commands (build, test, scripts)</li><li>Show you if things passed or failed</li></ul><p>Instead of you running commands manually every time, Jenkins does it <strong>automatically</strong>.</p><p>You can think of Jenkins as:</p><blockquote><p>A small robot that runs your scripts in a safe and repeatable way.</p></blockquote><hr><h2 id=2-java-requirement-very-important>2. Java Requirement (Very Important)<a hidden class=anchor aria-hidden=true href=#2-java-requirement-very-important>#</a></h2><p>Jenkins is a Java application.<br>It needs a <strong>stable, Long-Term Support (LTS)</strong> version of Java.</p><h3 id=recommended-java-versions>Recommended Java Versions<a hidden class=anchor aria-hidden=true href=#recommended-java-versions>#</a></h3><table><thead><tr><th>Java Version</th><th>Type</th><th>Recommendation</th></tr></thead><tbody><tr><td>Java 17</td><td>LTS</td><td>✅ Stable</td></tr><tr><td>Java 21</td><td>LTS</td><td>✅ Best choice</td></tr><tr><td>Java 25</td><td>Non-LTS</td><td>❌ Not recommended</td></tr></tbody></table><p>In this guide we use <strong>Java 21 (LTS)</strong> on Arch.</p><hr><h2 id=3-remove-wrong-java-version-if-needed>3. Remove Wrong Java Version (If Needed)<a hidden class=anchor aria-hidden=true href=#3-remove-wrong-java-version-if-needed>#</a></h2><p>First, check which Java version you have:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>java -version
-</span></span></code></pre></div><p>If you see something like Java 25 or a non‑LTS version, remove it:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Remove the current OpenJDK package (example: jdk-openjdk)</span>
-</span></span><span style=display:flex><span>sudo pacman -Rns jdk-openjdk
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Optionally clean unused dependencies</span>
-</span></span><span style=display:flex><span>sudo pacman -Rns <span style=color:#66d9ef>$(</span>pacman -Qtdq<span style=color:#66d9ef>)</span>
-</span></span></code></pre></div><p>If you already have Java 21 installed, you can skip removal.</p><hr><h2 id=4-install-java-21-lts-on-arch>4. Install Java 21 (LTS) on Arch<a hidden class=anchor aria-hidden=true href=#4-install-java-21-lts-on-arch>#</a></h2><p>Install Java 21 JDK:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>sudo pacman -S jdk21-openjdk
-</span></span></code></pre></div><p>Verify the version:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>java -version
-</span></span></code></pre></div><p>You should see something like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>openjdk version &#34;21.x.x&#34; 20xx-xx-xx
-</span></span></code></pre></div><p>If the version shows <code>21</code>, you are good.</p><hr><h2 id=5-install-jenkins-on-arch-linux>5. Install Jenkins on Arch Linux<a hidden class=anchor aria-hidden=true href=#5-install-jenkins-on-arch-linux>#</a></h2><p>Arch Linux has a <code>jenkins</code> package.</p><p>Install it:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>sudo pacman -S jenkins
-</span></span></code></pre></div><p>During installation you may see something like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>There are 2 providers available for java-runtime=21:
-</span></span><span style=display:flex><span>1) jdk21-openjdk
-</span></span><span style=display:flex><span>2) jre21-openjdk
-</span></span></code></pre></div><p>Choose:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>1
-</span></span></code></pre></div><p>This means Jenkins will use the JDK 21 runtime.</p><hr><h2 id=6-start-and-enable-jenkins-service>6. Start and Enable Jenkins Service<a hidden class=anchor aria-hidden=true href=#6-start-and-enable-jenkins-service>#</a></h2><p>Start Jenkins now:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>sudo systemctl start jenkins
-</span></span></code></pre></div><p>Enable Jenkins to start on boot:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>sudo systemctl enable jenkins
-</span></span></code></pre></div><p>Check that it is running:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>systemctl status jenkins
-</span></span></code></pre></div><p>You should see something like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>Active: active (running)
-</span></span></code></pre></div><p>If it is not active, read the last few lines of the status output for errors.</p><hr><h2 id=7-open-jenkins-in-your-browser>7. Open Jenkins in Your Browser<a hidden class=anchor aria-hidden=true href=#7-open-jenkins-in-your-browser>#</a></h2><p>By default Jenkins listens on port <strong>8080</strong>.</p><p>Open your browser and go to:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>http://localhost:8080
-</span></span></code></pre></div><p>You should see the Jenkins unlock screen.</p><p>If you cannot open it:</p><ul><li>Check that Jenkins is running: <code>systemctl status jenkins</code></li><li>Check firewall rules (if you use one)</li></ul><hr><h2 id=8-get-the-jenkins-unlock-password>8. Get the Jenkins Unlock Password<a hidden class=anchor aria-hidden=true href=#8-get-the-jenkins-unlock-password>#</a></h2><p>On the first run, Jenkins asks for an <strong>initial admin password</strong>.</p><p>Get it with:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-</span></span></code></pre></div><p>Copy the long string and paste it into the browser field.</p><p>Click <strong>Continue</strong>.</p><hr><h2 id=9-jenkins-initial-setup>9. Jenkins Initial Setup<a hidden class=anchor aria-hidden=true href=#9-jenkins-initial-setup>#</a></h2><p>After unlock, Jenkins will ask you how to set it up.</p><ol><li>Click <strong>Install suggested plugins</strong></li><li>Wait until plugins finish installing</li><li>Create your <strong>admin user</strong> (username, password, email)</li><li>Click <strong>Save and Finish</strong></li><li>Click <strong>Start using Jenkins</strong></li></ol><p>Now you are on the main <strong>Jenkins Dashboard</strong>.</p><hr><h2 id=10-create-a-simple-freestyle-job>10. Create a Simple Freestyle Job<a hidden class=anchor aria-hidden=true href=#10-create-a-simple-freestyle-job>#</a></h2><p>We will create a tiny job that prints some information.<br>This proves Jenkins is working correctly.</p><h3 id=101-create-the-job>10.1 Create the Job<a hidden class=anchor aria-hidden=true href=#101-create-the-job>#</a></h3><ol><li>On the Jenkins dashboard, click <strong>New Item</strong></li><li>In <strong>Item name</strong>, type: <code>hello-jenkins</code></li><li>Select <strong>Freestyle project</strong></li><li>Click <strong>OK</strong></li></ol><p>You are now in the job configuration page.</p><h3 id=102-add-a-build-step>10.2 Add a Build Step<a hidden class=anchor aria-hidden=true href=#102-add-a-build-step>#</a></h3><p>Scroll down to the <strong>Build</strong> section.</p><ol><li>Click <strong>Add build step → Execute shell</strong></li><li>In the <strong>Command</strong> box, paste:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Hello Jenkins!&#34;</span>
-</span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Running on Arch Linux&#34;</span>
-</span></span><span style=display:flex><span>date
-</span></span><span style=display:flex><span>whoami
-</span></span></code></pre></div><ol start=3><li>Click <strong>Save</strong></li></ol><hr><h2 id=11-run-the-freestyle-job>11. Run the Freestyle Job<a hidden class=anchor aria-hidden=true href=#11-run-the-freestyle-job>#</a></h2><p>From the job page for <code>hello-jenkins</code>:</p><ol><li>Click <strong>Build Now</strong></li><li>On the left side, you will see a build number, for example <code>#1</code></li><li>Click on <code>#1</code></li><li>Click <strong>Console Output</strong></li></ol><p>You should see output similar to:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>Hello Jenkins!
-</span></span><span style=display:flex><span>Running on Arch Linux
-</span></span><span style=display:flex><span>Tue Feb 10 13:00:00 PKT 2026
-</span></span><span style=display:flex><span>jenkins
-</span></span></code></pre></div><p>If you see this, your first Jenkins job is working correctly.</p><hr><h2 id=12-where-jenkins-stores-its-files-useful-paths>12. Where Jenkins Stores Its Files (Useful Paths)<a hidden class=anchor aria-hidden=true href=#12-where-jenkins-stores-its-files-useful-paths>#</a></h2><p>Jenkins uses these main paths on Arch:</p><table><thead><tr><th>Purpose</th><th>Path</th></tr></thead><tbody><tr><td>Jenkins home</td><td><code>/var/lib/jenkins</code></td></tr><tr><td>Jobs</td><td><code>/var/lib/jenkins/jobs/</code></td></tr><tr><td>Job workspace</td><td><code>/var/lib/jenkins/workspace/</code></td></tr><tr><td>Config</td><td><code>/etc/conf.d/jenkins</code></td></tr><tr><td>Logs</td><td><code>/var/log/jenkins/</code></td></tr></tbody></table><p>For example, to see files for your job:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>ls /var/lib/jenkins/jobs/hello-jenkins/
-</span></span></code></pre></div><hr><h2 id=13-optional-when-jenkins-uses-a-git-repo>13. (Optional) When Jenkins Uses a Git Repo<a hidden class=anchor aria-hidden=true href=#13-optional-when-jenkins-uses-a-git-repo>#</a></h2><p>When Jenkins checks out a Git repository for a job, it places it in the <strong>workspace</strong> folder:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>/var/lib/jenkins/workspace/&lt;job-name&gt;/
-</span></span></code></pre></div><p>Example for our later pipeline job:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>/var/lib/jenkins/workspace/github-pipeline/
-</span></span></code></pre></div><p>This is useful when you want to debug or inspect the code that was built.</p><hr><h2 id=14-common-jenkins-service-commands>14. Common Jenkins Service Commands<a hidden class=anchor aria-hidden=true href=#14-common-jenkins-service-commands>#</a></h2><p>Some handy commands for daily use:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Restart Jenkins (after config changes)</span>
-</span></span><span style=display:flex><span>sudo systemctl restart jenkins
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Stop Jenkins</span>
-</span></span><span style=display:flex><span>sudo systemctl stop jenkins
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Start Jenkins</span>
-</span></span><span style=display:flex><span>sudo systemctl start jenkins
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># Follow Jenkins logs in real-time</span>
-</span></span><span style=display:flex><span>journalctl -u jenkins -f
-</span></span></code></pre></div><hr><h2 id=15-jenkins-pipeline--github-realistic-example>15. Jenkins Pipeline + GitHub (Realistic Example)<a hidden class=anchor aria-hidden=true href=#15-jenkins-pipeline--github-realistic-example>#</a></h2><p>Now we will set up a <strong>real Jenkins Pipeline</strong> that:</p><ul><li>Uses a <strong>GitHub repository</strong></li><li>Stores the pipeline in a <strong>Jenkinsfile</strong> inside the repo</li><li>Lets Jenkins pull and run the pipeline automatically</li></ul><p>This is how Jenkins is used in real projects.</p><h3 id=151-what-we-will-build>15.1 What We Will Build<a hidden class=anchor aria-hidden=true href=#151-what-we-will-build>#</a></h3><p>On GitHub we will have:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>jenkins-pipeline-demo
-</span></span><span style=display:flex><span>├── Jenkinsfile
-</span></span><span style=display:flex><span>└── app.sh
-</span></span></code></pre></div><p>Jenkins will:</p><ol><li>Clone the repo</li><li>Read the <code>Jenkinsfile</code></li><li>Run the script <code>app.sh</code> as part of the pipeline</li></ol><hr><h2 id=16-install-git-if-not-already-installed>16. Install Git (If Not Already Installed)<a hidden class=anchor aria-hidden=true href=#16-install-git-if-not-already-installed>#</a></h2><p>On Arch:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>sudo pacman -S git
-</span></span></code></pre></div><p>Check Git:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>git --version
-</span></span></code></pre></div><p>If you see a version number, Git is installed correctly.</p><hr><h2 id=17-create-the-github-repository>17. Create the GitHub Repository<a hidden class=anchor aria-hidden=true href=#17-create-the-github-repository>#</a></h2><ol><li>Go to GitHub and log in</li><li>Click <strong>New repository</strong></li><li>Name it: <code>jenkins-pipeline-demo</code></li><li>Choose <strong>Public</strong> (easier while learning)</li><li><strong>Do not</strong> initialize with a README</li><li>Click <strong>Create repository</strong></li></ol><p>Copy the repo URL, for example:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>https://github.com/ayyzenn/jenkins-pipeline-demo.git
-</span></span></code></pre></div><hr><h2 id=18-prepare-the-repo-locally>18. Prepare the Repo Locally<a hidden class=anchor aria-hidden=true href=#18-prepare-the-repo-locally>#</a></h2><p>In your terminal:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>cd ~
-</span></span><span style=display:flex><span>mkdir jenkins-pipeline-demo
-</span></span><span style=display:flex><span>cd jenkins-pipeline-demo
-</span></span><span style=display:flex><span>git init
-</span></span></code></pre></div><h3 id=181-create-a-simple-script>18.1 Create a Simple Script<a hidden class=anchor aria-hidden=true href=#181-create-a-simple-script>#</a></h3><p>Create a small script file:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>nano app.sh
-</span></span></code></pre></div><p>Paste:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/bash
-</span></span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#34;Hello from GitHub + Jenkins Pipeline&#34;</span>
-</span></span><span style=display:flex><span>uname -a
-</span></span><span style=display:flex><span>date
-</span></span></code></pre></div><p>Save and exit. Then make it executable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>chmod +x app.sh
-</span></span></code></pre></div><hr><h2 id=19-create-the-jenkinsfile-important>19. Create the Jenkinsfile (Important)<a hidden class=anchor aria-hidden=true href=#19-create-the-jenkinsfile-important>#</a></h2><p>Now create a <code>Jenkinsfile</code> in the same folder:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>nano Jenkinsfile
-</span></span></code></pre></div><p>Paste this pipeline definition:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-groovy data-lang=groovy><span style=display:flex><span>pipeline <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>    agent any
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    stages <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>        stage<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;Clone&#39;</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>            steps <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>                echo <span style=color:#e6db74>&#39;Repository cloned by Jenkins&#39;</span>
-</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        stage<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;Run Script&#39;</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>            steps <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>                sh <span style=color:#e6db74>&#39;./app.sh&#39;</span>
-</span></span><span style=display:flex><span>            <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    post <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>        success <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>            echo <span style=color:#e6db74>&#39;Pipeline finished successfully&#39;</span>
-</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>        failure <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>            echo <span style=color:#e6db74>&#39;Pipeline failed&#39;</span>
-</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
-</span></span></code></pre></div><p>Save and exit.</p><p>This file tells Jenkins <strong>what to do</strong> when the pipeline runs.</p><hr><h2 id=20-push-the-code-to-github>20. Push the Code to GitHub<a hidden class=anchor aria-hidden=true href=#20-push-the-code-to-github>#</a></h2><p>Back in the <code>jenkins-pipeline-demo</code> folder:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>git add .
-</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Initial Jenkins pipeline&#34;</span>
-</span></span><span style=display:flex><span>git branch -M main
-</span></span><span style=display:flex><span>git remote add origin https://github.com/ayyzenn/jenkins-pipeline-demo.git
-</span></span><span style=display:flex><span>git push -u origin main
-</span></span></code></pre></div><p>Now GitHub has:</p><ul><li><code>app.sh</code></li><li><code>Jenkinsfile</code></li></ul><hr><h2 id=21-create-a-github-token-for-jenkins>21. Create a GitHub Token for Jenkins<a hidden class=anchor aria-hidden=true href=#21-create-a-github-token-for-jenkins>#</a></h2><p>Jenkins needs permission to pull from your private or API-protected repos.</p><ol><li>On GitHub, go to <strong>Settings → Developer settings → Personal access tokens</strong></li><li>Create a new token (classic or fine-grained)</li><li>Give it <strong>repo</strong> access</li><li>Copy the token (keep it secret)</li></ol><p>You will use this token as a password in Jenkins credentials.</p><hr><h2 id=22-add-github-credentials-to-jenkins>22. Add GitHub Credentials to Jenkins<a hidden class=anchor aria-hidden=true href=#22-add-github-credentials-to-jenkins>#</a></h2><p>In Jenkins:</p><ol><li>Go to <strong>Manage Jenkins → Credentials</strong></li><li>Select a <strong>(global)</strong> domain (or create one)</li><li>Click <strong>Add Credentials</strong></li></ol><p>Fill in:</p><ul><li><strong>Kind</strong>: <code>Username with password</code></li><li><strong>Username</strong>: your GitHub username</li><li><strong>Password</strong>: the GitHub token you created</li><li><strong>ID</strong>: <code>github-token</code> (easy to remember)</li></ul><p>Click <strong>OK / Save</strong>.</p><hr><h2 id=23-create-a-jenkins-pipeline-job-from-scm>23. Create a Jenkins Pipeline Job (From SCM)<a hidden class=anchor aria-hidden=true href=#23-create-a-jenkins-pipeline-job-from-scm>#</a></h2><p>Back in the Jenkins dashboard:</p><ol><li>Click <strong>New Item</strong></li><li>Name it: <code>github-pipeline</code></li><li>Select <strong>Pipeline</strong></li><li>Click <strong>OK</strong></li></ol><p>You are now in the job configuration.</p><hr><h2 id=24-configure-the-pipeline-from-git>24. Configure the Pipeline (From Git)<a hidden class=anchor aria-hidden=true href=#24-configure-the-pipeline-from-git>#</a></h2><p>Scroll down to the <strong>Pipeline</strong> section.</p><p>Set:</p><ul><li><strong>Definition</strong>: <code>Pipeline script from SCM</code></li><li><strong>SCM</strong>: <code>Git</code></li></ul><p>Then fill in:</p><ul><li><p><strong>Repository URL</strong>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>https://github.com/ayyzenn/jenkins-pipeline-demo.git
-</span></span></code></pre></div></li><li><p><strong>Credentials</strong>: select <code>github-token</code></p></li><li><p><strong>Branch Specifier</strong>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>*/main
-</span></span></code></pre></div></li><li><p><strong>Script Path</strong>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>Jenkinsfile
-</span></span></code></pre></div></li></ul><p>Click <strong>Save</strong>.</p><p>Now Jenkins knows:</p><ul><li>Which repo to clone</li><li>Which branch to use</li><li>Which file (<code>Jenkinsfile</code>) describes the pipeline</li></ul><hr><h2 id=25-run-the-jenkins-pipeline>25. Run the Jenkins Pipeline<a hidden class=anchor aria-hidden=true href=#25-run-the-jenkins-pipeline>#</a></h2><p>From the <code>github-pipeline</code> job page:</p><ol><li>Click <strong>Build Now</strong></li><li>Click the build number (for example <code>#1</code>)</li><li>Click <strong>Console Output</strong></li></ol><p>You should see logs similar to:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-text data-lang=text><span style=display:flex><span>Cloning the remote Git repository
-</span></span><span style=display:flex><span>Repository cloned by Jenkins
-</span></span><span style=display:flex><span>[Pipeline] sh
-</span></span><span style=display:flex><span>+ ./app.sh
-</span></span><span style=display:flex><span>Hello from GitHub + Jenkins Pipeline
-</span></span><span style=display:flex><span>... (system info and date) ...
-</span></span><span style=display:flex><span>Pipeline finished successfully
-</span></span><span style=display:flex><span>Finished: SUCCESS
-</span></span></code></pre></div><p>If you see <code>Finished: SUCCESS</code>, your GitHub-based Jenkins Pipeline is working.</p><hr><h2 id=26-what-you-learned-summary>26. What You Learned (Summary)<a hidden class=anchor aria-hidden=true href=#26-what-you-learned-summary>#</a></h2><p>You now know how to:</p><ul><li>Install <strong>Java 21</strong> and <strong>Jenkins</strong> on Arch Linux</li><li>Start and manage the <code>jenkins</code> systemd service</li><li>Create a <strong>freestyle job</strong> that runs shell commands</li><li>Understand where Jenkins stores its <strong>jobs</strong> and <strong>workspaces</strong></li><li>Put your <strong>pipeline definition in a GitHub repo</strong> as a <code>Jenkinsfile</code></li><li>Create a Jenkins <strong>Pipeline job</strong> that reads from SCM (Git)</li></ul><p>This is the same pattern teams use in real projects:</p><ul><li>Code + <code>Jenkinsfile</code> live in Git</li><li>Jenkins pulls the repo</li><li>Jenkins runs the pipeline defined in the repo</li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://ayyzenn.github.io/tags/jenkins/>Jenkins</a></li><li><a href=https://ayyzenn.github.io/tags/devops/>Devops</a></li><li><a href=https://ayyzenn.github.io/tags/arch-linux/>Arch-Linux</a></li><li><a href=https://ayyzenn.github.io/tags/ci-cd/>Ci-Cd</a></li><li><a href=https://ayyzenn.github.io/tags/automation/>Automation</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://ayyzenn.github.io/>ayyzenn</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+Instead of you running commands manually every time, Jenkins does it automatically.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ayyzenn.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project",
+      "item": "https://ayyzenn.github.io/posts/jenkins-on-arch-linux/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project",
+  "name": "Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project",
+  "description": "Jenkins on Arch Linux (i3) This guide shows you how to:\nInstall Jenkins on Arch Linux (i3 window manager is fine) Start and use Jenkins Create a simple freestyle job Create a real Jenkins Pipeline from a GitHub repo The language is simple and the examples are small and realistic.\n1. What is Jenkins? (Simple Explanation) Jenkins is an automation server.\nYou can tell Jenkins to:\nGet your code (for example from GitHub) Run commands (build, test, scripts) Show you if things passed or failed Instead of you running commands manually every time, Jenkins does it automatically.\n",
+  "keywords": [
+    "jenkins", "devops", "arch-linux", "ci-cd", "automation"
+  ],
+  "articleBody": "Jenkins on Arch Linux (i3) This guide shows you how to:\nInstall Jenkins on Arch Linux (i3 window manager is fine) Start and use Jenkins Create a simple freestyle job Create a real Jenkins Pipeline from a GitHub repo The language is simple and the examples are small and realistic.\n1. What is Jenkins? (Simple Explanation) Jenkins is an automation server.\nYou can tell Jenkins to:\nGet your code (for example from GitHub) Run commands (build, test, scripts) Show you if things passed or failed Instead of you running commands manually every time, Jenkins does it automatically.\nYou can think of Jenkins as:\nA small robot that runs your scripts in a safe and repeatable way.\n2. Java Requirement (Very Important) Jenkins is a Java application.\nIt needs a stable, Long-Term Support (LTS) version of Java.\nRecommended Java Versions Java Version Type Recommendation Java 17 LTS ✅ Stable Java 21 LTS ✅ Best choice Java 25 Non-LTS ❌ Not recommended In this guide we use Java 21 (LTS) on Arch.\n3. Remove Wrong Java Version (If Needed) First, check which Java version you have:\njava -version If you see something like Java 25 or a non‑LTS version, remove it:\n# Remove the current OpenJDK package (example: jdk-openjdk) sudo pacman -Rns jdk-openjdk # Optionally clean unused dependencies sudo pacman -Rns $(pacman -Qtdq) If you already have Java 21 installed, you can skip removal.\n4. Install Java 21 (LTS) on Arch Install Java 21 JDK:\nsudo pacman -S jdk21-openjdk Verify the version:\njava -version You should see something like:\nopenjdk version \"21.x.x\" 20xx-xx-xx If the version shows 21, you are good.\n5. Install Jenkins on Arch Linux Arch Linux has a jenkins package.\nInstall it:\nsudo pacman -S jenkins During installation you may see something like:\nThere are 2 providers available for java-runtime=21: 1) jdk21-openjdk 2) jre21-openjdk Choose:\n1 This means Jenkins will use the JDK 21 runtime.\n6. Start and Enable Jenkins Service Start Jenkins now:\nsudo systemctl start jenkins Enable Jenkins to start on boot:\nsudo systemctl enable jenkins Check that it is running:\nsystemctl status jenkins You should see something like:\nActive: active (running) If it is not active, read the last few lines of the status output for errors.\n7. Open Jenkins in Your Browser By default Jenkins listens on port 8080.\nOpen your browser and go to:\nhttp://localhost:8080 You should see the Jenkins unlock screen.\nIf you cannot open it:\nCheck that Jenkins is running: systemctl status jenkins Check firewall rules (if you use one) 8. Get the Jenkins Unlock Password On the first run, Jenkins asks for an initial admin password.\nGet it with:\nsudo cat /var/lib/jenkins/secrets/initialAdminPassword Copy the long string and paste it into the browser field.\nClick Continue.\n9. Jenkins Initial Setup After unlock, Jenkins will ask you how to set it up.\nClick Install suggested plugins Wait until plugins finish installing Create your admin user (username, password, email) Click Save and Finish Click Start using Jenkins Now you are on the main Jenkins Dashboard.\n10. Create a Simple Freestyle Job We will create a tiny job that prints some information.\nThis proves Jenkins is working correctly.\n10.1 Create the Job On the Jenkins dashboard, click New Item In Item name, type: hello-jenkins Select Freestyle project Click OK You are now in the job configuration page.\n10.2 Add a Build Step Scroll down to the Build section.\nClick Add build step → Execute shell In the Command box, paste: echo \"Hello Jenkins!\" echo \"Running on Arch Linux\" date whoami Click Save 11. Run the Freestyle Job From the job page for hello-jenkins:\nClick Build Now On the left side, you will see a build number, for example #1 Click on #1 Click Console Output You should see output similar to:\nHello Jenkins! Running on Arch Linux Tue Feb 10 13:00:00 PKT 2026 jenkins If you see this, your first Jenkins job is working correctly.\n12. Where Jenkins Stores Its Files (Useful Paths) Jenkins uses these main paths on Arch:\nPurpose Path Jenkins home /var/lib/jenkins Jobs /var/lib/jenkins/jobs/ Job workspace /var/lib/jenkins/workspace/ Config /etc/conf.d/jenkins Logs /var/log/jenkins/ For example, to see files for your job:\nls /var/lib/jenkins/jobs/hello-jenkins/ 13. (Optional) When Jenkins Uses a Git Repo When Jenkins checks out a Git repository for a job, it places it in the workspace folder:\n/var/lib/jenkins/workspace// Example for our later pipeline job:\n/var/lib/jenkins/workspace/github-pipeline/ This is useful when you want to debug or inspect the code that was built.\n14. Common Jenkins Service Commands Some handy commands for daily use:\n# Restart Jenkins (after config changes) sudo systemctl restart jenkins # Stop Jenkins sudo systemctl stop jenkins # Start Jenkins sudo systemctl start jenkins # Follow Jenkins logs in real-time journalctl -u jenkins -f 15. Jenkins Pipeline + GitHub (Realistic Example) Now we will set up a real Jenkins Pipeline that:\nUses a GitHub repository Stores the pipeline in a Jenkinsfile inside the repo Lets Jenkins pull and run the pipeline automatically This is how Jenkins is used in real projects.\n15.1 What We Will Build On GitHub we will have:\njenkins-pipeline-demo ├── Jenkinsfile └── app.sh Jenkins will:\nClone the repo Read the Jenkinsfile Run the script app.sh as part of the pipeline 16. Install Git (If Not Already Installed) On Arch:\nsudo pacman -S git Check Git:\ngit --version If you see a version number, Git is installed correctly.\n17. Create the GitHub Repository Go to GitHub and log in Click New repository Name it: jenkins-pipeline-demo Choose Public (easier while learning) Do not initialize with a README Click Create repository Copy the repo URL, for example:\nhttps://github.com/ayyzenn/jenkins-pipeline-demo.git 18. Prepare the Repo Locally In your terminal:\ncd ~ mkdir jenkins-pipeline-demo cd jenkins-pipeline-demo git init 18.1 Create a Simple Script Create a small script file:\nnano app.sh Paste:\n#!/bin/bash echo \"Hello from GitHub + Jenkins Pipeline\" uname -a date Save and exit. Then make it executable:\nchmod +x app.sh 19. Create the Jenkinsfile (Important) Now create a Jenkinsfile in the same folder:\nnano Jenkinsfile Paste this pipeline definition:\npipeline { agent any stages { stage('Clone') { steps { echo 'Repository cloned by Jenkins' } } stage('Run Script') { steps { sh './app.sh' } } } post { success { echo 'Pipeline finished successfully' } failure { echo 'Pipeline failed' } } } Save and exit.\nThis file tells Jenkins what to do when the pipeline runs.\n20. Push the Code to GitHub Back in the jenkins-pipeline-demo folder:\ngit add . git commit -m \"Initial Jenkins pipeline\" git branch -M main git remote add origin https://github.com/ayyzenn/jenkins-pipeline-demo.git git push -u origin main Now GitHub has:\napp.sh Jenkinsfile 21. Create a GitHub Token for Jenkins Jenkins needs permission to pull from your private or API-protected repos.\nOn GitHub, go to Settings → Developer settings → Personal access tokens Create a new token (classic or fine-grained) Give it repo access Copy the token (keep it secret) You will use this token as a password in Jenkins credentials.\n22. Add GitHub Credentials to Jenkins In Jenkins:\nGo to Manage Jenkins → Credentials Select a (global) domain (or create one) Click Add Credentials Fill in:\nKind: Username with password Username: your GitHub username Password: the GitHub token you created ID: github-token (easy to remember) Click OK / Save.\n23. Create a Jenkins Pipeline Job (From SCM) Back in the Jenkins dashboard:\nClick New Item Name it: github-pipeline Select Pipeline Click OK You are now in the job configuration.\n24. Configure the Pipeline (From Git) Scroll down to the Pipeline section.\nSet:\nDefinition: Pipeline script from SCM SCM: Git Then fill in:\nRepository URL:\nhttps://github.com/ayyzenn/jenkins-pipeline-demo.git Credentials: select github-token\nBranch Specifier:\n*/main Script Path:\nJenkinsfile Click Save.\nNow Jenkins knows:\nWhich repo to clone Which branch to use Which file (Jenkinsfile) describes the pipeline 25. Run the Jenkins Pipeline From the github-pipeline job page:\nClick Build Now Click the build number (for example #1) Click Console Output You should see logs similar to:\nCloning the remote Git repository Repository cloned by Jenkins [Pipeline] sh + ./app.sh Hello from GitHub + Jenkins Pipeline ... (system info and date) ... Pipeline finished successfully Finished: SUCCESS If you see Finished: SUCCESS, your GitHub-based Jenkins Pipeline is working.\n26. What You Learned (Summary) You now know how to:\nInstall Java 21 and Jenkins on Arch Linux Start and manage the jenkins systemd service Create a freestyle job that runs shell commands Understand where Jenkins stores its jobs and workspaces Put your pipeline definition in a GitHub repo as a Jenkinsfile Create a Jenkins Pipeline job that reads from SCM (Git) This is the same pattern teams use in real projects:\nCode + Jenkinsfile live in Git Jenkins pulls the repo Jenkins runs the pipeline defined in the repo ",
+  "wordCount" : "1443",
+  "inLanguage": "en",
+  "datePublished": "2026-02-09T00:00:00Z",
+  "dateModified": "2026-02-09T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Saad"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ayyzenn.github.io/posts/jenkins-on-arch-linux/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ayyzenn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ayyzenn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project
+    </h1>
+    <div class="post-meta"><span title='2026-02-09 00:00:00 +0000 UTC'>February 9, 2026</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Saad
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#jenkins-on-arch-linux-i3" aria-label="Jenkins on Arch Linux (i3)">Jenkins on Arch Linux (i3)</a></li>
+                <li>
+                    <a href="#1-what-is-jenkins-simple-explanation" aria-label="1. What is Jenkins? (Simple Explanation)">1. What is Jenkins? (Simple Explanation)</a></li>
+                <li>
+                    <a href="#2-java-requirement-very-important" aria-label="2. Java Requirement (Very Important)">2. Java Requirement (Very Important)</a><ul>
+                        
+                <li>
+                    <a href="#recommended-java-versions" aria-label="Recommended Java Versions">Recommended Java Versions</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-remove-wrong-java-version-if-needed" aria-label="3. Remove Wrong Java Version (If Needed)">3. Remove Wrong Java Version (If Needed)</a></li>
+                <li>
+                    <a href="#4-install-java-21-lts-on-arch" aria-label="4. Install Java 21 (LTS) on Arch">4. Install Java 21 (LTS) on Arch</a></li>
+                <li>
+                    <a href="#5-install-jenkins-on-arch-linux" aria-label="5. Install Jenkins on Arch Linux">5. Install Jenkins on Arch Linux</a></li>
+                <li>
+                    <a href="#6-start-and-enable-jenkins-service" aria-label="6. Start and Enable Jenkins Service">6. Start and Enable Jenkins Service</a></li>
+                <li>
+                    <a href="#7-open-jenkins-in-your-browser" aria-label="7. Open Jenkins in Your Browser">7. Open Jenkins in Your Browser</a></li>
+                <li>
+                    <a href="#8-get-the-jenkins-unlock-password" aria-label="8. Get the Jenkins Unlock Password">8. Get the Jenkins Unlock Password</a></li>
+                <li>
+                    <a href="#9-jenkins-initial-setup" aria-label="9. Jenkins Initial Setup">9. Jenkins Initial Setup</a></li>
+                <li>
+                    <a href="#10-create-a-simple-freestyle-job" aria-label="10. Create a Simple Freestyle Job">10. Create a Simple Freestyle Job</a><ul>
+                        
+                <li>
+                    <a href="#101-create-the-job" aria-label="10.1 Create the Job">10.1 Create the Job</a></li>
+                <li>
+                    <a href="#102-add-a-build-step" aria-label="10.2 Add a Build Step">10.2 Add a Build Step</a></li></ul>
+                </li>
+                <li>
+                    <a href="#11-run-the-freestyle-job" aria-label="11. Run the Freestyle Job">11. Run the Freestyle Job</a></li>
+                <li>
+                    <a href="#12-where-jenkins-stores-its-files-useful-paths" aria-label="12. Where Jenkins Stores Its Files (Useful Paths)">12. Where Jenkins Stores Its Files (Useful Paths)</a></li>
+                <li>
+                    <a href="#13-optional-when-jenkins-uses-a-git-repo" aria-label="13. (Optional) When Jenkins Uses a Git Repo">13. (Optional) When Jenkins Uses a Git Repo</a></li>
+                <li>
+                    <a href="#14-common-jenkins-service-commands" aria-label="14. Common Jenkins Service Commands">14. Common Jenkins Service Commands</a></li>
+                <li>
+                    <a href="#15-jenkins-pipeline--github-realistic-example" aria-label="15. Jenkins Pipeline &#43; GitHub (Realistic Example)">15. Jenkins Pipeline + GitHub (Realistic Example)</a><ul>
+                        
+                <li>
+                    <a href="#151-what-we-will-build" aria-label="15.1 What We Will Build">15.1 What We Will Build</a></li></ul>
+                </li>
+                <li>
+                    <a href="#16-install-git-if-not-already-installed" aria-label="16. Install Git (If Not Already Installed)">16. Install Git (If Not Already Installed)</a></li>
+                <li>
+                    <a href="#17-create-the-github-repository" aria-label="17. Create the GitHub Repository">17. Create the GitHub Repository</a></li>
+                <li>
+                    <a href="#18-prepare-the-repo-locally" aria-label="18. Prepare the Repo Locally">18. Prepare the Repo Locally</a><ul>
+                        
+                <li>
+                    <a href="#181-create-a-simple-script" aria-label="18.1 Create a Simple Script">18.1 Create a Simple Script</a></li></ul>
+                </li>
+                <li>
+                    <a href="#19-create-the-jenkinsfile-important" aria-label="19. Create the Jenkinsfile (Important)">19. Create the Jenkinsfile (Important)</a></li>
+                <li>
+                    <a href="#20-push-the-code-to-github" aria-label="20. Push the Code to GitHub">20. Push the Code to GitHub</a></li>
+                <li>
+                    <a href="#21-create-a-github-token-for-jenkins" aria-label="21. Create a GitHub Token for Jenkins">21. Create a GitHub Token for Jenkins</a></li>
+                <li>
+                    <a href="#22-add-github-credentials-to-jenkins" aria-label="22. Add GitHub Credentials to Jenkins">22. Add GitHub Credentials to Jenkins</a></li>
+                <li>
+                    <a href="#23-create-a-jenkins-pipeline-job-from-scm" aria-label="23. Create a Jenkins Pipeline Job (From SCM)">23. Create a Jenkins Pipeline Job (From SCM)</a></li>
+                <li>
+                    <a href="#24-configure-the-pipeline-from-git" aria-label="24. Configure the Pipeline (From Git)">24. Configure the Pipeline (From Git)</a></li>
+                <li>
+                    <a href="#25-run-the-jenkins-pipeline" aria-label="25. Run the Jenkins Pipeline">25. Run the Jenkins Pipeline</a></li>
+                <li>
+                    <a href="#26-what-you-learned-summary" aria-label="26. What You Learned (Summary)">26. What You Learned (Summary)</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="jenkins-on-arch-linux-i3">Jenkins on Arch Linux (i3)<a hidden class="anchor" aria-hidden="true" href="#jenkins-on-arch-linux-i3">#</a></h2>
+<p>This guide shows you how to:</p>
+<ul>
+<li><strong>Install Jenkins</strong> on Arch Linux (i3 window manager is fine)</li>
+<li><strong>Start and use Jenkins</strong></li>
+<li><strong>Create a simple freestyle job</strong></li>
+<li><strong>Create a real Jenkins Pipeline from a GitHub repo</strong></li>
+</ul>
+<p>The language is simple and the examples are small and realistic.</p>
+<hr>
+<h2 id="1-what-is-jenkins-simple-explanation">1. What is Jenkins? (Simple Explanation)<a hidden class="anchor" aria-hidden="true" href="#1-what-is-jenkins-simple-explanation">#</a></h2>
+<p><strong>Jenkins is an automation server.</strong></p>
+<p>You can tell Jenkins to:</p>
+<ul>
+<li>Get your code (for example from GitHub)</li>
+<li>Run commands (build, test, scripts)</li>
+<li>Show you if things passed or failed</li>
+</ul>
+<p>Instead of you running commands manually every time, Jenkins does it <strong>automatically</strong>.</p>
+<p>You can think of Jenkins as:</p>
+<blockquote>
+<p>A small robot that runs your scripts in a safe and repeatable way.</p>
+</blockquote>
+<hr>
+<h2 id="2-java-requirement-very-important">2. Java Requirement (Very Important)<a hidden class="anchor" aria-hidden="true" href="#2-java-requirement-very-important">#</a></h2>
+<p>Jenkins is a Java application.<br>
+It needs a <strong>stable, Long-Term Support (LTS)</strong> version of Java.</p>
+<h3 id="recommended-java-versions">Recommended Java Versions<a hidden class="anchor" aria-hidden="true" href="#recommended-java-versions">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Java Version</th>
+          <th>Type</th>
+          <th>Recommendation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Java 17</td>
+          <td>LTS</td>
+          <td>✅ Stable</td>
+      </tr>
+      <tr>
+          <td>Java 21</td>
+          <td>LTS</td>
+          <td>✅ Best choice</td>
+      </tr>
+      <tr>
+          <td>Java 25</td>
+          <td>Non-LTS</td>
+          <td>❌ Not recommended</td>
+      </tr>
+  </tbody>
+</table>
+<p>In this guide we use <strong>Java 21 (LTS)</strong> on Arch.</p>
+<hr>
+<h2 id="3-remove-wrong-java-version-if-needed">3. Remove Wrong Java Version (If Needed)<a hidden class="anchor" aria-hidden="true" href="#3-remove-wrong-java-version-if-needed">#</a></h2>
+<p>First, check which Java version you have:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -version
+</span></span></code></pre></div><p>If you see something like Java 25 or a non‑LTS version, remove it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Remove the current OpenJDK package (example: jdk-openjdk)</span>
+</span></span><span style="display:flex;"><span>sudo pacman -Rns jdk-openjdk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Optionally clean unused dependencies</span>
+</span></span><span style="display:flex;"><span>sudo pacman -Rns <span style="color:#66d9ef">$(</span>pacman -Qtdq<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><p>If you already have Java 21 installed, you can skip removal.</p>
+<hr>
+<h2 id="4-install-java-21-lts-on-arch">4. Install Java 21 (LTS) on Arch<a hidden class="anchor" aria-hidden="true" href="#4-install-java-21-lts-on-arch">#</a></h2>
+<p>Install Java 21 JDK:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S jdk21-openjdk
+</span></span></code></pre></div><p>Verify the version:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -version
+</span></span></code></pre></div><p>You should see something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>openjdk version &#34;21.x.x&#34; 20xx-xx-xx
+</span></span></code></pre></div><p>If the version shows <code>21</code>, you are good.</p>
+<hr>
+<h2 id="5-install-jenkins-on-arch-linux">5. Install Jenkins on Arch Linux<a hidden class="anchor" aria-hidden="true" href="#5-install-jenkins-on-arch-linux">#</a></h2>
+<p>Arch Linux has a <code>jenkins</code> package.</p>
+<p>Install it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S jenkins
+</span></span></code></pre></div><p>During installation you may see something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>There are 2 providers available for java-runtime=21:
+</span></span><span style="display:flex;"><span>1) jdk21-openjdk
+</span></span><span style="display:flex;"><span>2) jre21-openjdk
+</span></span></code></pre></div><p>Choose:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1
+</span></span></code></pre></div><p>This means Jenkins will use the JDK 21 runtime.</p>
+<hr>
+<h2 id="6-start-and-enable-jenkins-service">6. Start and Enable Jenkins Service<a hidden class="anchor" aria-hidden="true" href="#6-start-and-enable-jenkins-service">#</a></h2>
+<p>Start Jenkins now:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl start jenkins
+</span></span></code></pre></div><p>Enable Jenkins to start on boot:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable jenkins
+</span></span></code></pre></div><p>Check that it is running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status jenkins
+</span></span></code></pre></div><p>You should see something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Active: active (running)
+</span></span></code></pre></div><p>If it is not active, read the last few lines of the status output for errors.</p>
+<hr>
+<h2 id="7-open-jenkins-in-your-browser">7. Open Jenkins in Your Browser<a hidden class="anchor" aria-hidden="true" href="#7-open-jenkins-in-your-browser">#</a></h2>
+<p>By default Jenkins listens on port <strong>8080</strong>.</p>
+<p>Open your browser and go to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>http://localhost:8080
+</span></span></code></pre></div><p>You should see the Jenkins unlock screen.</p>
+<p>If you cannot open it:</p>
+<ul>
+<li>Check that Jenkins is running: <code>systemctl status jenkins</code></li>
+<li>Check firewall rules (if you use one)</li>
+</ul>
+<hr>
+<h2 id="8-get-the-jenkins-unlock-password">8. Get the Jenkins Unlock Password<a hidden class="anchor" aria-hidden="true" href="#8-get-the-jenkins-unlock-password">#</a></h2>
+<p>On the first run, Jenkins asks for an <strong>initial admin password</strong>.</p>
+<p>Get it with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+</span></span></code></pre></div><p>Copy the long string and paste it into the browser field.</p>
+<p>Click <strong>Continue</strong>.</p>
+<hr>
+<h2 id="9-jenkins-initial-setup">9. Jenkins Initial Setup<a hidden class="anchor" aria-hidden="true" href="#9-jenkins-initial-setup">#</a></h2>
+<p>After unlock, Jenkins will ask you how to set it up.</p>
+<ol>
+<li>Click <strong>Install suggested plugins</strong></li>
+<li>Wait until plugins finish installing</li>
+<li>Create your <strong>admin user</strong> (username, password, email)</li>
+<li>Click <strong>Save and Finish</strong></li>
+<li>Click <strong>Start using Jenkins</strong></li>
+</ol>
+<p>Now you are on the main <strong>Jenkins Dashboard</strong>.</p>
+<hr>
+<h2 id="10-create-a-simple-freestyle-job">10. Create a Simple Freestyle Job<a hidden class="anchor" aria-hidden="true" href="#10-create-a-simple-freestyle-job">#</a></h2>
+<p>We will create a tiny job that prints some information.<br>
+This proves Jenkins is working correctly.</p>
+<h3 id="101-create-the-job">10.1 Create the Job<a hidden class="anchor" aria-hidden="true" href="#101-create-the-job">#</a></h3>
+<ol>
+<li>On the Jenkins dashboard, click <strong>New Item</strong></li>
+<li>In <strong>Item name</strong>, type: <code>hello-jenkins</code></li>
+<li>Select <strong>Freestyle project</strong></li>
+<li>Click <strong>OK</strong></li>
+</ol>
+<p>You are now in the job configuration page.</p>
+<h3 id="102-add-a-build-step">10.2 Add a Build Step<a hidden class="anchor" aria-hidden="true" href="#102-add-a-build-step">#</a></h3>
+<p>Scroll down to the <strong>Build</strong> section.</p>
+<ol>
+<li>Click <strong>Add build step → Execute shell</strong></li>
+<li>In the <strong>Command</strong> box, paste:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Hello Jenkins!&#34;</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Running on Arch Linux&#34;</span>
+</span></span><span style="display:flex;"><span>date
+</span></span><span style="display:flex;"><span>whoami
+</span></span></code></pre></div><ol start="3">
+<li>Click <strong>Save</strong></li>
+</ol>
+<hr>
+<h2 id="11-run-the-freestyle-job">11. Run the Freestyle Job<a hidden class="anchor" aria-hidden="true" href="#11-run-the-freestyle-job">#</a></h2>
+<p>From the job page for <code>hello-jenkins</code>:</p>
+<ol>
+<li>Click <strong>Build Now</strong></li>
+<li>On the left side, you will see a build number, for example <code>#1</code></li>
+<li>Click on <code>#1</code></li>
+<li>Click <strong>Console Output</strong></li>
+</ol>
+<p>You should see output similar to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Hello Jenkins!
+</span></span><span style="display:flex;"><span>Running on Arch Linux
+</span></span><span style="display:flex;"><span>Tue Feb 10 13:00:00 PKT 2026
+</span></span><span style="display:flex;"><span>jenkins
+</span></span></code></pre></div><p>If you see this, your first Jenkins job is working correctly.</p>
+<hr>
+<h2 id="12-where-jenkins-stores-its-files-useful-paths">12. Where Jenkins Stores Its Files (Useful Paths)<a hidden class="anchor" aria-hidden="true" href="#12-where-jenkins-stores-its-files-useful-paths">#</a></h2>
+<p>Jenkins uses these main paths on Arch:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Purpose</th>
+          <th>Path</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Jenkins home</td>
+          <td><code>/var/lib/jenkins</code></td>
+      </tr>
+      <tr>
+          <td>Jobs</td>
+          <td><code>/var/lib/jenkins/jobs/</code></td>
+      </tr>
+      <tr>
+          <td>Job workspace</td>
+          <td><code>/var/lib/jenkins/workspace/</code></td>
+      </tr>
+      <tr>
+          <td>Config</td>
+          <td><code>/etc/conf.d/jenkins</code></td>
+      </tr>
+      <tr>
+          <td>Logs</td>
+          <td><code>/var/log/jenkins/</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>For example, to see files for your job:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls /var/lib/jenkins/jobs/hello-jenkins/
+</span></span></code></pre></div><hr>
+<h2 id="13-optional-when-jenkins-uses-a-git-repo">13. (Optional) When Jenkins Uses a Git Repo<a hidden class="anchor" aria-hidden="true" href="#13-optional-when-jenkins-uses-a-git-repo">#</a></h2>
+<p>When Jenkins checks out a Git repository for a job, it places it in the <strong>workspace</strong> folder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/var/lib/jenkins/workspace/&lt;job-name&gt;/
+</span></span></code></pre></div><p>Example for our later pipeline job:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/var/lib/jenkins/workspace/github-pipeline/
+</span></span></code></pre></div><p>This is useful when you want to debug or inspect the code that was built.</p>
+<hr>
+<h2 id="14-common-jenkins-service-commands">14. Common Jenkins Service Commands<a hidden class="anchor" aria-hidden="true" href="#14-common-jenkins-service-commands">#</a></h2>
+<p>Some handy commands for daily use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Restart Jenkins (after config changes)</span>
+</span></span><span style="display:flex;"><span>sudo systemctl restart jenkins
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Stop Jenkins</span>
+</span></span><span style="display:flex;"><span>sudo systemctl stop jenkins
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start Jenkins</span>
+</span></span><span style="display:flex;"><span>sudo systemctl start jenkins
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Follow Jenkins logs in real-time</span>
+</span></span><span style="display:flex;"><span>journalctl -u jenkins -f
+</span></span></code></pre></div><hr>
+<h2 id="15-jenkins-pipeline--github-realistic-example">15. Jenkins Pipeline + GitHub (Realistic Example)<a hidden class="anchor" aria-hidden="true" href="#15-jenkins-pipeline--github-realistic-example">#</a></h2>
+<p>Now we will set up a <strong>real Jenkins Pipeline</strong> that:</p>
+<ul>
+<li>Uses a <strong>GitHub repository</strong></li>
+<li>Stores the pipeline in a <strong>Jenkinsfile</strong> inside the repo</li>
+<li>Lets Jenkins pull and run the pipeline automatically</li>
+</ul>
+<p>This is how Jenkins is used in real projects.</p>
+<h3 id="151-what-we-will-build">15.1 What We Will Build<a hidden class="anchor" aria-hidden="true" href="#151-what-we-will-build">#</a></h3>
+<p>On GitHub we will have:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>jenkins-pipeline-demo
+</span></span><span style="display:flex;"><span>├── Jenkinsfile
+</span></span><span style="display:flex;"><span>└── app.sh
+</span></span></code></pre></div><p>Jenkins will:</p>
+<ol>
+<li>Clone the repo</li>
+<li>Read the <code>Jenkinsfile</code></li>
+<li>Run the script <code>app.sh</code> as part of the pipeline</li>
+</ol>
+<hr>
+<h2 id="16-install-git-if-not-already-installed">16. Install Git (If Not Already Installed)<a hidden class="anchor" aria-hidden="true" href="#16-install-git-if-not-already-installed">#</a></h2>
+<p>On Arch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S git
+</span></span></code></pre></div><p>Check Git:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><p>If you see a version number, Git is installed correctly.</p>
+<hr>
+<h2 id="17-create-the-github-repository">17. Create the GitHub Repository<a hidden class="anchor" aria-hidden="true" href="#17-create-the-github-repository">#</a></h2>
+<ol>
+<li>Go to GitHub and log in</li>
+<li>Click <strong>New repository</strong></li>
+<li>Name it: <code>jenkins-pipeline-demo</code></li>
+<li>Choose <strong>Public</strong> (easier while learning)</li>
+<li><strong>Do not</strong> initialize with a README</li>
+<li>Click <strong>Create repository</strong></li>
+</ol>
+<p>Copy the repo URL, for example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>https://github.com/ayyzenn/jenkins-pipeline-demo.git
+</span></span></code></pre></div><hr>
+<h2 id="18-prepare-the-repo-locally">18. Prepare the Repo Locally<a hidden class="anchor" aria-hidden="true" href="#18-prepare-the-repo-locally">#</a></h2>
+<p>In your terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~
+</span></span><span style="display:flex;"><span>mkdir jenkins-pipeline-demo
+</span></span><span style="display:flex;"><span>cd jenkins-pipeline-demo
+</span></span><span style="display:flex;"><span>git init
+</span></span></code></pre></div><h3 id="181-create-a-simple-script">18.1 Create a Simple Script<a hidden class="anchor" aria-hidden="true" href="#181-create-a-simple-script">#</a></h3>
+<p>Create a small script file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano app.sh
+</span></span></code></pre></div><p>Paste:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Hello from GitHub + Jenkins Pipeline&#34;</span>
+</span></span><span style="display:flex;"><span>uname -a
+</span></span><span style="display:flex;"><span>date
+</span></span></code></pre></div><p>Save and exit. Then make it executable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x app.sh
+</span></span></code></pre></div><hr>
+<h2 id="19-create-the-jenkinsfile-important">19. Create the Jenkinsfile (Important)<a hidden class="anchor" aria-hidden="true" href="#19-create-the-jenkinsfile-important">#</a></h2>
+<p>Now create a <code>Jenkinsfile</code> in the same folder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano Jenkinsfile
+</span></span></code></pre></div><p>Paste this pipeline definition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-groovy" data-lang="groovy"><span style="display:flex;"><span>pipeline <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    agent any
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    stages <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Clone&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            steps <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                echo <span style="color:#e6db74">&#39;Repository cloned by Jenkins&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        stage<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Run Script&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            steps <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                sh <span style="color:#e6db74">&#39;./app.sh&#39;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    post <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        success <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            echo <span style="color:#e6db74">&#39;Pipeline finished successfully&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        failure <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            echo <span style="color:#e6db74">&#39;Pipeline failed&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Save and exit.</p>
+<p>This file tells Jenkins <strong>what to do</strong> when the pipeline runs.</p>
+<hr>
+<h2 id="20-push-the-code-to-github">20. Push the Code to GitHub<a hidden class="anchor" aria-hidden="true" href="#20-push-the-code-to-github">#</a></h2>
+<p>Back in the <code>jenkins-pipeline-demo</code> folder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial Jenkins pipeline&#34;</span>
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/ayyzenn/jenkins-pipeline-demo.git
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><p>Now GitHub has:</p>
+<ul>
+<li><code>app.sh</code></li>
+<li><code>Jenkinsfile</code></li>
+</ul>
+<hr>
+<h2 id="21-create-a-github-token-for-jenkins">21. Create a GitHub Token for Jenkins<a hidden class="anchor" aria-hidden="true" href="#21-create-a-github-token-for-jenkins">#</a></h2>
+<p>Jenkins needs permission to pull from your private or API-protected repos.</p>
+<ol>
+<li>On GitHub, go to <strong>Settings → Developer settings → Personal access tokens</strong></li>
+<li>Create a new token (classic or fine-grained)</li>
+<li>Give it <strong>repo</strong> access</li>
+<li>Copy the token (keep it secret)</li>
+</ol>
+<p>You will use this token as a password in Jenkins credentials.</p>
+<hr>
+<h2 id="22-add-github-credentials-to-jenkins">22. Add GitHub Credentials to Jenkins<a hidden class="anchor" aria-hidden="true" href="#22-add-github-credentials-to-jenkins">#</a></h2>
+<p>In Jenkins:</p>
+<ol>
+<li>Go to <strong>Manage Jenkins → Credentials</strong></li>
+<li>Select a <strong>(global)</strong> domain (or create one)</li>
+<li>Click <strong>Add Credentials</strong></li>
+</ol>
+<p>Fill in:</p>
+<ul>
+<li><strong>Kind</strong>: <code>Username with password</code></li>
+<li><strong>Username</strong>: your GitHub username</li>
+<li><strong>Password</strong>: the GitHub token you created</li>
+<li><strong>ID</strong>: <code>github-token</code> (easy to remember)</li>
+</ul>
+<p>Click <strong>OK / Save</strong>.</p>
+<hr>
+<h2 id="23-create-a-jenkins-pipeline-job-from-scm">23. Create a Jenkins Pipeline Job (From SCM)<a hidden class="anchor" aria-hidden="true" href="#23-create-a-jenkins-pipeline-job-from-scm">#</a></h2>
+<p>Back in the Jenkins dashboard:</p>
+<ol>
+<li>Click <strong>New Item</strong></li>
+<li>Name it: <code>github-pipeline</code></li>
+<li>Select <strong>Pipeline</strong></li>
+<li>Click <strong>OK</strong></li>
+</ol>
+<p>You are now in the job configuration.</p>
+<hr>
+<h2 id="24-configure-the-pipeline-from-git">24. Configure the Pipeline (From Git)<a hidden class="anchor" aria-hidden="true" href="#24-configure-the-pipeline-from-git">#</a></h2>
+<p>Scroll down to the <strong>Pipeline</strong> section.</p>
+<p>Set:</p>
+<ul>
+<li><strong>Definition</strong>: <code>Pipeline script from SCM</code></li>
+<li><strong>SCM</strong>: <code>Git</code></li>
+</ul>
+<p>Then fill in:</p>
+<ul>
+<li>
+<p><strong>Repository URL</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>https://github.com/ayyzenn/jenkins-pipeline-demo.git
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Credentials</strong>: select <code>github-token</code></p>
+</li>
+<li>
+<p><strong>Branch Specifier</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>*/main
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Script Path</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Jenkinsfile
+</span></span></code></pre></div></li>
+</ul>
+<p>Click <strong>Save</strong>.</p>
+<p>Now Jenkins knows:</p>
+<ul>
+<li>Which repo to clone</li>
+<li>Which branch to use</li>
+<li>Which file (<code>Jenkinsfile</code>) describes the pipeline</li>
+</ul>
+<hr>
+<h2 id="25-run-the-jenkins-pipeline">25. Run the Jenkins Pipeline<a hidden class="anchor" aria-hidden="true" href="#25-run-the-jenkins-pipeline">#</a></h2>
+<p>From the <code>github-pipeline</code> job page:</p>
+<ol>
+<li>Click <strong>Build Now</strong></li>
+<li>Click the build number (for example <code>#1</code>)</li>
+<li>Click <strong>Console Output</strong></li>
+</ol>
+<p>You should see logs similar to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Cloning the remote Git repository
+</span></span><span style="display:flex;"><span>Repository cloned by Jenkins
+</span></span><span style="display:flex;"><span>[Pipeline] sh
+</span></span><span style="display:flex;"><span>+ ./app.sh
+</span></span><span style="display:flex;"><span>Hello from GitHub + Jenkins Pipeline
+</span></span><span style="display:flex;"><span>... (system info and date) ...
+</span></span><span style="display:flex;"><span>Pipeline finished successfully
+</span></span><span style="display:flex;"><span>Finished: SUCCESS
+</span></span></code></pre></div><p>If you see <code>Finished: SUCCESS</code>, your GitHub-based Jenkins Pipeline is working.</p>
+<hr>
+<h2 id="26-what-you-learned-summary">26. What You Learned (Summary)<a hidden class="anchor" aria-hidden="true" href="#26-what-you-learned-summary">#</a></h2>
+<p>You now know how to:</p>
+<ul>
+<li>Install <strong>Java 21</strong> and <strong>Jenkins</strong> on Arch Linux</li>
+<li>Start and manage the <code>jenkins</code> systemd service</li>
+<li>Create a <strong>freestyle job</strong> that runs shell commands</li>
+<li>Understand where Jenkins stores its <strong>jobs</strong> and <strong>workspaces</strong></li>
+<li>Put your <strong>pipeline definition in a GitHub repo</strong> as a <code>Jenkinsfile</code></li>
+<li>Create a Jenkins <strong>Pipeline job</strong> that reads from SCM (Git)</li>
+</ul>
+<p>This is the same pattern teams use in real projects:</p>
+<ul>
+<li>Code + <code>Jenkinsfile</code> live in Git</li>
+<li>Jenkins pulls the repo</li>
+<li>Jenkins runs the pipeline defined in the repo</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://ayyzenn.github.io/tags/jenkins/">Jenkins</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/devops/">Devops</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/arch-linux/">Arch-Linux</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/ci-cd/">Ci-Cd</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/automation/">Automation</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

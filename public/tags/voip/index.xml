@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Voip on ayyzenn</title><link>https://ayyzenn.github.io/tags/voip/</link><description>Recent content in Voip on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Tue, 02 Aug 2022 15:49:43 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/voip/index.xml" rel="self" type="application/rss+xml"/><item><title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title><link>https://ayyzenn.github.io/posts/voip/</link><pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/voip/</guid><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Voip on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/voip/</link>
+    <description>Recent content in Voip on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Aug 2022 15:49:43 +0500</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/voip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title>
+      <link>https://ayyzenn.github.io/posts/voip/</link>
+      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/voip/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Voice over Internet Protocol (VoIP) is a technology that enables voice and video communication over the internet instead of traditional landlines. With an internet connection, users can make calls without relying on local phone services or physical copper wiring. A VoIP service provider manages the call transmission over the internet.&lt;/p&gt;
-&lt;h1 id="how-voip-works"&gt;How VoIP Works&lt;/h1&gt;
-&lt;p&gt;VoIP converts voice into a digital format, compresses it, and transmits it over the internet. A VoIP service provider facilitates the call setup. Many users prefer VoIP over traditional landlines due to its lower startup costs and reduced expenses for long-distance calls. VoIP operates using Internet Protocol, a fundamental component of modern internet infrastructure, offering significant advancements over traditional telecommunications.&lt;/p&gt;</description></item></channel></rss>
+&lt;h1 id=&#34;how-voip-works&#34;&gt;How VoIP Works&lt;/h1&gt;
+&lt;p&gt;VoIP converts voice into a digital format, compresses it, and transmits it over the internet. A VoIP service provider facilitates the call setup. Many users prefer VoIP over traditional landlines due to its lower startup costs and reduced expenses for long-distance calls. VoIP operates using Internet Protocol, a fundamental component of modern internet infrastructure, offering significant advancements over traditional telecommunications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

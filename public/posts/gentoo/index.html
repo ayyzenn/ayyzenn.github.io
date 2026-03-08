@@ -1,85 +1,518 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Conquering Gentoo: Turning the "Impossible" into Reality | ayyzenn</title><meta name=keywords content="gentoo,linux,cli"><meta name=description content="Introduction
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality | ayyzenn</title>
+<meta name="keywords" content="gentoo, linux, cli">
+<meta name="description" content="Introduction
 Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:
 
 Processor: Intel Core i5 4th Gen (4 cores)
 RAM: 8GB
 Storage: 256GB SSD
 
-I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!"><meta name=author content><link rel=canonical href=https://ayyzenn.github.io/posts/gentoo/><link crossorigin=anonymous href=/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css integrity="sha256-IhHKMWS+eDACT2qtKzouUghDpk+PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as=style><link rel=icon href=https://ayyzenn.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://ayyzenn.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://ayyzenn.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://ayyzenn.github.io/apple-touch-icon.png><link rel=mask-icon href=https://ayyzenn.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://ayyzenn.github.io/posts/gentoo/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/gentoo/"><meta property="og:site_name" content="ayyzenn"><meta property="og:title" content='Conquering Gentoo: Turning the "Impossible" into Reality'><meta property="og:description" content="Introduction Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:
-Processor: Intel Core i5 4th Gen (4 cores) RAM: 8GB Storage: 256GB SSD I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!"><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-12-03T15:49:43+05:00"><meta property="article:modified_time" content="2022-12-03T15:49:43+05:00"><meta property="article:tag" content="Gentoo"><meta property="article:tag" content="Linux"><meta property="article:tag" content="Cli"><meta name=twitter:card content="summary"><meta name=twitter:title content='Conquering Gentoo: Turning the "Impossible" into Reality'><meta name=twitter:description content="Introduction
+I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!">
+<meta name="author" content="">
+<link rel="canonical" href="https://ayyzenn.github.io/posts/gentoo/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/gentoo/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/gentoo/">
+  <meta property="og:site_name" content="ayyzenn">
+  <meta property="og:title" content="Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality">
+  <meta property="og:description" content="Introduction Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:
+Processor: Intel Core i5 4th Gen (4 cores) RAM: 8GB Storage: 256GB SSD I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-12-03T15:49:43+05:00">
+    <meta property="article:modified_time" content="2022-12-03T15:49:43+05:00">
+    <meta property="article:tag" content="Gentoo">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Cli">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality">
+<meta name="twitter:description" content="Introduction
 Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:
 
 Processor: Intel Core i5 4th Gen (4 cores)
 RAM: 8GB
 Storage: 256GB SSD
 
-I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://ayyzenn.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Conquering Gentoo: Turning the \"Impossible\" into Reality","item":"https://ayyzenn.github.io/posts/gentoo/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Conquering Gentoo: Turning the \"Impossible\" into Reality","name":"Conquering Gentoo: Turning the \u0022Impossible\u0022 into Reality","description":"Introduction Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:\nProcessor: Intel Core i5 4th Gen (4 cores) RAM: 8GB Storage: 256GB SSD I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!\n","keywords":["gentoo","linux","cli"],"articleBody":"Introduction Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:\nProcessor: Intel Core i5 4th Gen (4 cores) RAM: 8GB Storage: 256GB SSD I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!\nStep 1: Grab the Gentoo ISO Head over to Gentoo’s official website and download the ISO. You’ll see two options:\nGUI Installer (if you want an easier time) Minimal (CLI) Installer (if you want to go full pro mode) For this guide, we’re going Minimal. Let’s get our hands dirty!\nStep 2: Setting Up the Disk Check your available disks:\nlsblk Partition your disk:\ncfdisk /dev/sda Format the partitions:\nmkfs.fat -F 32 /dev/sda1 mkfs.ext4 /dev/sda2 Mount the partitions:\nmount /dev/sda2 /mnt/gentoo mkdir -p /mnt/gentoo/boot mount /dev/sda1 /mnt/gentoo/boot Step 3: Getting Stage 3 Ready Download the latest Stage 3 tarball:\nlinks https://www.gentoo.org/downloads/mirrors/ Extract it:\ntar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner -C /mnt/gentoo Copy your network settings:\ncp --dereference /etc/resolv.conf /mnt/gentoo/etc/ Step 4: Mounting System Directories mount -t proc /proc /mnt/gentoo/proc mount --rbind /sys /mnt/gentoo/sys mount --make-rslave /mnt/gentoo/sys mount --rbind /dev /mnt/gentoo/dev mount --make-rslave /mnt/gentoo/dev Step 5: Entering the Gentoo World chroot /mnt/gentoo /bin/bash source /etc/profile export PS1=\"(chroot) ${PS1}\" Boom! You’re now inside Gentoo. Feels good, right?\nStep 6: Syncing and Configuring the System First, sync the package manager:\nemerge --sync Pick a profile:\neselect profile list eselect profile set 23 # Choose whatever fits your needs Tweak your make.conf file:\nnano /etc/portage/make.conf Example settings:\nCOMMON_FLAGS=\"-march=native -O2 -pipe\" Update everything:\nemerge --sync emerge -vuDN @world # Grab a coffee, this takes a while (12hrs for me) Clean up the mess:\nemerge --depclean Set up pinentry:\neselect pinentry set pinentry-gnome3 Step 7: Installing Kernel emerge -v =sys-kernel/gentoo-sources-6.12.16 emerge sys-boot/grub app-admin/sysklogd sys-process/cronie app-admin/sudo app-misc/neofetch Grant necessary permissions:\necho \"sys-kernel/linux-firmware linux-fw-redistributable\" \u003e\u003e /etc/portage/package.license Install Genkernel:\nemerge sys-kernel/genkernel ln -sf /usr/src/linux-6.12.16-gentoo /usr/src/linux genkernel all Step 8: Fstab Configuration Edit /etc/fstab:\nnano /etc/fstab Set up your partitions with UUIDs (find them using blkid):\nUUID= / ext4 defaults 1 1 UUID= /boot vfat defaults 1 2 Test it:\nmount -a Step 9: Installing and Configuring the Bootloader grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Gentoo grub-mkconfig -o /boot/grub/grub.cfg Set your hostname:\necho \"gentoo\" \u003e /etc/hostname Set a root password:\npasswd Step 10: Creating a User Account Create a user:\ngroupadd mail mkdir -p /var/spool/mail touch /var/spool/mail/yourusername chmod 660 /var/spool/mail/yourusername useradd -m -G mail -s /bin/bash yourusername passwd yourusername chown yourusername:mail /var/spool/mail/yourusername Give them sudo access:\nEDITOR=nano visudo Uncomment this line:\n%wheel ALL=(ALL:ALL) ALL Set up their home directory:\nmkdir -p /home/yourusername chown yourusername:users /home/yourusername chmod 700 /home/yourusername Test your new user:\nsu - yourusername exit # exit from your new user Step 11: Enabling Important Services rc-update add sysklogd default rc-update add cronie default Step 12: Final Steps and Reboot Exit chroot and unmount everything:\nexit umount -l /mnt/gentoo/dev{/shm,/pts,} umount -R /mnt/gentoo or umount -l /mnt/gentoo # if the drive is busy And finally, the moment of truth:\nreboot Conclusion Congratulations! 🎉 You just installed Gentoo Linux from scratch. It wasn’t impossible after all, was it? Now, go flex on your friends and enjoy the pure performance of your custom-built system!\nIf you hit any snags, check out the Gentoo Handbook or the forums. Happy hacking! 🐧\n","wordCount":"583","inLanguage":"en","datePublished":"2022-12-03T15:49:43+05:00","dateModified":"2022-12-03T15:49:43+05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ayyzenn.github.io/posts/gentoo/"},"publisher":{"@type":"Organization","name":"ayyzenn","logo":{"@type":"ImageObject","url":"https://ayyzenn.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://ayyzenn.github.io/ accesskey=h title="ayyzenn (Alt + H)">ayyzenn</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://ayyzenn.github.io/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://ayyzenn.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://ayyzenn.github.io/search title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://ayyzenn.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://ayyzenn.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Conquering Gentoo: Turning the "Impossible" into Reality</h1><div class=post-meta><span title='2022-12-03 15:49:43 +0500 PKT'>December 3, 2022</span>&nbsp;·&nbsp;3 min</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#introduction aria-label=Introduction>Introduction</a></li><li><a href=#step-1-grab-the-gentoo-iso aria-label="Step 1: Grab the Gentoo ISO">Step 1: Grab the Gentoo ISO</a></li><li><a href=#step-2-setting-up-the-disk aria-label="Step 2: Setting Up the Disk">Step 2: Setting Up the Disk</a></li><li><a href=#step-3-getting-stage-3-ready aria-label="Step 3: Getting Stage 3 Ready">Step 3: Getting Stage 3 Ready</a></li><li><a href=#step-4-mounting-system-directories aria-label="Step 4: Mounting System Directories">Step 4: Mounting System Directories</a></li><li><a href=#step-5-entering-the-gentoo-world aria-label="Step 5: Entering the Gentoo World">Step 5: Entering the Gentoo World</a></li><li><a href=#step-6-syncing-and-configuring-the-system aria-label="Step 6: Syncing and Configuring the System">Step 6: Syncing and Configuring the System</a></li><li><a href=#step-7-installing-kernel aria-label="Step 7: Installing Kernel">Step 7: Installing Kernel</a></li><li><a href=#step-8-fstab-configuration aria-label="Step 8: Fstab Configuration">Step 8: Fstab Configuration</a></li><li><a href=#step-9-installing-and-configuring-the-bootloader aria-label="Step 9: Installing and Configuring the Bootloader">Step 9: Installing and Configuring the Bootloader</a></li><li><a href=#step-10-creating-a-user-account aria-label="Step 10: Creating a User Account">Step 10: Creating a User Account</a></li><li><a href=#step-11-enabling-important-services aria-label="Step 11: Enabling Important Services">Step 11: Enabling Important Services</a></li><li><a href=#step-12-final-steps-and-reboot aria-label="Step 12: Final Steps and Reboot">Step 12: Final Steps and Reboot</a></li><li><a href=#conclusion aria-label=Conclusion>Conclusion</a></li></ul></div></details></div><div class=post-content><h2 id=introduction>Introduction<a hidden class=anchor aria-hidden=true href=#introduction>#</a></h2><p>Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:</p><ul><li><strong>Processor:</strong> Intel Core i5 4th Gen (4 cores)</li><li><strong>RAM:</strong> 8GB</li><li><strong>Storage:</strong> 256GB SSD</li></ul><p>I’ll be using the <strong>Minimal ISO</strong> because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!</p><hr><h2 id=step-1-grab-the-gentoo-iso>Step 1: Grab the Gentoo ISO<a hidden class=anchor aria-hidden=true href=#step-1-grab-the-gentoo-iso>#</a></h2><p>Head over to <a href=https://www.gentoo.org/>Gentoo’s official website</a> and download the ISO. You’ll see two options:</p><ul><li><strong>GUI Installer</strong> (if you want an easier time)</li><li><strong>Minimal (CLI) Installer</strong> (if you want to go full pro mode)</li></ul><p>For this guide, we’re going <strong>Minimal</strong>. Let’s get our hands dirty!</p><hr><h2 id=step-2-setting-up-the-disk>Step 2: Setting Up the Disk<a hidden class=anchor aria-hidden=true href=#step-2-setting-up-the-disk>#</a></h2><p>Check your available disks:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>lsblk
-</span></span></code></pre></div><p>Partition your disk:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>cfdisk /dev/sda
-</span></span></code></pre></div><p>Format the partitions:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>mkfs.fat -F <span style=color:#ae81ff>32</span> /dev/sda1
-</span></span><span style=display:flex><span>mkfs.ext4 /dev/sda2
-</span></span></code></pre></div><p>Mount the partitions:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>mount /dev/sda2 /mnt/gentoo
-</span></span><span style=display:flex><span>mkdir -p /mnt/gentoo/boot 
-</span></span><span style=display:flex><span>mount /dev/sda1 /mnt/gentoo/boot
-</span></span></code></pre></div><hr><h2 id=step-3-getting-stage-3-ready>Step 3: Getting Stage 3 Ready<a hidden class=anchor aria-hidden=true href=#step-3-getting-stage-3-ready>#</a></h2><p>Download the latest Stage 3 tarball:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>links https://www.gentoo.org/downloads/mirrors/
-</span></span></code></pre></div><p>Extract it:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>tar xpvf stage3-*.tar.xz --xattrs-include<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;*.*&#39;</span> --numeric-owner -C /mnt/gentoo
-</span></span></code></pre></div><p>Copy your network settings:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>cp --dereference /etc/resolv.conf /mnt/gentoo/etc/
-</span></span></code></pre></div><hr><h2 id=step-4-mounting-system-directories>Step 4: Mounting System Directories<a hidden class=anchor aria-hidden=true href=#step-4-mounting-system-directories>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>mount -t proc /proc /mnt/gentoo/proc
-</span></span><span style=display:flex><span>mount --rbind /sys /mnt/gentoo/sys 
-</span></span><span style=display:flex><span>mount --make-rslave /mnt/gentoo/sys 
-</span></span><span style=display:flex><span>mount --rbind /dev /mnt/gentoo/dev 
-</span></span><span style=display:flex><span>mount --make-rslave /mnt/gentoo/dev
-</span></span></code></pre></div><hr><h2 id=step-5-entering-the-gentoo-world>Step 5: Entering the Gentoo World<a hidden class=anchor aria-hidden=true href=#step-5-entering-the-gentoo-world>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>chroot /mnt/gentoo /bin/bash
-</span></span><span style=display:flex><span>source /etc/profile
-</span></span><span style=display:flex><span>export PS1<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;(chroot) </span><span style=color:#e6db74>${</span>PS1<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
-</span></span></code></pre></div><p>Boom! You’re now inside Gentoo. Feels good, right?</p><hr><h2 id=step-6-syncing-and-configuring-the-system>Step 6: Syncing and Configuring the System<a hidden class=anchor aria-hidden=true href=#step-6-syncing-and-configuring-the-system>#</a></h2><p>First, sync the package manager:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>emerge --sync
-</span></span></code></pre></div><p>Pick a profile:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>eselect profile list
-</span></span><span style=display:flex><span>eselect profile set <span style=color:#ae81ff>23</span>  <span style=color:#75715e># Choose whatever fits your needs</span>
-</span></span></code></pre></div><p>Tweak your <code>make.conf</code> file:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>nano /etc/portage/make.conf
-</span></span></code></pre></div><p>Example settings:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>COMMON_FLAGS<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;-march=native -O2 -pipe&#34;</span>
-</span></span></code></pre></div><p>Update everything:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>emerge --sync
-</span></span><span style=display:flex><span>emerge -vuDN @world  <span style=color:#75715e># Grab a coffee, this takes a while (12hrs for me)</span>
-</span></span></code></pre></div><p>Clean up the mess:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>emerge --depclean
-</span></span></code></pre></div><p>Set up pinentry:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>eselect pinentry set pinentry-gnome3
-</span></span></code></pre></div><hr><h2 id=step-7-installing-kernel>Step 7: Installing Kernel<a hidden class=anchor aria-hidden=true href=#step-7-installing-kernel>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>emerge -v <span style=color:#f92672>=</span>sys-kernel/gentoo-sources-6.12.16
-</span></span><span style=display:flex><span>emerge sys-boot/grub app-admin/sysklogd sys-process/cronie app-admin/sudo app-misc/neofetch
-</span></span></code></pre></div><p>Grant necessary permissions:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>echo <span style=color:#e6db74>&#34;sys-kernel/linux-firmware linux-fw-redistributable&#34;</span> &gt;&gt; /etc/portage/package.license
-</span></span></code></pre></div><p>Install Genkernel:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>emerge sys-kernel/genkernel
-</span></span><span style=display:flex><span>ln -sf /usr/src/linux-6.12.16-gentoo /usr/src/linux
-</span></span><span style=display:flex><span>genkernel all
-</span></span></code></pre></div><hr><h2 id=step-8-fstab-configuration>Step 8: Fstab Configuration<a hidden class=anchor aria-hidden=true href=#step-8-fstab-configuration>#</a></h2><p>Edit <code>/etc/fstab</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>nano /etc/fstab
-</span></span></code></pre></div><p>Set up your partitions with UUIDs (find them using <code>blkid</code>):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>UUID<span style=color:#f92672>=</span>&lt;your-root-uuid&gt;   /               ext4    defaults    <span style=color:#ae81ff>1</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>UUID<span style=color:#f92672>=</span>&lt;your-boot-uuid&gt;   /boot   vfat    defaults    <span style=color:#ae81ff>1</span> <span style=color:#ae81ff>2</span>
-</span></span></code></pre></div><p>Test it:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>mount -a
-</span></span></code></pre></div><hr><h2 id=step-9-installing-and-configuring-the-bootloader>Step 9: Installing and Configuring the Bootloader<a hidden class=anchor aria-hidden=true href=#step-9-installing-and-configuring-the-bootloader>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>grub-install --target<span style=color:#f92672>=</span>x86_64-efi --efi-directory<span style=color:#f92672>=</span>/boot --bootloader-id<span style=color:#f92672>=</span>Gentoo
-</span></span><span style=display:flex><span>grub-mkconfig -o /boot/grub/grub.cfg
-</span></span></code></pre></div><p>Set your hostname:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>echo <span style=color:#e6db74>&#34;gentoo&#34;</span> &gt; /etc/hostname
-</span></span></code></pre></div><p>Set a root password:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>passwd
-</span></span></code></pre></div><hr><h2 id=step-10-creating-a-user-account>Step 10: Creating a User Account<a hidden class=anchor aria-hidden=true href=#step-10-creating-a-user-account>#</a></h2><p>Create a user:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>groupadd mail
-</span></span><span style=display:flex><span>mkdir -p /var/spool/mail
-</span></span><span style=display:flex><span>touch /var/spool/mail/yourusername
-</span></span><span style=display:flex><span>chmod <span style=color:#ae81ff>660</span> /var/spool/mail/yourusername
-</span></span><span style=display:flex><span>useradd -m -G mail -s /bin/bash yourusername
-</span></span><span style=display:flex><span>passwd yourusername
-</span></span><span style=display:flex><span>chown yourusername:mail /var/spool/mail/yourusername
-</span></span></code></pre></div><p>Give them sudo access:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>EDITOR<span style=color:#f92672>=</span>nano visudo
-</span></span></code></pre></div><p>Uncomment this line:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>%wheel ALL<span style=color:#f92672>=(</span>ALL:ALL<span style=color:#f92672>)</span> ALL
-</span></span></code></pre></div><p>Set up their home directory:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>mkdir -p /home/yourusername
-</span></span><span style=display:flex><span>chown yourusername:users /home/yourusername
-</span></span><span style=display:flex><span>chmod <span style=color:#ae81ff>700</span> /home/yourusername
-</span></span></code></pre></div><p>Test your new user:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>su - yourusername
-</span></span><span style=display:flex><span>exit <span style=color:#75715e># exit from your new user</span>
-</span></span></code></pre></div><hr><h2 id=step-11-enabling-important-services>Step 11: Enabling Important Services<a hidden class=anchor aria-hidden=true href=#step-11-enabling-important-services>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>rc-update add sysklogd default
-</span></span><span style=display:flex><span>rc-update add cronie default
-</span></span></code></pre></div><hr><h2 id=step-12-final-steps-and-reboot>Step 12: Final Steps and Reboot<a hidden class=anchor aria-hidden=true href=#step-12-final-steps-and-reboot>#</a></h2><p>Exit chroot and unmount everything:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>exit
-</span></span><span style=display:flex><span>umount -l /mnt/gentoo/dev<span style=color:#f92672>{</span>/shm,/pts,<span style=color:#f92672>}</span>
-</span></span><span style=display:flex><span>umount -R /mnt/gentoo 
-</span></span><span style=display:flex><span>or 
-</span></span><span style=display:flex><span>umount -l /mnt/gentoo <span style=color:#75715e># if the drive is busy</span>
-</span></span></code></pre></div><p>And finally, the moment of truth:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>reboot
-</span></span></code></pre></div><hr><p><img alt="Neofetch Showing System Info" loading=lazy src=/gentoo/gentoo.png></p><h2 id=conclusion>Conclusion<a hidden class=anchor aria-hidden=true href=#conclusion>#</a></h2><p>Congratulations! 🎉 You just installed <strong>Gentoo Linux</strong> from scratch. It wasn’t impossible after all, was it? Now, go flex on your friends and enjoy the pure performance of your custom-built system!</p><p>If you hit any snags, check out the <a href=https://wiki.gentoo.org/wiki/Handbook:AMD64>Gentoo Handbook</a> or the forums. Happy hacking! 🐧</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://ayyzenn.github.io/tags/gentoo/>Gentoo</a></li><li><a href=https://ayyzenn.github.io/tags/linux/>Linux</a></li><li><a href=https://ayyzenn.github.io/tags/cli/>Cli</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://ayyzenn.github.io/>ayyzenn</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ayyzenn.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Conquering Gentoo: Turning the \"Impossible\" into Reality",
+      "item": "https://ayyzenn.github.io/posts/gentoo/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Conquering Gentoo: Turning the \"Impossible\" into Reality",
+  "name": "Conquering Gentoo: Turning the \u0022Impossible\u0022 into Reality",
+  "description": "Introduction Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:\nProcessor: Intel Core i5 4th Gen (4 cores) RAM: 8GB Storage: 256GB SSD I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!\n",
+  "keywords": [
+    "gentoo", "linux", "cli"
+  ],
+  "articleBody": "Introduction Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:\nProcessor: Intel Core i5 4th Gen (4 cores) RAM: 8GB Storage: 256GB SSD I’ll be using the Minimal ISO because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!\nStep 1: Grab the Gentoo ISO Head over to Gentoo’s official website and download the ISO. You’ll see two options:\nGUI Installer (if you want an easier time) Minimal (CLI) Installer (if you want to go full pro mode) For this guide, we’re going Minimal. Let’s get our hands dirty!\nStep 2: Setting Up the Disk Check your available disks:\nlsblk Partition your disk:\ncfdisk /dev/sda Format the partitions:\nmkfs.fat -F 32 /dev/sda1 mkfs.ext4 /dev/sda2 Mount the partitions:\nmount /dev/sda2 /mnt/gentoo mkdir -p /mnt/gentoo/boot mount /dev/sda1 /mnt/gentoo/boot Step 3: Getting Stage 3 Ready Download the latest Stage 3 tarball:\nlinks https://www.gentoo.org/downloads/mirrors/ Extract it:\ntar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner -C /mnt/gentoo Copy your network settings:\ncp --dereference /etc/resolv.conf /mnt/gentoo/etc/ Step 4: Mounting System Directories mount -t proc /proc /mnt/gentoo/proc mount --rbind /sys /mnt/gentoo/sys mount --make-rslave /mnt/gentoo/sys mount --rbind /dev /mnt/gentoo/dev mount --make-rslave /mnt/gentoo/dev Step 5: Entering the Gentoo World chroot /mnt/gentoo /bin/bash source /etc/profile export PS1=\"(chroot) ${PS1}\" Boom! You’re now inside Gentoo. Feels good, right?\nStep 6: Syncing and Configuring the System First, sync the package manager:\nemerge --sync Pick a profile:\neselect profile list eselect profile set 23 # Choose whatever fits your needs Tweak your make.conf file:\nnano /etc/portage/make.conf Example settings:\nCOMMON_FLAGS=\"-march=native -O2 -pipe\" Update everything:\nemerge --sync emerge -vuDN @world # Grab a coffee, this takes a while (12hrs for me) Clean up the mess:\nemerge --depclean Set up pinentry:\neselect pinentry set pinentry-gnome3 Step 7: Installing Kernel emerge -v =sys-kernel/gentoo-sources-6.12.16 emerge sys-boot/grub app-admin/sysklogd sys-process/cronie app-admin/sudo app-misc/neofetch Grant necessary permissions:\necho \"sys-kernel/linux-firmware linux-fw-redistributable\" \u003e\u003e /etc/portage/package.license Install Genkernel:\nemerge sys-kernel/genkernel ln -sf /usr/src/linux-6.12.16-gentoo /usr/src/linux genkernel all Step 8: Fstab Configuration Edit /etc/fstab:\nnano /etc/fstab Set up your partitions with UUIDs (find them using blkid):\nUUID= / ext4 defaults 1 1 UUID= /boot vfat defaults 1 2 Test it:\nmount -a Step 9: Installing and Configuring the Bootloader grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Gentoo grub-mkconfig -o /boot/grub/grub.cfg Set your hostname:\necho \"gentoo\" \u003e /etc/hostname Set a root password:\npasswd Step 10: Creating a User Account Create a user:\ngroupadd mail mkdir -p /var/spool/mail touch /var/spool/mail/yourusername chmod 660 /var/spool/mail/yourusername useradd -m -G mail -s /bin/bash yourusername passwd yourusername chown yourusername:mail /var/spool/mail/yourusername Give them sudo access:\nEDITOR=nano visudo Uncomment this line:\n%wheel ALL=(ALL:ALL) ALL Set up their home directory:\nmkdir -p /home/yourusername chown yourusername:users /home/yourusername chmod 700 /home/yourusername Test your new user:\nsu - yourusername exit # exit from your new user Step 11: Enabling Important Services rc-update add sysklogd default rc-update add cronie default Step 12: Final Steps and Reboot Exit chroot and unmount everything:\nexit umount -l /mnt/gentoo/dev{/shm,/pts,} umount -R /mnt/gentoo or umount -l /mnt/gentoo # if the drive is busy And finally, the moment of truth:\nreboot Conclusion Congratulations! 🎉 You just installed Gentoo Linux from scratch. It wasn’t impossible after all, was it? Now, go flex on your friends and enjoy the pure performance of your custom-built system!\nIf you hit any snags, check out the Gentoo Handbook or the forums. Happy hacking! 🐧\n",
+  "wordCount" : "583",
+  "inLanguage": "en",
+  "datePublished": "2022-12-03T15:49:43+05:00",
+  "dateModified": "2022-12-03T15:49:43+05:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ayyzenn.github.io/posts/gentoo/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ayyzenn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ayyzenn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality
+    </h1>
+    <div class="post-meta"><span title='2022-12-03 15:49:43 +0500 PKT'>December 3, 2022</span>&nbsp;·&nbsp;3 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#step-1-grab-the-gentoo-iso" aria-label="Step 1: Grab the Gentoo ISO">Step 1: Grab the Gentoo ISO</a></li>
+                <li>
+                    <a href="#step-2-setting-up-the-disk" aria-label="Step 2: Setting Up the Disk">Step 2: Setting Up the Disk</a></li>
+                <li>
+                    <a href="#step-3-getting-stage-3-ready" aria-label="Step 3: Getting Stage 3 Ready">Step 3: Getting Stage 3 Ready</a></li>
+                <li>
+                    <a href="#step-4-mounting-system-directories" aria-label="Step 4: Mounting System Directories">Step 4: Mounting System Directories</a></li>
+                <li>
+                    <a href="#step-5-entering-the-gentoo-world" aria-label="Step 5: Entering the Gentoo World">Step 5: Entering the Gentoo World</a></li>
+                <li>
+                    <a href="#step-6-syncing-and-configuring-the-system" aria-label="Step 6: Syncing and Configuring the System">Step 6: Syncing and Configuring the System</a></li>
+                <li>
+                    <a href="#step-7-installing-kernel" aria-label="Step 7: Installing Kernel">Step 7: Installing Kernel</a></li>
+                <li>
+                    <a href="#step-8-fstab-configuration" aria-label="Step 8: Fstab Configuration">Step 8: Fstab Configuration</a></li>
+                <li>
+                    <a href="#step-9-installing-and-configuring-the-bootloader" aria-label="Step 9: Installing and Configuring the Bootloader">Step 9: Installing and Configuring the Bootloader</a></li>
+                <li>
+                    <a href="#step-10-creating-a-user-account" aria-label="Step 10: Creating a User Account">Step 10: Creating a User Account</a></li>
+                <li>
+                    <a href="#step-11-enabling-important-services" aria-label="Step 11: Enabling Important Services">Step 11: Enabling Important Services</a></li>
+                <li>
+                    <a href="#step-12-final-steps-and-reboot" aria-label="Step 12: Final Steps and Reboot">Step 12: Final Steps and Reboot</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:</p>
+<ul>
+<li><strong>Processor:</strong> Intel Core i5 4th Gen (4 cores)</li>
+<li><strong>RAM:</strong> 8GB</li>
+<li><strong>Storage:</strong> 256GB SSD</li>
+</ul>
+<p>I’ll be using the <strong>Minimal ISO</strong> because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!</p>
+<hr>
+<h2 id="step-1-grab-the-gentoo-iso">Step 1: Grab the Gentoo ISO<a hidden class="anchor" aria-hidden="true" href="#step-1-grab-the-gentoo-iso">#</a></h2>
+<p>Head over to <a href="https://www.gentoo.org/">Gentoo’s official website</a> and download the ISO. You’ll see two options:</p>
+<ul>
+<li><strong>GUI Installer</strong> (if you want an easier time)</li>
+<li><strong>Minimal (CLI) Installer</strong> (if you want to go full pro mode)</li>
+</ul>
+<p>For this guide, we’re going <strong>Minimal</strong>. Let’s get our hands dirty!</p>
+<hr>
+<h2 id="step-2-setting-up-the-disk">Step 2: Setting Up the Disk<a hidden class="anchor" aria-hidden="true" href="#step-2-setting-up-the-disk">#</a></h2>
+<p>Check your available disks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsblk
+</span></span></code></pre></div><p>Partition your disk:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cfdisk /dev/sda
+</span></span></code></pre></div><p>Format the partitions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkfs.fat -F <span style="color:#ae81ff">32</span> /dev/sda1
+</span></span><span style="display:flex;"><span>mkfs.ext4 /dev/sda2
+</span></span></code></pre></div><p>Mount the partitions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount /dev/sda2 /mnt/gentoo
+</span></span><span style="display:flex;"><span>mkdir -p /mnt/gentoo/boot 
+</span></span><span style="display:flex;"><span>mount /dev/sda1 /mnt/gentoo/boot
+</span></span></code></pre></div><hr>
+<h2 id="step-3-getting-stage-3-ready">Step 3: Getting Stage 3 Ready<a hidden class="anchor" aria-hidden="true" href="#step-3-getting-stage-3-ready">#</a></h2>
+<p>Download the latest Stage 3 tarball:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>links https://www.gentoo.org/downloads/mirrors/
+</span></span></code></pre></div><p>Extract it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar xpvf stage3-*.tar.xz --xattrs-include<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*.*&#39;</span> --numeric-owner -C /mnt/gentoo
+</span></span></code></pre></div><p>Copy your network settings:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp --dereference /etc/resolv.conf /mnt/gentoo/etc/
+</span></span></code></pre></div><hr>
+<h2 id="step-4-mounting-system-directories">Step 4: Mounting System Directories<a hidden class="anchor" aria-hidden="true" href="#step-4-mounting-system-directories">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount -t proc /proc /mnt/gentoo/proc
+</span></span><span style="display:flex;"><span>mount --rbind /sys /mnt/gentoo/sys 
+</span></span><span style="display:flex;"><span>mount --make-rslave /mnt/gentoo/sys 
+</span></span><span style="display:flex;"><span>mount --rbind /dev /mnt/gentoo/dev 
+</span></span><span style="display:flex;"><span>mount --make-rslave /mnt/gentoo/dev
+</span></span></code></pre></div><hr>
+<h2 id="step-5-entering-the-gentoo-world">Step 5: Entering the Gentoo World<a hidden class="anchor" aria-hidden="true" href="#step-5-entering-the-gentoo-world">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chroot /mnt/gentoo /bin/bash
+</span></span><span style="display:flex;"><span>source /etc/profile
+</span></span><span style="display:flex;"><span>export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(chroot) </span><span style="color:#e6db74">${</span>PS1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Boom! You’re now inside Gentoo. Feels good, right?</p>
+<hr>
+<h2 id="step-6-syncing-and-configuring-the-system">Step 6: Syncing and Configuring the System<a hidden class="anchor" aria-hidden="true" href="#step-6-syncing-and-configuring-the-system">#</a></h2>
+<p>First, sync the package manager:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emerge --sync
+</span></span></code></pre></div><p>Pick a profile:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eselect profile list
+</span></span><span style="display:flex;"><span>eselect profile set <span style="color:#ae81ff">23</span>  <span style="color:#75715e"># Choose whatever fits your needs</span>
+</span></span></code></pre></div><p>Tweak your <code>make.conf</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano /etc/portage/make.conf
+</span></span></code></pre></div><p>Example settings:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>COMMON_FLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-march=native -O2 -pipe&#34;</span>
+</span></span></code></pre></div><p>Update everything:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emerge --sync
+</span></span><span style="display:flex;"><span>emerge -vuDN @world  <span style="color:#75715e"># Grab a coffee, this takes a while (12hrs for me)</span>
+</span></span></code></pre></div><p>Clean up the mess:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emerge --depclean
+</span></span></code></pre></div><p>Set up pinentry:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eselect pinentry set pinentry-gnome3
+</span></span></code></pre></div><hr>
+<h2 id="step-7-installing-kernel">Step 7: Installing Kernel<a hidden class="anchor" aria-hidden="true" href="#step-7-installing-kernel">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emerge -v <span style="color:#f92672">=</span>sys-kernel/gentoo-sources-6.12.16
+</span></span><span style="display:flex;"><span>emerge sys-boot/grub app-admin/sysklogd sys-process/cronie app-admin/sudo app-misc/neofetch
+</span></span></code></pre></div><p>Grant necessary permissions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;sys-kernel/linux-firmware linux-fw-redistributable&#34;</span> &gt;&gt; /etc/portage/package.license
+</span></span></code></pre></div><p>Install Genkernel:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emerge sys-kernel/genkernel
+</span></span><span style="display:flex;"><span>ln -sf /usr/src/linux-6.12.16-gentoo /usr/src/linux
+</span></span><span style="display:flex;"><span>genkernel all
+</span></span></code></pre></div><hr>
+<h2 id="step-8-fstab-configuration">Step 8: Fstab Configuration<a hidden class="anchor" aria-hidden="true" href="#step-8-fstab-configuration">#</a></h2>
+<p>Edit <code>/etc/fstab</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano /etc/fstab
+</span></span></code></pre></div><p>Set up your partitions with UUIDs (find them using <code>blkid</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>UUID<span style="color:#f92672">=</span>&lt;your-root-uuid&gt;   /               ext4    defaults    <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>UUID<span style="color:#f92672">=</span>&lt;your-boot-uuid&gt;   /boot   vfat    defaults    <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><p>Test it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount -a
+</span></span></code></pre></div><hr>
+<h2 id="step-9-installing-and-configuring-the-bootloader">Step 9: Installing and Configuring the Bootloader<a hidden class="anchor" aria-hidden="true" href="#step-9-installing-and-configuring-the-bootloader">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grub-install --target<span style="color:#f92672">=</span>x86_64-efi --efi-directory<span style="color:#f92672">=</span>/boot --bootloader-id<span style="color:#f92672">=</span>Gentoo
+</span></span><span style="display:flex;"><span>grub-mkconfig -o /boot/grub/grub.cfg
+</span></span></code></pre></div><p>Set your hostname:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;gentoo&#34;</span> &gt; /etc/hostname
+</span></span></code></pre></div><p>Set a root password:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>passwd
+</span></span></code></pre></div><hr>
+<h2 id="step-10-creating-a-user-account">Step 10: Creating a User Account<a hidden class="anchor" aria-hidden="true" href="#step-10-creating-a-user-account">#</a></h2>
+<p>Create a user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>groupadd mail
+</span></span><span style="display:flex;"><span>mkdir -p /var/spool/mail
+</span></span><span style="display:flex;"><span>touch /var/spool/mail/yourusername
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">660</span> /var/spool/mail/yourusername
+</span></span><span style="display:flex;"><span>useradd -m -G mail -s /bin/bash yourusername
+</span></span><span style="display:flex;"><span>passwd yourusername
+</span></span><span style="display:flex;"><span>chown yourusername:mail /var/spool/mail/yourusername
+</span></span></code></pre></div><p>Give them sudo access:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>EDITOR<span style="color:#f92672">=</span>nano visudo
+</span></span></code></pre></div><p>Uncomment this line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>%wheel ALL<span style="color:#f92672">=(</span>ALL:ALL<span style="color:#f92672">)</span> ALL
+</span></span></code></pre></div><p>Set up their home directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p /home/yourusername
+</span></span><span style="display:flex;"><span>chown yourusername:users /home/yourusername
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">700</span> /home/yourusername
+</span></span></code></pre></div><p>Test your new user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - yourusername
+</span></span><span style="display:flex;"><span>exit <span style="color:#75715e"># exit from your new user</span>
+</span></span></code></pre></div><hr>
+<h2 id="step-11-enabling-important-services">Step 11: Enabling Important Services<a hidden class="anchor" aria-hidden="true" href="#step-11-enabling-important-services">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rc-update add sysklogd default
+</span></span><span style="display:flex;"><span>rc-update add cronie default
+</span></span></code></pre></div><hr>
+<h2 id="step-12-final-steps-and-reboot">Step 12: Final Steps and Reboot<a hidden class="anchor" aria-hidden="true" href="#step-12-final-steps-and-reboot">#</a></h2>
+<p>Exit chroot and unmount everything:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exit
+</span></span><span style="display:flex;"><span>umount -l /mnt/gentoo/dev<span style="color:#f92672">{</span>/shm,/pts,<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>umount -R /mnt/gentoo 
+</span></span><span style="display:flex;"><span>or 
+</span></span><span style="display:flex;"><span>umount -l /mnt/gentoo <span style="color:#75715e"># if the drive is busy</span>
+</span></span></code></pre></div><p>And finally, the moment of truth:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>reboot
+</span></span></code></pre></div><hr>
+<p><img alt="Neofetch Showing System Info" loading="lazy" src="/gentoo/gentoo.png"></p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Congratulations! 🎉 You just installed <strong>Gentoo Linux</strong> from scratch. It wasn’t impossible after all, was it? Now, go flex on your friends and enjoy the pure performance of your custom-built system!</p>
+<p>If you hit any snags, check out the <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64">Gentoo Handbook</a> or the forums. Happy hacking! 🐧</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://ayyzenn.github.io/tags/gentoo/">Gentoo</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/linux/">Linux</a></li>
+      <li><a href="https://ayyzenn.github.io/tags/cli/">Cli</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

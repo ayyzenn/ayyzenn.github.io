@@ -1,13 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Installation on ayyzenn</title><link>https://ayyzenn.github.io/tags/installation/</link><description>Recent content in Installation on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Thu, 11 Aug 2022 15:49:43 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/installation/index.xml" rel="self" type="application/rss+xml"/><item><title>Setting Up Odoo: A Beginner’s Guide</title><link>https://ayyzenn.github.io/posts/odoo/</link><pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/odoo/</guid><description>&lt;h2 id="update-your-system"&gt;Update Your System&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Installation on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/installation/</link>
+    <description>Recent content in Installation on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Aug 2022 15:49:43 +0500</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up Odoo: A Beginner’s Guide</title>
+      <link>https://ayyzenn.github.io/posts/odoo/</link>
+      <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/odoo/</guid>
+      <description>&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s start by updating your package repository:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt update &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="create-an-odoo-user"&gt;Create an Odoo User&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-an-odoo-user&#34;&gt;Create an Odoo User&lt;/h2&gt;
 &lt;p&gt;Run this command to create a system user for Odoo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo adduser -system -home&lt;span style="color:#f92672"&gt;=&lt;/span&gt;/opt/odoo -group odoo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-postgresql"&gt;Install PostgreSQL&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo adduser -system -home&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/odoo -group odoo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-postgresql&#34;&gt;Install PostgreSQL&lt;/h2&gt;
 &lt;p&gt;Odoo needs PostgreSQL as its database, so install it with:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt-get install postgresql -y
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="create-a-postgresql-user-for-odoo"&gt;Create a PostgreSQL User for Odoo&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo su - postgres -c &lt;span style="color:#e6db74"&gt;&amp;#34;createuser -s odoo&amp;#34;&lt;/span&gt; 2&amp;gt; /dev/null &lt;span style="color:#f92672"&gt;||&lt;/span&gt; true
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-python-dependencies"&gt;Install Python Dependencies&lt;/h2&gt;
-&lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description></item></channel></rss>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install postgresql -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-a-postgresql-user-for-odoo&#34;&gt;Create a PostgreSQL User for Odoo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo su - postgres -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;createuser -s odoo&amp;#34;&lt;/span&gt; 2&amp;gt; /dev/null &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-python-dependencies&#34;&gt;Install Python Dependencies&lt;/h2&gt;
+&lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

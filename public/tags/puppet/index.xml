@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Puppet on ayyzenn</title><link>https://ayyzenn.github.io/tags/puppet/</link><description>Recent content in Puppet on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Thu, 28 Jul 2022 15:49:43 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/puppet/index.xml" rel="self" type="application/rss+xml"/><item><title>Setting up Puppet using Docker</title><link>https://ayyzenn.github.io/posts/puppet/</link><pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/puppet/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Puppet on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/puppet/</link>
+    <description>Recent content in Puppet on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jul 2022 15:49:43 +0500</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/puppet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Puppet using Docker</title>
+      <link>https://ayyzenn.github.io/posts/puppet/</link>
+      <pubDate>Thu, 28 Jul 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/puppet/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Puppet is one of the earliest configuration management tools and has gained a substantial community of supporters and users. It is a powerful tool for deploying, configuring, managing, and maintaining a machine or a system.&lt;/p&gt;
-&lt;h2 id="configuration-management"&gt;Configuration Management&lt;/h2&gt;
+&lt;h2 id=&#34;configuration-management&#34;&gt;Configuration Management&lt;/h2&gt;
 &lt;p&gt;System Administrators often perform repetitive tasks such as installing and configuring servers. While scripting can automate these tasks, managing large infrastructure manually is cumbersome.&lt;/p&gt;
-&lt;p&gt;To address this issue, &lt;strong&gt;Configuration Management&lt;/strong&gt; was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;To address this issue, &lt;strong&gt;Configuration Management&lt;/strong&gt; was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,28 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Ubuntu on ayyzenn</title><link>https://ayyzenn.github.io/tags/ubuntu/</link><description>Recent content in Ubuntu on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Thu, 11 Aug 2022 15:49:43 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>Setting Up Odoo: A Beginner’s Guide</title><link>https://ayyzenn.github.io/posts/odoo/</link><pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/odoo/</guid><description>&lt;h2 id="update-your-system"&gt;Update Your System&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ubuntu on ayyzenn</title>
+    <link>https://ayyzenn.github.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on ayyzenn</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Aug 2022 15:49:43 +0500</lastBuildDate>
+    <atom:link href="https://ayyzenn.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up Odoo: A Beginner’s Guide</title>
+      <link>https://ayyzenn.github.io/posts/odoo/</link>
+      <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/odoo/</guid>
+      <description>&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s start by updating your package repository:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt update &lt;span style="color:#f92672"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="create-an-odoo-user"&gt;Create an Odoo User&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-an-odoo-user&#34;&gt;Create an Odoo User&lt;/h2&gt;
 &lt;p&gt;Run this command to create a system user for Odoo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo adduser -system -home&lt;span style="color:#f92672"&gt;=&lt;/span&gt;/opt/odoo -group odoo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-postgresql"&gt;Install PostgreSQL&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo adduser -system -home&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/odoo -group odoo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-postgresql&#34;&gt;Install PostgreSQL&lt;/h2&gt;
 &lt;p&gt;Odoo needs PostgreSQL as its database, so install it with:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt-get install postgresql -y
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="create-a-postgresql-user-for-odoo"&gt;Create a PostgreSQL User for Odoo&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo su - postgres -c &lt;span style="color:#e6db74"&gt;&amp;#34;createuser -s odoo&amp;#34;&lt;/span&gt; 2&amp;gt; /dev/null &lt;span style="color:#f92672"&gt;||&lt;/span&gt; true
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-python-dependencies"&gt;Install Python Dependencies&lt;/h2&gt;
-&lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description></item><item><title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title><link>https://ayyzenn.github.io/posts/chef/</link><pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/chef/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install postgresql -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-a-postgresql-user-for-odoo&#34;&gt;Create a PostgreSQL User for Odoo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo su - postgres -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;createuser -s odoo&amp;#34;&lt;/span&gt; 2&amp;gt; /dev/null &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-python-dependencies&#34;&gt;Install Python Dependencies&lt;/h2&gt;
+&lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title>
+      <link>https://ayyzenn.github.io/posts/chef/</link>
+      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/chef/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.&lt;/p&gt;
-&lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description></item><item><title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title><link>https://ayyzenn.github.io/posts/voip/</link><pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/voip/</guid><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title>
+      <link>https://ayyzenn.github.io/posts/voip/</link>
+      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/voip/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Voice over Internet Protocol (VoIP) is a technology that enables voice and video communication over the internet instead of traditional landlines. With an internet connection, users can make calls without relying on local phone services or physical copper wiring. A VoIP service provider manages the call transmission over the internet.&lt;/p&gt;
-&lt;h1 id="how-voip-works"&gt;How VoIP Works&lt;/h1&gt;
-&lt;p&gt;VoIP converts voice into a digital format, compresses it, and transmits it over the internet. A VoIP service provider facilitates the call setup. Many users prefer VoIP over traditional landlines due to its lower startup costs and reduced expenses for long-distance calls. VoIP operates using Internet Protocol, a fundamental component of modern internet infrastructure, offering significant advancements over traditional telecommunications.&lt;/p&gt;</description></item><item><title>SSH: Connecting to a Remote Server in Linux</title><link>https://ayyzenn.github.io/posts/ssh/</link><pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/ssh/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;h1 id=&#34;how-voip-works&#34;&gt;How VoIP Works&lt;/h1&gt;
+&lt;p&gt;VoIP converts voice into a digital format, compresses it, and transmits it over the internet. A VoIP service provider facilitates the call setup. Many users prefer VoIP over traditional landlines due to its lower startup costs and reduced expenses for long-distance calls. VoIP operates using Internet Protocol, a fundamental component of modern internet infrastructure, offering significant advancements over traditional telecommunications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH: Connecting to a Remote Server in Linux</title>
+      <link>https://ayyzenn.github.io/posts/ssh/</link>
+      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/ssh/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Secure Shell (SSH)&lt;/strong&gt; for Linux-based machines&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Remote Desktop Protocol (RDP)&lt;/strong&gt; for Windows-based machines&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.&lt;/p&gt;</description></item><item><title>Dual boot Ubuntu and Windows</title><link>https://ayyzenn.github.io/posts/dual_boot/</link><pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/dual_boot/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dual boot Ubuntu and Windows</title>
+      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
+      <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
+      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
-&lt;h3 id="what-is-ubuntu"&gt;What is Ubuntu?&lt;/h3&gt;
+&lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;
 &lt;p&gt;Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.&lt;/p&gt;
-&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

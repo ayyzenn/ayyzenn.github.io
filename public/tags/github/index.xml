@@ -1,31 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Github on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/github/</link>
-    <description>Recent content in Github on ayyzenn</description>
-    <generator>Hugo -- 0.153.3</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 04 Sep 2021 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title>
-      <link>https://ayyzenn.github.io/posts/git_tools/</link>
-      <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/git_tools/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Github on ayyzenn</title><link>https://ayyzenn.github.io/tags/github/</link><description>Recent content in Github on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>Jenkins + Docker Pipeline from GitHub</title><link>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</link><pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</guid><description>&lt;h2 id="what-is-this-about"&gt;What Is This About?&lt;/h2&gt;
+&lt;p&gt;In this post, I explain how I built a &lt;strong&gt;Jenkins pipeline&lt;/strong&gt; that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pulls code from &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Builds a &lt;strong&gt;Docker image&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Runs a &lt;strong&gt;Docker container&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Executes a script automatically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a very common &lt;strong&gt;real-world CI/CD setup&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="goal-from-manual-to-automatic"&gt;Goal: From Manual to Automatic&lt;/h2&gt;
+&lt;p&gt;Manually, we usually do this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone a GitHub repository&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;docker build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;docker run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Check the output&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;</description></item><item><title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title><link>https://ayyzenn.github.io/posts/git_tools/</link><pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/git_tools/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (&lt;code&gt;gh&lt;/code&gt;) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.&lt;/p&gt;
 &lt;p&gt;This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;creating-a-personal-access-token-pat&#34;&gt;Creating a Personal Access Token (PAT)&lt;/h2&gt;
-&lt;p&gt;A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title>
-      <link>https://ayyzenn.github.io/posts/git_cli/</link>
-      <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/git_cli/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;h2 id="creating-a-personal-access-token-pat"&gt;Creating a Personal Access Token (PAT)&lt;/h2&gt;
+&lt;p&gt;A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.&lt;/p&gt;</description></item><item><title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title><link>https://ayyzenn.github.io/posts/git_cli/</link><pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/git_cli/</guid><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;This guide provides a comprehensive introduction to GitHub, covering:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;What is GitHub?&lt;/li&gt;
@@ -34,20 +33,10 @@
 &lt;li&gt;Installing and configuring Git&lt;/li&gt;
 &lt;li&gt;Uploading files to GitHub using the command line&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;what-is-github&#34;&gt;What is GitHub?&lt;/h2&gt;
+&lt;h2 id="what-is-github"&gt;What is GitHub?&lt;/h2&gt;
 &lt;p&gt;Before diving into GitHub, it is essential to understand Git and Open-Source Projects.&lt;/p&gt;
-&lt;h3 id=&#34;1-git&#34;&gt;1. Git&lt;/h3&gt;
-&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hugo: The Fastest Static Site Generator</title>
-      <link>https://ayyzenn.github.io/posts/hugo/</link>
-      <pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/hugo/</guid>
-      <description>&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;
+&lt;h3 id="1-git"&gt;1. Git&lt;/h3&gt;
+&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;</description></item><item><title>Hugo: The Fastest Static Site Generator</title><link>https://ayyzenn.github.io/posts/hugo/</link><pubDate>Thu, 03 Dec 2020 17:07:58 +0500</pubDate><guid>https://ayyzenn.github.io/posts/hugo/</guid><description>&lt;h2 id="what-is-hugo"&gt;What is Hugo?&lt;/h2&gt;
 &lt;p&gt;Hugo is an open-source static site generator (SSG) written in Go. It is designed for speed, simplicity, and flexibility, making it a popular choice for building blogs, documentation sites, and personal portfolios. Unlike traditional content management systems (CMS) like WordPress, Hugo generates static HTML files that can be served directly from any web server, eliminating the need for a database.&lt;/p&gt;
-&lt;h2 id=&#34;why-use-hugo&#34;&gt;Why Use Hugo?&lt;/h2&gt;
-&lt;p&gt;Hugo is widely used due to its numerous advantages:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h2 id="why-use-hugo"&gt;Why Use Hugo?&lt;/h2&gt;
+&lt;p&gt;Hugo is widely used due to its numerous advantages:&lt;/p&gt;</description></item></channel></rss>

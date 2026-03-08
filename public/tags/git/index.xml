@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Git on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/git/</link>
-    <description>Recent content in Git on ayyzenn</description>
-    <generator>Hugo -- 0.153.3</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 03 Sep 2021 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title>
-      <link>https://ayyzenn.github.io/posts/git_cli/</link>
-      <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/git_cli/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Git on ayyzenn</title><link>https://ayyzenn.github.io/tags/git/</link><description>Recent content in Git on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Fri, 03 Sep 2021 15:49:43 +0500</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title><link>https://ayyzenn.github.io/posts/git_cli/</link><pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/git_cli/</guid><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;This guide provides a comprehensive introduction to GitHub, covering:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;What is GitHub?&lt;/li&gt;
@@ -22,10 +7,7 @@
 &lt;li&gt;Installing and configuring Git&lt;/li&gt;
 &lt;li&gt;Uploading files to GitHub using the command line&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;what-is-github&#34;&gt;What is GitHub?&lt;/h2&gt;
+&lt;h2 id="what-is-github"&gt;What is GitHub?&lt;/h2&gt;
 &lt;p&gt;Before diving into GitHub, it is essential to understand Git and Open-Source Projects.&lt;/p&gt;
-&lt;h3 id=&#34;1-git&#34;&gt;1. Git&lt;/h3&gt;
-&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h3 id="1-git"&gt;1. Git&lt;/h3&gt;
+&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;</description></item></channel></rss>

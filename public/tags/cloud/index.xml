@@ -1,22 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Cloud on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/cloud/</link>
-    <description>Recent content in Cloud on ayyzenn</description>
-    <generator>Hugo -- 0.153.3</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Terraform: Infrastructure as Code</title>
-      <link>https://ayyzenn.github.io/posts/terraform/</link>
-      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/terraform/</guid>
-      <description>&lt;h2 id=&#34;what-is-terraform&#34;&gt;What is Terraform?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cloud on ayyzenn</title><link>https://ayyzenn.github.io/tags/cloud/</link><description>Recent content in Cloud on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml"/><item><title>Terraform: Infrastructure as Code</title><link>https://ayyzenn.github.io/posts/terraform/</link><pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/terraform/</guid><description>&lt;h2 id="what-is-terraform"&gt;What is Terraform?&lt;/h2&gt;
 &lt;p&gt;Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&amp;rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.&lt;/p&gt;
 &lt;p&gt;Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.&lt;/p&gt;
-&lt;h2 id=&#34;why-use-terraform&#34;&gt;Why Use Terraform?&lt;/h2&gt;
+&lt;h2 id="why-use-terraform"&gt;Why Use Terraform?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;No More Manual Clicking&lt;/strong&gt;: Automate infrastructure setup instead of clicking through AWS&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Easy Updates&lt;/strong&gt;: Change your code and run &lt;code&gt;terraform apply&lt;/code&gt; to update everything&lt;/li&gt;
@@ -25,18 +10,8 @@
 &lt;li&gt;&lt;strong&gt;Cost Preview&lt;/strong&gt;: See what resources cost before you create them&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Work with Multiple Clouds&lt;/strong&gt;: Manage AWS, Azure, and Google Cloud from one tool&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;basic-concepts-made-simple&#34;&gt;Basic Concepts (Made Simple)&lt;/h2&gt;
-&lt;h3 id=&#34;providers&#34;&gt;Providers&lt;/h3&gt;
-&lt;p&gt;A &lt;strong&gt;provider&lt;/strong&gt; tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Creating a Virtual Machine on Microsoft Azure</title>
-      <link>https://ayyzenn.github.io/posts/azure/</link>
-      <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/azure/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id="basic-concepts-made-simple"&gt;Basic Concepts (Made Simple)&lt;/h2&gt;
+&lt;h3 id="providers"&gt;Providers&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;provider&lt;/strong&gt; tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.&lt;/p&gt;</description></item><item><title>Creating a Virtual Machine on Microsoft Azure</title><link>https://ayyzenn.github.io/posts/azure/</link><pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/azure/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.&lt;/p&gt;
-&lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Postgresql on ayyzenn</title><link>https://ayyzenn.github.io/tags/postgresql/</link><description>Recent content in Postgresql on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Sat, 07 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml"/><item><title>RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB</title><link>https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/</link><pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/</guid><description>&lt;h2 id="restful-api-with-web-scraping-pipelines"&gt;RESTful API with Web Scraping Pipelines&lt;/h2&gt;
+&lt;p&gt;This guide shows you how to build a backend API project that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Uses FastAPI and Flask&lt;/strong&gt; for RESTful APIs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scrapes data from websites&lt;/strong&gt; with BeautifulSoup and Selenium&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stores data&lt;/strong&gt; in PostgreSQL and MongoDB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrates with external services&lt;/strong&gt; like JSONPlaceholder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-what-does-this-project-do-simple-explanation"&gt;1. What Does This Project Do? (Simple Explanation)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;This project is a data aggregator backend.&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

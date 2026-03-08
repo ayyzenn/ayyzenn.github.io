@@ -1,327 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture | ayyzenn</title>
-<meta name="keywords" content="Agentic RAG, Multi-Agent, Gemini, ChromaDB, Query Decomposition, HyDE, AI Agents">
-<meta name="description" content="A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.">
-<meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/agentic_rag/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/agentic_rag/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/agentic_rag/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Building an Intelligent Agentic RAG System with Multi-Agent Architecture">
-  <meta property="og:description" content="A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-10-29T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-10-29T00:00:00+00:00">
-    <meta property="article:tag" content="Agentic RAG">
-    <meta property="article:tag" content="Multi-Agent">
-    <meta property="article:tag" content="Gemini">
-    <meta property="article:tag" content="ChromaDB">
-    <meta property="article:tag" content="Query Decomposition">
-    <meta property="article:tag" content="HyDE">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Building an Intelligent Agentic RAG System with Multi-Agent Architecture">
-<meta name="twitter:description" content="A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Building an Intelligent Agentic RAG System with Multi-Agent Architecture",
-      "item": "https://ayyzenn.github.io/posts/agentic_rag/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Building an Intelligent Agentic RAG System with Multi-Agent Architecture",
-  "name": "Building an Intelligent Agentic RAG System with Multi-Agent Architecture",
-  "description": "A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.",
-  "keywords": [
-    "Agentic RAG", "Multi-Agent", "Gemini", "ChromaDB", "Query Decomposition", "HyDE", "AI Agents"
-  ],
-  "articleBody": "Overview Traditional RAG (Retrieval-Augmented Generation) systems follow a simple pattern: retrieve documents, generate answers. But what if your system could think about the query first, decide the best approach, and even try multiple strategies automatically?\nAgentic RAG introduces autonomous decision-making into the retrieval process. Instead of a single pipeline, multiple specialized agents work together to provide optimal answers for both simple and complex queries.\nThis system features a 3-agent architecture where agents collaborate intelligently:\nRouter Agent: Analyzes queries and evaluates answer quality Basic Generator Agent: Handles simple queries with fast retrieval Advanced Generator Agent: Employs sophisticated techniques for complex queries Key capabilities include:\nIntelligent Query Routing: Automatically determines the best retrieval strategy Advanced RAG Techniques: Query Decomposition, HyDE, and Multi-Query Retrieval Quality-Driven Escalation: Automatically switches to advanced techniques when needed Autonomous Decision Making: Agents evaluate and adapt their approach in real-time Key Insight: The system starts with simple retrieval and automatically escalates to advanced techniques only when needed, optimizing both speed and quality.\nArchitecture Deep Dive The system follows a sophisticated multi-agent workflow:\nUser Query ↓ Router Agent (evaluates query complexity \u0026 routes) ↓ Basic Generator Agent (fast, simple retrieval) ↓ Router Agent (evaluates answer quality) ↓ (if insufficient) Advanced Generator Agent ├── Query Decomposition ├── HyDE (Hypothetical Document Embeddings) └── Multi-Query Retrieval ↓ Final Answer Agent Responsibilities Agent Purpose Techniques Router Agent Query analysis, quality evaluation, routing decisions LLM-based evaluation, confidence scoring Basic Generator Fast retrieval for simple queries Standard vector similarity search Advanced Generator Complex query handling Query decomposition, HyDE, multi-query retrieval Quick Setup Prerequisites # System requirements Python 3.8+ 4GB+ RAM (for embeddings and model processing) Google Gemini API Key Installation # Clone and setup git clone https://github.com/ayyzenn/agentic_rag.git cd agentic_rag # Create virtual environment python -m venv venv source venv/bin/activate # On Windows: venv\\Scripts\\activate # Install dependencies pip install -r requirements.txt Configuration Create a .env file with your Gemini API key:\necho \"GEMINI_API_KEY=your_actual_api_key_here\" \u003e .env Running the System python agentic_rag.py Choose your output mode:\nsilent: Shows only the final answer verbose: Shows routing decisions and agent usage (default) debug: Shows all steps, evaluations, and detailed reasoning Advanced RAG Techniques Explained 1. Query Decomposition Complex queries are automatically broken down into simpler sub-queries for better retrieval coverage.\n# Example transformation Original: \"Compare AI applications in healthcare versus finance\" Decomposed: ├── \"AI applications in healthcare\" ├── \"AI applications in finance\" └── Synthesized comparison Benefits:\nBetter handling of multi-part questions More comprehensive document retrieval Structured approach to complex topics 2. HyDE (Hypothetical Document Embeddings) Generates a hypothetical “ideal answer” first, then uses its embedding to find similar real documents.\n# HyDE Process 1. Generate hypothetical answer using LLM 2. Embed the hypothetical answer 3. Search for documents similar to hypothetical answer 4. Generate grounded answer from real documents Benefits:\nMore focused retrieval Better semantic matching Improved relevance for abstract queries 3. Multi-Query Retrieval Creates multiple phrasings of the query to capture different perspectives and improve retrieval coverage.\n# Example query variations Original: \"How is AI used in medicine?\" Variations: ├── \"Medical AI applications\" ├── \"Artificial intelligence healthcare use cases\" └── \"AI technologies in clinical settings\" Benefits:\nCaptures different semantic angles Improves recall for diverse document styles Reduces dependency on exact keyword matching Usage Examples Simple Query (Basic Generator) Ask your question: What is AI in healthcare? [Router] → Using Basic Generator Agent [Basic] Retrieved 3 chunks [Basic] Generated answer in 3.2s Answer: AI in healthcare refers to artificial intelligence technologies used to improve patient care, diagnosis, and treatment... Complex Query (Advanced Generator) Ask your question: Compare and contrast AI applications in healthcare versus finance, including specific use cases and challenges. [Router] → Using Basic Generator Agent [Basic] Retrieved 3 chunks [Router] Evaluating answer... Insufficient depth [Router] → Using Advanced Generator Agent [Advanced/Decomposition] Generated 3 sub-queries [Advanced/HyDE] Generated hypothetical answer [Advanced/Multi-Query] Generated 4 query variations [Advanced] Combined 12 unique chunks [Advanced] Final answer generated in 15.7s Answer: [Comprehensive comparison with specific examples, use cases, benefits, and challenges for both domains] System Configuration Core Settings (config.py) # Model Configuration GEMINI_MODEL = \"gemini-2.5-flash\" TEMPERATURE = 0.1 MAX_TOKENS = 2048 # Retrieval Settings BASIC_RETRIEVAL_COUNT = 3 ADVANCED_RETRIEVAL_COUNT = 5 SIMILARITY_THRESHOLD = 0.7 # Chunking Configuration CHUNK_CONFIG = { \"max_words\": 100, \"overlap_words\": 20, } # Evaluation Thresholds QUALITY_THRESHOLD = 0.7 CONFIDENCE_THRESHOLD = 0.8 Adding Custom Documents # Simply add .txt files to the docs/ directory docs/ ├── about_me.txt ├── education.txt ├── finance.txt ├── healthcare.txt └── your_custom_document.txt # Automatically processed Quality Evaluation System The Router Agent uses sophisticated LLM-based evaluation to assess answer quality:\nEvaluation Criteria Metric Description Weight Completeness Does the answer fully address all parts of the question? 40% Relevance Is the answer relevant and on-topic? 30% Confidence How confident is the system in the answer? 20% Coherence Is the answer well-structured and logical? 10% Escalation Logic if answer_quality \u003c QUALITY_THRESHOLD: # Escalate to Advanced Generator advanced_response = advanced_generator.generate(query) return advanced_response else: return basic_response Performance Metrics Response Times Query Type Basic Generator Advanced Generator Simple factual 2-4 seconds N/A Complex analytical N/A 10-20 seconds Multi-part comparison N/A 15-25 seconds Resource Usage Memory: ~2-3GB (embeddings + models) Storage: ~500MB (vector store + documents) CPU: Moderate during inference, low at rest Accuracy Improvements Basic queries: 85% satisfaction rate Complex queries: 92% satisfaction rate with advanced techniques Overall system: 89% user satisfaction Extending the System Adding New Agents from agents.base_agent import BaseAgent class CustomAgent(BaseAgent): def __init__(self, config): super().__init__(config) # Custom initialization def generate(self, query, context=None): # Custom generation logic return response Custom Retrieval Techniques class CustomRetriever: def retrieve(self, query, k=5): # Implement custom retrieval logic return documents Integration with Other Vector Stores # Example: Pinecone integration from pinecone import Pinecone class PineconeVectorStore: def __init__(self, api_key, index_name): self.pc = Pinecone(api_key=api_key) self.index = self.pc.Index(index_name) Workflow Example Here’s a detailed trace of how the system handles a complex query:\nQuery: \"What are the ethical implications of AI in healthcare and finance?\" Step 1: Router Analysis ├── Query complexity: HIGH ├── Multi-domain: YES ├── Requires comparison: YES └── Route: Basic Generator (initial attempt) Step 2: Basic Generation ├── Retrieved chunks: 3 ├── Generated answer: Basic overview └── Quality score: 0.65 (below threshold) Step 3: Router Re-evaluation ├── Answer completeness: INSUFFICIENT ├── Missing ethical depth: YES └── Route: Advanced Generator Step 4: Advanced Generation ├── Query Decomposition: │ ├── \"Ethical implications of AI in healthcare\" │ ├── \"Ethical implications of AI in finance\" │ └── \"Comparative ethical analysis\" ├── HyDE Generation: │ └── Generated hypothetical comprehensive answer ├── Multi-Query Retrieval: │ ├── \"AI ethics healthcare medical\" │ ├── \"Financial AI ethical concerns\" │ ├── \"Healthcare AI bias privacy\" │ └── \"Algorithmic fairness finance\" └── Combined 15 unique chunks Step 5: Final Synthesis ├── Integrated multi-domain insights ├── Addressed ethical frameworks ├── Provided specific examples └── Quality score: 0.91 (excellent) Result: Comprehensive ethical analysis delivered Future Enhancements Planned Features Web Interface: Gradio/Streamlit dashboard Multi-modal Support: Images, tables, PDFs Conversation Memory: Context-aware follow-ups Streaming Responses: Real-time answer generation Custom Evaluation Models: Fine-tuned quality assessment RAG-Fusion Integration: Additional retrieval techniques Advanced Capabilities Agent Learning: Adaptive routing based on success patterns Dynamic Chunking: Context-aware document segmentation Multi-language Support: Cross-lingual retrieval and generation Federated Search: Multiple vector store integration Summary Component Purpose Key Benefits Router Agent Query analysis and routing Intelligent decision-making, quality assurance Basic Generator Fast simple retrieval Speed optimization, resource efficiency Advanced Generator Complex query handling Comprehensive answers, advanced techniques Quality Evaluator Answer assessment Automatic escalation, quality assurance Vector Store Document storage/retrieval Fast semantic search, scalable storage Key Takeaways Agentic RAG transforms static pipelines into intelligent, adaptive systems Multi-agent architecture provides both speed and sophistication Automatic escalation ensures optimal resource usage Advanced techniques handle complex, multi-part queries effectively Quality-driven approach maintains high answer standards Modular design enables easy customization and extension The system demonstrates how autonomous agents can collaborate to provide superior RAG performance, automatically adapting their approach based on query complexity and answer quality requirements.\nReferences:\nAgentic RAG GitHub Repository Google Gemini API Documentation ChromaDB Documentation Sentence Transformers ",
-  "wordCount" : "1314",
-  "inLanguage": "en",
-  "datePublished": "2025-10-29T00:00:00Z",
-  "dateModified": "2025-10-29T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/agentic_rag/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
-                    <span>Posts</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Building an Intelligent Agentic RAG System with Multi-Agent Architecture
-    </h1>
-    <div class="post-description">
-      A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.
-    </div>
-    <div class="post-meta"><span title='2025-10-29 00:00:00 +0000 UTC'>October 29, 2025</span>&nbsp;·&nbsp;7 min
-
-</div>
-  </header> <div class="toc">
-    <details >
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#overview" aria-label="Overview">Overview</a></li>
-                <li>
-                    <a href="#architecture-deep-dive" aria-label="Architecture Deep Dive">Architecture Deep Dive</a><ul>
-                        
-                <li>
-                    <a href="#agent-responsibilities" aria-label="Agent Responsibilities">Agent Responsibilities</a></li></ul>
-                </li>
-                <li>
-                    <a href="#quick-setup" aria-label="Quick Setup">Quick Setup</a><ul>
-                        
-                <li>
-                    <a href="#prerequisites" aria-label="Prerequisites">Prerequisites</a></li>
-                <li>
-                    <a href="#installation" aria-label="Installation">Installation</a></li>
-                <li>
-                    <a href="#configuration" aria-label="Configuration">Configuration</a></li>
-                <li>
-                    <a href="#running-the-system" aria-label="Running the System">Running the System</a></li></ul>
-                </li>
-                <li>
-                    <a href="#advanced-rag-techniques-explained" aria-label="Advanced RAG Techniques Explained">Advanced RAG Techniques Explained</a><ul>
-                        
-                <li>
-                    <a href="#1-query-decomposition" aria-label="1. Query Decomposition">1. Query Decomposition</a></li>
-                <li>
-                    <a href="#2-hyde-hypothetical-document-embeddings" aria-label="2. HyDE (Hypothetical Document Embeddings)">2. HyDE (Hypothetical Document Embeddings)</a></li>
-                <li>
-                    <a href="#3-multi-query-retrieval" aria-label="3. Multi-Query Retrieval">3. Multi-Query Retrieval</a></li></ul>
-                </li>
-                <li>
-                    <a href="#usage-examples" aria-label="Usage Examples">Usage Examples</a><ul>
-                        
-                <li>
-                    <a href="#simple-query-basic-generator" aria-label="Simple Query (Basic Generator)">Simple Query (Basic Generator)</a></li>
-                <li>
-                    <a href="#complex-query-advanced-generator" aria-label="Complex Query (Advanced Generator)">Complex Query (Advanced Generator)</a></li></ul>
-                </li>
-                <li>
-                    <a href="#system-configuration" aria-label="System Configuration">System Configuration</a><ul>
-                        
-                <li>
-                    <a href="#core-settings-configpy" aria-label="Core Settings (config.py)">Core Settings (config.py)</a></li>
-                <li>
-                    <a href="#adding-custom-documents" aria-label="Adding Custom Documents">Adding Custom Documents</a></li></ul>
-                </li>
-                <li>
-                    <a href="#quality-evaluation-system" aria-label="Quality Evaluation System">Quality Evaluation System</a><ul>
-                        
-                <li>
-                    <a href="#evaluation-criteria" aria-label="Evaluation Criteria">Evaluation Criteria</a></li>
-                <li>
-                    <a href="#escalation-logic" aria-label="Escalation Logic">Escalation Logic</a></li></ul>
-                </li>
-                <li>
-                    <a href="#performance-metrics" aria-label="Performance Metrics">Performance Metrics</a><ul>
-                        
-                <li>
-                    <a href="#response-times" aria-label="Response Times">Response Times</a></li>
-                <li>
-                    <a href="#resource-usage" aria-label="Resource Usage">Resource Usage</a></li>
-                <li>
-                    <a href="#accuracy-improvements" aria-label="Accuracy Improvements">Accuracy Improvements</a></li></ul>
-                </li>
-                <li>
-                    <a href="#extending-the-system" aria-label="Extending the System">Extending the System</a><ul>
-                        
-                <li>
-                    <a href="#adding-new-agents" aria-label="Adding New Agents">Adding New Agents</a></li>
-                <li>
-                    <a href="#custom-retrieval-techniques" aria-label="Custom Retrieval Techniques">Custom Retrieval Techniques</a></li>
-                <li>
-                    <a href="#integration-with-other-vector-stores" aria-label="Integration with Other Vector Stores">Integration with Other Vector Stores</a></li></ul>
-                </li>
-                <li>
-                    <a href="#workflow-example" aria-label="Workflow Example">Workflow Example</a></li>
-                <li>
-                    <a href="#future-enhancements" aria-label="Future Enhancements">Future Enhancements</a><ul>
-                        
-                <li>
-                    <a href="#planned-features" aria-label="Planned Features">Planned Features</a></li>
-                <li>
-                    <a href="#advanced-capabilities" aria-label="Advanced Capabilities">Advanced Capabilities</a></li></ul>
-                </li>
-                <li>
-                    <a href="#summary" aria-label="Summary">Summary</a></li>
-                <li>
-                    <a href="#key-takeaways" aria-label="Key Takeaways">Key Takeaways</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
-  <div class="post-content"><h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
-<p>Traditional RAG (Retrieval-Augmented Generation) systems follow a simple pattern: retrieve documents, generate answers. But what if your system could <strong>think</strong> about the query first, decide the best approach, and even try multiple strategies automatically?</p>
-<p><strong>Agentic RAG</strong> introduces autonomous decision-making into the retrieval process. Instead of a single pipeline, multiple specialized agents work together to provide optimal answers for both simple and complex queries.</p>
-<p>This system features a <strong>3-agent architecture</strong> where agents collaborate intelligently:</p>
-<ul>
-<li><strong>Router Agent</strong>: Analyzes queries and evaluates answer quality</li>
-<li><strong>Basic Generator Agent</strong>: Handles simple queries with fast retrieval</li>
-<li><strong>Advanced Generator Agent</strong>: Employs sophisticated techniques for complex queries</li>
-</ul>
-<p>Key capabilities include:</p>
-<ul>
-<li><strong>Intelligent Query Routing</strong>: Automatically determines the best retrieval strategy</li>
-<li><strong>Advanced RAG Techniques</strong>: Query Decomposition, HyDE, and Multi-Query Retrieval</li>
-<li><strong>Quality-Driven Escalation</strong>: Automatically switches to advanced techniques when needed</li>
-<li><strong>Autonomous Decision Making</strong>: Agents evaluate and adapt their approach in real-time</li>
-</ul>
-<blockquote>
-<p><strong>Key Insight:</strong> The system starts with simple retrieval and automatically escalates to advanced techniques only when needed, optimizing both speed and quality.</p>
-</blockquote>
-<hr>
-<h2 id="architecture-deep-dive">Architecture Deep Dive<a hidden class="anchor" aria-hidden="true" href="#architecture-deep-dive">#</a></h2>
-<p>The system follows a sophisticated multi-agent workflow:</p>
-<pre tabindex="0"><code>User Query
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture | ayyzenn</title><meta name=keywords content="Agentic RAG,Multi-Agent,Gemini,ChromaDB,Query Decomposition,HyDE,AI Agents"><meta name=description content="A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture."><meta name=author content><link rel=canonical href=https://ayyzenn.github.io/posts/agentic_rag/><link crossorigin=anonymous href=/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css integrity="sha256-IhHKMWS+eDACT2qtKzouUghDpk+PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as=style><link rel=icon href=https://ayyzenn.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://ayyzenn.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://ayyzenn.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://ayyzenn.github.io/apple-touch-icon.png><link rel=mask-icon href=https://ayyzenn.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://ayyzenn.github.io/posts/agentic_rag/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/agentic_rag/"><meta property="og:site_name" content="ayyzenn"><meta property="og:title" content="Building an Intelligent Agentic RAG System with Multi-Agent Architecture"><meta property="og:description" content="A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-10-29T00:00:00+00:00"><meta property="article:modified_time" content="2025-10-29T00:00:00+00:00"><meta property="article:tag" content="Agentic RAG"><meta property="article:tag" content="Multi-Agent"><meta property="article:tag" content="Gemini"><meta property="article:tag" content="ChromaDB"><meta property="article:tag" content="Query Decomposition"><meta property="article:tag" content="HyDE"><meta name=twitter:card content="summary"><meta name=twitter:title content="Building an Intelligent Agentic RAG System with Multi-Agent Architecture"><meta name=twitter:description content="A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://ayyzenn.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Building an Intelligent Agentic RAG System with Multi-Agent Architecture","item":"https://ayyzenn.github.io/posts/agentic_rag/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Building an Intelligent Agentic RAG System with Multi-Agent Architecture","name":"Building an Intelligent Agentic RAG System with Multi-Agent Architecture","description":"A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.","keywords":["Agentic RAG","Multi-Agent","Gemini","ChromaDB","Query Decomposition","HyDE","AI Agents"],"articleBody":"Overview Traditional RAG (Retrieval-Augmented Generation) systems follow a simple pattern: retrieve documents, generate answers. But what if your system could think about the query first, decide the best approach, and even try multiple strategies automatically?\nAgentic RAG introduces autonomous decision-making into the retrieval process. Instead of a single pipeline, multiple specialized agents work together to provide optimal answers for both simple and complex queries.\nThis system features a 3-agent architecture where agents collaborate intelligently:\nRouter Agent: Analyzes queries and evaluates answer quality Basic Generator Agent: Handles simple queries with fast retrieval Advanced Generator Agent: Employs sophisticated techniques for complex queries Key capabilities include:\nIntelligent Query Routing: Automatically determines the best retrieval strategy Advanced RAG Techniques: Query Decomposition, HyDE, and Multi-Query Retrieval Quality-Driven Escalation: Automatically switches to advanced techniques when needed Autonomous Decision Making: Agents evaluate and adapt their approach in real-time Key Insight: The system starts with simple retrieval and automatically escalates to advanced techniques only when needed, optimizing both speed and quality.\nArchitecture Deep Dive The system follows a sophisticated multi-agent workflow:\nUser Query ↓ Router Agent (evaluates query complexity \u0026 routes) ↓ Basic Generator Agent (fast, simple retrieval) ↓ Router Agent (evaluates answer quality) ↓ (if insufficient) Advanced Generator Agent ├── Query Decomposition ├── HyDE (Hypothetical Document Embeddings) └── Multi-Query Retrieval ↓ Final Answer Agent Responsibilities Agent Purpose Techniques Router Agent Query analysis, quality evaluation, routing decisions LLM-based evaluation, confidence scoring Basic Generator Fast retrieval for simple queries Standard vector similarity search Advanced Generator Complex query handling Query decomposition, HyDE, multi-query retrieval Quick Setup Prerequisites # System requirements Python 3.8+ 4GB+ RAM (for embeddings and model processing) Google Gemini API Key Installation # Clone and setup git clone https://github.com/ayyzenn/agentic_rag.git cd agentic_rag # Create virtual environment python -m venv venv source venv/bin/activate # On Windows: venv\\Scripts\\activate # Install dependencies pip install -r requirements.txt Configuration Create a .env file with your Gemini API key:\necho \"GEMINI_API_KEY=your_actual_api_key_here\" \u003e .env Running the System python agentic_rag.py Choose your output mode:\nsilent: Shows only the final answer verbose: Shows routing decisions and agent usage (default) debug: Shows all steps, evaluations, and detailed reasoning Advanced RAG Techniques Explained 1. Query Decomposition Complex queries are automatically broken down into simpler sub-queries for better retrieval coverage.\n# Example transformation Original: \"Compare AI applications in healthcare versus finance\" Decomposed: ├── \"AI applications in healthcare\" ├── \"AI applications in finance\" └── Synthesized comparison Benefits:\nBetter handling of multi-part questions More comprehensive document retrieval Structured approach to complex topics 2. HyDE (Hypothetical Document Embeddings) Generates a hypothetical “ideal answer” first, then uses its embedding to find similar real documents.\n# HyDE Process 1. Generate hypothetical answer using LLM 2. Embed the hypothetical answer 3. Search for documents similar to hypothetical answer 4. Generate grounded answer from real documents Benefits:\nMore focused retrieval Better semantic matching Improved relevance for abstract queries 3. Multi-Query Retrieval Creates multiple phrasings of the query to capture different perspectives and improve retrieval coverage.\n# Example query variations Original: \"How is AI used in medicine?\" Variations: ├── \"Medical AI applications\" ├── \"Artificial intelligence healthcare use cases\" └── \"AI technologies in clinical settings\" Benefits:\nCaptures different semantic angles Improves recall for diverse document styles Reduces dependency on exact keyword matching Usage Examples Simple Query (Basic Generator) Ask your question: What is AI in healthcare? [Router] → Using Basic Generator Agent [Basic] Retrieved 3 chunks [Basic] Generated answer in 3.2s Answer: AI in healthcare refers to artificial intelligence technologies used to improve patient care, diagnosis, and treatment... Complex Query (Advanced Generator) Ask your question: Compare and contrast AI applications in healthcare versus finance, including specific use cases and challenges. [Router] → Using Basic Generator Agent [Basic] Retrieved 3 chunks [Router] Evaluating answer... Insufficient depth [Router] → Using Advanced Generator Agent [Advanced/Decomposition] Generated 3 sub-queries [Advanced/HyDE] Generated hypothetical answer [Advanced/Multi-Query] Generated 4 query variations [Advanced] Combined 12 unique chunks [Advanced] Final answer generated in 15.7s Answer: [Comprehensive comparison with specific examples, use cases, benefits, and challenges for both domains] System Configuration Core Settings (config.py) # Model Configuration GEMINI_MODEL = \"gemini-2.5-flash\" TEMPERATURE = 0.1 MAX_TOKENS = 2048 # Retrieval Settings BASIC_RETRIEVAL_COUNT = 3 ADVANCED_RETRIEVAL_COUNT = 5 SIMILARITY_THRESHOLD = 0.7 # Chunking Configuration CHUNK_CONFIG = { \"max_words\": 100, \"overlap_words\": 20, } # Evaluation Thresholds QUALITY_THRESHOLD = 0.7 CONFIDENCE_THRESHOLD = 0.8 Adding Custom Documents # Simply add .txt files to the docs/ directory docs/ ├── about_me.txt ├── education.txt ├── finance.txt ├── healthcare.txt └── your_custom_document.txt # Automatically processed Quality Evaluation System The Router Agent uses sophisticated LLM-based evaluation to assess answer quality:\nEvaluation Criteria Metric Description Weight Completeness Does the answer fully address all parts of the question? 40% Relevance Is the answer relevant and on-topic? 30% Confidence How confident is the system in the answer? 20% Coherence Is the answer well-structured and logical? 10% Escalation Logic if answer_quality \u003c QUALITY_THRESHOLD: # Escalate to Advanced Generator advanced_response = advanced_generator.generate(query) return advanced_response else: return basic_response Performance Metrics Response Times Query Type Basic Generator Advanced Generator Simple factual 2-4 seconds N/A Complex analytical N/A 10-20 seconds Multi-part comparison N/A 15-25 seconds Resource Usage Memory: ~2-3GB (embeddings + models) Storage: ~500MB (vector store + documents) CPU: Moderate during inference, low at rest Accuracy Improvements Basic queries: 85% satisfaction rate Complex queries: 92% satisfaction rate with advanced techniques Overall system: 89% user satisfaction Extending the System Adding New Agents from agents.base_agent import BaseAgent class CustomAgent(BaseAgent): def __init__(self, config): super().__init__(config) # Custom initialization def generate(self, query, context=None): # Custom generation logic return response Custom Retrieval Techniques class CustomRetriever: def retrieve(self, query, k=5): # Implement custom retrieval logic return documents Integration with Other Vector Stores # Example: Pinecone integration from pinecone import Pinecone class PineconeVectorStore: def __init__(self, api_key, index_name): self.pc = Pinecone(api_key=api_key) self.index = self.pc.Index(index_name) Workflow Example Here’s a detailed trace of how the system handles a complex query:\nQuery: \"What are the ethical implications of AI in healthcare and finance?\" Step 1: Router Analysis ├── Query complexity: HIGH ├── Multi-domain: YES ├── Requires comparison: YES └── Route: Basic Generator (initial attempt) Step 2: Basic Generation ├── Retrieved chunks: 3 ├── Generated answer: Basic overview └── Quality score: 0.65 (below threshold) Step 3: Router Re-evaluation ├── Answer completeness: INSUFFICIENT ├── Missing ethical depth: YES └── Route: Advanced Generator Step 4: Advanced Generation ├── Query Decomposition: │ ├── \"Ethical implications of AI in healthcare\" │ ├── \"Ethical implications of AI in finance\" │ └── \"Comparative ethical analysis\" ├── HyDE Generation: │ └── Generated hypothetical comprehensive answer ├── Multi-Query Retrieval: │ ├── \"AI ethics healthcare medical\" │ ├── \"Financial AI ethical concerns\" │ ├── \"Healthcare AI bias privacy\" │ └── \"Algorithmic fairness finance\" └── Combined 15 unique chunks Step 5: Final Synthesis ├── Integrated multi-domain insights ├── Addressed ethical frameworks ├── Provided specific examples └── Quality score: 0.91 (excellent) Result: Comprehensive ethical analysis delivered Future Enhancements Planned Features Web Interface: Gradio/Streamlit dashboard Multi-modal Support: Images, tables, PDFs Conversation Memory: Context-aware follow-ups Streaming Responses: Real-time answer generation Custom Evaluation Models: Fine-tuned quality assessment RAG-Fusion Integration: Additional retrieval techniques Advanced Capabilities Agent Learning: Adaptive routing based on success patterns Dynamic Chunking: Context-aware document segmentation Multi-language Support: Cross-lingual retrieval and generation Federated Search: Multiple vector store integration Summary Component Purpose Key Benefits Router Agent Query analysis and routing Intelligent decision-making, quality assurance Basic Generator Fast simple retrieval Speed optimization, resource efficiency Advanced Generator Complex query handling Comprehensive answers, advanced techniques Quality Evaluator Answer assessment Automatic escalation, quality assurance Vector Store Document storage/retrieval Fast semantic search, scalable storage Key Takeaways Agentic RAG transforms static pipelines into intelligent, adaptive systems Multi-agent architecture provides both speed and sophistication Automatic escalation ensures optimal resource usage Advanced techniques handle complex, multi-part queries effectively Quality-driven approach maintains high answer standards Modular design enables easy customization and extension The system demonstrates how autonomous agents can collaborate to provide superior RAG performance, automatically adapting their approach based on query complexity and answer quality requirements.\nReferences:\nAgentic RAG GitHub Repository Google Gemini API Documentation ChromaDB Documentation Sentence Transformers ","wordCount":"1314","inLanguage":"en","datePublished":"2025-10-29T00:00:00Z","dateModified":"2025-10-29T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://ayyzenn.github.io/posts/agentic_rag/"},"publisher":{"@type":"Organization","name":"ayyzenn","logo":{"@type":"ImageObject","url":"https://ayyzenn.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://ayyzenn.github.io/ accesskey=h title="ayyzenn (Alt + H)">ayyzenn</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://ayyzenn.github.io/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://ayyzenn.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://ayyzenn.github.io/search title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://ayyzenn.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://ayyzenn.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Building an Intelligent Agentic RAG System with Multi-Agent Architecture</h1><div class=post-description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</div><div class=post-meta><span title='2025-10-29 00:00:00 +0000 UTC'>October 29, 2025</span>&nbsp;·&nbsp;7 min</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#overview aria-label=Overview>Overview</a></li><li><a href=#architecture-deep-dive aria-label="Architecture Deep Dive">Architecture Deep Dive</a><ul><li><a href=#agent-responsibilities aria-label="Agent Responsibilities">Agent Responsibilities</a></li></ul></li><li><a href=#quick-setup aria-label="Quick Setup">Quick Setup</a><ul><li><a href=#prerequisites aria-label=Prerequisites>Prerequisites</a></li><li><a href=#installation aria-label=Installation>Installation</a></li><li><a href=#configuration aria-label=Configuration>Configuration</a></li><li><a href=#running-the-system aria-label="Running the System">Running the System</a></li></ul></li><li><a href=#advanced-rag-techniques-explained aria-label="Advanced RAG Techniques Explained">Advanced RAG Techniques Explained</a><ul><li><a href=#1-query-decomposition aria-label="1. Query Decomposition">1. Query Decomposition</a></li><li><a href=#2-hyde-hypothetical-document-embeddings aria-label="2. HyDE (Hypothetical Document Embeddings)">2. HyDE (Hypothetical Document Embeddings)</a></li><li><a href=#3-multi-query-retrieval aria-label="3. Multi-Query Retrieval">3. Multi-Query Retrieval</a></li></ul></li><li><a href=#usage-examples aria-label="Usage Examples">Usage Examples</a><ul><li><a href=#simple-query-basic-generator aria-label="Simple Query (Basic Generator)">Simple Query (Basic Generator)</a></li><li><a href=#complex-query-advanced-generator aria-label="Complex Query (Advanced Generator)">Complex Query (Advanced Generator)</a></li></ul></li><li><a href=#system-configuration aria-label="System Configuration">System Configuration</a><ul><li><a href=#core-settings-configpy aria-label="Core Settings (config.py)">Core Settings (config.py)</a></li><li><a href=#adding-custom-documents aria-label="Adding Custom Documents">Adding Custom Documents</a></li></ul></li><li><a href=#quality-evaluation-system aria-label="Quality Evaluation System">Quality Evaluation System</a><ul><li><a href=#evaluation-criteria aria-label="Evaluation Criteria">Evaluation Criteria</a></li><li><a href=#escalation-logic aria-label="Escalation Logic">Escalation Logic</a></li></ul></li><li><a href=#performance-metrics aria-label="Performance Metrics">Performance Metrics</a><ul><li><a href=#response-times aria-label="Response Times">Response Times</a></li><li><a href=#resource-usage aria-label="Resource Usage">Resource Usage</a></li><li><a href=#accuracy-improvements aria-label="Accuracy Improvements">Accuracy Improvements</a></li></ul></li><li><a href=#extending-the-system aria-label="Extending the System">Extending the System</a><ul><li><a href=#adding-new-agents aria-label="Adding New Agents">Adding New Agents</a></li><li><a href=#custom-retrieval-techniques aria-label="Custom Retrieval Techniques">Custom Retrieval Techniques</a></li><li><a href=#integration-with-other-vector-stores aria-label="Integration with Other Vector Stores">Integration with Other Vector Stores</a></li></ul></li><li><a href=#workflow-example aria-label="Workflow Example">Workflow Example</a></li><li><a href=#future-enhancements aria-label="Future Enhancements">Future Enhancements</a><ul><li><a href=#planned-features aria-label="Planned Features">Planned Features</a></li><li><a href=#advanced-capabilities aria-label="Advanced Capabilities">Advanced Capabilities</a></li></ul></li><li><a href=#summary aria-label=Summary>Summary</a></li><li><a href=#key-takeaways aria-label="Key Takeaways">Key Takeaways</a></li></ul></div></details></div><div class=post-content><h2 id=overview>Overview<a hidden class=anchor aria-hidden=true href=#overview>#</a></h2><p>Traditional RAG (Retrieval-Augmented Generation) systems follow a simple pattern: retrieve documents, generate answers. But what if your system could <strong>think</strong> about the query first, decide the best approach, and even try multiple strategies automatically?</p><p><strong>Agentic RAG</strong> introduces autonomous decision-making into the retrieval process. Instead of a single pipeline, multiple specialized agents work together to provide optimal answers for both simple and complex queries.</p><p>This system features a <strong>3-agent architecture</strong> where agents collaborate intelligently:</p><ul><li><strong>Router Agent</strong>: Analyzes queries and evaluates answer quality</li><li><strong>Basic Generator Agent</strong>: Handles simple queries with fast retrieval</li><li><strong>Advanced Generator Agent</strong>: Employs sophisticated techniques for complex queries</li></ul><p>Key capabilities include:</p><ul><li><strong>Intelligent Query Routing</strong>: Automatically determines the best retrieval strategy</li><li><strong>Advanced RAG Techniques</strong>: Query Decomposition, HyDE, and Multi-Query Retrieval</li><li><strong>Quality-Driven Escalation</strong>: Automatically switches to advanced techniques when needed</li><li><strong>Autonomous Decision Making</strong>: Agents evaluate and adapt their approach in real-time</li></ul><blockquote><p><strong>Key Insight:</strong> The system starts with simple retrieval and automatically escalates to advanced techniques only when needed, optimizing both speed and quality.</p></blockquote><hr><h2 id=architecture-deep-dive>Architecture Deep Dive<a hidden class=anchor aria-hidden=true href=#architecture-deep-dive>#</a></h2><p>The system follows a sophisticated multi-agent workflow:</p><pre tabindex=0><code>User Query
     ↓
 Router Agent (evaluates query complexity &amp; routes)
     ↓
@@ -335,278 +14,119 @@ Advanced Generator Agent
     └── Multi-Query Retrieval
     ↓
 Final Answer
-</code></pre><h3 id="agent-responsibilities">Agent Responsibilities<a hidden class="anchor" aria-hidden="true" href="#agent-responsibilities">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>Agent</th>
-          <th>Purpose</th>
-          <th>Techniques</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Router Agent</strong></td>
-          <td>Query analysis, quality evaluation, routing decisions</td>
-          <td>LLM-based evaluation, confidence scoring</td>
-      </tr>
-      <tr>
-          <td><strong>Basic Generator</strong></td>
-          <td>Fast retrieval for simple queries</td>
-          <td>Standard vector similarity search</td>
-      </tr>
-      <tr>
-          <td><strong>Advanced Generator</strong></td>
-          <td>Complex query handling</td>
-          <td>Query decomposition, HyDE, multi-query retrieval</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h2 id="quick-setup">Quick Setup<a hidden class="anchor" aria-hidden="true" href="#quick-setup">#</a></h2>
-<h3 id="prerequisites">Prerequisites<a hidden class="anchor" aria-hidden="true" href="#prerequisites">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># System requirements</span>
-</span></span><span style="display:flex;"><span>Python 3.8+
-</span></span><span style="display:flex;"><span>4GB+ RAM <span style="color:#f92672">(</span><span style="color:#66d9ef">for</span> embeddings and model processing<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Google Gemini API Key
-</span></span></code></pre></div><h3 id="installation">Installation<a hidden class="anchor" aria-hidden="true" href="#installation">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Clone and setup</span>
-</span></span><span style="display:flex;"><span>git clone https://github.com/ayyzenn/agentic_rag.git
-</span></span><span style="display:flex;"><span>cd agentic_rag
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create virtual environment</span>
-</span></span><span style="display:flex;"><span>python -m venv venv
-</span></span><span style="display:flex;"><span>source venv/bin/activate  <span style="color:#75715e"># On Windows: venv\Scripts\activate</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install dependencies</span>
-</span></span><span style="display:flex;"><span>pip install -r requirements.txt
-</span></span></code></pre></div><h3 id="configuration">Configuration<a hidden class="anchor" aria-hidden="true" href="#configuration">#</a></h3>
-<p>Create a <code>.env</code> file with your Gemini API key:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;GEMINI_API_KEY=your_actual_api_key_here&#34;</span> &gt; .env
-</span></span></code></pre></div><h3 id="running-the-system">Running the System<a hidden class="anchor" aria-hidden="true" href="#running-the-system">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python agentic_rag.py
-</span></span></code></pre></div><p>Choose your output mode:</p>
-<ul>
-<li><strong>silent</strong>: Shows only the final answer</li>
-<li><strong>verbose</strong>: Shows routing decisions and agent usage (default)</li>
-<li><strong>debug</strong>: Shows all steps, evaluations, and detailed reasoning</li>
-</ul>
-<hr>
-<h2 id="advanced-rag-techniques-explained">Advanced RAG Techniques Explained<a hidden class="anchor" aria-hidden="true" href="#advanced-rag-techniques-explained">#</a></h2>
-<h3 id="1-query-decomposition">1. Query Decomposition<a hidden class="anchor" aria-hidden="true" href="#1-query-decomposition">#</a></h3>
-<p>Complex queries are automatically broken down into simpler sub-queries for better retrieval coverage.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Example transformation</span>
-</span></span><span style="display:flex;"><span>Original: <span style="color:#e6db74">&#34;Compare AI applications in healthcare versus finance&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Decomposed:
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#e6db74">&#34;AI applications in healthcare&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#e6db74">&#34;AI applications in finance&#34;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└──</span> Synthesized comparison
-</span></span></code></pre></div><p><strong>Benefits:</strong></p>
-<ul>
-<li>Better handling of multi-part questions</li>
-<li>More comprehensive document retrieval</li>
-<li>Structured approach to complex topics</li>
-</ul>
-<h3 id="2-hyde-hypothetical-document-embeddings">2. HyDE (Hypothetical Document Embeddings)<a hidden class="anchor" aria-hidden="true" href="#2-hyde-hypothetical-document-embeddings">#</a></h3>
-<p>Generates a hypothetical &ldquo;ideal answer&rdquo; first, then uses its embedding to find similar real documents.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># HyDE Process</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1.</span> Generate hypothetical answer using LLM
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2.</span> Embed the hypothetical answer
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3.</span> Search <span style="color:#66d9ef">for</span> documents similar to hypothetical answer
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4.</span> Generate grounded answer <span style="color:#f92672">from</span> real documents
-</span></span></code></pre></div><p><strong>Benefits:</strong></p>
-<ul>
-<li>More focused retrieval</li>
-<li>Better semantic matching</li>
-<li>Improved relevance for abstract queries</li>
-</ul>
-<h3 id="3-multi-query-retrieval">3. Multi-Query Retrieval<a hidden class="anchor" aria-hidden="true" href="#3-multi-query-retrieval">#</a></h3>
-<p>Creates multiple phrasings of the query to capture different perspectives and improve retrieval coverage.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Example query variations</span>
-</span></span><span style="display:flex;"><span>Original: <span style="color:#e6db74">&#34;How is AI used in medicine?&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Variations:
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#e6db74">&#34;Medical AI applications&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">├──</span> <span style="color:#e6db74">&#34;Artificial intelligence healthcare use cases&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">└──</span> <span style="color:#e6db74">&#34;AI technologies in clinical settings&#34;</span>
-</span></span></code></pre></div><p><strong>Benefits:</strong></p>
-<ul>
-<li>Captures different semantic angles</li>
-<li>Improves recall for diverse document styles</li>
-<li>Reduces dependency on exact keyword matching</li>
-</ul>
-<hr>
-<h2 id="usage-examples">Usage Examples<a hidden class="anchor" aria-hidden="true" href="#usage-examples">#</a></h2>
-<h3 id="simple-query-basic-generator">Simple Query (Basic Generator)<a hidden class="anchor" aria-hidden="true" href="#simple-query-basic-generator">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Ask your question: What is AI in healthcare?
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Router<span style="color:#f92672">]</span> → Using Basic Generator Agent
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Basic<span style="color:#f92672">]</span> Retrieved <span style="color:#ae81ff">3</span> chunks
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Basic<span style="color:#f92672">]</span> Generated answer in 3.2s
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Answer: AI in healthcare refers to artificial intelligence technologies 
-</span></span><span style="display:flex;"><span>used to improve patient care, diagnosis, and treatment...
-</span></span></code></pre></div><h3 id="complex-query-advanced-generator">Complex Query (Advanced Generator)<a hidden class="anchor" aria-hidden="true" href="#complex-query-advanced-generator">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Ask your question: Compare and contrast AI applications in healthcare 
-</span></span><span style="display:flex;"><span>versus finance, including specific use cases and challenges.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Router<span style="color:#f92672">]</span> → Using Basic Generator Agent
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Basic<span style="color:#f92672">]</span> Retrieved <span style="color:#ae81ff">3</span> chunks
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Router<span style="color:#f92672">]</span> Evaluating answer... Insufficient depth
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Router<span style="color:#f92672">]</span> → Using Advanced Generator Agent
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Advanced/Decomposition<span style="color:#f92672">]</span> Generated <span style="color:#ae81ff">3</span> sub-queries
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Advanced/HyDE<span style="color:#f92672">]</span> Generated hypothetical answer
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Advanced/Multi-Query<span style="color:#f92672">]</span> Generated <span style="color:#ae81ff">4</span> query variations
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Advanced<span style="color:#f92672">]</span> Combined <span style="color:#ae81ff">12</span> unique chunks
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Advanced<span style="color:#f92672">]</span> Final answer generated in 15.7s
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Answer: <span style="color:#f92672">[</span>Comprehensive comparison with specific examples, 
-</span></span><span style="display:flex;"><span>use cases, benefits, and challenges <span style="color:#66d9ef">for</span> both domains<span style="color:#f92672">]</span>
-</span></span></code></pre></div><hr>
-<h2 id="system-configuration">System Configuration<a hidden class="anchor" aria-hidden="true" href="#system-configuration">#</a></h2>
-<h3 id="core-settings-configpy">Core Settings (config.py)<a hidden class="anchor" aria-hidden="true" href="#core-settings-configpy">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Model Configuration</span>
-</span></span><span style="display:flex;"><span>GEMINI_MODEL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;gemini-2.5-flash&#34;</span>
-</span></span><span style="display:flex;"><span>TEMPERATURE <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span>
-</span></span><span style="display:flex;"><span>MAX_TOKENS <span style="color:#f92672">=</span> <span style="color:#ae81ff">2048</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieval Settings</span>
-</span></span><span style="display:flex;"><span>BASIC_RETRIEVAL_COUNT <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>ADVANCED_RETRIEVAL_COUNT <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
-</span></span><span style="display:flex;"><span>SIMILARITY_THRESHOLD <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.7</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Chunking Configuration</span>
-</span></span><span style="display:flex;"><span>CHUNK_CONFIG <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;max_words&#34;</span>: <span style="color:#ae81ff">100</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;overlap_words&#34;</span>: <span style="color:#ae81ff">20</span>,
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Evaluation Thresholds</span>
-</span></span><span style="display:flex;"><span>QUALITY_THRESHOLD <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.7</span>
-</span></span><span style="display:flex;"><span>CONFIDENCE_THRESHOLD <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.8</span>
-</span></span></code></pre></div><h3 id="adding-custom-documents">Adding Custom Documents<a hidden class="anchor" aria-hidden="true" href="#adding-custom-documents">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Simply add .txt files to the docs/ directory</span>
-</span></span><span style="display:flex;"><span>docs/
-</span></span><span style="display:flex;"><span>├── about_me.txt
-</span></span><span style="display:flex;"><span>├── education.txt
-</span></span><span style="display:flex;"><span>├── finance.txt
-</span></span><span style="display:flex;"><span>├── healthcare.txt
-</span></span><span style="display:flex;"><span>└── your_custom_document.txt  <span style="color:#75715e"># Automatically processed</span>
-</span></span></code></pre></div><hr>
-<h2 id="quality-evaluation-system">Quality Evaluation System<a hidden class="anchor" aria-hidden="true" href="#quality-evaluation-system">#</a></h2>
-<p>The Router Agent uses sophisticated LLM-based evaluation to assess answer quality:</p>
-<h3 id="evaluation-criteria">Evaluation Criteria<a hidden class="anchor" aria-hidden="true" href="#evaluation-criteria">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>Metric</th>
-          <th>Description</th>
-          <th>Weight</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Completeness</strong></td>
-          <td>Does the answer fully address all parts of the question?</td>
-          <td>40%</td>
-      </tr>
-      <tr>
-          <td><strong>Relevance</strong></td>
-          <td>Is the answer relevant and on-topic?</td>
-          <td>30%</td>
-      </tr>
-      <tr>
-          <td><strong>Confidence</strong></td>
-          <td>How confident is the system in the answer?</td>
-          <td>20%</td>
-      </tr>
-      <tr>
-          <td><strong>Coherence</strong></td>
-          <td>Is the answer well-structured and logical?</td>
-          <td>10%</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="escalation-logic">Escalation Logic<a hidden class="anchor" aria-hidden="true" href="#escalation-logic">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> answer_quality <span style="color:#f92672">&lt;</span> QUALITY_THRESHOLD:
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Escalate to Advanced Generator</span>
-</span></span><span style="display:flex;"><span>    advanced_response <span style="color:#f92672">=</span> advanced_generator<span style="color:#f92672">.</span>generate(query)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> advanced_response
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> basic_response
-</span></span></code></pre></div><hr>
-<h2 id="performance-metrics">Performance Metrics<a hidden class="anchor" aria-hidden="true" href="#performance-metrics">#</a></h2>
-<h3 id="response-times">Response Times<a hidden class="anchor" aria-hidden="true" href="#response-times">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>Query Type</th>
-          <th>Basic Generator</th>
-          <th>Advanced Generator</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Simple factual</td>
-          <td>2-4 seconds</td>
-          <td>N/A</td>
-      </tr>
-      <tr>
-          <td>Complex analytical</td>
-          <td>N/A</td>
-          <td>10-20 seconds</td>
-      </tr>
-      <tr>
-          <td>Multi-part comparison</td>
-          <td>N/A</td>
-          <td>15-25 seconds</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="resource-usage">Resource Usage<a hidden class="anchor" aria-hidden="true" href="#resource-usage">#</a></h3>
-<ul>
-<li><strong>Memory</strong>: ~2-3GB (embeddings + models)</li>
-<li><strong>Storage</strong>: ~500MB (vector store + documents)</li>
-<li><strong>CPU</strong>: Moderate during inference, low at rest</li>
-</ul>
-<h3 id="accuracy-improvements">Accuracy Improvements<a hidden class="anchor" aria-hidden="true" href="#accuracy-improvements">#</a></h3>
-<ul>
-<li><strong>Basic queries</strong>: 85% satisfaction rate</li>
-<li><strong>Complex queries</strong>: 92% satisfaction rate with advanced techniques</li>
-<li><strong>Overall system</strong>: 89% user satisfaction</li>
-</ul>
-<hr>
-<h2 id="extending-the-system">Extending the System<a hidden class="anchor" aria-hidden="true" href="#extending-the-system">#</a></h2>
-<h3 id="adding-new-agents">Adding New Agents<a hidden class="anchor" aria-hidden="true" href="#adding-new-agents">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> agents.base_agent <span style="color:#f92672">import</span> BaseAgent
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomAgent</span>(BaseAgent):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, config):
-</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span><span style="color:#a6e22e">__init__</span>(config)
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Custom initialization</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate</span>(self, query, context<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Custom generation logic</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> response
-</span></span></code></pre></div><h3 id="custom-retrieval-techniques">Custom Retrieval Techniques<a hidden class="anchor" aria-hidden="true" href="#custom-retrieval-techniques">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomRetriever</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">retrieve</span>(self, query, k<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>):
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Implement custom retrieval logic</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> documents
-</span></span></code></pre></div><h3 id="integration-with-other-vector-stores">Integration with Other Vector Stores<a hidden class="anchor" aria-hidden="true" href="#integration-with-other-vector-stores">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Example: Pinecone integration</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pinecone <span style="color:#f92672">import</span> Pinecone
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PineconeVectorStore</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, api_key, index_name):
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>pc <span style="color:#f92672">=</span> Pinecone(api_key<span style="color:#f92672">=</span>api_key)
-</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>pc<span style="color:#f92672">.</span>Index(index_name)
-</span></span></code></pre></div><hr>
-<h2 id="workflow-example">Workflow Example<a hidden class="anchor" aria-hidden="true" href="#workflow-example">#</a></h2>
-<p>Here&rsquo;s a detailed trace of how the system handles a complex query:</p>
-<pre tabindex="0"><code>Query: &#34;What are the ethical implications of AI in healthcare and finance?&#34;
+</code></pre><h3 id=agent-responsibilities>Agent Responsibilities<a hidden class=anchor aria-hidden=true href=#agent-responsibilities>#</a></h3><table><thead><tr><th>Agent</th><th>Purpose</th><th>Techniques</th></tr></thead><tbody><tr><td><strong>Router Agent</strong></td><td>Query analysis, quality evaluation, routing decisions</td><td>LLM-based evaluation, confidence scoring</td></tr><tr><td><strong>Basic Generator</strong></td><td>Fast retrieval for simple queries</td><td>Standard vector similarity search</td></tr><tr><td><strong>Advanced Generator</strong></td><td>Complex query handling</td><td>Query decomposition, HyDE, multi-query retrieval</td></tr></tbody></table><hr><h2 id=quick-setup>Quick Setup<a hidden class=anchor aria-hidden=true href=#quick-setup>#</a></h2><h3 id=prerequisites>Prerequisites<a hidden class=anchor aria-hidden=true href=#prerequisites>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># System requirements</span>
+</span></span><span style=display:flex><span>Python 3.8+
+</span></span><span style=display:flex><span>4GB+ RAM <span style=color:#f92672>(</span><span style=color:#66d9ef>for</span> embeddings and model processing<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>Google Gemini API Key
+</span></span></code></pre></div><h3 id=installation>Installation<a hidden class=anchor aria-hidden=true href=#installation>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Clone and setup</span>
+</span></span><span style=display:flex><span>git clone https://github.com/ayyzenn/agentic_rag.git
+</span></span><span style=display:flex><span>cd agentic_rag
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Create virtual environment</span>
+</span></span><span style=display:flex><span>python -m venv venv
+</span></span><span style=display:flex><span>source venv/bin/activate  <span style=color:#75715e># On Windows: venv\Scripts\activate</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Install dependencies</span>
+</span></span><span style=display:flex><span>pip install -r requirements.txt
+</span></span></code></pre></div><h3 id=configuration>Configuration<a hidden class=anchor aria-hidden=true href=#configuration>#</a></h3><p>Create a <code>.env</code> file with your Gemini API key:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>echo <span style=color:#e6db74>&#34;GEMINI_API_KEY=your_actual_api_key_here&#34;</span> &gt; .env
+</span></span></code></pre></div><h3 id=running-the-system>Running the System<a hidden class=anchor aria-hidden=true href=#running-the-system>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>python agentic_rag.py
+</span></span></code></pre></div><p>Choose your output mode:</p><ul><li><strong>silent</strong>: Shows only the final answer</li><li><strong>verbose</strong>: Shows routing decisions and agent usage (default)</li><li><strong>debug</strong>: Shows all steps, evaluations, and detailed reasoning</li></ul><hr><h2 id=advanced-rag-techniques-explained>Advanced RAG Techniques Explained<a hidden class=anchor aria-hidden=true href=#advanced-rag-techniques-explained>#</a></h2><h3 id=1-query-decomposition>1. Query Decomposition<a hidden class=anchor aria-hidden=true href=#1-query-decomposition>#</a></h3><p>Complex queries are automatically broken down into simpler sub-queries for better retrieval coverage.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># Example transformation</span>
+</span></span><span style=display:flex><span>Original: <span style=color:#e6db74>&#34;Compare AI applications in healthcare versus finance&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Decomposed:
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>├──</span> <span style=color:#e6db74>&#34;AI applications in healthcare&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>├──</span> <span style=color:#e6db74>&#34;AI applications in finance&#34;</span> 
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>└──</span> Synthesized comparison
+</span></span></code></pre></div><p><strong>Benefits:</strong></p><ul><li>Better handling of multi-part questions</li><li>More comprehensive document retrieval</li><li>Structured approach to complex topics</li></ul><h3 id=2-hyde-hypothetical-document-embeddings>2. HyDE (Hypothetical Document Embeddings)<a hidden class=anchor aria-hidden=true href=#2-hyde-hypothetical-document-embeddings>#</a></h3><p>Generates a hypothetical &ldquo;ideal answer&rdquo; first, then uses its embedding to find similar real documents.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># HyDE Process</span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>1.</span> Generate hypothetical answer using LLM
+</span></span><span style=display:flex><span><span style=color:#ae81ff>2.</span> Embed the hypothetical answer
+</span></span><span style=display:flex><span><span style=color:#ae81ff>3.</span> Search <span style=color:#66d9ef>for</span> documents similar to hypothetical answer
+</span></span><span style=display:flex><span><span style=color:#ae81ff>4.</span> Generate grounded answer <span style=color:#f92672>from</span> real documents
+</span></span></code></pre></div><p><strong>Benefits:</strong></p><ul><li>More focused retrieval</li><li>Better semantic matching</li><li>Improved relevance for abstract queries</li></ul><h3 id=3-multi-query-retrieval>3. Multi-Query Retrieval<a hidden class=anchor aria-hidden=true href=#3-multi-query-retrieval>#</a></h3><p>Creates multiple phrasings of the query to capture different perspectives and improve retrieval coverage.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># Example query variations</span>
+</span></span><span style=display:flex><span>Original: <span style=color:#e6db74>&#34;How is AI used in medicine?&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Variations:
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>├──</span> <span style=color:#e6db74>&#34;Medical AI applications&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>├──</span> <span style=color:#e6db74>&#34;Artificial intelligence healthcare use cases&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>└──</span> <span style=color:#e6db74>&#34;AI technologies in clinical settings&#34;</span>
+</span></span></code></pre></div><p><strong>Benefits:</strong></p><ul><li>Captures different semantic angles</li><li>Improves recall for diverse document styles</li><li>Reduces dependency on exact keyword matching</li></ul><hr><h2 id=usage-examples>Usage Examples<a hidden class=anchor aria-hidden=true href=#usage-examples>#</a></h2><h3 id=simple-query-basic-generator>Simple Query (Basic Generator)<a hidden class=anchor aria-hidden=true href=#simple-query-basic-generator>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Ask your question: What is AI in healthcare?
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Router<span style=color:#f92672>]</span> → Using Basic Generator Agent
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Basic<span style=color:#f92672>]</span> Retrieved <span style=color:#ae81ff>3</span> chunks
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Basic<span style=color:#f92672>]</span> Generated answer in 3.2s
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Answer: AI in healthcare refers to artificial intelligence technologies 
+</span></span><span style=display:flex><span>used to improve patient care, diagnosis, and treatment...
+</span></span></code></pre></div><h3 id=complex-query-advanced-generator>Complex Query (Advanced Generator)<a hidden class=anchor aria-hidden=true href=#complex-query-advanced-generator>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Ask your question: Compare and contrast AI applications in healthcare 
+</span></span><span style=display:flex><span>versus finance, including specific use cases and challenges.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Router<span style=color:#f92672>]</span> → Using Basic Generator Agent
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Basic<span style=color:#f92672>]</span> Retrieved <span style=color:#ae81ff>3</span> chunks
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Router<span style=color:#f92672>]</span> Evaluating answer... Insufficient depth
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Router<span style=color:#f92672>]</span> → Using Advanced Generator Agent
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Advanced/Decomposition<span style=color:#f92672>]</span> Generated <span style=color:#ae81ff>3</span> sub-queries
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Advanced/HyDE<span style=color:#f92672>]</span> Generated hypothetical answer
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Advanced/Multi-Query<span style=color:#f92672>]</span> Generated <span style=color:#ae81ff>4</span> query variations
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Advanced<span style=color:#f92672>]</span> Combined <span style=color:#ae81ff>12</span> unique chunks
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>Advanced<span style=color:#f92672>]</span> Final answer generated in 15.7s
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Answer: <span style=color:#f92672>[</span>Comprehensive comparison with specific examples, 
+</span></span><span style=display:flex><span>use cases, benefits, and challenges <span style=color:#66d9ef>for</span> both domains<span style=color:#f92672>]</span>
+</span></span></code></pre></div><hr><h2 id=system-configuration>System Configuration<a hidden class=anchor aria-hidden=true href=#system-configuration>#</a></h2><h3 id=core-settings-configpy>Core Settings (config.py)<a hidden class=anchor aria-hidden=true href=#core-settings-configpy>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># Model Configuration</span>
+</span></span><span style=display:flex><span>GEMINI_MODEL <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;gemini-2.5-flash&#34;</span>
+</span></span><span style=display:flex><span>TEMPERATURE <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.1</span>
+</span></span><span style=display:flex><span>MAX_TOKENS <span style=color:#f92672>=</span> <span style=color:#ae81ff>2048</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Retrieval Settings</span>
+</span></span><span style=display:flex><span>BASIC_RETRIEVAL_COUNT <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span>ADVANCED_RETRIEVAL_COUNT <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>SIMILARITY_THRESHOLD <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.7</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Chunking Configuration</span>
+</span></span><span style=display:flex><span>CHUNK_CONFIG <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;max_words&#34;</span>: <span style=color:#ae81ff>100</span>,
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;overlap_words&#34;</span>: <span style=color:#ae81ff>20</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Evaluation Thresholds</span>
+</span></span><span style=display:flex><span>QUALITY_THRESHOLD <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.7</span>
+</span></span><span style=display:flex><span>CONFIDENCE_THRESHOLD <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.8</span>
+</span></span></code></pre></div><h3 id=adding-custom-documents>Adding Custom Documents<a hidden class=anchor aria-hidden=true href=#adding-custom-documents>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Simply add .txt files to the docs/ directory</span>
+</span></span><span style=display:flex><span>docs/
+</span></span><span style=display:flex><span>├── about_me.txt
+</span></span><span style=display:flex><span>├── education.txt
+</span></span><span style=display:flex><span>├── finance.txt
+</span></span><span style=display:flex><span>├── healthcare.txt
+</span></span><span style=display:flex><span>└── your_custom_document.txt  <span style=color:#75715e># Automatically processed</span>
+</span></span></code></pre></div><hr><h2 id=quality-evaluation-system>Quality Evaluation System<a hidden class=anchor aria-hidden=true href=#quality-evaluation-system>#</a></h2><p>The Router Agent uses sophisticated LLM-based evaluation to assess answer quality:</p><h3 id=evaluation-criteria>Evaluation Criteria<a hidden class=anchor aria-hidden=true href=#evaluation-criteria>#</a></h3><table><thead><tr><th>Metric</th><th>Description</th><th>Weight</th></tr></thead><tbody><tr><td><strong>Completeness</strong></td><td>Does the answer fully address all parts of the question?</td><td>40%</td></tr><tr><td><strong>Relevance</strong></td><td>Is the answer relevant and on-topic?</td><td>30%</td></tr><tr><td><strong>Confidence</strong></td><td>How confident is the system in the answer?</td><td>20%</td></tr><tr><td><strong>Coherence</strong></td><td>Is the answer well-structured and logical?</td><td>10%</td></tr></tbody></table><h3 id=escalation-logic>Escalation Logic<a hidden class=anchor aria-hidden=true href=#escalation-logic>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>if</span> answer_quality <span style=color:#f92672>&lt;</span> QUALITY_THRESHOLD:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Escalate to Advanced Generator</span>
+</span></span><span style=display:flex><span>    advanced_response <span style=color:#f92672>=</span> advanced_generator<span style=color:#f92672>.</span>generate(query)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> advanced_response
+</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> basic_response
+</span></span></code></pre></div><hr><h2 id=performance-metrics>Performance Metrics<a hidden class=anchor aria-hidden=true href=#performance-metrics>#</a></h2><h3 id=response-times>Response Times<a hidden class=anchor aria-hidden=true href=#response-times>#</a></h3><table><thead><tr><th>Query Type</th><th>Basic Generator</th><th>Advanced Generator</th></tr></thead><tbody><tr><td>Simple factual</td><td>2-4 seconds</td><td>N/A</td></tr><tr><td>Complex analytical</td><td>N/A</td><td>10-20 seconds</td></tr><tr><td>Multi-part comparison</td><td>N/A</td><td>15-25 seconds</td></tr></tbody></table><h3 id=resource-usage>Resource Usage<a hidden class=anchor aria-hidden=true href=#resource-usage>#</a></h3><ul><li><strong>Memory</strong>: ~2-3GB (embeddings + models)</li><li><strong>Storage</strong>: ~500MB (vector store + documents)</li><li><strong>CPU</strong>: Moderate during inference, low at rest</li></ul><h3 id=accuracy-improvements>Accuracy Improvements<a hidden class=anchor aria-hidden=true href=#accuracy-improvements>#</a></h3><ul><li><strong>Basic queries</strong>: 85% satisfaction rate</li><li><strong>Complex queries</strong>: 92% satisfaction rate with advanced techniques</li><li><strong>Overall system</strong>: 89% user satisfaction</li></ul><hr><h2 id=extending-the-system>Extending the System<a hidden class=anchor aria-hidden=true href=#extending-the-system>#</a></h2><h3 id=adding-new-agents>Adding New Agents<a hidden class=anchor aria-hidden=true href=#adding-new-agents>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> agents.base_agent <span style=color:#f92672>import</span> BaseAgent
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomAgent</span>(BaseAgent):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, config):
+</span></span><span style=display:flex><span>        super()<span style=color:#f92672>.</span><span style=color:#a6e22e>__init__</span>(config)
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Custom initialization</span>
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>generate</span>(self, query, context<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>):
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Custom generation logic</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> response
+</span></span></code></pre></div><h3 id=custom-retrieval-techniques>Custom Retrieval Techniques<a hidden class=anchor aria-hidden=true href=#custom-retrieval-techniques>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomRetriever</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>retrieve</span>(self, query, k<span style=color:#f92672>=</span><span style=color:#ae81ff>5</span>):
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Implement custom retrieval logic</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> documents
+</span></span></code></pre></div><h3 id=integration-with-other-vector-stores>Integration with Other Vector Stores<a hidden class=anchor aria-hidden=true href=#integration-with-other-vector-stores>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># Example: Pinecone integration</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> pinecone <span style=color:#f92672>import</span> Pinecone
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PineconeVectorStore</span>:
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>__init__</span>(self, api_key, index_name):
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>pc <span style=color:#f92672>=</span> Pinecone(api_key<span style=color:#f92672>=</span>api_key)
+</span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>index <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>pc<span style=color:#f92672>.</span>Index(index_name)
+</span></span></code></pre></div><hr><h2 id=workflow-example>Workflow Example<a hidden class=anchor aria-hidden=true href=#workflow-example>#</a></h2><p>Here&rsquo;s a detailed trace of how the system handles a complex query:</p><pre tabindex=0><code>Query: &#34;What are the ethical implications of AI in healthcare and finance?&#34;
 
 Step 1: Router Analysis
 ├── Query complexity: HIGH
@@ -645,215 +165,8 @@ Step 5: Final Synthesis
 └── Quality score: 0.91 (excellent)
 
 Result: Comprehensive ethical analysis delivered
-</code></pre><hr>
-<h2 id="future-enhancements">Future Enhancements<a hidden class="anchor" aria-hidden="true" href="#future-enhancements">#</a></h2>
-<h3 id="planned-features">Planned Features<a hidden class="anchor" aria-hidden="true" href="#planned-features">#</a></h3>
-<ul>
-<li><input disabled="" type="checkbox"> <strong>Web Interface</strong>: Gradio/Streamlit dashboard</li>
-<li><input disabled="" type="checkbox"> <strong>Multi-modal Support</strong>: Images, tables, PDFs</li>
-<li><input disabled="" type="checkbox"> <strong>Conversation Memory</strong>: Context-aware follow-ups</li>
-<li><input disabled="" type="checkbox"> <strong>Streaming Responses</strong>: Real-time answer generation</li>
-<li><input disabled="" type="checkbox"> <strong>Custom Evaluation Models</strong>: Fine-tuned quality assessment</li>
-<li><input disabled="" type="checkbox"> <strong>RAG-Fusion Integration</strong>: Additional retrieval techniques</li>
-</ul>
-<h3 id="advanced-capabilities">Advanced Capabilities<a hidden class="anchor" aria-hidden="true" href="#advanced-capabilities">#</a></h3>
-<ul>
-<li><input disabled="" type="checkbox"> <strong>Agent Learning</strong>: Adaptive routing based on success patterns</li>
-<li><input disabled="" type="checkbox"> <strong>Dynamic Chunking</strong>: Context-aware document segmentation</li>
-<li><input disabled="" type="checkbox"> <strong>Multi-language Support</strong>: Cross-lingual retrieval and generation</li>
-<li><input disabled="" type="checkbox"> <strong>Federated Search</strong>: Multiple vector store integration</li>
-</ul>
-<hr>
-<h2 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h2>
-<table>
-  <thead>
-      <tr>
-          <th>Component</th>
-          <th>Purpose</th>
-          <th>Key Benefits</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Router Agent</strong></td>
-          <td>Query analysis and routing</td>
-          <td>Intelligent decision-making, quality assurance</td>
-      </tr>
-      <tr>
-          <td><strong>Basic Generator</strong></td>
-          <td>Fast simple retrieval</td>
-          <td>Speed optimization, resource efficiency</td>
-      </tr>
-      <tr>
-          <td><strong>Advanced Generator</strong></td>
-          <td>Complex query handling</td>
-          <td>Comprehensive answers, advanced techniques</td>
-      </tr>
-      <tr>
-          <td><strong>Quality Evaluator</strong></td>
-          <td>Answer assessment</td>
-          <td>Automatic escalation, quality assurance</td>
-      </tr>
-      <tr>
-          <td><strong>Vector Store</strong></td>
-          <td>Document storage/retrieval</td>
-          <td>Fast semantic search, scalable storage</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h2 id="key-takeaways">Key Takeaways<a hidden class="anchor" aria-hidden="true" href="#key-takeaways">#</a></h2>
-<ul>
-<li><strong>Agentic RAG</strong> transforms static pipelines into intelligent, adaptive systems</li>
-<li><strong>Multi-agent architecture</strong> provides both speed and sophistication</li>
-<li><strong>Automatic escalation</strong> ensures optimal resource usage</li>
-<li><strong>Advanced techniques</strong> handle complex, multi-part queries effectively</li>
-<li><strong>Quality-driven approach</strong> maintains high answer standards</li>
-<li><strong>Modular design</strong> enables easy customization and extension</li>
-</ul>
-<p>The system demonstrates how autonomous agents can collaborate to provide superior RAG performance, automatically adapting their approach based on query complexity and answer quality requirements.</p>
-<hr>
-<p><strong>References:</strong></p>
-<ul>
-<li><a href="https://github.com/ayyzenn/agentic_rag">Agentic RAG GitHub Repository</a></li>
-<li><a href="https://ai.google.dev/docs">Google Gemini API Documentation</a></li>
-<li><a href="https://docs.trychroma.com/">ChromaDB Documentation</a></li>
-<li><a href="https://www.sbert.net/">Sentence Transformers</a></li>
-</ul>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/agentic-rag/">Agentic RAG</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/multi-agent/">Multi-Agent</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/gemini/">Gemini</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/chromadb/">ChromaDB</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/query-decomposition/">Query Decomposition</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/hyde/">HyDE</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/ai-agents/">AI Agents</a></li>
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
-</html>
+</code></pre><hr><h2 id=future-enhancements>Future Enhancements<a hidden class=anchor aria-hidden=true href=#future-enhancements>#</a></h2><h3 id=planned-features>Planned Features<a hidden class=anchor aria-hidden=true href=#planned-features>#</a></h3><ul><li><input disabled type=checkbox> <strong>Web Interface</strong>: Gradio/Streamlit dashboard</li><li><input disabled type=checkbox> <strong>Multi-modal Support</strong>: Images, tables, PDFs</li><li><input disabled type=checkbox> <strong>Conversation Memory</strong>: Context-aware follow-ups</li><li><input disabled type=checkbox> <strong>Streaming Responses</strong>: Real-time answer generation</li><li><input disabled type=checkbox> <strong>Custom Evaluation Models</strong>: Fine-tuned quality assessment</li><li><input disabled type=checkbox> <strong>RAG-Fusion Integration</strong>: Additional retrieval techniques</li></ul><h3 id=advanced-capabilities>Advanced Capabilities<a hidden class=anchor aria-hidden=true href=#advanced-capabilities>#</a></h3><ul><li><input disabled type=checkbox> <strong>Agent Learning</strong>: Adaptive routing based on success patterns</li><li><input disabled type=checkbox> <strong>Dynamic Chunking</strong>: Context-aware document segmentation</li><li><input disabled type=checkbox> <strong>Multi-language Support</strong>: Cross-lingual retrieval and generation</li><li><input disabled type=checkbox> <strong>Federated Search</strong>: Multiple vector store integration</li></ul><hr><h2 id=summary>Summary<a hidden class=anchor aria-hidden=true href=#summary>#</a></h2><table><thead><tr><th>Component</th><th>Purpose</th><th>Key Benefits</th></tr></thead><tbody><tr><td><strong>Router Agent</strong></td><td>Query analysis and routing</td><td>Intelligent decision-making, quality assurance</td></tr><tr><td><strong>Basic Generator</strong></td><td>Fast simple retrieval</td><td>Speed optimization, resource efficiency</td></tr><tr><td><strong>Advanced Generator</strong></td><td>Complex query handling</td><td>Comprehensive answers, advanced techniques</td></tr><tr><td><strong>Quality Evaluator</strong></td><td>Answer assessment</td><td>Automatic escalation, quality assurance</td></tr><tr><td><strong>Vector Store</strong></td><td>Document storage/retrieval</td><td>Fast semantic search, scalable storage</td></tr></tbody></table><hr><h2 id=key-takeaways>Key Takeaways<a hidden class=anchor aria-hidden=true href=#key-takeaways>#</a></h2><ul><li><strong>Agentic RAG</strong> transforms static pipelines into intelligent, adaptive systems</li><li><strong>Multi-agent architecture</strong> provides both speed and sophistication</li><li><strong>Automatic escalation</strong> ensures optimal resource usage</li><li><strong>Advanced techniques</strong> handle complex, multi-part queries effectively</li><li><strong>Quality-driven approach</strong> maintains high answer standards</li><li><strong>Modular design</strong> enables easy customization and extension</li></ul><p>The system demonstrates how autonomous agents can collaborate to provide superior RAG performance, automatically adapting their approach based on query complexity and answer quality requirements.</p><hr><p><strong>References:</strong></p><ul><li><a href=https://github.com/ayyzenn/agentic_rag>Agentic RAG GitHub Repository</a></li><li><a href=https://ai.google.dev/docs>Google Gemini API Documentation</a></li><li><a href=https://docs.trychroma.com/>ChromaDB Documentation</a></li><li><a href=https://www.sbert.net/>Sentence Transformers</a></li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://ayyzenn.github.io/tags/agentic-rag/>Agentic RAG</a></li><li><a href=https://ayyzenn.github.io/tags/multi-agent/>Multi-Agent</a></li><li><a href=https://ayyzenn.github.io/tags/gemini/>Gemini</a></li><li><a href=https://ayyzenn.github.io/tags/chromadb/>ChromaDB</a></li><li><a href=https://ayyzenn.github.io/tags/query-decomposition/>Query Decomposition</a></li><li><a href=https://ayyzenn.github.io/tags/hyde/>HyDE</a></li><li><a href=https://ayyzenn.github.io/tags/ai-agents/>AI Agents</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://ayyzenn.github.io/>ayyzenn</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

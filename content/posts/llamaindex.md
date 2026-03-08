@@ -4,7 +4,7 @@ date: 2025-10-27
 tags: ["LlamaIndex", "Text-to-SQL", "LLM", "SQL", "AI Agents", "LangChain"]
 categories: ["Agentic AI", "Structured Data"]
 description: "A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval."
--------------
+---
 
 ## 🧠 Overview
 

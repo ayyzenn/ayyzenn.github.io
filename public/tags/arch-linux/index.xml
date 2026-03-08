@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Arch-Linux on ayyzenn</title><link>https://ayyzenn.github.io/tags/arch-linux/</link><description>Recent content in Arch-Linux on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/arch-linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project</title><link>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</link><pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</guid><description>&lt;h2 id="jenkins-on-arch-linux-i3"&gt;Jenkins on Arch Linux (i3)&lt;/h2&gt;
+&lt;p&gt;This guide shows you how to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Install Jenkins&lt;/strong&gt; on Arch Linux (i3 window manager is fine)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Start and use Jenkins&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create a simple freestyle job&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create a real Jenkins Pipeline from a GitHub repo&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The language is simple and the examples are small and realistic.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="1-what-is-jenkins-simple-explanation"&gt;1. What is Jenkins? (Simple Explanation)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Jenkins is an automation server.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can tell Jenkins to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get your code (for example from GitHub)&lt;/li&gt;
+&lt;li&gt;Run commands (build, test, scripts)&lt;/li&gt;
+&lt;li&gt;Show you if things passed or failed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Instead of you running commands manually every time, Jenkins does it &lt;strong&gt;automatically&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>

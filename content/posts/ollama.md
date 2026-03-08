@@ -1,14 +1,14 @@
 +++
 date = '2025-02-03T17:07:58+05:00'
-title = 'Setting Up Olama with DeepSeek Coder on Manjaro: A Step-by-Step Guide'
+title = 'Setting Up Ollama with DeepSeek Coder on Manjaro: A Step-by-Step Guide'
 tags = ['langchain', 'RAG']
 +++
 
-## What is Olama?
+## What is Ollama?
 
-**Olama** is an open-source framework designed to run and manage large language models (LLMs) efficiently on local machines. It allows developers to load and interact with various AI models without relying on cloud-based APIs.
+**Ollama** is an open-source framework designed to run and manage large language models (LLMs) efficiently on local machines. It allows developers to load and interact with various AI models without relying on cloud-based APIs.
 
-### Why Use Olama?
+### Why Use Ollama?
 - **Privacy**: No data leaves your local system.
 - **Customization**: Run and fine-tune models as per your requirements.
 - **Performance**: Optimized for running models efficiently on consumer hardware.
@@ -16,21 +16,21 @@ tags = ['langchain', 'RAG']
 ## Note
 This guide is based on **Manjaro Linux (Kernel: Base Phoenix)**. Ubuntu users should replace package manager commands accordingly (e.g., using `apt` instead of `pacman`). Make sure to check compatibility for your specific distribution.
 
-## Installing Olama on Manjaro Linux
+## Installing Ollama on Manjaro Linux
 
-Follow these steps to install Olama on Manjaro Linux:
+Follow these steps to install Ollama on Manjaro Linux:
 
 ### Step 1: Update Your System
 ```sh
 sudo pacman -Syu
 ```
 
-### Step 2: Install Olama
+### Step 2: Install Ollama
 ```sh
 sudo pacman -S ollama --noconfirm
 ```
 
-### Step 3: Enable and Start Olama Service
+### Step 3: Enable and Start Ollama Service
 ```sh
 sudo systemctl enable ollama
 sudo systemctl start ollama
@@ -38,11 +38,11 @@ sudo systemctl restart ollama
 sudo systemctl status ollama
 ```
 
-## Available Olama Models
+## Available Ollama Models
 
-Olama supports multiple models that can be used for various applications. You can check out the official Olama models repository at:
+Ollama supports multiple models that can be used for various applications. You can check out the official Ollama models repository at:
 
-**[Olama Models List](https://ollama.ai/library)**
+**[Ollama Models List](https://ollama.ai/library)**
 
 Some of the available models include:
 - **DeepSeek Coder**
@@ -93,4 +93,4 @@ print("Factorial:", factorial(num))
 ## Congratulations! You Have Deployed Your Own Chatbot on a Local System.
 
 ## Conclusion
-Olama provides a simple and efficient way to run LLMs locally, including DeepSeek for programming-related tasks. By following the above steps, you can easily set up and interact with the model on your Manjaro Linux system.
+Ollama provides a simple and efficient way to run LLMs locally, including DeepSeek for programming-related tasks. By following the above steps, you can easily set up and interact with the model on your Manjaro Linux system.

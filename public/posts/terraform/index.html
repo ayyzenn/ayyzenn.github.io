@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Terraform: Infrastructure as Code | ayyzenn</title>
-<meta name="keywords" content="terraform, infrastructure, cloud, automation, IaC">
-<meta name="description" content="What is Terraform?
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Terraform: Infrastructure as Code | ayyzenn</title><meta name=keywords content="terraform,infrastructure,cloud,automation,IaC"><meta name=description content="What is Terraform?
 Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.
 Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.
 Why Use Terraform?
@@ -21,73 +12,9 @@ Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool
 
 Basic Concepts (Made Simple)
 Providers
-A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.">
-<meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/terraform/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/terraform/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/terraform/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Terraform: Infrastructure as Code">
-  <meta property="og:description" content="What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It’s like using a recipe instead of cooking from memory—repeatable and consistent every time.
+A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building."><meta name=author content><link rel=canonical href=https://ayyzenn.github.io/posts/terraform/><link crossorigin=anonymous href=/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css integrity="sha256-IhHKMWS+eDACT2qtKzouUghDpk+PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as=style><link rel=icon href=https://ayyzenn.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://ayyzenn.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://ayyzenn.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://ayyzenn.github.io/apple-touch-icon.png><link rel=mask-icon href=https://ayyzenn.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://ayyzenn.github.io/posts/terraform/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/terraform/"><meta property="og:site_name" content="ayyzenn"><meta property="og:title" content="Terraform: Infrastructure as Code"><meta property="og:description" content="What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It’s like using a recipe instead of cooking from memory—repeatable and consistent every time.
 Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.
-Why Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-12-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-12-14T00:00:00+00:00">
-    <meta property="article:tag" content="Terraform">
-    <meta property="article:tag" content="Infrastructure">
-    <meta property="article:tag" content="Cloud">
-    <meta property="article:tag" content="Automation">
-    <meta property="article:tag" content="IaC">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Terraform: Infrastructure as Code">
-<meta name="twitter:description" content="What is Terraform?
+Why Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-12-14T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-14T00:00:00+00:00"><meta property="article:tag" content="Terraform"><meta property="article:tag" content="Infrastructure"><meta property="article:tag" content="Cloud"><meta property="article:tag" content="Automation"><meta property="article:tag" content="IaC"><meta name=twitter:card content="summary"><meta name=twitter:title content="Terraform: Infrastructure as Code"><meta name=twitter:description content="What is Terraform?
 Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.
 Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.
 Why Use Terraform?
@@ -101,290 +28,75 @@ Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool
 
 Basic Concepts (Made Simple)
 Providers
-A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Terraform: Infrastructure as Code",
-      "item": "https://ayyzenn.github.io/posts/terraform/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Terraform: Infrastructure as Code",
-  "name": "Terraform: Infrastructure as Code",
-  "description": "What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It\u0026rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.\nTerraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.\nWhy Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.\n",
-  "keywords": [
-    "terraform", "infrastructure", "cloud", "automation", "IaC"
-  ],
-  "articleBody": "What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It’s like using a recipe instead of cooking from memory—repeatable and consistent every time.\nTerraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.\nWhy Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.\nprovider \"aws\" { region = \"us-east-1\" } That’s it! Now Terraform knows: “I’m using AWS, in the us-east-1 region.”\nResources A resource is something you want to create—a server, a database, a network, etc.\nresource \"aws_instance\" \"my_server\" { ami = \"ami-0c55b159cbfafe1f0\" # The OS image to use instance_type = \"t2.micro\" # The size (small, medium, large) tags = { Name = \"MyWebServer\" } } In plain English: “Create an AWS EC2 server called ‘my_server’ using a free-tier compatible image and size it as ’t2.micro’.”\nVariables Variables make your code reusable. Instead of hardcoding values, you define them once and reuse them.\nvariable \"server_count\" { description = \"How many servers do you want?\" type = number default = 1 } resource \"aws_instance\" \"servers\" { count = var.server_count ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.micro\" } Now if you change server_count to 3, Terraform creates 3 servers instead of 1.\nCommon Commands (What They Actually Do) terraform init # Download necessary files (run this first!) terraform plan # Show what will happen (no changes yet) terraform apply # Actually create/change the resources terraform destroy # Delete all the resources (be careful!) terraform show # Display current infrastructure state Example workflow:\n$ terraform init # Set up $ terraform plan # Preview: \"Will create 1 server, 1 database\" $ terraform apply # Do it: \"Server and database created!\" $ terraform destroy # Clean up: \"All resources deleted\" State Management (What’s This .tfstate File?) Terraform keeps a file called terraform.tfstate that tracks what resources exist. It’s like a shopping list of everything Terraform created.\nKeep state files safe:\nDon’t lose them (Terraform won’t know what resources exist) Don’t commit them to Git (they contain sensitive data) Back them up to AWS S3 or similar storage Simple example - S3 backend:\nterraform { backend \"s3\" { bucket = \"my-terraform-state\" key = \"prod/terraform.tfstate\" region = \"us-east-1\" } } This tells Terraform: “Save my state file to this S3 bucket instead of locally.”\nWorking with Docker and Terraform One of my favorite use cases is combining Terraform with Docker. Here’s a real-world example: I want to launch a server on AWS and automatically run my app in a Docker container.\nStep 1: Create a Docker image\nresource \"aws_ecr_repository\" \"my_app\" { name = \"my-awesome-app\" } This creates a private Docker registry on AWS where you can store your Docker images.\nStep 2: Launch a server with Docker installed\nresource \"aws_instance\" \"web_server\" { ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.small\" # Run these commands when the server starts user_data = \u003c\u003c-EOF #!/bin/bash sudo yum update -y sudo yum install -y docker sudo systemctl start docker EOF tags = { Name = \"MyWebServer\" } } What’s happening:\nTerraform creates an EC2 server When it boots up, it automatically installs Docker You can then push your Docker images and run them Example: Running your Docker app\n# Build and push your app to AWS docker build -t my-awesome-app . docker tag my-awesome-app:latest 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest # SSH into the server and run it ssh ec2-user@your-server-ip docker login --username AWS -p $(aws ecr get-login-password) 123456789.dkr.ecr.us-east-1.amazonaws.com docker run -d -p 80:3000 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest Now your app is running in a Docker container on AWS!\nReal-World Scenario: Multi-Environment Setup I organize my Terraform files like this to keep things clean and easy to manage:\nterraform/ ├── main.tf # Basic setup ├── variables.tf # Things you can change ├── outputs.tf # Things to remember after creation ├── networking.tf # Networks and firewalls ├── servers.tf # EC2 instances └── environments/ ├── dev.tfvars # Settings for development ├── staging.tfvars # Settings for testing └── prod.tfvars # Settings for production Why organize this way?\nKeep code organized and easy to find Separate settings for each environment Easy to scale and maintain Deploy to different environments:\n# Test it first (development) terraform apply -var-file=\"environments/dev.tfvars\" # Later, deploy to production terraform apply -var-file=\"environments/prod.tfvars\" The same Terraform code works everywhere, just with different settings!\nGetting Important Information Back After Terraform creates resources, you might want to remember important details (like server IP addresses or database names). Use outputs for this:\noutput \"server_ip\" { description = \"The IP address of the web server\" value = aws_instance.web_server.public_ip } output \"database_endpoint\" { description = \"Where to connect to your database\" value = aws_db_instance.main.endpoint } After you run terraform apply, Terraform will show you these values automatically.\nTips from Experience Always preview before doing: Run terraform plan and read the output carefully Use the same setup everywhere: One set of files for dev, staging, and production Keep sensitive data private: Never put passwords or API keys in your code Organize your files: Group related resources (all network stuff together, all servers together) Name things clearly: Use descriptive names so you remember what each resource does Save state files safely: Keep them backed up, don’t share them by accident Common Mistakes I’ve Made Forgot to commit state to version control properly: Couldn’t remember what I created, had to rebuild Ran terraform apply in the wrong directory: Accidentally deleted some servers Made changes in AWS console instead of Terraform: Terraform got confused and tried to undo my changes Hardcoded server IPs: Had to change every file when I moved servers Didn’t test on development first: Broke production because I didn’t test the changes The lesson: Always test on dev first, keep everything in code, never manually change things in AWS console.\nGetting Started (Super Simple) Requirement: You need an AWS account (free tier is fine)\nStep 1: Install Terraform\n# Ubuntu/Debian curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - sudo apt-add-repository \"deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main\" sudo apt-get update \u0026\u0026 sudo apt-get install terraform Step 2: Create a simple file called main.tf\nprovider \"aws\" { region = \"us-east-1\" } resource \"aws_instance\" \"first_server\" { ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.micro\" tags = { Name = \"MyFirstServer\" } } Step 3: Run these commands\nterraform init # Downloads AWS tools terraform plan # Shows what will happen terraform apply # Creates your server! That’s it! You now have a server running on AWS.\nWhen you’re done:\nterraform destroy # Delete everything and stop paying for it Conclusion Terraform made a huge difference for me. Instead of manually clicking around AWS, I can now:\nCreate the same setup in seconds Share my infrastructure with teammates Keep everything organized in code Track changes like I do with regular code If you’re managing servers manually, give Terraform a try. Start with a simple project, get comfortable with the basic commands, and soon you’ll be managing entire cloud setups with just a few commands.\n",
-  "wordCount" : "1260",
-  "inLanguage": "en",
-  "datePublished": "2025-12-14T00:00:00Z",
-  "dateModified": "2025-12-14T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/terraform/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
-                    <span>Posts</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Terraform: Infrastructure as Code
-    </h1>
-    <div class="post-meta"><span title='2025-12-14 00:00:00 +0000 UTC'>December 14, 2025</span>&nbsp;·&nbsp;6 min
-
-</div>
-  </header> <div class="toc">
-    <details >
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
-
-        <div class="inner"><ul>
-                <li>
-                    <a href="#what-is-terraform" aria-label="What is Terraform?">What is Terraform?</a></li>
-                <li>
-                    <a href="#why-use-terraform" aria-label="Why Use Terraform?">Why Use Terraform?</a></li>
-                <li>
-                    <a href="#basic-concepts-made-simple" aria-label="Basic Concepts (Made Simple)">Basic Concepts (Made Simple)</a><ul>
-                        
-                <li>
-                    <a href="#providers" aria-label="Providers">Providers</a></li>
-                <li>
-                    <a href="#resources" aria-label="Resources">Resources</a></li>
-                <li>
-                    <a href="#variables" aria-label="Variables">Variables</a></li></ul>
-                </li>
-                <li>
-                    <a href="#common-commands-what-they-actually-do" aria-label="Common Commands (What They Actually Do)">Common Commands (What They Actually Do)</a></li>
-                <li>
-                    <a href="#state-management-whats-this-tfstate-file" aria-label="State Management (What&rsquo;s This .tfstate File?)">State Management (What&rsquo;s This .tfstate File?)</a></li>
-                <li>
-                    <a href="#working-with-docker-and-terraform" aria-label="Working with Docker and Terraform">Working with Docker and Terraform</a></li>
-                <li>
-                    <a href="#real-world-scenario-multi-environment-setup" aria-label="Real-World Scenario: Multi-Environment Setup">Real-World Scenario: Multi-Environment Setup</a></li>
-                <li>
-                    <a href="#getting-important-information-back" aria-label="Getting Important Information Back">Getting Important Information Back</a></li>
-                <li>
-                    <a href="#tips-from-experience" aria-label="Tips from Experience">Tips from Experience</a></li>
-                <li>
-                    <a href="#common-mistakes-ive-made" aria-label="Common Mistakes I&rsquo;ve Made">Common Mistakes I&rsquo;ve Made</a></li>
-                <li>
-                    <a href="#getting-started-super-simple" aria-label="Getting Started (Super Simple)">Getting Started (Super Simple)</a></li>
-                <li>
-                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
-                </li>
-            </ul>
-        </div>
-    </details>
-</div>
-
-  <div class="post-content"><h2 id="what-is-terraform">What is Terraform?<a hidden class="anchor" aria-hidden="true" href="#what-is-terraform">#</a></h2>
-<p>Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.</p>
-<p>Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.</p>
-<h2 id="why-use-terraform">Why Use Terraform?<a hidden class="anchor" aria-hidden="true" href="#why-use-terraform">#</a></h2>
-<ul>
-<li><strong>No More Manual Clicking</strong>: Automate infrastructure setup instead of clicking through AWS</li>
-<li><strong>Easy Updates</strong>: Change your code and run <code>terraform apply</code> to update everything</li>
-<li><strong>Backup Your Infrastructure</strong>: Keep your setup in version control (like Git)</li>
-<li><strong>Reuse Everywhere</strong>: Run the same setup in dev, staging, and production without changes</li>
-<li><strong>Cost Preview</strong>: See what resources cost before you create them</li>
-<li><strong>Work with Multiple Clouds</strong>: Manage AWS, Azure, and Google Cloud from one tool</li>
-</ul>
-<h2 id="basic-concepts-made-simple">Basic Concepts (Made Simple)<a hidden class="anchor" aria-hidden="true" href="#basic-concepts-made-simple">#</a></h2>
-<h3 id="providers">Providers<a hidden class="anchor" aria-hidden="true" href="#providers">#</a></h3>
-<p>A <strong>provider</strong> tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;aws&#34;</span> {
-</span></span><span style="display:flex;"><span>  region <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;us-east-1&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>That&rsquo;s it! Now Terraform knows: &ldquo;I&rsquo;m using AWS, in the us-east-1 region.&rdquo;</p>
-<h3 id="resources">Resources<a hidden class="anchor" aria-hidden="true" href="#resources">#</a></h3>
-<p>A <strong>resource</strong> is something you want to create—a server, a database, a network, etc.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_instance&#34; &#34;my_server&#34;</span> {
-</span></span><span style="display:flex;"><span>  ami           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ami-0c55b159cbfafe1f0&#34;</span><span style="color:#75715e">  # The OS image to use
-</span></span></span><span style="display:flex;"><span>  instance_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;t2.micro&#34;</span><span style="color:#75715e">               # The size (small, medium, large)
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  tags <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    Name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MyWebServer&#34;</span>
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>In plain English: &ldquo;Create an AWS EC2 server called &lsquo;my_server&rsquo; using a free-tier compatible image and size it as &rsquo;t2.micro&rsquo;.&rdquo;</p>
-<h3 id="variables">Variables<a hidden class="anchor" aria-hidden="true" href="#variables">#</a></h3>
-<p><strong>Variables</strong> make your code reusable. Instead of hardcoding values, you define them once and reuse them.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">variable</span> <span style="color:#e6db74">&#34;server_count&#34;</span> {
-</span></span><span style="display:flex;"><span>  description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;How many servers do you want?&#34;</span>
-</span></span><span style="display:flex;"><span>  type        <span style="color:#f92672">=</span> <span style="color:#66d9ef">number</span>
-</span></span><span style="display:flex;"><span>  default     <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_instance&#34; &#34;servers&#34;</span> {
-</span></span><span style="display:flex;"><span>  count         <span style="color:#f92672">=</span> <span style="color:#66d9ef">var</span>.<span style="color:#66d9ef">server_count</span>
-</span></span><span style="display:flex;"><span>  ami           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ami-0c55b159cbfafe1f0&#34;</span>
-</span></span><span style="display:flex;"><span>  instance_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;t2.micro&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Now if you change <code>server_count</code> to 3, Terraform creates 3 servers instead of 1.</p>
-<h2 id="common-commands-what-they-actually-do">Common Commands (What They Actually Do)<a hidden class="anchor" aria-hidden="true" href="#common-commands-what-they-actually-do">#</a></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>terraform init      <span style="color:#75715e"># Download necessary files (run this first!)</span>
-</span></span><span style="display:flex;"><span>terraform plan      <span style="color:#75715e"># Show what will happen (no changes yet)</span>
-</span></span><span style="display:flex;"><span>terraform apply     <span style="color:#75715e"># Actually create/change the resources</span>
-</span></span><span style="display:flex;"><span>terraform destroy   <span style="color:#75715e"># Delete all the resources (be careful!)</span>
-</span></span><span style="display:flex;"><span>terraform show      <span style="color:#75715e"># Display current infrastructure state</span>
-</span></span></code></pre></div><p><strong>Example workflow:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ terraform init      <span style="color:#75715e"># Set up</span>
-</span></span><span style="display:flex;"><span>$ terraform plan      <span style="color:#75715e"># Preview: &#34;Will create 1 server, 1 database&#34;</span>
-</span></span><span style="display:flex;"><span>$ terraform apply     <span style="color:#75715e"># Do it: &#34;Server and database created!&#34;</span>
-</span></span><span style="display:flex;"><span>$ terraform destroy   <span style="color:#75715e"># Clean up: &#34;All resources deleted&#34;</span>
-</span></span></code></pre></div><h2 id="state-management-whats-this-tfstate-file">State Management (What&rsquo;s This <code>.tfstate</code> File?)<a hidden class="anchor" aria-hidden="true" href="#state-management-whats-this-tfstate-file">#</a></h2>
-<p>Terraform keeps a file called <code>terraform.tfstate</code> that tracks what resources exist. It&rsquo;s like a shopping list of everything Terraform created.</p>
-<p><strong>Keep state files safe:</strong></p>
-<ul>
-<li>Don&rsquo;t lose them (Terraform won&rsquo;t know what resources exist)</li>
-<li>Don&rsquo;t commit them to Git (they contain sensitive data)</li>
-<li>Back them up to AWS S3 or similar storage</li>
-</ul>
-<p><strong>Simple example - S3 backend:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">terraform</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">backend</span> <span style="color:#e6db74">&#34;s3&#34;</span> {
-</span></span><span style="display:flex;"><span>    bucket <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;my-terraform-state&#34;</span>
-</span></span><span style="display:flex;"><span>    key    <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;prod/terraform.tfstate&#34;</span>
-</span></span><span style="display:flex;"><span>    region <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;us-east-1&#34;</span>
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>This tells Terraform: &ldquo;Save my state file to this S3 bucket instead of locally.&rdquo;</p>
-<h2 id="working-with-docker-and-terraform">Working with Docker and Terraform<a hidden class="anchor" aria-hidden="true" href="#working-with-docker-and-terraform">#</a></h2>
-<p>One of my favorite use cases is combining Terraform with Docker. Here&rsquo;s a real-world example: I want to launch a server on AWS and automatically run my app in a Docker container.</p>
-<p><strong>Step 1: Create a Docker image</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_ecr_repository&#34; &#34;my_app&#34;</span> {
-</span></span><span style="display:flex;"><span>  name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;my-awesome-app&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>This creates a private Docker registry on AWS where you can store your Docker images.</p>
-<p><strong>Step 2: Launch a server with Docker installed</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_instance&#34; &#34;web_server&#34;</span> {
-</span></span><span style="display:flex;"><span>  ami           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ami-0c55b159cbfafe1f0&#34;</span>
-</span></span><span style="display:flex;"><span>  instance_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;t2.small&#34;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  # Run these commands when the server starts
-</span></span></span><span style="display:flex;"><span>  user_data <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">&lt;&lt;-</span><span style="color:#66d9ef">EOF</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">              #!/bin/bash
-</span></span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">sudo</span> <span style="color:#66d9ef">yum</span> <span style="color:#66d9ef">update</span> <span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">y</span>
-</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">sudo</span> <span style="color:#66d9ef">yum</span> <span style="color:#66d9ef">install</span> <span style="color:#960050;background-color:#1e0010">-</span><span style="color:#66d9ef">y</span> <span style="color:#66d9ef">docker</span>
-</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">sudo</span> <span style="color:#66d9ef">systemctl</span> <span style="color:#66d9ef">start</span> <span style="color:#66d9ef">docker</span>
-</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">EOF</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  tags <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    Name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MyWebServer&#34;</span>
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>What&rsquo;s happening:</strong></p>
-<ol>
-<li>Terraform creates an EC2 server</li>
-<li>When it boots up, it automatically installs Docker</li>
-<li>You can then push your Docker images and run them</li>
-</ol>
-<p><strong>Example: Running your Docker app</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Build and push your app to AWS</span>
-</span></span><span style="display:flex;"><span>docker build -t my-awesome-app .
-</span></span><span style="display:flex;"><span>docker tag my-awesome-app:latest 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest
-</span></span><span style="display:flex;"><span>docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># SSH into the server and run it</span>
-</span></span><span style="display:flex;"><span>ssh ec2-user@your-server-ip
-</span></span><span style="display:flex;"><span>docker login --username AWS -p <span style="color:#66d9ef">$(</span>aws ecr get-login-password<span style="color:#66d9ef">)</span> 123456789.dkr.ecr.us-east-1.amazonaws.com
-</span></span><span style="display:flex;"><span>docker run -d -p 80:3000 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest
-</span></span></code></pre></div><p>Now your app is running in a Docker container on AWS!</p>
-<h2 id="real-world-scenario-multi-environment-setup">Real-World Scenario: Multi-Environment Setup<a hidden class="anchor" aria-hidden="true" href="#real-world-scenario-multi-environment-setup">#</a></h2>
-<p>I organize my Terraform files like this to keep things clean and easy to manage:</p>
-<pre tabindex="0"><code>terraform/
+A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://ayyzenn.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Terraform: Infrastructure as Code","item":"https://ayyzenn.github.io/posts/terraform/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Terraform: Infrastructure as Code","name":"Terraform: Infrastructure as Code","description":"What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It\u0026rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.\nTerraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.\nWhy Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.\n","keywords":["terraform","infrastructure","cloud","automation","IaC"],"articleBody":"What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It’s like using a recipe instead of cooking from memory—repeatable and consistent every time.\nTerraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.\nWhy Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.\nprovider \"aws\" { region = \"us-east-1\" } That’s it! Now Terraform knows: “I’m using AWS, in the us-east-1 region.”\nResources A resource is something you want to create—a server, a database, a network, etc.\nresource \"aws_instance\" \"my_server\" { ami = \"ami-0c55b159cbfafe1f0\" # The OS image to use instance_type = \"t2.micro\" # The size (small, medium, large) tags = { Name = \"MyWebServer\" } } In plain English: “Create an AWS EC2 server called ‘my_server’ using a free-tier compatible image and size it as ’t2.micro’.”\nVariables Variables make your code reusable. Instead of hardcoding values, you define them once and reuse them.\nvariable \"server_count\" { description = \"How many servers do you want?\" type = number default = 1 } resource \"aws_instance\" \"servers\" { count = var.server_count ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.micro\" } Now if you change server_count to 3, Terraform creates 3 servers instead of 1.\nCommon Commands (What They Actually Do) terraform init # Download necessary files (run this first!) terraform plan # Show what will happen (no changes yet) terraform apply # Actually create/change the resources terraform destroy # Delete all the resources (be careful!) terraform show # Display current infrastructure state Example workflow:\n$ terraform init # Set up $ terraform plan # Preview: \"Will create 1 server, 1 database\" $ terraform apply # Do it: \"Server and database created!\" $ terraform destroy # Clean up: \"All resources deleted\" State Management (What’s This .tfstate File?) Terraform keeps a file called terraform.tfstate that tracks what resources exist. It’s like a shopping list of everything Terraform created.\nKeep state files safe:\nDon’t lose them (Terraform won’t know what resources exist) Don’t commit them to Git (they contain sensitive data) Back them up to AWS S3 or similar storage Simple example - S3 backend:\nterraform { backend \"s3\" { bucket = \"my-terraform-state\" key = \"prod/terraform.tfstate\" region = \"us-east-1\" } } This tells Terraform: “Save my state file to this S3 bucket instead of locally.”\nWorking with Docker and Terraform One of my favorite use cases is combining Terraform with Docker. Here’s a real-world example: I want to launch a server on AWS and automatically run my app in a Docker container.\nStep 1: Create a Docker image\nresource \"aws_ecr_repository\" \"my_app\" { name = \"my-awesome-app\" } This creates a private Docker registry on AWS where you can store your Docker images.\nStep 2: Launch a server with Docker installed\nresource \"aws_instance\" \"web_server\" { ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.small\" # Run these commands when the server starts user_data = \u003c\u003c-EOF #!/bin/bash sudo yum update -y sudo yum install -y docker sudo systemctl start docker EOF tags = { Name = \"MyWebServer\" } } What’s happening:\nTerraform creates an EC2 server When it boots up, it automatically installs Docker You can then push your Docker images and run them Example: Running your Docker app\n# Build and push your app to AWS docker build -t my-awesome-app . docker tag my-awesome-app:latest 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest # SSH into the server and run it ssh ec2-user@your-server-ip docker login --username AWS -p $(aws ecr get-login-password) 123456789.dkr.ecr.us-east-1.amazonaws.com docker run -d -p 80:3000 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest Now your app is running in a Docker container on AWS!\nReal-World Scenario: Multi-Environment Setup I organize my Terraform files like this to keep things clean and easy to manage:\nterraform/ ├── main.tf # Basic setup ├── variables.tf # Things you can change ├── outputs.tf # Things to remember after creation ├── networking.tf # Networks and firewalls ├── servers.tf # EC2 instances └── environments/ ├── dev.tfvars # Settings for development ├── staging.tfvars # Settings for testing └── prod.tfvars # Settings for production Why organize this way?\nKeep code organized and easy to find Separate settings for each environment Easy to scale and maintain Deploy to different environments:\n# Test it first (development) terraform apply -var-file=\"environments/dev.tfvars\" # Later, deploy to production terraform apply -var-file=\"environments/prod.tfvars\" The same Terraform code works everywhere, just with different settings!\nGetting Important Information Back After Terraform creates resources, you might want to remember important details (like server IP addresses or database names). Use outputs for this:\noutput \"server_ip\" { description = \"The IP address of the web server\" value = aws_instance.web_server.public_ip } output \"database_endpoint\" { description = \"Where to connect to your database\" value = aws_db_instance.main.endpoint } After you run terraform apply, Terraform will show you these values automatically.\nTips from Experience Always preview before doing: Run terraform plan and read the output carefully Use the same setup everywhere: One set of files for dev, staging, and production Keep sensitive data private: Never put passwords or API keys in your code Organize your files: Group related resources (all network stuff together, all servers together) Name things clearly: Use descriptive names so you remember what each resource does Save state files safely: Keep them backed up, don’t share them by accident Common Mistakes I’ve Made Forgot to commit state to version control properly: Couldn’t remember what I created, had to rebuild Ran terraform apply in the wrong directory: Accidentally deleted some servers Made changes in AWS console instead of Terraform: Terraform got confused and tried to undo my changes Hardcoded server IPs: Had to change every file when I moved servers Didn’t test on development first: Broke production because I didn’t test the changes The lesson: Always test on dev first, keep everything in code, never manually change things in AWS console.\nGetting Started (Super Simple) Requirement: You need an AWS account (free tier is fine)\nStep 1: Install Terraform\n# Ubuntu/Debian curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - sudo apt-add-repository \"deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main\" sudo apt-get update \u0026\u0026 sudo apt-get install terraform Step 2: Create a simple file called main.tf\nprovider \"aws\" { region = \"us-east-1\" } resource \"aws_instance\" \"first_server\" { ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.micro\" tags = { Name = \"MyFirstServer\" } } Step 3: Run these commands\nterraform init # Downloads AWS tools terraform plan # Shows what will happen terraform apply # Creates your server! That’s it! You now have a server running on AWS.\nWhen you’re done:\nterraform destroy # Delete everything and stop paying for it Conclusion Terraform made a huge difference for me. Instead of manually clicking around AWS, I can now:\nCreate the same setup in seconds Share my infrastructure with teammates Keep everything organized in code Track changes like I do with regular code If you’re managing servers manually, give Terraform a try. Start with a simple project, get comfortable with the basic commands, and soon you’ll be managing entire cloud setups with just a few commands.\n","wordCount":"1260","inLanguage":"en","datePublished":"2025-12-14T00:00:00Z","dateModified":"2025-12-14T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://ayyzenn.github.io/posts/terraform/"},"publisher":{"@type":"Organization","name":"ayyzenn","logo":{"@type":"ImageObject","url":"https://ayyzenn.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://ayyzenn.github.io/ accesskey=h title="ayyzenn (Alt + H)">ayyzenn</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://ayyzenn.github.io/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://ayyzenn.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://ayyzenn.github.io/search title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://ayyzenn.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://ayyzenn.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Terraform: Infrastructure as Code</h1><div class=post-meta><span title='2025-12-14 00:00:00 +0000 UTC'>December 14, 2025</span>&nbsp;·&nbsp;6 min</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#what-is-terraform aria-label="What is Terraform?">What is Terraform?</a></li><li><a href=#why-use-terraform aria-label="Why Use Terraform?">Why Use Terraform?</a></li><li><a href=#basic-concepts-made-simple aria-label="Basic Concepts (Made Simple)">Basic Concepts (Made Simple)</a><ul><li><a href=#providers aria-label=Providers>Providers</a></li><li><a href=#resources aria-label=Resources>Resources</a></li><li><a href=#variables aria-label=Variables>Variables</a></li></ul></li><li><a href=#common-commands-what-they-actually-do aria-label="Common Commands (What They Actually Do)">Common Commands (What They Actually Do)</a></li><li><a href=#state-management-whats-this-tfstate-file aria-label="State Management (What&rsquo;s This .tfstate File?)">State Management (What&rsquo;s This .tfstate File?)</a></li><li><a href=#working-with-docker-and-terraform aria-label="Working with Docker and Terraform">Working with Docker and Terraform</a></li><li><a href=#real-world-scenario-multi-environment-setup aria-label="Real-World Scenario: Multi-Environment Setup">Real-World Scenario: Multi-Environment Setup</a></li><li><a href=#getting-important-information-back aria-label="Getting Important Information Back">Getting Important Information Back</a></li><li><a href=#tips-from-experience aria-label="Tips from Experience">Tips from Experience</a></li><li><a href=#common-mistakes-ive-made aria-label="Common Mistakes I&rsquo;ve Made">Common Mistakes I&rsquo;ve Made</a></li><li><a href=#getting-started-super-simple aria-label="Getting Started (Super Simple)">Getting Started (Super Simple)</a></li><li><a href=#conclusion aria-label=Conclusion>Conclusion</a></li></ul></div></details></div><div class=post-content><h2 id=what-is-terraform>What is Terraform?<a hidden class=anchor aria-hidden=true href=#what-is-terraform>#</a></h2><p>Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.</p><p>Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.</p><h2 id=why-use-terraform>Why Use Terraform?<a hidden class=anchor aria-hidden=true href=#why-use-terraform>#</a></h2><ul><li><strong>No More Manual Clicking</strong>: Automate infrastructure setup instead of clicking through AWS</li><li><strong>Easy Updates</strong>: Change your code and run <code>terraform apply</code> to update everything</li><li><strong>Backup Your Infrastructure</strong>: Keep your setup in version control (like Git)</li><li><strong>Reuse Everywhere</strong>: Run the same setup in dev, staging, and production without changes</li><li><strong>Cost Preview</strong>: See what resources cost before you create them</li><li><strong>Work with Multiple Clouds</strong>: Manage AWS, Azure, and Google Cloud from one tool</li></ul><h2 id=basic-concepts-made-simple>Basic Concepts (Made Simple)<a hidden class=anchor aria-hidden=true href=#basic-concepts-made-simple>#</a></h2><h3 id=providers>Providers<a hidden class=anchor aria-hidden=true href=#providers>#</a></h3><p>A <strong>provider</strong> tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-hcl data-lang=hcl><span style=display:flex><span><span style=color:#66d9ef>provider</span> <span style=color:#e6db74>&#34;aws&#34;</span> {
+</span></span><span style=display:flex><span>  region <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;us-east-1&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>That&rsquo;s it! Now Terraform knows: &ldquo;I&rsquo;m using AWS, in the us-east-1 region.&rdquo;</p><h3 id=resources>Resources<a hidden class=anchor aria-hidden=true href=#resources>#</a></h3><p>A <strong>resource</strong> is something you want to create—a server, a database, a network, etc.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-hcl data-lang=hcl><span style=display:flex><span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;aws_instance&#34; &#34;my_server&#34;</span> {
+</span></span><span style=display:flex><span>  ami           <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ami-0c55b159cbfafe1f0&#34;</span><span style=color:#75715e>  # The OS image to use
+</span></span></span><span style=display:flex><span>  instance_type <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t2.micro&#34;</span><span style=color:#75715e>               # The size (small, medium, large)
+</span></span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  tags <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    Name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;MyWebServer&#34;</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>In plain English: &ldquo;Create an AWS EC2 server called &lsquo;my_server&rsquo; using a free-tier compatible image and size it as &rsquo;t2.micro&rsquo;.&rdquo;</p><h3 id=variables>Variables<a hidden class=anchor aria-hidden=true href=#variables>#</a></h3><p><strong>Variables</strong> make your code reusable. Instead of hardcoding values, you define them once and reuse them.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-hcl data-lang=hcl><span style=display:flex><span><span style=color:#66d9ef>variable</span> <span style=color:#e6db74>&#34;server_count&#34;</span> {
+</span></span><span style=display:flex><span>  description <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;How many servers do you want?&#34;</span>
+</span></span><span style=display:flex><span>  type        <span style=color:#f92672>=</span> <span style=color:#66d9ef>number</span>
+</span></span><span style=display:flex><span>  default     <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;aws_instance&#34; &#34;servers&#34;</span> {
+</span></span><span style=display:flex><span>  count         <span style=color:#f92672>=</span> <span style=color:#66d9ef>var</span>.<span style=color:#66d9ef>server_count</span>
+</span></span><span style=display:flex><span>  ami           <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ami-0c55b159cbfafe1f0&#34;</span>
+</span></span><span style=display:flex><span>  instance_type <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t2.micro&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Now if you change <code>server_count</code> to 3, Terraform creates 3 servers instead of 1.</p><h2 id=common-commands-what-they-actually-do>Common Commands (What They Actually Do)<a hidden class=anchor aria-hidden=true href=#common-commands-what-they-actually-do>#</a></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>terraform init      <span style=color:#75715e># Download necessary files (run this first!)</span>
+</span></span><span style=display:flex><span>terraform plan      <span style=color:#75715e># Show what will happen (no changes yet)</span>
+</span></span><span style=display:flex><span>terraform apply     <span style=color:#75715e># Actually create/change the resources</span>
+</span></span><span style=display:flex><span>terraform destroy   <span style=color:#75715e># Delete all the resources (be careful!)</span>
+</span></span><span style=display:flex><span>terraform show      <span style=color:#75715e># Display current infrastructure state</span>
+</span></span></code></pre></div><p><strong>Example workflow:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>$ terraform init      <span style=color:#75715e># Set up</span>
+</span></span><span style=display:flex><span>$ terraform plan      <span style=color:#75715e># Preview: &#34;Will create 1 server, 1 database&#34;</span>
+</span></span><span style=display:flex><span>$ terraform apply     <span style=color:#75715e># Do it: &#34;Server and database created!&#34;</span>
+</span></span><span style=display:flex><span>$ terraform destroy   <span style=color:#75715e># Clean up: &#34;All resources deleted&#34;</span>
+</span></span></code></pre></div><h2 id=state-management-whats-this-tfstate-file>State Management (What&rsquo;s This <code>.tfstate</code> File?)<a hidden class=anchor aria-hidden=true href=#state-management-whats-this-tfstate-file>#</a></h2><p>Terraform keeps a file called <code>terraform.tfstate</code> that tracks what resources exist. It&rsquo;s like a shopping list of everything Terraform created.</p><p><strong>Keep state files safe:</strong></p><ul><li>Don&rsquo;t lose them (Terraform won&rsquo;t know what resources exist)</li><li>Don&rsquo;t commit them to Git (they contain sensitive data)</li><li>Back them up to AWS S3 or similar storage</li></ul><p><strong>Simple example - S3 backend:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-hcl data-lang=hcl><span style=display:flex><span><span style=color:#66d9ef>terraform</span> {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>backend</span> <span style=color:#e6db74>&#34;s3&#34;</span> {
+</span></span><span style=display:flex><span>    bucket <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;my-terraform-state&#34;</span>
+</span></span><span style=display:flex><span>    key    <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;prod/terraform.tfstate&#34;</span>
+</span></span><span style=display:flex><span>    region <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;us-east-1&#34;</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This tells Terraform: &ldquo;Save my state file to this S3 bucket instead of locally.&rdquo;</p><h2 id=working-with-docker-and-terraform>Working with Docker and Terraform<a hidden class=anchor aria-hidden=true href=#working-with-docker-and-terraform>#</a></h2><p>One of my favorite use cases is combining Terraform with Docker. Here&rsquo;s a real-world example: I want to launch a server on AWS and automatically run my app in a Docker container.</p><p><strong>Step 1: Create a Docker image</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-hcl data-lang=hcl><span style=display:flex><span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;aws_ecr_repository&#34; &#34;my_app&#34;</span> {
+</span></span><span style=display:flex><span>  name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;my-awesome-app&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This creates a private Docker registry on AWS where you can store your Docker images.</p><p><strong>Step 2: Launch a server with Docker installed</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-hcl data-lang=hcl><span style=display:flex><span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;aws_instance&#34; &#34;web_server&#34;</span> {
+</span></span><span style=display:flex><span>  ami           <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ami-0c55b159cbfafe1f0&#34;</span>
+</span></span><span style=display:flex><span>  instance_type <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t2.small&#34;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>  # Run these commands when the server starts
+</span></span></span><span style=display:flex><span>  user_data <span style=color:#f92672>=</span> <span style=color:#960050;background-color:#1e0010>&lt;&lt;-</span><span style=color:#66d9ef>EOF</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>              #!/bin/bash
+</span></span></span><span style=display:flex><span>              <span style=color:#66d9ef>sudo</span> <span style=color:#66d9ef>yum</span> <span style=color:#66d9ef>update</span> <span style=color:#960050;background-color:#1e0010>-</span><span style=color:#66d9ef>y</span>
+</span></span><span style=display:flex><span>              <span style=color:#66d9ef>sudo</span> <span style=color:#66d9ef>yum</span> <span style=color:#66d9ef>install</span> <span style=color:#960050;background-color:#1e0010>-</span><span style=color:#66d9ef>y</span> <span style=color:#66d9ef>docker</span>
+</span></span><span style=display:flex><span>              <span style=color:#66d9ef>sudo</span> <span style=color:#66d9ef>systemctl</span> <span style=color:#66d9ef>start</span> <span style=color:#66d9ef>docker</span>
+</span></span><span style=display:flex><span>              <span style=color:#66d9ef>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  tags <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    Name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;MyWebServer&#34;</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>What&rsquo;s happening:</strong></p><ol><li>Terraform creates an EC2 server</li><li>When it boots up, it automatically installs Docker</li><li>You can then push your Docker images and run them</li></ol><p><strong>Example: Running your Docker app</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Build and push your app to AWS</span>
+</span></span><span style=display:flex><span>docker build -t my-awesome-app .
+</span></span><span style=display:flex><span>docker tag my-awesome-app:latest 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest
+</span></span><span style=display:flex><span>docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># SSH into the server and run it</span>
+</span></span><span style=display:flex><span>ssh ec2-user@your-server-ip
+</span></span><span style=display:flex><span>docker login --username AWS -p <span style=color:#66d9ef>$(</span>aws ecr get-login-password<span style=color:#66d9ef>)</span> 123456789.dkr.ecr.us-east-1.amazonaws.com
+</span></span><span style=display:flex><span>docker run -d -p 80:3000 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest
+</span></span></code></pre></div><p>Now your app is running in a Docker container on AWS!</p><h2 id=real-world-scenario-multi-environment-setup>Real-World Scenario: Multi-Environment Setup<a hidden class=anchor aria-hidden=true href=#real-world-scenario-multi-environment-setup>#</a></h2><p>I organize my Terraform files like this to keep things clean and easy to manage:</p><pre tabindex=0><code>terraform/
 ├── main.tf              # Basic setup
 ├── variables.tf         # Things you can change
 ├── outputs.tf           # Things to remember after creation
@@ -394,218 +106,43 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
     ├── dev.tfvars       # Settings for development
     ├── staging.tfvars   # Settings for testing
     └── prod.tfvars      # Settings for production
-</code></pre><p><strong>Why organize this way?</strong></p>
-<ul>
-<li>Keep code organized and easy to find</li>
-<li>Separate settings for each environment</li>
-<li>Easy to scale and maintain</li>
-</ul>
-<p><strong>Deploy to different environments:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Test it first (development)</span>
-</span></span><span style="display:flex;"><span>terraform apply -var-file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;environments/dev.tfvars&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Later, deploy to production</span>
-</span></span><span style="display:flex;"><span>terraform apply -var-file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;environments/prod.tfvars&#34;</span>
-</span></span></code></pre></div><p>The same Terraform code works everywhere, just with different settings!</p>
-<h2 id="getting-important-information-back">Getting Important Information Back<a hidden class="anchor" aria-hidden="true" href="#getting-important-information-back">#</a></h2>
-<p>After Terraform creates resources, you might want to remember important details (like server IP addresses or database names). Use <strong>outputs</strong> for this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">output</span> <span style="color:#e6db74">&#34;server_ip&#34;</span> {
-</span></span><span style="display:flex;"><span>  description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;The IP address of the web server&#34;</span>
-</span></span><span style="display:flex;"><span>  value       <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_instance</span>.<span style="color:#66d9ef">web_server</span>.<span style="color:#66d9ef">public_ip</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">output</span> <span style="color:#e6db74">&#34;database_endpoint&#34;</span> {
-</span></span><span style="display:flex;"><span>  description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Where to connect to your database&#34;</span>
-</span></span><span style="display:flex;"><span>  value       <span style="color:#f92672">=</span> <span style="color:#66d9ef">aws_db_instance</span>.<span style="color:#66d9ef">main</span>.<span style="color:#66d9ef">endpoint</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>After you run <code>terraform apply</code>, Terraform will show you these values automatically.</p>
-<h2 id="tips-from-experience">Tips from Experience<a hidden class="anchor" aria-hidden="true" href="#tips-from-experience">#</a></h2>
-<ol>
-<li><strong>Always preview before doing</strong>: Run <code>terraform plan</code> and read the output carefully</li>
-<li><strong>Use the same setup everywhere</strong>: One set of files for dev, staging, and production</li>
-<li><strong>Keep sensitive data private</strong>: Never put passwords or API keys in your code</li>
-<li><strong>Organize your files</strong>: Group related resources (all network stuff together, all servers together)</li>
-<li><strong>Name things clearly</strong>: Use descriptive names so you remember what each resource does</li>
-<li><strong>Save state files safely</strong>: Keep them backed up, don&rsquo;t share them by accident</li>
-</ol>
-<h2 id="common-mistakes-ive-made">Common Mistakes I&rsquo;ve Made<a hidden class="anchor" aria-hidden="true" href="#common-mistakes-ive-made">#</a></h2>
-<ul>
-<li><strong>Forgot to commit state to version control properly</strong>: Couldn&rsquo;t remember what I created, had to rebuild</li>
-<li><strong>Ran <code>terraform apply</code> in the wrong directory</strong>: Accidentally deleted some servers</li>
-<li><strong>Made changes in AWS console instead of Terraform</strong>: Terraform got confused and tried to undo my changes</li>
-<li><strong>Hardcoded server IPs</strong>: Had to change every file when I moved servers</li>
-<li><strong>Didn&rsquo;t test on development first</strong>: Broke production because I didn&rsquo;t test the changes</li>
-</ul>
-<p><strong>The lesson:</strong> Always test on dev first, keep everything in code, never manually change things in AWS console.</p>
-<h2 id="getting-started-super-simple">Getting Started (Super Simple)<a hidden class="anchor" aria-hidden="true" href="#getting-started-super-simple">#</a></h2>
-<p><strong>Requirement:</strong> You need an AWS account (free tier is fine)</p>
-<p><strong>Step 1: Install Terraform</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ubuntu/Debian</span>
-</span></span><span style="display:flex;"><span>curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-</span></span><span style="display:flex;"><span>sudo apt-add-repository <span style="color:#e6db74">&#34;deb [arch=amd64] https://apt.releases.hashicorp.com </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> main&#34;</span>
-</span></span><span style="display:flex;"><span>sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get install terraform
-</span></span></code></pre></div><p><strong>Step 2: Create a simple file called <code>main.tf</code></strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;aws&#34;</span> {
-</span></span><span style="display:flex;"><span>  region <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;us-east-1&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;aws_instance&#34; &#34;first_server&#34;</span> {
-</span></span><span style="display:flex;"><span>  ami           <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ami-0c55b159cbfafe1f0&#34;</span>
-</span></span><span style="display:flex;"><span>  instance_type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;t2.micro&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  tags <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    Name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MyFirstServer&#34;</span>
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>Step 3: Run these commands</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>terraform init    <span style="color:#75715e"># Downloads AWS tools</span>
-</span></span><span style="display:flex;"><span>terraform plan    <span style="color:#75715e"># Shows what will happen</span>
-</span></span><span style="display:flex;"><span>terraform apply   <span style="color:#75715e"># Creates your server!</span>
-</span></span></code></pre></div><p>That&rsquo;s it! You now have a server running on AWS.</p>
-<p><strong>When you&rsquo;re done:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>terraform destroy  <span style="color:#75715e"># Delete everything and stop paying for it</span>
-</span></span></code></pre></div><h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
-<p>Terraform made a huge difference for me. Instead of manually clicking around AWS, I can now:</p>
-<ul>
-<li>Create the same setup in seconds</li>
-<li>Share my infrastructure with teammates</li>
-<li>Keep everything organized in code</li>
-<li>Track changes like I do with regular code</li>
-</ul>
-<p>If you&rsquo;re managing servers manually, give Terraform a try. Start with a simple project, get comfortable with the basic commands, and soon you&rsquo;ll be managing entire cloud setups with just a few commands.</p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/terraform/">Terraform</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/infrastructure/">Infrastructure</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/cloud/">Cloud</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/automation/">Automation</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/iac/">IaC</a></li>
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
-</html>
+</code></pre><p><strong>Why organize this way?</strong></p><ul><li>Keep code organized and easy to find</li><li>Separate settings for each environment</li><li>Easy to scale and maintain</li></ul><p><strong>Deploy to different environments:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Test it first (development)</span>
+</span></span><span style=display:flex><span>terraform apply -var-file<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;environments/dev.tfvars&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Later, deploy to production</span>
+</span></span><span style=display:flex><span>terraform apply -var-file<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;environments/prod.tfvars&#34;</span>
+</span></span></code></pre></div><p>The same Terraform code works everywhere, just with different settings!</p><h2 id=getting-important-information-back>Getting Important Information Back<a hidden class=anchor aria-hidden=true href=#getting-important-information-back>#</a></h2><p>After Terraform creates resources, you might want to remember important details (like server IP addresses or database names). Use <strong>outputs</strong> for this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-hcl data-lang=hcl><span style=display:flex><span><span style=color:#66d9ef>output</span> <span style=color:#e6db74>&#34;server_ip&#34;</span> {
+</span></span><span style=display:flex><span>  description <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;The IP address of the web server&#34;</span>
+</span></span><span style=display:flex><span>  value       <span style=color:#f92672>=</span> <span style=color:#66d9ef>aws_instance</span>.<span style=color:#66d9ef>web_server</span>.<span style=color:#66d9ef>public_ip</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>output</span> <span style=color:#e6db74>&#34;database_endpoint&#34;</span> {
+</span></span><span style=display:flex><span>  description <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Where to connect to your database&#34;</span>
+</span></span><span style=display:flex><span>  value       <span style=color:#f92672>=</span> <span style=color:#66d9ef>aws_db_instance</span>.<span style=color:#66d9ef>main</span>.<span style=color:#66d9ef>endpoint</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>After you run <code>terraform apply</code>, Terraform will show you these values automatically.</p><h2 id=tips-from-experience>Tips from Experience<a hidden class=anchor aria-hidden=true href=#tips-from-experience>#</a></h2><ol><li><strong>Always preview before doing</strong>: Run <code>terraform plan</code> and read the output carefully</li><li><strong>Use the same setup everywhere</strong>: One set of files for dev, staging, and production</li><li><strong>Keep sensitive data private</strong>: Never put passwords or API keys in your code</li><li><strong>Organize your files</strong>: Group related resources (all network stuff together, all servers together)</li><li><strong>Name things clearly</strong>: Use descriptive names so you remember what each resource does</li><li><strong>Save state files safely</strong>: Keep them backed up, don&rsquo;t share them by accident</li></ol><h2 id=common-mistakes-ive-made>Common Mistakes I&rsquo;ve Made<a hidden class=anchor aria-hidden=true href=#common-mistakes-ive-made>#</a></h2><ul><li><strong>Forgot to commit state to version control properly</strong>: Couldn&rsquo;t remember what I created, had to rebuild</li><li><strong>Ran <code>terraform apply</code> in the wrong directory</strong>: Accidentally deleted some servers</li><li><strong>Made changes in AWS console instead of Terraform</strong>: Terraform got confused and tried to undo my changes</li><li><strong>Hardcoded server IPs</strong>: Had to change every file when I moved servers</li><li><strong>Didn&rsquo;t test on development first</strong>: Broke production because I didn&rsquo;t test the changes</li></ul><p><strong>The lesson:</strong> Always test on dev first, keep everything in code, never manually change things in AWS console.</p><h2 id=getting-started-super-simple>Getting Started (Super Simple)<a hidden class=anchor aria-hidden=true href=#getting-started-super-simple>#</a></h2><p><strong>Requirement:</strong> You need an AWS account (free tier is fine)</p><p><strong>Step 1: Install Terraform</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Ubuntu/Debian</span>
+</span></span><span style=display:flex><span>curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+</span></span><span style=display:flex><span>sudo apt-add-repository <span style=color:#e6db74>&#34;deb [arch=amd64] https://apt.releases.hashicorp.com </span><span style=color:#66d9ef>$(</span>lsb_release -cs<span style=color:#66d9ef>)</span><span style=color:#e6db74> main&#34;</span>
+</span></span><span style=display:flex><span>sudo apt-get update <span style=color:#f92672>&amp;&amp;</span> sudo apt-get install terraform
+</span></span></code></pre></div><p><strong>Step 2: Create a simple file called <code>main.tf</code></strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-hcl data-lang=hcl><span style=display:flex><span><span style=color:#66d9ef>provider</span> <span style=color:#e6db74>&#34;aws&#34;</span> {
+</span></span><span style=display:flex><span>  region <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;us-east-1&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;aws_instance&#34; &#34;first_server&#34;</span> {
+</span></span><span style=display:flex><span>  ami           <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ami-0c55b159cbfafe1f0&#34;</span>
+</span></span><span style=display:flex><span>  instance_type <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t2.micro&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  tags <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    Name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;MyFirstServer&#34;</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>Step 3: Run these commands</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>terraform init    <span style=color:#75715e># Downloads AWS tools</span>
+</span></span><span style=display:flex><span>terraform plan    <span style=color:#75715e># Shows what will happen</span>
+</span></span><span style=display:flex><span>terraform apply   <span style=color:#75715e># Creates your server!</span>
+</span></span></code></pre></div><p>That&rsquo;s it! You now have a server running on AWS.</p><p><strong>When you&rsquo;re done:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>terraform destroy  <span style=color:#75715e># Delete everything and stop paying for it</span>
+</span></span></code></pre></div><h2 id=conclusion>Conclusion<a hidden class=anchor aria-hidden=true href=#conclusion>#</a></h2><p>Terraform made a huge difference for me. Instead of manually clicking around AWS, I can now:</p><ul><li>Create the same setup in seconds</li><li>Share my infrastructure with teammates</li><li>Keep everything organized in code</li><li>Track changes like I do with regular code</li></ul><p>If you&rsquo;re managing servers manually, give Terraform a try. Start with a simple project, get comfortable with the basic commands, and soon you&rsquo;ll be managing entire cloud setups with just a few commands.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://ayyzenn.github.io/tags/terraform/>Terraform</a></li><li><a href=https://ayyzenn.github.io/tags/infrastructure/>Infrastructure</a></li><li><a href=https://ayyzenn.github.io/tags/cloud/>Cloud</a></li><li><a href=https://ayyzenn.github.io/tags/automation/>Automation</a></li><li><a href=https://ayyzenn.github.io/tags/iac/>IaC</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://ayyzenn.github.io/>ayyzenn</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

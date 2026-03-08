@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Docker on ayyzenn</title><link>https://ayyzenn.github.io/tags/docker/</link><description>Recent content in Docker on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Jenkins + Docker Pipeline from GitHub</title><link>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</link><pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</guid><description>&lt;h2 id="what-is-this-about"&gt;What Is This About?&lt;/h2&gt;
+&lt;p&gt;In this post, I explain how I built a &lt;strong&gt;Jenkins pipeline&lt;/strong&gt; that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pulls code from &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Builds a &lt;strong&gt;Docker image&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Runs a &lt;strong&gt;Docker container&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Executes a script automatically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a very common &lt;strong&gt;real-world CI/CD setup&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="goal-from-manual-to-automatic"&gt;Goal: From Manual to Automatic&lt;/h2&gt;
+&lt;p&gt;Manually, we usually do this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone a GitHub repository&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;docker build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;docker run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Check the output&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;</description></item><item><title>Ansible: Automating Docker and Kubernetes Node Setup</title><link>https://ayyzenn.github.io/posts/ansible_adv/</link><pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/ansible_adv/</guid><description>&lt;h2 id="why-this-post-exists"&gt;Why This Post Exists&lt;/h2&gt;
+&lt;p&gt;After writing my &lt;strong&gt;first real Ansible playbook&lt;/strong&gt;, I realized something:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Installing software manually once is easy.
+Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So I decided to automate something &lt;strong&gt;real&lt;/strong&gt; and &lt;strong&gt;useful&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;strong&gt;Docker Engine (official way)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Prepare an Ubuntu server to become a &lt;strong&gt;Kubernetes node&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Do everything using &lt;strong&gt;Ansible&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No SSH-ing into the server again and again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This post documents that journey.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="real-setup-same-as-before"&gt;Real Setup (Same as Before)&lt;/h2&gt;
+&lt;p&gt;Nothing fancy. Just real machines.&lt;/p&gt;</description></item></channel></rss>

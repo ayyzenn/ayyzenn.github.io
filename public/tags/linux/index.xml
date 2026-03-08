@@ -1,46 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Linux on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/linux/</link>
-    <description>Recent content in Linux on ayyzenn</description>
-    <generator>Hugo -- 0.153.3</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 03 Dec 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
-      <link>https://ayyzenn.github.io/posts/gentoo/</link>
-      <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/gentoo/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Linux on ayyzenn</title><link>https://ayyzenn.github.io/tags/linux/</link><description>Recent content in Linux on ayyzenn</description><generator>Hugo -- 0.157.0</generator><language>en-us</language><lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ayyzenn.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Ansible for Beginners: My First Real Automation</title><link>https://ayyzenn.github.io/posts/ansible/</link><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><guid>https://ayyzenn.github.io/posts/ansible/</guid><description>&lt;h2 id="what-is-ansible-in-simple-words"&gt;What is Ansible? (In Simple Words)&lt;/h2&gt;
+&lt;p&gt;Think of &lt;strong&gt;Ansible as a remote control for your servers&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Instead of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SSH into server&lt;/li&gt;
+&lt;li&gt;Run commands manually&lt;/li&gt;
+&lt;li&gt;Forget what you changed&lt;/li&gt;
+&lt;li&gt;Repeat the same steps again and again 😵&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You tell Ansible:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Hey, I want this server to look &lt;em&gt;like this&lt;/em&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And Ansible makes it happen — &lt;strong&gt;again and again&lt;/strong&gt;, without breaking things.&lt;/p&gt;
+&lt;p&gt;The best part?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No agent needed&lt;/li&gt;
+&lt;li&gt;Just SSH&lt;/li&gt;
+&lt;li&gt;Simple YAML files&lt;/li&gt;
+&lt;li&gt;Very human-readable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="my-setup-real-world"&gt;My Setup (Real World)&lt;/h2&gt;
+&lt;p&gt;This is exactly what I used:&lt;/p&gt;</description></item><item><title>Conquering Gentoo: Turning the "Impossible" into Reality</title><link>https://ayyzenn.github.io/posts/gentoo/</link><pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/gentoo/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Processor:&lt;/strong&gt; Intel Core i5 4th Gen (4 cores)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; 8GB&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; 256GB SSD&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title>
-      <link>https://ayyzenn.github.io/posts/proftpd/</link>
-      <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/proftpd/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description></item><item><title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title><link>https://ayyzenn.github.io/posts/proftpd/</link><pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/proftpd/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.&lt;/p&gt;
-&lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Dual boot Ubuntu and Windows</title>
-      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
-      <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description></item><item><title>Dual boot Ubuntu and Windows</title><link>https://ayyzenn.github.io/posts/dual_boot/</link><pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate><guid>https://ayyzenn.github.io/posts/dual_boot/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
-&lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;
+&lt;h3 id="what-is-ubuntu"&gt;What is Ubuntu?&lt;/h3&gt;
 &lt;p&gt;Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.&lt;/p&gt;
-&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description></item></channel></rss>

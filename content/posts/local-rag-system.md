@@ -1,7 +1,7 @@
 ---
 title: "Local RAG with Ollama and ChromaDB: Running AI Offline"
 date: 2025-06-29
-tags: ["RAG", "Ollama", "ChromaDB", "AI", "Python", "LLM", "Vector Database"]
+tags: ["rag", "ollama", "chromadb", "ai", "python", "llm", "vector database"]
 ---
 ## Why I Built This
 

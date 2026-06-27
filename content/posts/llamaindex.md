@@ -1,7 +1,7 @@
 ---
 title: "LlamaIndex + Text-to-SQL: What I Learned"
 date: 2025-10-27
-tags: ["LlamaIndex", "Text-to-SQL", "LLM", "SQL", "AI Agents", "LangChain"]
+tags: ["llamaindex", "text-to-sql", "llm", "sql", "ai agents", "langchain"]
 ---
 ## What I Was Trying to Do
 

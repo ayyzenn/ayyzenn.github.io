@@ -16,23 +16,24 @@ theme = 'hugo-PaperMod'
     taglist = true
     defaultTheme = 'auto'
     lazyLoadImages = true
+    mainSections = ["posts"]
 
 [params.profileMode]
     enabled = true
     title = "Saad Ahmad"
-    subtitle = "Linux Nerd 🐧"
+    subtitle = "arch · i3 · notes"
     imageUrl = "img3.jpeg"
-    imageTitle = "Profile Picture"
-    imageWidth = 300
-    imageHeight = 300
+    imageTitle = "Saad Ahmad"
+    imageWidth = 280
+    imageHeight = 280
 
 [[params.profileMode.buttons]]
-    name = "About Me"
+    name = "about"
     url = "/about"
 
 [[params.profileMode.buttons]]
-    name = "Archives"
-    url = "/archives"
+    name = "posts"
+    url = "/posts"
 
 [[params.socialIcons]]
     name = "github"

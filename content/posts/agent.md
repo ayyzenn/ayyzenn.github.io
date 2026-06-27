@@ -1,7 +1,7 @@
 ---
 title: "YouTube Summarizer: What I Built with LangGraph and Gemini"
 date: 2025-06-06
-tags: ["AI", "LangGraph", "Gemini", "Python", "YouTube"]
+tags: ["ai", "langgraph", "gemini", "python", "youtube"]
 ---
 ## What I Built
 

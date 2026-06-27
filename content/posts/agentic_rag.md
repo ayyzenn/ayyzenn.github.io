@@ -1,7 +1,7 @@
 ---
 title: "Agentic RAG: My Multi-Agent Setup with Gemini and ChromaDB"
 date: 2025-10-29
-tags: ["Agentic RAG", "Multi-Agent", "Gemini", "ChromaDB", "Query Decomposition", "HyDE", "AI Agents"]
+tags: ["agentic rag", "multi-agent", "gemini", "chromadb", "query decomposition", "hyde", "ai agents"]
 ---
 ## What I Built
 

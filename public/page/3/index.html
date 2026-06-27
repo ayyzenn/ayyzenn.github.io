@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.163.3"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>ayyzenn</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">GitHub CLI and Personal Access Tokens: What I Use Daily
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Why I Bother With This I got tired of opening the browser every time I wanted to create a repo, check a PR, or trigger a workflow. GitHub CLI (gh) lets me do most of that from the terminal. Personal Access Tokens (PATs) are how Git authenticates when you push over HTTPS.
+This post covers both — how I generate a PAT and how I use gh day to day.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-09-04 00:00:00 +0000 UTC'>September 4, 2021</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to GitHub CLI and Personal Access Tokens: What I Use Daily" href="http://localhost:1313/posts/git_tools/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">GitHub from the Command Line: How I Push My Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Why I Use GitHub I use Git to track changes in my code and GitHub to host it online. Git runs on my machine. GitHub is the website that stores my repos and lets me share them.
+If you’re new: Git is the tool, GitHub is where the repos live.
+Install Git Ubuntu:
+sudo apt update sudo apt install git Arch Linux:
+sudo pacman -S git Check it worked:
+git --version Set Your Name and Email Git attaches this info to every commit:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-09-03 00:00:00 +0000 UTC'>September 3, 2021</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to GitHub from the Command Line: How I Push My Code" href="http://localhost:1313/posts/git_cli/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Creating a VM on Microsoft Azure
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>What I Did I needed a cloud server to test things without using my local machine. I spun up an Ubuntu 20.04 VM on Azure and connected via SSH. Here’s the exact process I followed.
+Create the VM Log in to Azure Click Create a Resource Pick Ubuntu 20.04 LTS → Create Name the VM Under Administration Account, choose SSH Public Key Set a username and key pair name Under Inbound Port Rules, open SSH (22) and HTTP (80) Click Review and Create → Create Download the key pair file when prompted Wait for deployment, then click Go to Resource Connect via SSH cd ~/Downloads chmod 400 pair_key_name.pem ssh -i pair_key_name.pem username@your_ip Type yes when SSH asks about the fingerprint.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-16 00:00:00 +0000 UTC'>August 16, 2021</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to Creating a VM on Microsoft Azure" href="http://localhost:1313/posts/azure/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">SSH: How I Connect to Remote Servers
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Why I Use SSH SSH is how I control another machine from my terminal. I use it to manage servers, copy files, and run commands on remote systems without sitting in front of them.
+For Windows remote desktop you use RDP. For Linux, SSH is the standard.
+How SSH Works (Short Version) Client — on your laptop (where you type) Server — on the remote machine (what you connect to) You run ssh user@ip, enter your password (or use a key), and you get a shell on the remote box.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-14 00:00:00 +0000 UTC'>August 14, 2021</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to SSH: How I Connect to Remote Servers" href="http://localhost:1313/posts/ssh/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Dual Boot Ubuntu and Windows: What I Did
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Why I Dual-Booted I needed Windows for some things and Linux for everything else. Instead of picking one, I installed Ubuntu alongside Windows on the same machine. This is the process I followed.
+Steps to Dual Boot Ubuntu with Windows Step 1: Prepare a Bootable USB Drive Download the latest Ubuntu ISO from the official Ubuntu website. Download and install Rufus or balenaEtcher to create a bootable USB. Insert a USB drive (at least 8GB) into your computer. Open Rufus or balenaEtcher: Select the Ubuntu ISO file. Choose the USB drive. Click “Start” to create the bootable drive. Step 2: Configure BIOS/UEFI Settings Restart your computer and enter BIOS/UEFI by pressing a specific key (usually F2, F12, Del, or Esc) during startup. Look for Boot Order/Boot Priority and set the USB drive as the first boot device. Disable Secure Boot (if enabled) under the Security tab. Enable UEFI mode (recommended) instead of Legacy mode. Save changes and exit BIOS. Step 3: Boot from the USB Drive Insert the bootable USB drive into your computer. Restart the system and press the Boot Menu key (F12, F9, Esc, or as per your motherboard). Select the bootable USB drive from the list. Press Enter to boot into Ubuntu Live. Step 4: Try or Install Ubuntu Once the Ubuntu installer loads, you will see two options: Try Ubuntu – Runs Ubuntu without installing it. Install Ubuntu – Proceeds with the installation. Click on Install Ubuntu to continue. Step 5: Select Keyboard Layout Choose your preferred keyboard layout and language. Click Continue. Step 6: Connect to Wi-Fi (Optional) Select your Wi-Fi network. Enter the password and click Continue. Step 7: Choose Installation Type Select Normal Installation (recommended). Check the box Install third-party software for graphics and Wi-Fi hardware, Flash, MP3, and other media. Click Continue. Step 8: Choose Installation Method Select Something else (for manual partitioning). Click Continue. Step 9: Create Partitions for Ubuntu Ubuntu requires three main partitions:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-08-13 00:00:00 +0000 UTC'>August 13, 2021</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Dual Boot Ubuntu and Windows: What I Did" href="http://localhost:1313/posts/dual_boot/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Hugo: The Static Site Generator I Use for This Blog
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Why I Picked Hugo I wanted a blog that loads fast, doesn’t need a database, and lets me write posts in Markdown. Hugo does exactly that — it builds plain HTML files from my content, and I host them on GitHub Pages.
+No WordPress, no PHP, no MySQL. Just markdown files and a hugo command.
+What I Like About It Fast builds — my whole site compiles in under a second Markdown posts — write in any editor, commit to Git Themes — I’m using PaperMod GitHub Pages — free hosting, deploys on push How I Set Up Hugo 1. Install Hugo On Arch Linux sudo pacman -S hugo On Ubuntu sudo apt update sudo apt install hugo Or install the extended edition from the official release page (recommended for themes that use Sass):
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-12-03 00:00:00 +0000 UTC'>December 3, 2020</span>&nbsp;·&nbsp;4 min</footer>
+  <a class="entry-link" aria-label="post link to Hugo: The Static Site Generator I Use for This Blog" href="http://localhost:1313/posts/hugo/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">My First Post
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Hello — this is my first blog post on Hugo. I set this site up to document what I’m learning as I go. More posts coming soon.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-09-15 00:00:00 +0000 UTC'>September 15, 2020</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to My First Post" href="http://localhost:1313/posts/first_post/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/2/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">ayyzenn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 ---
 title: "Terraform: How I Stopped Clicking Around in AWS"
 date: 2025-12-14
-tags: ["terraform", "infrastructure", "cloud", "automation", "IaC"]
+tags: ["terraform", "infrastructure", "cloud", "automation", "iac"]
 ---
 ## What Terraform Is (For Me)
 

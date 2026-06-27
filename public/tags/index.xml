@@ -156,7 +156,7 @@
       <description></description>
     </item>
     <item>
-      <title>IaC</title>
+      <title>Iac</title>
       <link>http://localhost:1313/tags/iac/</link>
       <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/iac/</guid>
@@ -177,21 +177,21 @@
       <description></description>
     </item>
     <item>
-      <title>Agentic RAG</title>
+      <title>Agentic Rag</title>
       <link>http://localhost:1313/tags/agentic-rag/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/agentic-rag/</guid>
       <description></description>
     </item>
     <item>
-      <title>AI Agents</title>
+      <title>Ai Agents</title>
       <link>http://localhost:1313/tags/ai-agents/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/ai-agents/</guid>
       <description></description>
     </item>
     <item>
-      <title>ChromaDB</title>
+      <title>Chromadb</title>
       <link>http://localhost:1313/tags/chromadb/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/chromadb/</guid>
@@ -205,7 +205,7 @@
       <description></description>
     </item>
     <item>
-      <title>HyDE</title>
+      <title>Hyde</title>
       <link>http://localhost:1313/tags/hyde/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/hyde/</guid>
@@ -226,14 +226,14 @@
       <description></description>
     </item>
     <item>
-      <title>LangChain</title>
+      <title>Langchain</title>
       <link>http://localhost:1313/tags/langchain/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/langchain/</guid>
       <description></description>
     </item>
     <item>
-      <title>LlamaIndex</title>
+      <title>Llamaindex</title>
       <link>http://localhost:1313/tags/llamaindex/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/llamaindex/</guid>
@@ -247,21 +247,21 @@
       <description></description>
     </item>
     <item>
-      <title>SQL</title>
+      <title>Sql</title>
       <link>http://localhost:1313/tags/sql/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/sql/</guid>
       <description></description>
     </item>
     <item>
-      <title>Text-to-SQL</title>
+      <title>Text-to-Sql</title>
       <link>http://localhost:1313/tags/text-to-sql/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/text-to-sql/</guid>
       <description></description>
     </item>
     <item>
-      <title>AI</title>
+      <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/ai/</guid>
@@ -282,7 +282,7 @@
       <description></description>
     </item>
     <item>
-      <title>RAG</title>
+      <title>Rag</title>
       <link>http://localhost:1313/tags/rag/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/rag/</guid>
@@ -296,14 +296,14 @@
       <description></description>
     </item>
     <item>
-      <title>LangGraph</title>
+      <title>Langgraph</title>
       <link>http://localhost:1313/tags/langgraph/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/langgraph/</guid>
       <description></description>
     </item>
     <item>
-      <title>YouTube</title>
+      <title>Youtube</title>
       <link>http://localhost:1313/tags/youtube/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/youtube/</guid>

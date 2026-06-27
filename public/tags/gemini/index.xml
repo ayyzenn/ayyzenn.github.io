@@ -2,25 +2,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Gemini on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/gemini/</link>
+    <link>http://localhost:1313/tags/gemini/</link>
     <description>Recent content in Gemini on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/gemini/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/gemini/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture</title>
-      <link>https://ayyzenn.github.io/posts/agentic_rag/</link>
+      <title>Agentic RAG: My Multi-Agent Setup with Gemini and ChromaDB</title>
+      <link>http://localhost:1313/posts/agentic_rag/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/agentic_rag/</guid>
-      <description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</description>
+      <guid>http://localhost:1313/posts/agentic_rag/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;Basic RAG retrieves docs and generates an answer. I wanted something smarter — a system that picks the right strategy and retries with heavier techniques when the first answer isn&amp;rsquo;t good enough.&lt;/p&gt;
+&lt;p&gt;This project uses &lt;strong&gt;three agents&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Router Agent&lt;/strong&gt; — reads the question and checks answer quality&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Basic Generator Agent&lt;/strong&gt; — fast retrieval for simple questions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advanced Generator Agent&lt;/strong&gt; — uses heavier techniques for hard questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The system tries the fast path first. If the answer is weak, it automatically switches to advanced methods like query decomposition, HyDE, and multi-query retrieval.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Building a YouTube Transcript Summarizer with LangGraph and Gemini</title>
-      <link>https://ayyzenn.github.io/posts/agent/</link>
+      <title>YouTube Summarizer: What I Built with LangGraph and Gemini</title>
+      <link>http://localhost:1313/posts/agent/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/agent/</guid>
-      <description>A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.</description>
+      <guid>http://localhost:1313/posts/agent/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I wanted to paste a YouTube URL and get a summary — or ask questions about the video — without watching the whole thing. This project uses &lt;strong&gt;LangGraph&lt;/strong&gt; for the workflow and &lt;strong&gt;Gemini&lt;/strong&gt; for the actual summarizing and Q&amp;amp;A.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-features-of-agentic-workflows&#34;&gt;Key Features of Agentic Workflows&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modularity&lt;/strong&gt; — each step can be built and tested on its own&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State&lt;/strong&gt; — data flows from step to step in a structured way&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusability&lt;/strong&gt; — the same steps can be reused in other projects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Autonomy&lt;/strong&gt; — each step can decide what to do based on the input it receives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;popular-tools-for-agentic-workflows&#34;&gt;Popular Tools for Agentic Workflows&lt;/h2&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Tool&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Language&lt;/th&gt;
+					&lt;th&gt;Best For&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LangGraph&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Graph-based AI workflow framework with state management.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Custom step-by-step pipelines&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;CrewAI&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Agent orchestration tool inspired by human teams and role delegation.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Role-based agent collaboration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Autogen&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Microsoft&amp;rsquo;s multi-agent framework for goal-oriented dialogue and tasks.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Conversational multi-agent systems&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LangChain&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;General framework for chaining LLMs with tools, memory, and logic.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Broader LLM apps beyond just agents&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;AgentOps&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Infra layer for deploying and monitoring agentic systems.&lt;/td&gt;
+					&lt;td&gt;Platform&lt;/td&gt;
+					&lt;td&gt;Scaling, testing, and managing agents&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-i-chose-langgraph&#34;&gt;Why I Chose LangGraph&lt;/h2&gt;
+&lt;p&gt;For this project, I chose &lt;strong&gt;LangGraph&lt;/strong&gt; because:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

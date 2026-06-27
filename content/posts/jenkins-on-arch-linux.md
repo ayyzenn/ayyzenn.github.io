@@ -1,20 +1,11 @@
 ---
-title: "Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project"
-author: Saad
+title: "Jenkins on Arch Linux: How I Set It Up on i3"
 date: 2026-02-09
-tags: [jenkins, devops, arch-linux, ci-cd, automation]
+tags: ["jenkins", "devops", "arch-linux", "ci-cd", "automation"]
 ---
+## Why I Wrote This
 
-## Jenkins on Arch Linux (i3)
-
-This guide shows you how to:
-
-- **Install Jenkins** on Arch Linux (i3 window manager is fine)
-- **Start and use Jenkins**
-- **Create a simple freestyle job**
-- **Create a real Jenkins Pipeline from a GitHub repo**
-
-The language is simple and the examples are small and realistic.
+I run Arch Linux with i3 and wanted Jenkins locally for CI/CD experiments. This covers Java 21, the Jenkins install, a test job, and a GitHub pipeline — exactly what I ran on my machine.
 
 ---
 
@@ -45,9 +36,9 @@ It needs a **stable, Long-Term Support (LTS)** version of Java.
 
 | Java Version | Type    | Recommendation      |
 | ------------ | ------- | ------------------- |
-| Java 17      | LTS     | ✅ Stable           |
-| Java 21      | LTS     | ✅ Best choice      |
-| Java 25      | Non-LTS | ❌ Not recommended  |
+| Java 17      | LTS     | Stable — works well |
+| Java 21      | LTS     | Best choice         |
+| Java 25      | Non-LTS | Not recommended     |
 
 In this guide we use **Java 21 (LTS)** on Arch.
 

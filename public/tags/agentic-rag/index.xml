@@ -2,18 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Agentic RAG on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/agentic-rag/</link>
+    <link>http://localhost:1313/tags/agentic-rag/</link>
     <description>Recent content in Agentic RAG on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/agentic-rag/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/agentic-rag/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building an Intelligent Agentic RAG System with Multi-Agent Architecture</title>
-      <link>https://ayyzenn.github.io/posts/agentic_rag/</link>
+      <title>Agentic RAG: My Multi-Agent Setup with Gemini and ChromaDB</title>
+      <link>http://localhost:1313/posts/agentic_rag/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/agentic_rag/</guid>
-      <description>A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture.</description>
+      <guid>http://localhost:1313/posts/agentic_rag/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;Basic RAG retrieves docs and generates an answer. I wanted something smarter — a system that picks the right strategy and retries with heavier techniques when the first answer isn&amp;rsquo;t good enough.&lt;/p&gt;
+&lt;p&gt;This project uses &lt;strong&gt;three agents&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Router Agent&lt;/strong&gt; — reads the question and checks answer quality&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Basic Generator Agent&lt;/strong&gt; — fast retrieval for simple questions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advanced Generator Agent&lt;/strong&gt; — uses heavier techniques for hard questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The system tries the fast path first. If the answer is weak, it automatically switches to advanced methods like query decomposition, HyDE, and multi-query retrieval.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

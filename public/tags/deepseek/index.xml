@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Deepseek on ayyzenn</title>
+    <link>http://localhost:1313/tags/deepseek/</link>
+    <description>Recent content in Deepseek on ayyzenn</description>
+    <generator>Hugo -- 0.163.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/deepseek/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ollama &#43; DeepSeek: How I Run LLMs Locally</title>
+      <link>http://localhost:1313/posts/ollama/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ollama/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ollama&#34;&gt;Why I Use Ollama&lt;/h2&gt;
+&lt;p&gt;I wanted to run LLMs on my own hardware without paying for API calls or sending data to the cloud. &lt;strong&gt;Ollama&lt;/strong&gt; made that straightforward — install, pull a model, start chatting.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;install-ollama&#34;&gt;Install Ollama&lt;/h2&gt;
+&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux&lt;/h3&gt;
+&lt;p&gt;Update your system, then install Ollama:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enable and start the service:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl start ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl status ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should see &lt;code&gt;active (running)&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

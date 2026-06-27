@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Git on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/git/</link>
+    <link>http://localhost:1313/tags/git/</link>
     <description>Recent content in Git on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Sep 2021 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title>
-      <link>https://ayyzenn.github.io/posts/git_cli/</link>
-      <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/git_cli/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;This guide provides a comprehensive introduction to GitHub, covering:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;What is GitHub?&lt;/li&gt;
-&lt;li&gt;Why use GitHub?&lt;/li&gt;
-&lt;li&gt;How to use GitHub?&lt;/li&gt;
-&lt;li&gt;Installing and configuring Git&lt;/li&gt;
-&lt;li&gt;Uploading files to GitHub using the command line&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;what-is-github&#34;&gt;What is GitHub?&lt;/h2&gt;
-&lt;p&gt;Before diving into GitHub, it is essential to understand Git and Open-Source Projects.&lt;/p&gt;
-&lt;h3 id=&#34;1-git&#34;&gt;1. Git&lt;/h3&gt;
-&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;</description>
+      <title>GitHub from the Command Line: How I Push My Code</title>
+      <link>http://localhost:1313/posts/git_cli/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git_cli/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-github&#34;&gt;Why I Use GitHub&lt;/h2&gt;
+&lt;p&gt;I use &lt;strong&gt;Git&lt;/strong&gt; to track changes in my code and &lt;strong&gt;GitHub&lt;/strong&gt; to host it online. Git runs on my machine. GitHub is the website that stores my repos and lets me share them.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re new: Git is the tool, GitHub is where the repos live.&lt;/p&gt;
+&lt;h2 id=&#34;install-git&#34;&gt;Install Git&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ubuntu:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Arch Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check it worked:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;set-your-name-and-email&#34;&gt;Set Your Name and Email&lt;/h2&gt;
+&lt;p&gt;Git attaches this info to every commit:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

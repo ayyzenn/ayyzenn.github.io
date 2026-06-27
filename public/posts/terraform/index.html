@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Terraform: Infrastructure as Code | ayyzenn</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Terraform: How I Stopped Clicking Around in AWS | ayyzenn</title>
 <meta name="keywords" content="terraform, infrastructure, cloud, automation, IaC">
-<meta name="description" content="What is Terraform?
-Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.
-Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.
+<meta name="description" content="What Terraform Is (For Me)
+Terraform is how I describe cloud stuff in code instead of clicking through the AWS console. I write what I want in .tf files, run terraform apply, and it gets created. Same result every time.
 Why Use Terraform?
 
 No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS
@@ -23,16 +22,16 @@ Basic Concepts (Made Simple)
 Providers
 A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.">
 <meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/terraform/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/terraform/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/terraform/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/terraform/">
 <noscript>
     <style>
         #theme-toggle,
@@ -69,90 +68,7 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/terraform/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Terraform: Infrastructure as Code">
-  <meta property="og:description" content="What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It’s like using a recipe instead of cooking from memory—repeatable and consistent every time.
-Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.
-Why Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-12-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-12-14T00:00:00+00:00">
-    <meta property="article:tag" content="Terraform">
-    <meta property="article:tag" content="Infrastructure">
-    <meta property="article:tag" content="Cloud">
-    <meta property="article:tag" content="Automation">
-    <meta property="article:tag" content="IaC">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Terraform: Infrastructure as Code">
-<meta name="twitter:description" content="What is Terraform?
-Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.
-Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.
-Why Use Terraform?
-
-No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS
-Easy Updates: Change your code and run terraform apply to update everything
-Backup Your Infrastructure: Keep your setup in version control (like Git)
-Reuse Everywhere: Run the same setup in dev, staging, and production without changes
-Cost Preview: See what resources cost before you create them
-Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool
-
-Basic Concepts (Made Simple)
-Providers
-A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Terraform: Infrastructure as Code",
-      "item": "https://ayyzenn.github.io/posts/terraform/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Terraform: Infrastructure as Code",
-  "name": "Terraform: Infrastructure as Code",
-  "description": "What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It\u0026rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.\nTerraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.\nWhy Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.\n",
-  "keywords": [
-    "terraform", "infrastructure", "cloud", "automation", "IaC"
-  ],
-  "articleBody": "What is Terraform? Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It’s like using a recipe instead of cooking from memory—repeatable and consistent every time.\nTerraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.\nWhy Use Terraform? No More Manual Clicking: Automate infrastructure setup instead of clicking through AWS Easy Updates: Change your code and run terraform apply to update everything Backup Your Infrastructure: Keep your setup in version control (like Git) Reuse Everywhere: Run the same setup in dev, staging, and production without changes Cost Preview: See what resources cost before you create them Work with Multiple Clouds: Manage AWS, Azure, and Google Cloud from one tool Basic Concepts (Made Simple) Providers A provider tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.\nprovider \"aws\" { region = \"us-east-1\" } That’s it! Now Terraform knows: “I’m using AWS, in the us-east-1 region.”\nResources A resource is something you want to create—a server, a database, a network, etc.\nresource \"aws_instance\" \"my_server\" { ami = \"ami-0c55b159cbfafe1f0\" # The OS image to use instance_type = \"t2.micro\" # The size (small, medium, large) tags = { Name = \"MyWebServer\" } } In plain English: “Create an AWS EC2 server called ‘my_server’ using a free-tier compatible image and size it as ’t2.micro’.”\nVariables Variables make your code reusable. Instead of hardcoding values, you define them once and reuse them.\nvariable \"server_count\" { description = \"How many servers do you want?\" type = number default = 1 } resource \"aws_instance\" \"servers\" { count = var.server_count ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.micro\" } Now if you change server_count to 3, Terraform creates 3 servers instead of 1.\nCommon Commands (What They Actually Do) terraform init # Download necessary files (run this first!) terraform plan # Show what will happen (no changes yet) terraform apply # Actually create/change the resources terraform destroy # Delete all the resources (be careful!) terraform show # Display current infrastructure state Example workflow:\n$ terraform init # Set up $ terraform plan # Preview: \"Will create 1 server, 1 database\" $ terraform apply # Do it: \"Server and database created!\" $ terraform destroy # Clean up: \"All resources deleted\" State Management (What’s This .tfstate File?) Terraform keeps a file called terraform.tfstate that tracks what resources exist. It’s like a shopping list of everything Terraform created.\nKeep state files safe:\nDon’t lose them (Terraform won’t know what resources exist) Don’t commit them to Git (they contain sensitive data) Back them up to AWS S3 or similar storage Simple example - S3 backend:\nterraform { backend \"s3\" { bucket = \"my-terraform-state\" key = \"prod/terraform.tfstate\" region = \"us-east-1\" } } This tells Terraform: “Save my state file to this S3 bucket instead of locally.”\nWorking with Docker and Terraform One of my favorite use cases is combining Terraform with Docker. Here’s a real-world example: I want to launch a server on AWS and automatically run my app in a Docker container.\nStep 1: Create a Docker image\nresource \"aws_ecr_repository\" \"my_app\" { name = \"my-awesome-app\" } This creates a private Docker registry on AWS where you can store your Docker images.\nStep 2: Launch a server with Docker installed\nresource \"aws_instance\" \"web_server\" { ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.small\" # Run these commands when the server starts user_data = \u003c\u003c-EOF #!/bin/bash sudo yum update -y sudo yum install -y docker sudo systemctl start docker EOF tags = { Name = \"MyWebServer\" } } What’s happening:\nTerraform creates an EC2 server When it boots up, it automatically installs Docker You can then push your Docker images and run them Example: Running your Docker app\n# Build and push your app to AWS docker build -t my-awesome-app . docker tag my-awesome-app:latest 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest # SSH into the server and run it ssh ec2-user@your-server-ip docker login --username AWS -p $(aws ecr get-login-password) 123456789.dkr.ecr.us-east-1.amazonaws.com docker run -d -p 80:3000 123456789.dkr.ecr.us-east-1.amazonaws.com/my-awesome-app:latest Now your app is running in a Docker container on AWS!\nReal-World Scenario: Multi-Environment Setup I organize my Terraform files like this to keep things clean and easy to manage:\nterraform/ ├── main.tf # Basic setup ├── variables.tf # Things you can change ├── outputs.tf # Things to remember after creation ├── networking.tf # Networks and firewalls ├── servers.tf # EC2 instances └── environments/ ├── dev.tfvars # Settings for development ├── staging.tfvars # Settings for testing └── prod.tfvars # Settings for production Why organize this way?\nKeep code organized and easy to find Separate settings for each environment Easy to scale and maintain Deploy to different environments:\n# Test it first (development) terraform apply -var-file=\"environments/dev.tfvars\" # Later, deploy to production terraform apply -var-file=\"environments/prod.tfvars\" The same Terraform code works everywhere, just with different settings!\nGetting Important Information Back After Terraform creates resources, you might want to remember important details (like server IP addresses or database names). Use outputs for this:\noutput \"server_ip\" { description = \"The IP address of the web server\" value = aws_instance.web_server.public_ip } output \"database_endpoint\" { description = \"Where to connect to your database\" value = aws_db_instance.main.endpoint } After you run terraform apply, Terraform will show you these values automatically.\nTips from Experience Always preview before doing: Run terraform plan and read the output carefully Use the same setup everywhere: One set of files for dev, staging, and production Keep sensitive data private: Never put passwords or API keys in your code Organize your files: Group related resources (all network stuff together, all servers together) Name things clearly: Use descriptive names so you remember what each resource does Save state files safely: Keep them backed up, don’t share them by accident Common Mistakes I’ve Made Forgot to commit state to version control properly: Couldn’t remember what I created, had to rebuild Ran terraform apply in the wrong directory: Accidentally deleted some servers Made changes in AWS console instead of Terraform: Terraform got confused and tried to undo my changes Hardcoded server IPs: Had to change every file when I moved servers Didn’t test on development first: Broke production because I didn’t test the changes The lesson: Always test on dev first, keep everything in code, never manually change things in AWS console.\nGetting Started (Super Simple) Requirement: You need an AWS account (free tier is fine)\nStep 1: Install Terraform\n# Ubuntu/Debian curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - sudo apt-add-repository \"deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main\" sudo apt-get update \u0026\u0026 sudo apt-get install terraform Step 2: Create a simple file called main.tf\nprovider \"aws\" { region = \"us-east-1\" } resource \"aws_instance\" \"first_server\" { ami = \"ami-0c55b159cbfafe1f0\" instance_type = \"t2.micro\" tags = { Name = \"MyFirstServer\" } } Step 3: Run these commands\nterraform init # Downloads AWS tools terraform plan # Shows what will happen terraform apply # Creates your server! That’s it! You now have a server running on AWS.\nWhen you’re done:\nterraform destroy # Delete everything and stop paying for it Conclusion Terraform made a huge difference for me. Instead of manually clicking around AWS, I can now:\nCreate the same setup in seconds Share my infrastructure with teammates Keep everything organized in code Track changes like I do with regular code If you’re managing servers manually, give Terraform a try. Start with a simple project, get comfortable with the basic commands, and soon you’ll be managing entire cloud setups with just a few commands.\n",
-  "wordCount" : "1260",
-  "inLanguage": "en",
-  "datePublished": "2025-12-14T00:00:00Z",
-  "dateModified": "2025-12-14T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/terraform/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -170,7 +86,7 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -196,17 +112,17 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -217,9 +133,9 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Terraform: Infrastructure as Code
+      Terraform: How I Stopped Clicking Around in AWS
     </h1>
     <div class="post-meta"><span title='2025-12-14 00:00:00 +0000 UTC'>December 14, 2025</span>&nbsp;·&nbsp;6 min
 
@@ -232,7 +148,7 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#what-is-terraform" aria-label="What is Terraform?">What is Terraform?</a></li>
+                    <a href="#what-terraform-is-for-me" aria-label="What Terraform Is (For Me)">What Terraform Is (For Me)</a></li>
                 <li>
                     <a href="#why-use-terraform" aria-label="Why Use Terraform?">Why Use Terraform?</a></li>
                 <li>
@@ -269,9 +185,8 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
     </details>
 </div>
 
-  <div class="post-content"><h2 id="what-is-terraform">What is Terraform?<a hidden class="anchor" aria-hidden="true" href="#what-is-terraform">#</a></h2>
-<p>Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.</p>
-<p>Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.</p>
+  <div class="post-content"><h2 id="what-terraform-is-for-me">What Terraform Is (For Me)<a hidden class="anchor" aria-hidden="true" href="#what-terraform-is-for-me">#</a></h2>
+<p>Terraform is how I describe cloud stuff in code instead of clicking through the AWS console. I write what I want in <code>.tf</code> files, run <code>terraform apply</code>, and it gets created. Same result every time.</p>
 <h2 id="why-use-terraform">Why Use Terraform?<a hidden class="anchor" aria-hidden="true" href="#why-use-terraform">#</a></h2>
 <ul>
 <li><strong>No More Manual Clicking</strong>: Automate infrastructure setup instead of clicking through AWS</li>
@@ -440,11 +355,12 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
 <h2 id="getting-started-super-simple">Getting Started (Super Simple)<a hidden class="anchor" aria-hidden="true" href="#getting-started-super-simple">#</a></h2>
 <p><strong>Requirement:</strong> You need an AWS account (free tier is fine)</p>
 <p><strong>Step 1: Install Terraform</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ubuntu/Debian</span>
-</span></span><span style="display:flex;"><span>curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-</span></span><span style="display:flex;"><span>sudo apt-add-repository <span style="color:#e6db74">&#34;deb [arch=amd64] https://apt.releases.hashicorp.com </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> main&#34;</span>
-</span></span><span style="display:flex;"><span>sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get install terraform
+<p><strong>Ubuntu / Debian:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com </span><span style="color:#66d9ef">$(</span>lsb_release -cs<span style="color:#66d9ef">)</span><span style="color:#e6db74"> main&#34;</span> | sudo tee /etc/apt/sources.list.d/hashicorp.list
+</span></span><span style="display:flex;"><span>sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install terraform
+</span></span></code></pre></div><p><strong>Arch Linux:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S terraform
 </span></span></code></pre></div><p><strong>Step 2: Create a simple file called <code>main.tf</code></strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;aws&#34;</span> {
 </span></span><span style="display:flex;"><span>  region <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;us-east-1&#34;</span>
@@ -466,32 +382,25 @@ A provider tells Terraform which cloud service to use. Think of it as picking AW
 <p><strong>When you&rsquo;re done:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>terraform destroy  <span style="color:#75715e"># Delete everything and stop paying for it</span>
 </span></span></code></pre></div><h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
-<p>Terraform made a huge difference for me. Instead of manually clicking around AWS, I can now:</p>
-<ul>
-<li>Create the same setup in seconds</li>
-<li>Share my infrastructure with teammates</li>
-<li>Keep everything organized in code</li>
-<li>Track changes like I do with regular code</li>
-</ul>
-<p>If you&rsquo;re managing servers manually, give Terraform a try. Start with a simple project, get comfortable with the basic commands, and soon you&rsquo;ll be managing entire cloud setups with just a few commands.</p>
+<p>Terraform changed how I manage cloud resources. I still make mistakes — wrong directory, forgot to run <code>plan</code> — but having everything in code beats rebuilding from memory every time.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/terraform/">Terraform</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/infrastructure/">Infrastructure</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/cloud/">Cloud</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/automation/">Automation</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/iac/">IaC</a></li>
+      <li><a href="http://localhost:1313/tags/terraform/">Terraform</a></li>
+      <li><a href="http://localhost:1313/tags/infrastructure/">Infrastructure</a></li>
+      <li><a href="http://localhost:1313/tags/cloud/">Cloud</a></li>
+      <li><a href="http://localhost:1313/tags/automation/">Automation</a></li>
+      <li><a href="http://localhost:1313/tags/iac/">IaC</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

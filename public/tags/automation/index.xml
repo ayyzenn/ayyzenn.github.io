@@ -2,26 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Automation on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/automation/</link>
+    <link>http://localhost:1313/tags/automation/</link>
     <description>Recent content in Automation on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project</title>
-      <link>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</link>
+      <title>Jenkins on Arch Linux: How I Set It Up on i3</title>
+      <link>http://localhost:1313/posts/jenkins-on-arch-linux/</link>
       <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</guid>
-      <description>&lt;h2 id=&#34;jenkins-on-arch-linux-i3&#34;&gt;Jenkins on Arch Linux (i3)&lt;/h2&gt;
-&lt;p&gt;This guide shows you how to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Install Jenkins&lt;/strong&gt; on Arch Linux (i3 window manager is fine)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Start and use Jenkins&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create a simple freestyle job&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create a real Jenkins Pipeline from a GitHub repo&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The language is simple and the examples are small and realistic.&lt;/p&gt;
+      <guid>http://localhost:1313/posts/jenkins-on-arch-linux/</guid>
+      <description>&lt;h2 id=&#34;why-i-wrote-this&#34;&gt;Why I Wrote This&lt;/h2&gt;
+&lt;p&gt;I run Arch Linux with i3 and wanted Jenkins locally for CI/CD experiments. This covers Java 21, the Jenkins install, a test job, and a GitHub pipeline — exactly what I ran on my machine.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-what-is-jenkins-simple-explanation&#34;&gt;1. What is Jenkins? (Simple Explanation)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Jenkins is an automation server.&lt;/strong&gt;&lt;/p&gt;
@@ -34,10 +27,10 @@
 &lt;p&gt;Instead of you running commands manually every time, Jenkins does it &lt;strong&gt;automatically&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Ansible: Automating Docker and Kubernetes Node Setup</title>
-      <link>https://ayyzenn.github.io/posts/ansible_adv/</link>
+      <title>Ansible: Docker and Kubernetes Node Setup</title>
+      <link>http://localhost:1313/posts/ansible_adv/</link>
       <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/ansible_adv/</guid>
+      <guid>http://localhost:1313/posts/ansible_adv/</guid>
       <description>&lt;h2 id=&#34;why-this-post-exists&#34;&gt;Why This Post Exists&lt;/h2&gt;
 &lt;p&gt;After writing my &lt;strong&gt;first real Ansible playbook&lt;/strong&gt;, I realized something:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -58,9 +51,9 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
     </item>
     <item>
       <title>Ansible for Beginners: My First Real Automation</title>
-      <link>https://ayyzenn.github.io/posts/ansible/</link>
+      <link>http://localhost:1313/posts/ansible/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/ansible/</guid>
+      <guid>http://localhost:1313/posts/ansible/</guid>
       <description>&lt;h2 id=&#34;what-is-ansible-in-simple-words&#34;&gt;What is Ansible? (In Simple Words)&lt;/h2&gt;
 &lt;p&gt;Think of &lt;strong&gt;Ansible as a remote control for your servers&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Instead of:&lt;/p&gt;
@@ -68,7 +61,7 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;li&gt;SSH into server&lt;/li&gt;
 &lt;li&gt;Run commands manually&lt;/li&gt;
 &lt;li&gt;Forget what you changed&lt;/li&gt;
-&lt;li&gt;Repeat the same steps again and again 😵&lt;/li&gt;
+&lt;li&gt;Repeat the same steps again and again&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You tell Ansible:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -87,13 +80,12 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;p&gt;This is exactly what I used:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Terraform: Infrastructure as Code</title>
-      <link>https://ayyzenn.github.io/posts/terraform/</link>
+      <title>Terraform: How I Stopped Clicking Around in AWS</title>
+      <link>http://localhost:1313/posts/terraform/</link>
       <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/terraform/</guid>
-      <description>&lt;h2 id=&#34;what-is-terraform&#34;&gt;What is Terraform?&lt;/h2&gt;
-&lt;p&gt;Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&amp;rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.&lt;/p&gt;
-&lt;p&gt;Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.&lt;/p&gt;
+      <guid>http://localhost:1313/posts/terraform/</guid>
+      <description>&lt;h2 id=&#34;what-terraform-is-for-me&#34;&gt;What Terraform Is (For Me)&lt;/h2&gt;
+&lt;p&gt;Terraform is how I describe cloud stuff in code instead of clicking through the AWS console. I write what I want in &lt;code&gt;.tf&lt;/code&gt; files, run &lt;code&gt;terraform apply&lt;/code&gt;, and it gets created. Same result every time.&lt;/p&gt;
 &lt;h2 id=&#34;why-use-terraform&#34;&gt;Why Use Terraform?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;No More Manual Clicking&lt;/strong&gt;: Automate infrastructure setup instead of clicking through AWS&lt;/li&gt;
@@ -108,13 +100,15 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;p&gt;A &lt;strong&gt;provider&lt;/strong&gt; tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title>
-      <link>https://ayyzenn.github.io/posts/chef/</link>
-      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/chef/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.&lt;/p&gt;
-&lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description>
+      <title>Chef Server Setup: What I Did on Ubuntu</title>
+      <link>http://localhost:1313/posts/chef/</link>
+      <pubDate>Tue, 02 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/chef/</guid>
+      <description>&lt;h2 id=&#34;why-i-looked-into-chef&#34;&gt;Why I Looked Into Chef&lt;/h2&gt;
+&lt;p&gt;Managing servers one by one doesn&amp;rsquo;t scale. I set up &lt;strong&gt;Chef&lt;/strong&gt; to store server configs as code — a Chef server, a workstation where I write recipes, and a node that pulls its config automatically.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; I did this on &lt;strong&gt;Ubuntu 18.04&lt;/strong&gt; using &lt;code&gt;.deb&lt;/code&gt; packages and &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;chef-server&#34;&gt;Chef Server&lt;/h2&gt;
+&lt;p&gt;The Chef server acts as the central hub for all workstations and nodes under Chef management. Configuration changes made on workstations are pushed to the Chef server, where they are pulled by nodes using &lt;code&gt;chef-client&lt;/code&gt; to apply the configurations.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,20 +1,11 @@
 ---
-title: "RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB"
-author: Saad
+title: "RESTful API with Web Scraping: My FastAPI + Flask Project"
 date: 2026-03-07
-tags: [python, fastapi, flask, web-scraping, postgresql, mongodb, rest-api, beautifulsoup, selenium]
+tags: ["python", "fastapi", "flask", "web-scraping", "postgresql", "mongodb", "rest-api", "beautifulsoup", "selenium"]
 ---
+## What This Project Is
 
-## RESTful API with Web Scraping Pipelines
-
-This guide shows you how to build a backend API project that:
-
-- **Uses FastAPI and Flask** for RESTful APIs
-- **Scrapes data from websites** with BeautifulSoup and Selenium
-- **Stores data** in PostgreSQL and MongoDB
-- **Integrates with external services** like JSONPlaceholder
-
-The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.
+I built a backend that scrapes websites, stores data in PostgreSQL and MongoDB, and exposes REST APIs through FastAPI and Flask. I made it as a portfolio piece — something I could demo and actually run on my machine.
 
 ---
 
@@ -54,7 +45,7 @@ You can think of it as:
 
 Make sure you have:
 
-- **Python 3.11 or 3.12** (or 3.14 if your packages support it)
+- **Python 3.11 or 3.12** (recommended — some packages may not support the newest Python yet)
 - **Docker and Docker Compose** (for PostgreSQL and MongoDB)
 - **Git** (for version control)
 
@@ -141,8 +132,8 @@ docker-compose up -d
 The `-d` flag runs them in the background. You should see something like:
 
 ```text
-✔ Container backend-postgres-1  Started
-✔ Container backend-mongodb-1  Started
+Container backend-postgres-1  Started
+Container backend-mongodb-1  Started
 ```
 
 Check that they are running:
@@ -391,4 +382,4 @@ You now know how to:
 - **Integrate with external APIs** (e.g. JSONPlaceholder)
 - Push the project to **GitHub**
 
-This project demonstrates skills often asked about in backend developer interviews: REST design, web scraping, database choice, and API integration.
+This project demonstrates skills I wanted on my resume: REST design, web scraping, picking the right database, and wiring up external APIs.

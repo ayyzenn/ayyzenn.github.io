@@ -1,32 +1,28 @@
 ---
-title: "Building a YouTube Transcript Summarizer with LangGraph and Gemini"
+title: "YouTube Summarizer: What I Built with LangGraph and Gemini"
 date: 2025-06-06
-description: "A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API."
 tags: ["AI", "LangGraph", "Gemini", "Python", "YouTube"]
 ---
+## What I Built
 
-## 🧠 What is an Agentic Workflow?
-
-An **Agentic Workflow** is a system where multiple autonomous AI agents work together to solve complex tasks. Each agent is responsible for a specific role (such as fetching data, summarizing text, or answering questions), and they collaborate in a structured flow to complete the overall goal.
-
-This workflow design mimics how human teams operate — with clear roles, communication, and coordination.
+I wanted to paste a YouTube URL and get a summary — or ask questions about the video — without watching the whole thing. This project uses **LangGraph** for the workflow and **Gemini** for the actual summarizing and Q&A.
 
 ---
 
-## 🧱 Key Features of Agentic Workflows
+## Key Features of Agentic Workflows
 
-- **Modularity**: Each agent can be independently developed and reused.
-- **Statefulness**: Agents maintain and pass structured data (state) across steps.
-- **Reusability**: Agents can be composed into different workflows.
-- **Autonomy**: Agents can make decisions based on input and context.
+- **Modularity** — each step can be built and tested on its own
+- **State** — data flows from step to step in a structured way
+- **Reusability** — the same steps can be reused in other projects
+- **Autonomy** — each step can decide what to do based on the input it receives
 
 ---
 
-## 🛠️ Popular Tools for Agentic Workflows
+## Popular Tools for Agentic Workflows
 
 | Tool          | Description                                                             | Language | Best For                              |
 | ------------- | ----------------------------------------------------------------------- | -------- | ------------------------------------- |
-| **LangGraph** | Graph-based AI workflow framework with state management.                | Python   | Customizable and flexible workflows   |
+| **LangGraph** | Graph-based AI workflow framework with state management.                | Python   | Custom step-by-step pipelines         |
 | **CrewAI**    | Agent orchestration tool inspired by human teams and role delegation.   | Python   | Role-based agent collaboration        |
 | **Autogen**   | Microsoft's multi-agent framework for goal-oriented dialogue and tasks. | Python   | Conversational multi-agent systems    |
 | **LangChain** | General framework for chaining LLMs with tools, memory, and logic.      | Python   | Broader LLM apps beyond just agents   |
@@ -34,66 +30,66 @@ This workflow design mimics how human teams operate — with clear roles, commun
 
 ---
 
-## ⚙️ Why I Chose LangGraph
+## Why I Chose LangGraph
 
 For this project, I chose **LangGraph** because:
 
-- It offers **graph-based control** over the workflow between agents.
-- It’s ideal for **step-by-step pipelines**, like:
-  - 👉 Get YouTube URL → Fetch transcript → Summarize → Answer questions.
-- It natively supports **state management**, so agents can build on each other’s output.
+- It gives **clear control** over the order of steps
+- It fits **pipelines** like: get YouTube URL → fetch transcript → summarize → answer questions
+- It supports **state**, so each step can use output from the previous one
 
-## 🤖 Agent: YouTube Video Q&A Agent
+## YouTube Video Q&A Agent
 
-This project uses a single, multifunctional agent to handle two core tasks:
-1. **Summarizing the video transcript**
-2. **Answering user questions** based on the video content
+This project uses one agent that does two things:
 
-### 🧩 Responsibilities
-- Extract the transcript from a YouTube video.
-- Based on user input, either:
-  - Generate a summary of the content, or
-  - Answer a natural language question related to the video.
-- Use Google's **gemini-2.0-flash** model via `langchain-google-genai` to handle both tasks.
+1. **Summarize** the video transcript
+2. **Answer questions** about the video content
 
----
+### Responsibilities
 
-### ⚙️ How It Works
-
-1. **Transcript Extraction**  
-   The agent first retrieves the transcript using the `youtube-transcript-api`. It parses the text into a clean format suitable for processing.
-
-2. **Routing Based on User Input**  
-   The agent inspects the user prompt:
-   - If the user types `"summary"`, it sends the full transcript to Gemini with a prompt asking for a concise summary.
-   - If the user enters a specific question, it sends both the transcript and the question to Gemini, asking for an accurate, context-aware answer.
-
-3. **Response Generation**  
-   Gemini returns either a summary or a direct answer, which is then displayed to the user.
+- Extract the transcript from a YouTube video
+- If the user asks for a summary, generate a short summary
+- If the user asks a question, answer it using the transcript as context
+- Use Google's **gemini-2.0-flash** model through `langchain-google-genai`
 
 ---
 
-### 🛠️ Technologies Used
+### How It Works
 
-- `langchain-google-genai` to integrate Gemini Pro for LLM responses.
-- `youtube-transcript-api` to fetch video transcripts.
-- `LangGraph` to manage and run the workflow logic.
-- `dotenv` for secure API key handling.
+1. **Transcript extraction**  
+   The agent fetches the transcript with `youtube-transcript-api` and cleans the text.
+
+2. **Routing based on user input**  
+   - If the user types `"summary"`, the full transcript is sent to Gemini with a summary prompt
+   - If the user asks a question, both the transcript and the question are sent to Gemini
+
+3. **Response**  
+   Gemini returns either a summary or an answer, which is shown to the user.
 
 ---
 
-### 🔄 Example Workflow
+### Technologies Used
+
+- `langchain-google-genai` — connects to Gemini
+- `youtube-transcript-api` — fetches video transcripts
+- `LangGraph` — runs the workflow
+- `dotenv` — loads the API key from a `.env` file
+
+---
+
+### Example Workflow
 
 ```plaintext
-User enters YouTube URL → Transcript fetched → 
+User enters YouTube URL → Transcript fetched →
 User enters "summary" → Gemini generates a summary
 OR
-User enters a question → Gemini answers using the transcript context
+User enters a question → Gemini answers using the transcript
 ```
---- 
 
-### 📂 Check Out the Code
-You can find the full source code for this project on GitHub:
+---
+
+### Source Code
+
+Full project on GitHub:
 
 https://github.com/ayyzenn/youtube-video-qa.git
-

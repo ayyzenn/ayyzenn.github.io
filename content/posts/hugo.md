@@ -1,33 +1,44 @@
-+++
-date = '2020-12-03T17:07:58+05:00'
-title = 'Hugo: The Fastest Static Site Generator'
-tags = ['hugo', 'github']
-+++
+---
+title: "Hugo: The Static Site Generator I Use for This Blog"
+date: 2020-12-03
+tags: ["hugo", "github"]
+---
 
-## What is Hugo?
+## Why I Picked Hugo
 
-Hugo is an open-source static site generator (SSG) written in Go. It is designed for speed, simplicity, and flexibility, making it a popular choice for building blogs, documentation sites, and personal portfolios. Unlike traditional content management systems (CMS) like WordPress, Hugo generates static HTML files that can be served directly from any web server, eliminating the need for a database.
+I wanted a blog that loads fast, doesn't need a database, and lets me write posts in Markdown. **Hugo** does exactly that — it builds plain HTML files from my content, and I host them on GitHub Pages.
 
-## Why Use Hugo?
+No WordPress, no PHP, no MySQL. Just markdown files and a `hugo` command.
 
-Hugo is widely used due to its numerous advantages:
+## What I Like About It
 
-- **Blazing Fast** - Hugo can generate a complete website in milliseconds, making it one of the fastest static site generators.
-- **Easy to Use** - Content is written in Markdown, making it simple and portable.
-- **Flexible and Customizable** - Supports various themes, templates, and shortcodes.
-- **Secure** - No database or dynamic scripts, reducing the risk of security vulnerabilities.
-- **SEO-Friendly** - Static HTML is fast and optimized for search engines.
-- **Portable** - Websites can be hosted anywhere, including GitHub Pages, Netlify, or a simple web server.
+- **Fast builds** — my whole site compiles in under a second
+- **Markdown posts** — write in any editor, commit to Git
+- **Themes** — I'm using PaperMod
+- **GitHub Pages** — free hosting, deploys on push
 
-## How to Set Up Hugo
-
-Follow these steps to install and set up Hugo on your system.
+## How I Set Up Hugo
 
 ### 1. Install Hugo
 
-#### On Linux (Manjaro and Arch-based Systems)
+#### On Arch Linux
+
 ```bash
 sudo pacman -S hugo
+```
+
+#### On Ubuntu
+
+```bash
+sudo apt update
+sudo apt install hugo
+```
+
+Or install the extended edition from the official release page (recommended for themes that use Sass):
+
+```bash
+wget https://github.com/gohugoio/hugo/releases/download/v0.147.9/hugo_extended_0.147.9_linux-amd64.deb
+sudo dpkg -i hugo_extended_0.147.9_linux-amd64.deb
 ```
 
 #### On macOS (Using Homebrew)
@@ -219,4 +230,4 @@ https://yourusername.github.io/
 
 ## Conclusion
 
-Hugo is an excellent choice for anyone looking to build fast, secure, and customizable websites without the overhead of a traditional CMS. Its simplicity and performance make it a favorite among developers and content creators alike.
+That's how this site runs — Hugo locally, GitHub Pages in production. If you want a simple personal blog without managing a CMS, Hugo is worth trying.

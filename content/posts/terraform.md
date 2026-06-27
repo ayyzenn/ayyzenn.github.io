@@ -1,14 +1,11 @@
 ---
-title: "Terraform: Infrastructure as Code"
+title: "Terraform: How I Stopped Clicking Around in AWS"
 date: 2025-12-14
 tags: ["terraform", "infrastructure", "cloud", "automation", "IaC"]
 ---
+## What Terraform Is (For Me)
 
-## What is Terraform?
-
-Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It's like using a recipe instead of cooking from memory—repeatable and consistent every time.
-
-Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.
+Terraform is how I describe cloud stuff in code instead of clicking through the AWS console. I write what I want in `.tf` files, run `terraform apply`, and it gets created. Same result every time.
 
 ## Why Use Terraform?
 
@@ -235,12 +232,19 @@ After you run `terraform apply`, Terraform will show you these values automatica
 **Requirement:** You need an AWS account (free tier is fine)
 
 **Step 1: Install Terraform**
-```bash
 
-# Ubuntu/Debian
-curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-sudo apt-get update && sudo apt-get install terraform
+**Ubuntu / Debian:**
+
+```bash
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+```
+
+**Arch Linux:**
+
+```bash
+sudo pacman -S terraform
 ```
 
 **Step 2: Create a simple file called `main.tf`**
@@ -275,10 +279,4 @@ terraform destroy  # Delete everything and stop paying for it
 
 ## Conclusion
 
-Terraform made a huge difference for me. Instead of manually clicking around AWS, I can now:
-- Create the same setup in seconds
-- Share my infrastructure with teammates
-- Keep everything organized in code
-- Track changes like I do with regular code
-
-If you're managing servers manually, give Terraform a try. Start with a simple project, get comfortable with the basic commands, and soon you'll be managing entire cloud setups with just a few commands.
+Terraform changed how I manage cloud resources. I still make mistakes — wrong directory, forgot to run `plan` — but having everything in code beats rebuilding from memory every time.

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Ansible: Automating Docker and Kubernetes Node Setup | ayyzenn</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Ansible: Docker and Kubernetes Node Setup | ayyzenn</title>
 <meta name="keywords" content="ansible, docker, kubernetes, devops, automation">
 <meta name="description" content="Why This Post Exists
 After writing my first real Ansible playbook, I realized something:
@@ -25,16 +25,16 @@ This post documents that journey.
 Real Setup (Same as Before)
 Nothing fancy. Just real machines.">
 <meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/ansible_adv/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/ansible_adv/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/ansible_adv/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ansible_adv/">
 <noscript>
     <style>
         #theme-toggle,
@@ -71,94 +71,7 @@ Nothing fancy. Just real machines.">
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/ansible_adv/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Ansible: Automating Docker and Kubernetes Node Setup">
-  <meta property="og:description" content="Why This Post Exists After writing my first real Ansible playbook, I realized something:
-Installing software manually once is easy. Installing it correctly, repeatedly, and safely is not.
-So I decided to automate something real and useful:
-Install Docker Engine (official way) Prepare an Ubuntu server to become a Kubernetes node Do everything using Ansible No SSH-ing into the server again and again This post documents that journey.
-Real Setup (Same as Before) Nothing fancy. Just real machines.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-17T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-01-17T00:00:00+00:00">
-    <meta property="article:tag" content="Ansible">
-    <meta property="article:tag" content="Docker">
-    <meta property="article:tag" content="Kubernetes">
-    <meta property="article:tag" content="Devops">
-    <meta property="article:tag" content="Automation">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ansible: Automating Docker and Kubernetes Node Setup">
-<meta name="twitter:description" content="Why This Post Exists
-After writing my first real Ansible playbook, I realized something:
-
-Installing software manually once is easy.
-Installing it correctly, repeatedly, and safely is not.
-
-So I decided to automate something real and useful:
-
-Install Docker Engine (official way)
-Prepare an Ubuntu server to become a Kubernetes node
-Do everything using Ansible
-No SSH-ing into the server again and again
-
-This post documents that journey.
-
-Real Setup (Same as Before)
-Nothing fancy. Just real machines.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Ansible: Automating Docker and Kubernetes Node Setup",
-      "item": "https://ayyzenn.github.io/posts/ansible_adv/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Ansible: Automating Docker and Kubernetes Node Setup",
-  "name": "Ansible: Automating Docker and Kubernetes Node Setup",
-  "description": "Why This Post Exists After writing my first real Ansible playbook, I realized something:\nInstalling software manually once is easy. Installing it correctly, repeatedly, and safely is not.\nSo I decided to automate something real and useful:\nInstall Docker Engine (official way) Prepare an Ubuntu server to become a Kubernetes node Do everything using Ansible No SSH-ing into the server again and again This post documents that journey.\nReal Setup (Same as Before) Nothing fancy. Just real machines.\n",
-  "keywords": [
-    "ansible", "docker", "kubernetes", "devops", "automation"
-  ],
-  "articleBody": "Why This Post Exists After writing my first real Ansible playbook, I realized something:\nInstalling software manually once is easy. Installing it correctly, repeatedly, and safely is not.\nSo I decided to automate something real and useful:\nInstall Docker Engine (official way) Prepare an Ubuntu server to become a Kubernetes node Do everything using Ansible No SSH-ing into the server again and again This post documents that journey.\nReal Setup (Same as Before) Nothing fancy. Just real machines.\nRole OS Control Node Arch Linux (i3 WM) Managed Node Ubuntu 22.04 Tool Ansible Goal Kubernetes-ready node Yes, Arch → Ubuntu automation works perfectly fine.\nProject Structure (Clean \u0026 Grown-Up) Once things get bigger, single playbooks get messy. So I moved to roles.\nansible-k8s-bootstrap/ ├── inventory.ini ├── playbook.yml └── roles/ ├── docker/ │ ├── tasks/main.yml │ ├── handlers/main.yml │ └── vars/main.yml └── k8s_node/ ├── tasks/main.yml ├── handlers/main.yml └── vars/main.yml Think of roles as:\n“One role = one responsibility”\nInventory (Nothing New Here) [ubuntu_servers] 192.168.1.80 ansible_user=ubuntu ansible_python_interpreter=/usr/bin/python3 Same server, same rules.\nPhase 1: Installing Docker (The Right Way) Why Not apt install docker.io? Because Kubernetes is picky.\nUbuntu’s default Docker package:\nIs often outdated Can break container runtimes Causes weird kubelet issues later So we install Docker from Docker’s official repository.\nDocker Variables (No Hardcoding) roles/docker/vars/main.yml:\ndocker_apt_packages: - ca-certificates - curl - gnupg - lsb-release docker_packages: - docker-ce - docker-ce-cli - containerd.io - docker-buildx-plugin - docker-compose-plugin docker_gpg_key_path: /etc/apt/keyrings/docker.gpg Why variables?\nBecause future-you will thank you.\nDocker Tasks (What Ansible Actually Does) roles/docker/tasks/main.yml:\n- name: Install prerequisite packages apt: name: \"{{ docker_apt_packages }}\" state: present update_cache: yes - name: Create keyrings directory file: path: /etc/apt/keyrings state: directory - name: Add Docker GPG key get_url: url: https://download.docker.com/linux/ubuntu/gpg dest: \"{{ docker_gpg_key_path }}\" - name: Add Docker repository apt_repository: repo: \u003e deb [arch=amd64 signed-by={{ docker_gpg_key_path }}] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable state: present - name: Install Docker Engine apt: name: \"{{ docker_packages }}\" state: present update_cache: yes notify: restart docker - name: Enable Docker service: name: docker enabled: yes state: started - name: Add user to docker group user: name: \"{{ ansible_user }}\" groups: docker append: yes First Taste of Handlers (Important Concept) roles/docker/handlers/main.yml:\n- name: restart docker service: name: docker state: restarted Why handlers matter:\nDocker restarts only if something changes No unnecessary restarts Clean automation Phase 2: Kubernetes Node Bootstrap At this point Docker works. But Kubernetes still won’t.\nWhy?\nBecause Kubernetes has rules.\nThings Kubernetes Demands ❌ Swap must be disabled ❌ Wrong cgroup driver breaks kubelet ❌ Kernel networking must be enabled ❌ containerd must use systemd ❌ kubelet versions must not auto-upgrade We automate all of this.\nKubernetes Variables roles/k8s_node/vars/main.yml:\nk8s_packages: - kubelet - kubeadm - kubectl Kubernetes Tasks (The Serious Stuff) roles/k8s_node/tasks/main.yml:\n- name: Disable swap immediately command: swapoff -a - name: Disable swap permanently replace: path: /etc/fstab regexp: '^([^#].*swap.*)$' replace: '# \\1' - name: Load kernel modules copy: dest: /etc/modules-load.d/k8s.conf content: | overlay br_netfilter - name: Apply sysctl settings copy: dest: /etc/sysctl.d/k8s.conf content: | net.bridge.bridge-nf-call-iptables = 1 net.ipv4.ip_forward = 1 - name: Reload sysctl command: sysctl --system - name: Configure containerd for Kubernetes shell: | containerd config default \u003e /etc/containerd/config.toml sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' /etc/containerd/config.toml notify: restart containerd - name: Install Kubernetes tools apt: name: \"{{ k8s_packages }}\" state: present update_cache: yes - name: Hold Kubernetes packages dpkg_selections: name: \"{{ item }}\" selection: hold loop: \"{{ k8s_packages }}\" Kubernetes Handler roles/k8s_node/handlers/main.yml:\n- name: restart containerd service: name: containerd state: restarted Again: restart only if config changes.\nFinal Playbook (One Command to Rule Them All) playbook.yml:\n- name: Kubernetes node bootstrap hosts: ubuntu_servers become: true roles: - docker - k8s_node Run it:\nansible-playbook -i inventory.ini playbook.yml --ask-become-pass Verification (Always Trust, But Verify) docker --version swapoff --show kubeadm version Expected feelings:\nRelief Confidence “Okay… this is real DevOps now.” What I Learned From This Roles make automation readable Handlers prevent stupid restarts Variables prevent future pain Ansible is not magic — it’s discipline Final Thoughts Ansible feels like writing instructions for your future self.\nAnd future-you?\nWill be very thankful you automated this.\nWritten while learning Ansible, breaking things safely, and finally doing it the right way.\n",
-  "wordCount" : "688",
-  "inLanguage": "en",
-  "datePublished": "2026-01-17T00:00:00Z",
-  "dateModified": "2026-01-17T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/ansible_adv/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -176,7 +89,7 @@ Nothing fancy. Just real machines.">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -202,17 +115,17 @@ Nothing fancy. Just real machines.">
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -223,9 +136,9 @@ Nothing fancy. Just real machines.">
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Ansible: Automating Docker and Kubernetes Node Setup
+      Ansible: Docker and Kubernetes Node Setup
     </h1>
     <div class="post-meta"><span title='2026-01-17 00:00:00 +0000 UTC'>January 17, 2026</span>&nbsp;·&nbsp;4 min
 
@@ -301,30 +214,30 @@ Installing it <strong>correctly, repeatedly, and safely</strong> is not.</p>
 <h2 id="real-setup-same-as-before">Real Setup (Same as Before)<a hidden class="anchor" aria-hidden="true" href="#real-setup-same-as-before">#</a></h2>
 <p>Nothing fancy. Just real machines.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Role</th>
-          <th>OS</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Control Node</td>
-          <td>Arch Linux (i3 WM)</td>
-      </tr>
-      <tr>
-          <td>Managed Node</td>
-          <td>Ubuntu 22.04</td>
-      </tr>
-      <tr>
-          <td>Tool</td>
-          <td>Ansible</td>
-      </tr>
-      <tr>
-          <td>Goal</td>
-          <td>Kubernetes-ready node</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Role</th>
+					<th>OS</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Control Node</td>
+					<td>Arch Linux (i3 WM)</td>
+			</tr>
+			<tr>
+					<td>Managed Node</td>
+					<td>Ubuntu 22.04</td>
+			</tr>
+			<tr>
+					<td>Tool</td>
+					<td>Ansible</td>
+			</tr>
+			<tr>
+					<td>Goal</td>
+					<td>Kubernetes-ready node</td>
+			</tr>
+	</tbody>
 </table>
 <p>Yes, Arch → Ubuntu automation works perfectly fine.</p>
 <hr>
@@ -445,11 +358,11 @@ But Kubernetes still won&rsquo;t.</p>
 <p>Because Kubernetes has rules.</p>
 <h3 id="things-kubernetes-demands">Things Kubernetes Demands<a hidden class="anchor" aria-hidden="true" href="#things-kubernetes-demands">#</a></h3>
 <ul>
-<li>❌ Swap must be disabled</li>
-<li>❌ Wrong cgroup driver breaks kubelet</li>
-<li>❌ Kernel networking must be enabled</li>
-<li>❌ containerd must use systemd</li>
-<li>❌ kubelet versions must not auto-upgrade</li>
+<li>Swap must be disabled</li>
+<li>The cgroup driver must match what kubelet expects</li>
+<li>Required kernel networking modules must be loaded</li>
+<li>containerd must use the systemd cgroup driver</li>
+<li>kubelet, kubeadm, and kubectl versions must stay pinned (no auto-upgrades)</li>
 </ul>
 <p>We automate all of this.</p>
 <h3 id="kubernetes-variables">Kubernetes Variables<a hidden class="anchor" aria-hidden="true" href="#kubernetes-variables">#</a></h3>
@@ -552,18 +465,18 @@ But Kubernetes still won&rsquo;t.</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/ansible/">Ansible</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/docker/">Docker</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/kubernetes/">Kubernetes</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/devops/">Devops</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/automation/">Automation</a></li>
+      <li><a href="http://localhost:1313/tags/ansible/">Ansible</a></li>
+      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
+      <li><a href="http://localhost:1313/tags/kubernetes/">Kubernetes</a></li>
+      <li><a href="http://localhost:1313/tags/devops/">Devops</a></li>
+      <li><a href="http://localhost:1313/tags/automation/">Automation</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

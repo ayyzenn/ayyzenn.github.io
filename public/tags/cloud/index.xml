@@ -2,20 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Cloud on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/cloud/</link>
+    <link>http://localhost:1313/tags/cloud/</link>
     <description>Recent content in Cloud on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Terraform: Infrastructure as Code</title>
-      <link>https://ayyzenn.github.io/posts/terraform/</link>
+      <title>Terraform: How I Stopped Clicking Around in AWS</title>
+      <link>http://localhost:1313/posts/terraform/</link>
       <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/terraform/</guid>
-      <description>&lt;h2 id=&#34;what-is-terraform&#34;&gt;What is Terraform?&lt;/h2&gt;
-&lt;p&gt;Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&amp;rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.&lt;/p&gt;
-&lt;p&gt;Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.&lt;/p&gt;
+      <guid>http://localhost:1313/posts/terraform/</guid>
+      <description>&lt;h2 id=&#34;what-terraform-is-for-me&#34;&gt;What Terraform Is (For Me)&lt;/h2&gt;
+&lt;p&gt;Terraform is how I describe cloud stuff in code instead of clicking through the AWS console. I write what I want in &lt;code&gt;.tf&lt;/code&gt; files, run &lt;code&gt;terraform apply&lt;/code&gt;, and it gets created. Same result every time.&lt;/p&gt;
 &lt;h2 id=&#34;why-use-terraform&#34;&gt;Why Use Terraform?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;No More Manual Clicking&lt;/strong&gt;: Automate infrastructure setup instead of clicking through AWS&lt;/li&gt;
@@ -30,13 +29,30 @@
 &lt;p&gt;A &lt;strong&gt;provider&lt;/strong&gt; tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Creating a Virtual Machine on Microsoft Azure</title>
-      <link>https://ayyzenn.github.io/posts/azure/</link>
-      <pubDate>Mon, 16 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/azure/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Additionally, it supports various programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems.&lt;/p&gt;
-&lt;p&gt;In this guide, we will walk through the process of creating a Virtual Machine (VM) on Microsoft Azure.&lt;/p&gt;</description>
+      <title>Creating a VM on Microsoft Azure</title>
+      <link>http://localhost:1313/posts/azure/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/azure/</guid>
+      <description>&lt;h2 id=&#34;what-i-did&#34;&gt;What I Did&lt;/h2&gt;
+&lt;p&gt;I needed a cloud server to test things without using my local machine. I spun up an &lt;strong&gt;Ubuntu 20.04 VM&lt;/strong&gt; on Azure and connected via SSH. Here&amp;rsquo;s the exact process I followed.&lt;/p&gt;
+&lt;h2 id=&#34;create-the-vm&#34;&gt;Create the VM&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Log in to &lt;a href=&#34;https://portal.azure.com&#34;&gt;Azure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Create a Resource&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Pick &lt;strong&gt;Ubuntu 20.04 LTS&lt;/strong&gt; → &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Name the VM&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Administration Account&lt;/strong&gt;, choose &lt;strong&gt;SSH Public Key&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Set a username and key pair name&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Inbound Port Rules&lt;/strong&gt;, open &lt;strong&gt;SSH (22)&lt;/strong&gt; and &lt;strong&gt;HTTP (80)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Review and Create&lt;/strong&gt; → &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Download the &lt;strong&gt;key pair&lt;/strong&gt; file when prompted&lt;/li&gt;
+&lt;li&gt;Wait for deployment, then click &lt;strong&gt;Go to Resource&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;connect-via-ssh&#34;&gt;Connect via SSH&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd ~/Downloads
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;400&lt;/span&gt; pair_key_name.pem
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh -i pair_key_name.pem username@your_ip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Type &lt;code&gt;yes&lt;/code&gt; when SSH asks about the fingerprint.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

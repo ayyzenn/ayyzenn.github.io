@@ -1,28 +1,23 @@
-+++
-date = '2022-08-02T15:49:43+05:00'
-title = 'VoIP with Asterisk: Ditch the Landline & Build Your Own Phone System!'
-tags = ['voip', 'asterisk', 'ubuntu']
-+++
+---
+title: "VoIP with Asterisk: My Home Phone Setup on Ubuntu"
+date: 2022-08-02
+tags: ["voip", "asterisk", "ubuntu"]
+---
+## What I Built
 
-# Introduction
+I set up a home VoIP system using **Asterisk** as the server and **Twinkle** as the softphone client. Everything here runs on **Ubuntu** — same network, two extensions, calls between machines.
 
-Voice over Internet Protocol (VoIP) is a technology that enables voice and video communication over the internet instead of traditional landlines. With an internet connection, users can make calls without relying on local phone services or physical copper wiring. A VoIP service provider manages the call transmission over the internet.
+## How VoIP Works
 
-# How VoIP Works
+VoIP sends your voice as data over the internet instead of through a phone line. Cheaper than landlines, especially for long-distance — that's why I tried it.
 
-VoIP converts voice into a digital format, compresses it, and transmits it over the internet. A VoIP service provider facilitates the call setup. Many users prefer VoIP over traditional landlines due to its lower startup costs and reduced expenses for long-distance calls. VoIP operates using Internet Protocol, a fundamental component of modern internet infrastructure, offering significant advancements over traditional telecommunications.
+## Asterisk as the Server
 
-# Asterisk as a Gateway
+**Asterisk** is the PBX — it handles call routing between extensions. I compiled it from source on Ubuntu.
 
-Asterisk is a software-based telephone private branch exchange (PBX) that enables voice communication across various telephony technologies. It connects different telephony services, including the public switched telephone network (PSTN) and VoIP services. Asterisk’s modular and multi-protocol architecture makes it an effective solution for building telephony gateways.
+## Installing Asterisk
 
-# Installing Asterisk
-
-Let's get Asterisk up and running! Follow these steps carefully, and you'll have your own VoIP setup in no time.
-
-## Step 1: Update Your System
-
-Before diving in, let's update your system to ensure everything is up-to-date:
+Here's what I ran:
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
@@ -158,5 +153,5 @@ For testing, install Twinkle on a second system and configure it with `6002` ins
 
 ---
 
-That's it! You now have a fully functional VoIP setup using Asterisk and Twinkle. Time to start making some calls! 📞🚀
+That's it! You now have a working VoIP setup using Asterisk and Twinkle.
 

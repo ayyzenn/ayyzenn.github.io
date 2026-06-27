@@ -1,30 +1,21 @@
 ---
-title: "Building an Intelligent Agentic RAG System with Multi-Agent Architecture"
+title: "Agentic RAG: My Multi-Agent Setup with Gemini and ChromaDB"
 date: 2025-10-29
 tags: ["Agentic RAG", "Multi-Agent", "Gemini", "ChromaDB", "Query Decomposition", "HyDE", "AI Agents"]
-categories: ["Agentic AI", "RAG Systems"]
-description: "A comprehensive guide to building a sophisticated Agentic RAG system with intelligent routing, advanced retrieval techniques, and autonomous decision-making using a 3-agent architecture."
 ---
+## What I Built
 
-## Overview
+Basic RAG retrieves docs and generates an answer. I wanted something smarter — a system that picks the right strategy and retries with heavier techniques when the first answer isn't good enough.
 
-Traditional RAG (Retrieval-Augmented Generation) systems follow a simple pattern: retrieve documents, generate answers. But what if your system could **think** about the query first, decide the best approach, and even try multiple strategies automatically?
+This project uses **three agents**:
 
-**Agentic RAG** introduces autonomous decision-making into the retrieval process. Instead of a single pipeline, multiple specialized agents work together to provide optimal answers for both simple and complex queries.
+- **Router Agent** — reads the question and checks answer quality
+- **Basic Generator Agent** — fast retrieval for simple questions
+- **Advanced Generator Agent** — uses heavier techniques for hard questions
 
-This system features a **3-agent architecture** where agents collaborate intelligently:
-- **Router Agent**: Analyzes queries and evaluates answer quality
-- **Basic Generator Agent**: Handles simple queries with fast retrieval
-- **Advanced Generator Agent**: Employs sophisticated techniques for complex queries
+The system tries the fast path first. If the answer is weak, it automatically switches to advanced methods like query decomposition, HyDE, and multi-query retrieval.
 
-Key capabilities include:
-
-* **Intelligent Query Routing**: Automatically determines the best retrieval strategy
-* **Advanced RAG Techniques**: Query Decomposition, HyDE, and Multi-Query Retrieval
-* **Quality-Driven Escalation**: Automatically switches to advanced techniques when needed
-* **Autonomous Decision Making**: Agents evaluate and adapt their approach in real-time
-
-> **Key Insight:** The system starts with simple retrieval and automatically escalates to advanced techniques only when needed, optimizing both speed and quality.
+> **Key idea:** Start simple, escalate only when needed — faster for easy questions, stronger for hard ones.
 
 ---
 

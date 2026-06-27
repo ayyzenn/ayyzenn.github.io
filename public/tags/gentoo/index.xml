@@ -2,25 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Gentoo on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/gentoo/</link>
+    <link>http://localhost:1313/tags/gentoo/</link>
     <description>Recent content in Gentoo on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Dec 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/gentoo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gentoo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
-      <link>https://ayyzenn.github.io/posts/gentoo/</link>
-      <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/gentoo/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
+      <title>Gentoo Install: What I Did on My Laptop</title>
+      <link>http://localhost:1313/posts/gentoo/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gentoo/</guid>
+      <description>&lt;h2 id=&#34;why-i-installed-gentoo&#34;&gt;Why I Installed Gentoo&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Processor:&lt;/strong&gt; Intel Core i5 4th Gen (4 cores)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; 8GB&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; 256GB SSD&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
+&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-1-grab-the-gentoo-iso&#34;&gt;Step 1: Grab the Gentoo ISO&lt;/h2&gt;
+&lt;p&gt;Head over to &lt;a href=&#34;https://www.gentoo.org/&#34;&gt;Gentoo’s official website&lt;/a&gt; and download the ISO. You’ll see two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GUI Installer&lt;/strong&gt; (if you want an easier time)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimal (CLI) Installer&lt;/strong&gt; (if you want to go full pro mode)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For this guide, we’re going &lt;strong&gt;Minimal&lt;/strong&gt;. Let’s get our hands dirty!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

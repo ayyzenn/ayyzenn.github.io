@@ -1,39 +1,133 @@
-+++
-date = '2022-07-27T15:49:43+05:00'
-title = 'Creating a container in docker'
-tags = ['dockers', 'containers']
-+++
+---
+title: "Creating My First Docker Container"
+date: 2022-07-27
+tags: ["docker", "containers", "ubuntu", "arch-linux"]
+---
 
-### Creating a Docker Container with Ubuntu
+## What I Did Here
 
-To create a Docker container, first download the Ubuntu image from [Docker Hub](https://hub.docker.com/search?q=). Use the following command:
+After installing Docker, I wanted to run an actual Ubuntu container — not just `hello-world`. The steps inside this post are the same on **Arch Linux** and **Ubuntu** hosts. Only the Docker *installation* differs — see [Docker on Arch Linux and Ubuntu](/posts/dockers/) for that part.
+
+---
+
+## Arch Linux (host)
+
+Make sure Docker is installed and running on your Arch machine first:
+
+```bash
+sudo pacman -S docker
+sudo systemctl enable --now docker
+systemctl status docker
+```
+
+### Pull the Ubuntu image
 
 ```bash
 sudo docker pull ubuntu
 ```
 
-Once the image is downloaded, create a new container using the command below:
+### Create and enter a container
 
 ```bash
 sudo docker run --name my-container -it ubuntu
 ```
 
-#### Key Parameters:
+What those flags mean:
 
-- **`-i`**: Enables interactive mode.
-- **`-t`**: Allocates a terminal for the container.
-- **`--name`**: Assigns a custom name to the container.
+- **`-i`** — keep input open (interactive)
+- **`-t`** — give me a terminal inside the container
+- **`--name my-container`** — name it so I can find it later
 
-Upon execution, the container will be created, and you will be logged into its environment.
+Your shell prompt changes — you are **inside** the container now.
 
-### Working Inside the Container
+### Update packages inside the container
 
-Since you are operating as the root user within the container, you can execute commands without requiring `sudo` privileges. To update and upgrade the system, run:
+You are root inside the container, so no `sudo`:
 
 ```bash
 apt update
-apt upgrade
+apt upgrade -y
 ```
 
-Your container is now fully set up and ready for use.
+### Useful commands (from the Arch host)
 
+Run these from your normal Arch terminal, not inside the container:
+
+```bash
+# List running containers
+sudo docker ps
+
+# List all containers (including stopped)
+sudo docker ps -a
+
+# Stop the container
+sudo docker stop my-container
+
+# Start it again
+sudo docker start my-container
+
+# Re-enter a running container
+sudo docker exec -it my-container bash
+```
+
+---
+
+## Ubuntu (host)
+
+Make sure Docker is installed and running on your Ubuntu machine first:
+
+```bash
+sudo apt update
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+systemctl status docker
+```
+
+### Pull the Ubuntu image
+
+```bash
+sudo docker pull ubuntu
+```
+
+### Create and enter a container
+
+```bash
+sudo docker run --name my-container -it ubuntu
+```
+
+Same flags as above — after this, you are inside the container.
+
+### Update packages inside the container
+
+```bash
+apt update
+apt upgrade -y
+```
+
+### Useful commands (from the Ubuntu host)
+
+```bash
+# List running containers
+sudo docker ps
+
+# List all containers (including stopped)
+sudo docker ps -a
+
+# Stop the container
+sudo docker stop my-container
+
+# Start it again
+sudo docker start my-container
+
+# Re-enter a running container
+sudo docker exec -it my-container bash
+```
+
+---
+
+## What I Learned
+
+Docker containers are temporary by default — remove one and the changes inside are gone unless you commit it to a new image or use volumes. For learning though, `docker run -it ubuntu` on either Arch or Ubuntu is the simplest way to get started.
+
+The container itself runs Ubuntu Linux regardless of whether your **host** is Arch or Ubuntu — that is the whole point of containers.

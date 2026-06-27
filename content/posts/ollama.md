@@ -1,85 +1,104 @@
-+++
-date = '2025-02-03T17:07:58+05:00'
-title = 'Setting Up Ollama with DeepSeek Coder on Manjaro: A Step-by-Step Guide'
-tags = ['langchain', 'RAG']
-+++
+---
+title: "Ollama + DeepSeek: How I Run LLMs Locally"
+date: 2025-02-03
+tags: ["ollama", "deepseek", "llm", "arch-linux", "ubuntu"]
+---
+## Why I Use Ollama
 
-## What is Ollama?
+I wanted to run LLMs on my own hardware without paying for API calls or sending data to the cloud. **Ollama** made that straightforward — install, pull a model, start chatting.
 
-**Ollama** is an open-source framework designed to run and manage large language models (LLMs) efficiently on local machines. It allows developers to load and interact with various AI models without relying on cloud-based APIs.
+---
 
-### Why Use Ollama?
-- **Privacy**: No data leaves your local system.
-- **Customization**: Run and fine-tune models as per your requirements.
-- **Performance**: Optimized for running models efficiently on consumer hardware.
+## Install Ollama
 
-## Note
-This guide is based on **Manjaro Linux (Kernel: Base Phoenix)**. Ubuntu users should replace package manager commands accordingly (e.g., using `apt` instead of `pacman`). Make sure to check compatibility for your specific distribution.
+### Arch Linux
 
-## Installing Ollama on Manjaro Linux
+Update your system, then install Ollama:
 
-Follow these steps to install Ollama on Manjaro Linux:
-
-### Step 1: Update Your System
-```sh
+```bash
 sudo pacman -Syu
+sudo pacman -S ollama
 ```
 
-### Step 2: Install Ollama
-```sh
-sudo pacman -S ollama --noconfirm
-```
+Enable and start the service:
 
-### Step 3: Enable and Start Ollama Service
-```sh
+```bash
 sudo systemctl enable ollama
 sudo systemctl start ollama
-sudo systemctl restart ollama
 sudo systemctl status ollama
 ```
 
-## Available Ollama Models
+You should see `active (running)`.
 
-Ollama supports multiple models that can be used for various applications. You can check out the official Ollama models repository at:
+### Ubuntu
 
-**[Ollama Models List](https://ollama.ai/library)**
+Install Ollama with the official install script:
 
-Some of the available models include:
-- **DeepSeek Coder**
-- **Llama 2**
-- **Mistral**
-- **Gemma**
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
 
-## Installing DeepSeek Coder Model
+Start the service:
 
-DeepSeek Coder is an advanced open-source LLM optimized for code generation and completion.
+```bash
+sudo systemctl enable ollama
+sudo systemctl start ollama
+sudo systemctl status ollama
+```
 
-### Step 1: Pull the DeepSeek Coder Model
-```sh
+---
+
+## Available Models
+
+Browse models at [ollama.com/library](https://ollama.com/library).
+
+Popular choices:
+
+- **deepseek-r1** — strong reasoning and coding help
+- **llama3** — general-purpose chat
+- **mistral** — fast and lightweight
+- **gemma** — small models for weaker hardware
+
+---
+
+## Pull and Run DeepSeek
+
+This example uses **deepseek-r1**. You can swap the name for any model you prefer.
+
+### Step 1: Download the model
+
+```bash
 ollama pull deepseek-r1
 ```
 
-### Step 2: Verify the Installation
-```sh
+### Step 2: Confirm it is installed
+
+```bash
 ollama list
 ```
 
-### Step 3: Running the Model
-```sh
+You should see `deepseek-r1` in the list.
+
+### Step 3: Start a chat session
+
+```bash
 ollama run deepseek-r1
 ```
 
-**Note:** The guide covers DeepSeek Coder installation, but you can run any other model you have downloaded by replacing `deepseek-r1` with the model's name.
+Type a question and press Enter. Type `/bye` to exit.
 
-## Writing a Sample Program Using DeepSeek
+---
 
-To test the model, you can generate a simple Python script. For example, let's ask it to generate a Python script to calculate the factorial of a number:
+## Simple Test: Generate Python Code
 
-```sh
+Ask the model to write a short program:
+
+```bash
 echo "Write a Python program to calculate factorial using recursion." | ollama run deepseek-r1
 ```
 
-This should return a Python script like:
+Example output:
+
 ```python
 def factorial(n):
     if n == 0:
@@ -90,7 +109,19 @@ num = int(input("Enter a number: "))
 print("Factorial:", factorial(num))
 ```
 
-## Congratulations! You Have Deployed Your Own Chatbot on a Local System.
+---
+
+## Troubleshooting
+
+| Problem | What to try |
+| ------- | ----------- |
+| `command not found: ollama` | Install Ollama first (see above) |
+| Service not running | `sudo systemctl restart ollama` |
+| Model download fails | Check your internet connection |
+| Slow responses | Try a smaller model like `gemma` |
+
+---
 
 ## Conclusion
-Ollama provides a simple and efficient way to run LLMs locally, including DeepSeek for programming-related tasks. By following the above steps, you can easily set up and interact with the model on your Manjaro Linux system.
+
+Ollama makes it easy to run LLMs locally. Install it once, pull a model, and start chatting from your terminal — on Arch Linux or Ubuntu.

@@ -2,22 +2,90 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Dual Boot on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/dual-boot/</link>
+    <link>http://localhost:1313/tags/dual-boot/</link>
     <description>Recent content in Dual Boot on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Aug 2021 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/dual-boot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dual-boot/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Dual boot Ubuntu and Windows</title>
-      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
-      <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
-&lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;
-&lt;p&gt;Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.&lt;/p&gt;
-&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description>
+      <title>Dual Boot Ubuntu and Windows: What I Did</title>
+      <link>http://localhost:1313/posts/dual_boot/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dual_boot/</guid>
+      <description>&lt;h2 id=&#34;why-i-dual-booted&#34;&gt;Why I Dual-Booted&lt;/h2&gt;
+&lt;p&gt;I needed Windows for some things and Linux for everything else. Instead of picking one, I installed &lt;strong&gt;Ubuntu alongside Windows&lt;/strong&gt; on the same machine. This is the process I followed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;steps-to-dual-boot-ubuntu-with-windows&#34;&gt;Steps to Dual Boot Ubuntu with Windows&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-prepare-a-bootable-usb-drive&#34;&gt;&lt;strong&gt;Step 1: Prepare a Bootable USB Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the latest Ubuntu ISO from the &lt;a href=&#34;https://ubuntu.com/download&#34;&gt;official Ubuntu website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download and install &lt;a href=&#34;https://rufus.ie&#34;&gt;Rufus&lt;/a&gt; or &lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;balenaEtcher&lt;/a&gt; to create a bootable USB.&lt;/li&gt;
+&lt;li&gt;Insert a USB drive (at least 8GB) into your computer.&lt;/li&gt;
+&lt;li&gt;Open Rufus or balenaEtcher:
+&lt;ul&gt;
+&lt;li&gt;Select the Ubuntu ISO file.&lt;/li&gt;
+&lt;li&gt;Choose the USB drive.&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Start&amp;rdquo; to create the bootable drive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-2-configure-biosuefi-settings&#34;&gt;&lt;strong&gt;Step 2: Configure BIOS/UEFI Settings&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Restart your computer and enter BIOS/UEFI by pressing a specific key (usually &lt;strong&gt;F2, F12, Del, or Esc&lt;/strong&gt;) during startup.&lt;/li&gt;
+&lt;li&gt;Look for &lt;strong&gt;Boot Order/Boot Priority&lt;/strong&gt; and set the USB drive as the first boot device.&lt;/li&gt;
+&lt;li&gt;Disable &lt;strong&gt;Secure Boot&lt;/strong&gt; (if enabled) under the Security tab.&lt;/li&gt;
+&lt;li&gt;Enable &lt;strong&gt;UEFI mode&lt;/strong&gt; (recommended) instead of Legacy mode.&lt;/li&gt;
+&lt;li&gt;Save changes and exit BIOS.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-3-boot-from-the-usb-drive&#34;&gt;&lt;strong&gt;Step 3: Boot from the USB Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Insert the bootable USB drive into your computer.&lt;/li&gt;
+&lt;li&gt;Restart the system and press the &lt;strong&gt;Boot Menu key&lt;/strong&gt; (F12, F9, Esc, or as per your motherboard).&lt;/li&gt;
+&lt;li&gt;Select the bootable USB drive from the list.&lt;/li&gt;
+&lt;li&gt;Press &lt;strong&gt;Enter&lt;/strong&gt; to boot into Ubuntu Live.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-4-try-or-install-ubuntu&#34;&gt;&lt;strong&gt;Step 4: Try or Install Ubuntu&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Once the Ubuntu installer loads, you will see two options:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Try Ubuntu&lt;/strong&gt; – Runs Ubuntu without installing it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Install Ubuntu&lt;/strong&gt; – Proceeds with the installation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Install Ubuntu&lt;/strong&gt; to continue.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-5-select-keyboard-layout&#34;&gt;&lt;strong&gt;Step 5: Select Keyboard Layout&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Choose your preferred &lt;strong&gt;keyboard layout&lt;/strong&gt; and language.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-6-connect-to-wi-fi-optional&#34;&gt;&lt;strong&gt;Step 6: Connect to Wi-Fi (Optional)&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select your Wi-Fi network.&lt;/li&gt;
+&lt;li&gt;Enter the password and click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-7-choose-installation-type&#34;&gt;&lt;strong&gt;Step 7: Choose Installation Type&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select &lt;strong&gt;Normal Installation&lt;/strong&gt; (recommended).&lt;/li&gt;
+&lt;li&gt;Check the box &lt;strong&gt;Install third-party software for graphics and Wi-Fi hardware, Flash, MP3, and other media&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-8-choose-installation-method&#34;&gt;&lt;strong&gt;Step 8: Choose Installation Method&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select &lt;strong&gt;Something else&lt;/strong&gt; (for manual partitioning).&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-9-create-partitions-for-ubuntu&#34;&gt;&lt;strong&gt;Step 9: Create Partitions for Ubuntu&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Ubuntu requires three main partitions:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

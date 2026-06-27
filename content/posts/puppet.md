@@ -1,20 +1,11 @@
-+++
-date = '2022-07-28T15:49:43+05:00'
-title = 'Setting up Puppet using Docker'
-tags = ['dockers', 'containers', 'puppet']
-+++
+---
+title: "Puppet with Docker: How I Tested Master and Agent"
+date: 2022-07-28
+tags: ["dockers", "containers", "puppet"]
+---
+## What I Did
 
-## Introduction
-
-Puppet is one of the earliest configuration management tools and has gained a substantial community of supporters and users. It is a powerful tool for deploying, configuring, managing, and maintaining a machine or a system.
-
-## Configuration Management
-
-System Administrators often perform repetitive tasks such as installing and configuring servers. While scripting can automate these tasks, managing large infrastructure manually is cumbersome.
-
-To address this issue, **Configuration Management** was introduced. It is the practice of handling changes systematically so that a system maintains its integrity over time.
-
-In this guide, Docker will be used to create two containers: one for the Puppet master and another for the Puppet agent.
+I wanted to try **Puppet** without dedicating two full VMs. I ran a Puppet master and agent in separate **Ubuntu Docker containers** on my machine. Docker host commands work the same on Ubuntu and Arch.
 
 ## Installing Puppet Master
 
@@ -87,7 +78,7 @@ In this guide, Docker will be used to create two containers: one for the Puppet 
 11. Modify memory allocation for Java in Puppet server configuration:
 
     ```bash
-    nano /etc/default/pupperserver
+    nano /etc/default/puppetserver
     ```
     Replace:
     ```

@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB | ayyzenn</title>
+<meta name="robots" content="noindex, nofollow">
+<title>RESTful API with Web Scraping: My FastAPI &#43; Flask Project | ayyzenn</title>
 <meta name="keywords" content="python, fastapi, flask, web-scraping, postgresql, mongodb, rest-api, beautifulsoup, selenium">
-<meta name="description" content="RESTful API with Web Scraping Pipelines
-This guide shows you how to build a backend API project that:
-
-Uses FastAPI and Flask for RESTful APIs
-Scrapes data from websites with BeautifulSoup and Selenium
-Stores data in PostgreSQL and MongoDB
-Integrates with external services like JSONPlaceholder
-
-The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.
+<meta name="description" content="What This Project Is
+I built a backend that scrapes websites, stores data in PostgreSQL and MongoDB, and exposes REST APIs through FastAPI and Flask. I made it as a portfolio piece — something I could demo and actually run on my machine.
 
 1. What Does This Project Do? (Simple Explanation)
-This project is a data aggregator backend.">
-<meta name="author" content="Saad">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+This project is a data aggregator backend.
+It can:
+
+Scrape product or article data from websites
+Store that data in two databases (PostgreSQL for structured data, MongoDB for flexible logs)
+Expose REST APIs so other apps can create, read, update, and delete data
+Call external APIs and return the results
+
+You can think of it as:">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/restful-api-web-scraping-pipelines/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/restful-api-web-scraping-pipelines/">
 <noscript>
     <style>
         #theme-toggle,
@@ -66,92 +67,7 @@ This project is a data aggregator backend.">
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB">
-  <meta property="og:description" content="RESTful API with Web Scraping Pipelines This guide shows you how to build a backend API project that:
-Uses FastAPI and Flask for RESTful APIs Scrapes data from websites with BeautifulSoup and Selenium Stores data in PostgreSQL and MongoDB Integrates with external services like JSONPlaceholder The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.
-1. What Does This Project Do? (Simple Explanation) This project is a data aggregator backend.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-03-07T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-03-07T00:00:00+00:00">
-    <meta property="article:tag" content="Python">
-    <meta property="article:tag" content="Fastapi">
-    <meta property="article:tag" content="Flask">
-    <meta property="article:tag" content="Web-Scraping">
-    <meta property="article:tag" content="Postgresql">
-    <meta property="article:tag" content="Mongodb">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB">
-<meta name="twitter:description" content="RESTful API with Web Scraping Pipelines
-This guide shows you how to build a backend API project that:
-
-Uses FastAPI and Flask for RESTful APIs
-Scrapes data from websites with BeautifulSoup and Selenium
-Stores data in PostgreSQL and MongoDB
-Integrates with external services like JSONPlaceholder
-
-The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.
-
-1. What Does This Project Do? (Simple Explanation)
-This project is a data aggregator backend.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB",
-      "item": "https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB",
-  "name": "RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB",
-  "description": "RESTful API with Web Scraping Pipelines This guide shows you how to build a backend API project that:\nUses FastAPI and Flask for RESTful APIs Scrapes data from websites with BeautifulSoup and Selenium Stores data in PostgreSQL and MongoDB Integrates with external services like JSONPlaceholder The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.\n1. What Does This Project Do? (Simple Explanation) This project is a data aggregator backend.\n",
-  "keywords": [
-    "python", "fastapi", "flask", "web-scraping", "postgresql", "mongodb", "rest-api", "beautifulsoup", "selenium"
-  ],
-  "articleBody": "RESTful API with Web Scraping Pipelines This guide shows you how to build a backend API project that:\nUses FastAPI and Flask for RESTful APIs Scrapes data from websites with BeautifulSoup and Selenium Stores data in PostgreSQL and MongoDB Integrates with external services like JSONPlaceholder The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.\n1. What Does This Project Do? (Simple Explanation) This project is a data aggregator backend.\nIt can:\nScrape product or article data from websites Store that data in two databases (PostgreSQL for structured data, MongoDB for flexible logs) Expose REST APIs so other apps can create, read, update, and delete data Call external APIs and return the results You can think of it as:\nA small backend that collects data from the web, saves it, and lets you access it through simple HTTP endpoints.\n2. Technologies Used Technology Purpose FastAPI Main REST API – fast, modern, auto-generates docs Flask Second API for data processing and proxying BeautifulSoup Scrape static HTML pages (no browser needed) Selenium Scrape JavaScript-heavy pages (uses headless Chrome) PostgreSQL Relational database for structured product data MongoDB Document database for flexible scrape logs SQLAlchemy Connect to PostgreSQL and run queries PyMongo Connect to MongoDB and store documents 3. What You Need Before Starting Make sure you have:\nPython 3.11 or 3.12 (or 3.14 if your packages support it) Docker and Docker Compose (for PostgreSQL and MongoDB) Git (for version control) You do not need to install PostgreSQL or MongoDB on your system. Docker will run them in containers.\n4. Project Structure (Overview) After setup, your project will look like this:\nbackend/ ├── app/ # FastAPI main application │ ├── main.py # All REST endpoints │ ├── schemas.py # Data validation (Pydantic) │ └── crud.py # Database operations ├── flask_service/ # Flask microservice │ └── app.py # Text processing, proxy endpoints ├── scrapers/ # Web scraping code │ ├── beautifulsoup_scraper.py │ ├── selenium_scraper.py │ └── demo_scraper.py ├── db/ # Database setup │ ├── postgres.py # PostgreSQL connection │ ├── mongodb.py # MongoDB connection │ ├── models.py # Table definitions │ └── init_db.py # Create tables ├── config.py # Settings (env variables) ├── docker-compose.yml # PostgreSQL + MongoDB ├── requirements.txt # Python packages └── README.md 5. Step 1: Create a Virtual Environment A virtual environment keeps your project’s packages separate from the rest of your system.\ncd ~/Desktop/backend python -m venv venv Activate it:\n# On Linux or Mac: source venv/bin/activate # On Windows: venv\\Scripts\\activate You should see (venv) at the start of your terminal line. That means the virtual environment is active.\n6. Step 2: Install Dependencies Install all required Python packages:\npip install -r requirements.txt This installs FastAPI, Flask, BeautifulSoup, Selenium, SQLAlchemy, PyMongo, and other libraries.\nIf you get errors with psycopg2 or pydantic, try using Python 3.11 or 3.12. Some packages may not fully support the newest Python yet.\n7. Step 3: Start the Databases with Docker PostgreSQL and MongoDB run inside Docker containers. You do not need to install them on your computer.\nStart both databases:\ndocker-compose up -d The -d flag runs them in the background. You should see something like:\n✔ Container backend-postgres-1 Started ✔ Container backend-mongodb-1 Started Check that they are running:\ndocker ps You should see two containers: one for PostgreSQL (port 5432) and one for MongoDB (port 27017).\n8. Step 4: Create the Database Tables PostgreSQL needs tables before it can store data. Run the init script:\npython -m db.init_db You should see:\nPostgreSQL tables created successfully! This creates a products table with columns for title, price, description, and source URL.\n9. Step 5: Run the FastAPI Server Start the main API:\nuvicorn app.main:app --reload --port 8000 The --reload flag restarts the server when you change the code. Good for development.\nYou should see:\nUvicorn running on http://127.0.0.1:8000 Application startup complete. Open your browser and go to:\nhttp://localhost:8000 You will see a welcome message with links to the API docs and endpoints.\n10. Step 6: Open the Interactive API Docs FastAPI automatically generates documentation. Go to:\nhttp://localhost:8000/docs This is the Swagger UI. You can:\nSee all endpoints (GET, POST, PUT, DELETE) Try them out directly in the browser Send requests and see responses No need to use curl or Postman while learning. The docs page does it for you.\n11. Step 7: Try the Scraping Endpoint The project includes a demo scraper that uses a practice website called books.toscrape.com. It does not need Chrome or Selenium.\nIn the Swagger UI at /docs:\nFind POST /scrape Click Try it out Leave the body as {} (empty JSON) Click Execute The API will:\nScrape book titles and prices from the demo site Save them in PostgreSQL Log the scrape in MongoDB Then open GET /products and click Try it out → Execute. You will see the scraped products.\n12. Step 8: Run the Flask Service (Optional) The Flask service is a small second API. It can process text and proxy requests to the FastAPI backend.\nOpen a new terminal (keep FastAPI running in the first one). Then:\ncd ~/Desktop/backend source venv/bin/activate python flask_service/app.py Flask will run on port 5000. Open:\nhttp://localhost:5000 You will see a list of Flask endpoints. For example, POST /process/text lets you send text and get back word count and character count.\n13. Understanding the Two Scraping Tools BeautifulSoup (Static HTML) Use when: The website’s content is already in the HTML when the page loads. No JavaScript needed to show the data.\nPros: Fast, simple, no browser required Cons: Cannot handle content loaded by JavaScript Example: books.toscrape.com, many news sites, simple product pages\nSelenium (Dynamic Pages) Use when: The website uses JavaScript to load content. The data appears only after the page runs scripts.\nPros: Can handle complex, dynamic sites Cons: Slower, needs Chrome/Chromium and chromedriver Example: Single-page apps (SPAs), sites that load data via AJAX\n14. Why Two Databases? (PostgreSQL and MongoDB) PostgreSQL (Relational) Structured data with a fixed schema (columns: title, price, etc.) ACID – reliable transactions Good for: Products, users, orders – anything with a clear structure MongoDB (Document Store) Flexible data – each document can have different fields Good for: Logs, raw scrape results, data that changes shape No fixed schema – you can add new fields anytime In this project:\nPostgreSQL stores products (title, price, description) MongoDB stores scrape logs (source URL, count, raw product list) 15. Main API Endpoints (Quick Reference) FastAPI (Port 8000) Method Endpoint What It Does GET / Welcome message GET /health Health check GET /products List all products GET /products/{id} Get one product POST /products Create a product PUT /products/{id} Update a product DELETE /products/{id} Delete a product POST /scrape Run the scraping pipeline GET /external/posts Fetch posts from JSONPlaceholder GET /scrape-logs View MongoDB scrape logs Flask (Port 5000) Method Endpoint What It Does GET / Welcome message GET /health Health check POST /process/text Process text (word count, etc.) GET /proxy/products Get products from FastAPI GET /proxy/external-posts Get external posts via FastAPI 16. Example: Create a Product with curl From the terminal:\ncurl -X POST http://localhost:8000/products \\ -H \"Content-Type: application/json\" \\ -d '{\"title\":\"My Product\",\"price\":19.99,\"description\":\"A test item\"}' You will get back the created product with an ID. Then list all products:\ncurl http://localhost:8000/products 17. Example: Trigger a Scrape with a Custom URL You can scrape any URL. Send a POST request:\ncurl -X POST http://localhost:8000/scrape \\ -H \"Content-Type: application/json\" \\ -d '{\"url\":\"https://example.com\",\"use_selenium\":false}' url: The website to scrape use_selenium: true for JavaScript-heavy sites, false for static HTML (BeautifulSoup) 18. Useful Commands (Summary) Task Command Start databases docker-compose up -d Stop databases docker-compose down Create tables python -m db.init_db Run FastAPI uvicorn app.main:app --reload --port 8000 Run Flask python flask_service/app.py API docs Open http://localhost:8000/docs 19. What You Learned (Summary) You now know how to:\nBuild RESTful APIs with FastAPI and Flask Scrape websites with BeautifulSoup (static) and Selenium (dynamic) Use PostgreSQL for structured data and MongoDB for flexible logs Run PostgreSQL and MongoDB with Docker Perform CRUD operations (Create, Read, Update, Delete) Integrate with external APIs (e.g. JSONPlaceholder) Push the project to GitHub This project demonstrates skills often asked about in backend developer interviews: REST design, web scraping, database choice, and API integration.\n",
-  "wordCount" : "1364",
-  "inLanguage": "en",
-  "datePublished": "2026-03-07T00:00:00Z",
-  "dateModified": "2026-03-07T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "Saad"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -169,7 +85,7 @@ This project is a data aggregator backend.">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -195,17 +111,17 @@ This project is a data aggregator backend.">
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -216,11 +132,11 @@ This project is a data aggregator backend.">
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB
+      RESTful API with Web Scraping: My FastAPI &#43; Flask Project
     </h1>
-    <div class="post-meta"><span title='2026-03-07 00:00:00 +0000 UTC'>March 7, 2026</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Saad
+    <div class="post-meta"><span title='2026-03-07 00:00:00 +0000 UTC'>March 7, 2026</span>&nbsp;·&nbsp;7 min
 
 </div>
   </header> <div class="toc">
@@ -231,7 +147,7 @@ This project is a data aggregator backend.">
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#restful-api-with-web-scraping-pipelines" aria-label="RESTful API with Web Scraping Pipelines">RESTful API with Web Scraping Pipelines</a></li>
+                    <a href="#what-this-project-is" aria-label="What This Project Is">What This Project Is</a></li>
                 <li>
                     <a href="#1-what-does-this-project-do-simple-explanation" aria-label="1. What Does This Project Do? (Simple Explanation)">1. What Does This Project Do? (Simple Explanation)</a></li>
                 <li>
@@ -294,15 +210,8 @@ This project is a data aggregator backend.">
     </details>
 </div>
 
-  <div class="post-content"><h2 id="restful-api-with-web-scraping-pipelines">RESTful API with Web Scraping Pipelines<a hidden class="anchor" aria-hidden="true" href="#restful-api-with-web-scraping-pipelines">#</a></h2>
-<p>This guide shows you how to build a backend API project that:</p>
-<ul>
-<li><strong>Uses FastAPI and Flask</strong> for RESTful APIs</li>
-<li><strong>Scrapes data from websites</strong> with BeautifulSoup and Selenium</li>
-<li><strong>Stores data</strong> in PostgreSQL and MongoDB</li>
-<li><strong>Integrates with external services</strong> like JSONPlaceholder</li>
-</ul>
-<p>The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.</p>
+  <div class="post-content"><h2 id="what-this-project-is">What This Project Is<a hidden class="anchor" aria-hidden="true" href="#what-this-project-is">#</a></h2>
+<p>I built a backend that scrapes websites, stores data in PostgreSQL and MongoDB, and exposes REST APIs through FastAPI and Flask. I made it as a portfolio piece — something I could demo and actually run on my machine.</p>
 <hr>
 <h2 id="1-what-does-this-project-do-simple-explanation">1. What Does This Project Do? (Simple Explanation)<a hidden class="anchor" aria-hidden="true" href="#1-what-does-this-project-do-simple-explanation">#</a></h2>
 <p><strong>This project is a data aggregator backend.</strong></p>
@@ -320,52 +229,52 @@ This project is a data aggregator backend.">
 <hr>
 <h2 id="2-technologies-used">2. Technologies Used<a hidden class="anchor" aria-hidden="true" href="#2-technologies-used">#</a></h2>
 <table>
-  <thead>
-      <tr>
-          <th>Technology</th>
-          <th>Purpose</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>FastAPI</strong></td>
-          <td>Main REST API – fast, modern, auto-generates docs</td>
-      </tr>
-      <tr>
-          <td><strong>Flask</strong></td>
-          <td>Second API for data processing and proxying</td>
-      </tr>
-      <tr>
-          <td><strong>BeautifulSoup</strong></td>
-          <td>Scrape static HTML pages (no browser needed)</td>
-      </tr>
-      <tr>
-          <td><strong>Selenium</strong></td>
-          <td>Scrape JavaScript-heavy pages (uses headless Chrome)</td>
-      </tr>
-      <tr>
-          <td><strong>PostgreSQL</strong></td>
-          <td>Relational database for structured product data</td>
-      </tr>
-      <tr>
-          <td><strong>MongoDB</strong></td>
-          <td>Document database for flexible scrape logs</td>
-      </tr>
-      <tr>
-          <td><strong>SQLAlchemy</strong></td>
-          <td>Connect to PostgreSQL and run queries</td>
-      </tr>
-      <tr>
-          <td><strong>PyMongo</strong></td>
-          <td>Connect to MongoDB and store documents</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Technology</th>
+					<th>Purpose</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>FastAPI</strong></td>
+					<td>Main REST API – fast, modern, auto-generates docs</td>
+			</tr>
+			<tr>
+					<td><strong>Flask</strong></td>
+					<td>Second API for data processing and proxying</td>
+			</tr>
+			<tr>
+					<td><strong>BeautifulSoup</strong></td>
+					<td>Scrape static HTML pages (no browser needed)</td>
+			</tr>
+			<tr>
+					<td><strong>Selenium</strong></td>
+					<td>Scrape JavaScript-heavy pages (uses headless Chrome)</td>
+			</tr>
+			<tr>
+					<td><strong>PostgreSQL</strong></td>
+					<td>Relational database for structured product data</td>
+			</tr>
+			<tr>
+					<td><strong>MongoDB</strong></td>
+					<td>Document database for flexible scrape logs</td>
+			</tr>
+			<tr>
+					<td><strong>SQLAlchemy</strong></td>
+					<td>Connect to PostgreSQL and run queries</td>
+			</tr>
+			<tr>
+					<td><strong>PyMongo</strong></td>
+					<td>Connect to MongoDB and store documents</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 <h2 id="3-what-you-need-before-starting">3. What You Need Before Starting<a hidden class="anchor" aria-hidden="true" href="#3-what-you-need-before-starting">#</a></h2>
 <p>Make sure you have:</p>
 <ul>
-<li><strong>Python 3.11 or 3.12</strong> (or 3.14 if your packages support it)</li>
+<li><strong>Python 3.11 or 3.12</strong> (recommended — some packages may not support the newest Python yet)</li>
 <li><strong>Docker and Docker Compose</strong> (for PostgreSQL and MongoDB)</li>
 <li><strong>Git</strong> (for version control)</li>
 </ul>
@@ -417,8 +326,8 @@ This project is a data aggregator backend.">
 <p>Start both databases:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose up -d
 </span></span></code></pre></div><p>The <code>-d</code> flag runs them in the background. You should see something like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>✔ Container backend-postgres-1  Started
-</span></span><span style="display:flex;"><span>✔ Container backend-mongodb-1  Started
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Container backend-postgres-1  Started
+</span></span><span style="display:flex;"><span>Container backend-mongodb-1  Started
 </span></span></code></pre></div><p>Check that they are running:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps
 </span></span></code></pre></div><p>You should see two containers: one for PostgreSQL (port 5432) and one for MongoDB (port 27017).</p>
@@ -517,102 +426,102 @@ This project is a data aggregator backend.">
 <h2 id="15-main-api-endpoints-quick-reference">15. Main API Endpoints (Quick Reference)<a hidden class="anchor" aria-hidden="true" href="#15-main-api-endpoints-quick-reference">#</a></h2>
 <h3 id="fastapi-port-8000">FastAPI (Port 8000)<a hidden class="anchor" aria-hidden="true" href="#fastapi-port-8000">#</a></h3>
 <table>
-  <thead>
-      <tr>
-          <th>Method</th>
-          <th>Endpoint</th>
-          <th>What It Does</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>GET</td>
-          <td><code>/</code></td>
-          <td>Welcome message</td>
-      </tr>
-      <tr>
-          <td>GET</td>
-          <td><code>/health</code></td>
-          <td>Health check</td>
-      </tr>
-      <tr>
-          <td>GET</td>
-          <td><code>/products</code></td>
-          <td>List all products</td>
-      </tr>
-      <tr>
-          <td>GET</td>
-          <td><code>/products/{id}</code></td>
-          <td>Get one product</td>
-      </tr>
-      <tr>
-          <td>POST</td>
-          <td><code>/products</code></td>
-          <td>Create a product</td>
-      </tr>
-      <tr>
-          <td>PUT</td>
-          <td><code>/products/{id}</code></td>
-          <td>Update a product</td>
-      </tr>
-      <tr>
-          <td>DELETE</td>
-          <td><code>/products/{id}</code></td>
-          <td>Delete a product</td>
-      </tr>
-      <tr>
-          <td>POST</td>
-          <td><code>/scrape</code></td>
-          <td>Run the scraping pipeline</td>
-      </tr>
-      <tr>
-          <td>GET</td>
-          <td><code>/external/posts</code></td>
-          <td>Fetch posts from JSONPlaceholder</td>
-      </tr>
-      <tr>
-          <td>GET</td>
-          <td><code>/scrape-logs</code></td>
-          <td>View MongoDB scrape logs</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Method</th>
+					<th>Endpoint</th>
+					<th>What It Does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>GET</td>
+					<td><code>/</code></td>
+					<td>Welcome message</td>
+			</tr>
+			<tr>
+					<td>GET</td>
+					<td><code>/health</code></td>
+					<td>Health check</td>
+			</tr>
+			<tr>
+					<td>GET</td>
+					<td><code>/products</code></td>
+					<td>List all products</td>
+			</tr>
+			<tr>
+					<td>GET</td>
+					<td><code>/products/{id}</code></td>
+					<td>Get one product</td>
+			</tr>
+			<tr>
+					<td>POST</td>
+					<td><code>/products</code></td>
+					<td>Create a product</td>
+			</tr>
+			<tr>
+					<td>PUT</td>
+					<td><code>/products/{id}</code></td>
+					<td>Update a product</td>
+			</tr>
+			<tr>
+					<td>DELETE</td>
+					<td><code>/products/{id}</code></td>
+					<td>Delete a product</td>
+			</tr>
+			<tr>
+					<td>POST</td>
+					<td><code>/scrape</code></td>
+					<td>Run the scraping pipeline</td>
+			</tr>
+			<tr>
+					<td>GET</td>
+					<td><code>/external/posts</code></td>
+					<td>Fetch posts from JSONPlaceholder</td>
+			</tr>
+			<tr>
+					<td>GET</td>
+					<td><code>/scrape-logs</code></td>
+					<td>View MongoDB scrape logs</td>
+			</tr>
+	</tbody>
 </table>
 <h3 id="flask-port-5000">Flask (Port 5000)<a hidden class="anchor" aria-hidden="true" href="#flask-port-5000">#</a></h3>
 <table>
-  <thead>
-      <tr>
-          <th>Method</th>
-          <th>Endpoint</th>
-          <th>What It Does</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>GET</td>
-          <td><code>/</code></td>
-          <td>Welcome message</td>
-      </tr>
-      <tr>
-          <td>GET</td>
-          <td><code>/health</code></td>
-          <td>Health check</td>
-      </tr>
-      <tr>
-          <td>POST</td>
-          <td><code>/process/text</code></td>
-          <td>Process text (word count, etc.)</td>
-      </tr>
-      <tr>
-          <td>GET</td>
-          <td><code>/proxy/products</code></td>
-          <td>Get products from FastAPI</td>
-      </tr>
-      <tr>
-          <td>GET</td>
-          <td><code>/proxy/external-posts</code></td>
-          <td>Get external posts via FastAPI</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Method</th>
+					<th>Endpoint</th>
+					<th>What It Does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>GET</td>
+					<td><code>/</code></td>
+					<td>Welcome message</td>
+			</tr>
+			<tr>
+					<td>GET</td>
+					<td><code>/health</code></td>
+					<td>Health check</td>
+			</tr>
+			<tr>
+					<td>POST</td>
+					<td><code>/process/text</code></td>
+					<td>Process text (word count, etc.)</td>
+			</tr>
+			<tr>
+					<td>GET</td>
+					<td><code>/proxy/products</code></td>
+					<td>Get products from FastAPI</td>
+			</tr>
+			<tr>
+					<td>GET</td>
+					<td><code>/proxy/external-posts</code></td>
+					<td>Get external posts via FastAPI</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 <h2 id="16-example-create-a-product-with-curl">16. Example: Create a Product with curl<a hidden class="anchor" aria-hidden="true" href="#16-example-create-a-product-with-curl">#</a></h2>
@@ -635,38 +544,38 @@ This project is a data aggregator backend.">
 <hr>
 <h2 id="18-useful-commands-summary">18. Useful Commands (Summary)<a hidden class="anchor" aria-hidden="true" href="#18-useful-commands-summary">#</a></h2>
 <table>
-  <thead>
-      <tr>
-          <th>Task</th>
-          <th>Command</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Start databases</td>
-          <td><code>docker-compose up -d</code></td>
-      </tr>
-      <tr>
-          <td>Stop databases</td>
-          <td><code>docker-compose down</code></td>
-      </tr>
-      <tr>
-          <td>Create tables</td>
-          <td><code>python -m db.init_db</code></td>
-      </tr>
-      <tr>
-          <td>Run FastAPI</td>
-          <td><code>uvicorn app.main:app --reload --port 8000</code></td>
-      </tr>
-      <tr>
-          <td>Run Flask</td>
-          <td><code>python flask_service/app.py</code></td>
-      </tr>
-      <tr>
-          <td>API docs</td>
-          <td>Open http://localhost:8000/docs</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Task</th>
+					<th>Command</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Start databases</td>
+					<td><code>docker-compose up -d</code></td>
+			</tr>
+			<tr>
+					<td>Stop databases</td>
+					<td><code>docker-compose down</code></td>
+			</tr>
+			<tr>
+					<td>Create tables</td>
+					<td><code>python -m db.init_db</code></td>
+			</tr>
+			<tr>
+					<td>Run FastAPI</td>
+					<td><code>uvicorn app.main:app --reload --port 8000</code></td>
+			</tr>
+			<tr>
+					<td>Run Flask</td>
+					<td><code>python flask_service/app.py</code></td>
+			</tr>
+			<tr>
+					<td>API docs</td>
+					<td>Open http://localhost:8000/docs</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 <h2 id="19-what-you-learned-summary">19. What You Learned (Summary)<a hidden class="anchor" aria-hidden="true" href="#19-what-you-learned-summary">#</a></h2>
@@ -680,29 +589,29 @@ This project is a data aggregator backend.">
 <li><strong>Integrate with external APIs</strong> (e.g. JSONPlaceholder)</li>
 <li>Push the project to <strong>GitHub</strong></li>
 </ul>
-<p>This project demonstrates skills often asked about in backend developer interviews: REST design, web scraping, database choice, and API integration.</p>
+<p>This project demonstrates skills I wanted on my resume: REST design, web scraping, picking the right database, and wiring up external APIs.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/python/">Python</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/fastapi/">Fastapi</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/flask/">Flask</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/web-scraping/">Web-Scraping</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/postgresql/">Postgresql</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/mongodb/">Mongodb</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/rest-api/">Rest-Api</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/beautifulsoup/">Beautifulsoup</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/selenium/">Selenium</a></li>
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/fastapi/">Fastapi</a></li>
+      <li><a href="http://localhost:1313/tags/flask/">Flask</a></li>
+      <li><a href="http://localhost:1313/tags/web-scraping/">Web-Scraping</a></li>
+      <li><a href="http://localhost:1313/tags/postgresql/">Postgresql</a></li>
+      <li><a href="http://localhost:1313/tags/mongodb/">Mongodb</a></li>
+      <li><a href="http://localhost:1313/tags/rest-api/">Rest-Api</a></li>
+      <li><a href="http://localhost:1313/tags/beautifulsoup/">Beautifulsoup</a></li>
+      <li><a href="http://localhost:1313/tags/selenium/">Selenium</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

@@ -1,11 +1,12 @@
-+++
-date = '2022-08-11T15:49:43+05:00'
-title = 'Setting Up Odoo: A Beginner’s Guide'
-tags = ['odoo', 'installation', 'ubuntu']
-+++
+---
+title: "Odoo on Ubuntu: How I Installed It"
+date: 2022-08-11
+tags: ["odoo", "installation", "ubuntu"]
+---
+## What I Did
 
-## Update Your System
-Let's start by updating your package repository:
+I installed **Odoo** (open-source ERP) on Ubuntu for a project. These are the exact steps I ran — all `apt` commands on Ubuntu.
+
 ```bash
 sudo apt update && sudo apt upgrade
 ```

@@ -2,41 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>RAG on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/rag/</link>
+    <link>http://localhost:1313/tags/rag/</link>
     <description>Recent content in RAG on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/rag/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/rag/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title>
-      <link>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</link>
+      <title>RAG Text-to-SQL: Asking My Database Questions in Plain English</title>
+      <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</guid>
-      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
-    </item>
-    <item>
-      <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
-      <link>https://ayyzenn.github.io/posts/local-rag-system/</link>
-      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/local-rag-system/</guid>
-      <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
-    </item>
-    <item>
-      <title>Setting Up Ollama with DeepSeek Coder on Manjaro: A Step-by-Step Guide</title>
-      <link>https://ayyzenn.github.io/posts/ollama/</link>
-      <pubDate>Mon, 03 Feb 2025 17:07:58 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/ollama/</guid>
-      <description>&lt;h2 id=&#34;what-is-ollama&#34;&gt;What is Ollama?&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Ollama&lt;/strong&gt; is an open-source framework designed to run and manage large language models (LLMs) efficiently on local machines. It allows developers to load and interact with various AI models without relying on cloud-based APIs.&lt;/p&gt;
-&lt;h3 id=&#34;why-use-ollama&#34;&gt;Why Use Ollama?&lt;/h3&gt;
+      <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I hate writing SQL for simple questions. This project lets me ask things like &amp;ldquo;how many customers are from Brazil?&amp;rdquo; in plain English — it generates the SQL, runs it, and gives me a readable answer. All local, using &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt;.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt;: No data leaves your local system.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Customization&lt;/strong&gt;: Run and fine-tune models as per your requirements.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;: Optimized for running models efficiently on consumer hardware.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Easy to use&lt;/strong&gt; — ask questions in everyday language&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private&lt;/strong&gt; — everything runs locally on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fast feedback&lt;/strong&gt; — generates and runs SQL in seconds&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Schema-aware&lt;/strong&gt; — understands table names and relationships&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interactive&lt;/strong&gt; — ask follow-up questions in a chat-style flow&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error handling&lt;/strong&gt; — catches common issues like wrong table name casing&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;note&#34;&gt;Note&lt;/h2&gt;
-&lt;p&gt;This guide is based on &lt;strong&gt;Manjaro Linux (Kernel: Base Phoenix)&lt;/strong&gt;. Ubuntu users should replace package manager commands accordingly (e.g., using &lt;code&gt;apt&lt;/code&gt; instead of &lt;code&gt;pacman&lt;/code&gt;). Make sure to check compatibility for your specific distribution.&lt;/p&gt;</description>
+&lt;hr&gt;
+&lt;h2 id=&#34;system-architecture&#34;&gt;System Architecture&lt;/h2&gt;
+&lt;p&gt;My RAG Text-to-SQL system consists of five core components:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Local RAG with Ollama and ChromaDB: Running AI Offline</title>
+      <link>http://localhost:1313/posts/local-rag-system/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/local-rag-system/</guid>
+      <description>&lt;h2 id=&#34;why-i-built-this&#34;&gt;Why I Built This&lt;/h2&gt;
+&lt;p&gt;I wanted a chatbot that answers questions from &lt;strong&gt;my own documents&lt;/strong&gt; — without sending data to a cloud API. This RAG setup runs fully offline with &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt; on my machine.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt; — your data stays on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No API costs&lt;/strong&gt; — no usage fees or rate limits&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed&lt;/strong&gt; — no network delay for each query&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt; — you choose what goes into the knowledge base&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offline use&lt;/strong&gt; — works without internet after setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture Overview&lt;/h2&gt;
+&lt;p&gt;My local RAG system consists of four main components:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

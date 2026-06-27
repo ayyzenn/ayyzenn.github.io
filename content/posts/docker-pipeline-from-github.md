@@ -1,22 +1,11 @@
 ---
 title: "Jenkins + Docker Pipeline from GitHub"
-author: Saad
 date: 2026-02-10
 tags: ["jenkins", "docker", "ci-cd", "github", "devops"]
 ---
+## What I Built
 
-## What Is This About?
-
-In this post, I explain how I built a **Jenkins pipeline** that:
-
-- Pulls code from **GitHub**
-- Builds a **Docker image**
-- Runs a **Docker container**
-- Executes a script automatically
-
-This is a very common **real-world CI/CD setup**:
-
-> Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.
+I wanted Jenkins to pull code from GitHub, build a Docker image, and run a container automatically. This post is the pipeline I put together for that.
 
 ---
 
@@ -44,6 +33,15 @@ You should already have:
 - Jenkins user allowed to run Docker (for example, by adding the `jenkins` user to the `docker` group)
 
 On many systems this looks like:
+
+**Ubuntu** (after adding your user to the `docker` group):
+
+```bash
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+```
+
+**Arch Linux:**
 
 ```bash
 sudo usermod -aG docker jenkins

@@ -1,70 +1,129 @@
-+++
-date = '2022-07-26T15:49:43+05:00'
-title = 'Docker on Ubuntu'
-tags = ['dockers']
-+++
+---
+title: "Docker on Arch Linux and Ubuntu: How I Got It Running"
+date: 2022-07-26
+tags: ["docker", "ubuntu", "arch-linux", "containers"]
+---
 
-## Introduction
+## Why I Started Using Docker
 
-Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.
+I wanted a way to run apps without messing up my main system. Docker packs an app with everything it needs into a **container** — a small, isolated environment that shares my kernel but stays separate from everything else.
 
-By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
+If something breaks inside a container, I delete it and start over. No reinstalling the whole OS.
 
-## Container
+## Containers vs Images (Quick Version)
 
-Unlike a virtual machine (VM) that provides hardware virtualization, a container provides lightweight, operating-system-level virtualization by abstracting the user space. Containers share the host system’s kernel with other containers. A container, which runs on the host operating system, is a standard software unit that packages code and all its dependencies, ensuring applications can run quickly and reliably across different environments. Containers are non-persistent and are instantiated from images.
+- **Image** — a read-only template (like a recipe)
+- **Container** — a running instance of that image (like the actual dish you cooked)
 
-## Docker Images
+You build or pull an image once. You can spin up as many containers from it as you want.
 
-A Docker image is a collection of software that is run as a container. It contains a set of instructions for creating a container that can run on the Docker platform. Images are immutable, and any modifications require building a new image.
+---
 
-## Installing Docker on Ubuntu 20.04
+## Arch Linux
 
-To install Docker on Ubuntu 20.04, follow these steps:
+This is what I use on my main machine now.
 
-1. Update the package index:
+### Install Docker
 
-   ```bash
-   sudo apt update
-   ```
+```bash
+sudo pacman -S docker
+sudo systemctl enable --now docker
+```
 
-2. Install Docker:
+Check the service is running:
 
-   ```bash
-   sudo apt install docker.io
-   ```
+```bash
+systemctl status docker
+```
 
-3. Start the Docker service:
+You should see `active (running)`.
 
-   ```bash
-   sudo systemctl start docker
-   ```
+### Test with hello-world
 
-4. Enable Docker to start at boot:
+```bash
+sudo docker pull hello-world
+sudo docker images
+sudo docker run hello-world
+```
 
-   ```bash
-   sudo systemctl enable docker
-   ```
+If you see a friendly message from Docker, it works.
 
-5. Download the Docker test image:
+### Run Docker without sudo (optional)
 
-   ```bash
-   sudo docker pull hello-world
-   ```
+I got tired of typing `sudo` every time:
 
-6. Verify downloaded images:
+```bash
+sudo usermod -aG docker $USER
+```
 
-   ```bash
-   sudo docker images
-   ```
+Log out and log back in. Then test:
 
-7. Run the `hello-world` container:
+```bash
+docker ps
+```
 
-   ```bash
-   sudo docker run hello-world
-   ```
+If that works without sudo, you're set.
 
-**Note:** You need to run Docker with `sudo` privileges.
+---
 
-For creating a container, refer to my detailed blog post: [Creating a Container in Docker](/posts/container_docker/).
+## Ubuntu
 
+This is what I used first when I was learning Docker on Ubuntu 22.04.
+
+### Install Docker
+
+```bash
+sudo apt update
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
+Check the service is running:
+
+```bash
+systemctl status docker
+```
+
+You should see `active (running)`.
+
+### Test with hello-world
+
+```bash
+sudo docker pull hello-world
+sudo docker images
+sudo docker run hello-world
+```
+
+Same test as Arch — if hello-world prints a success message, Docker is working.
+
+### Run Docker without sudo (optional)
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+Log out and log back in. Then test:
+
+```bash
+docker ps
+```
+
+---
+
+## Quick Reference
+
+| Step | Arch Linux | Ubuntu |
+| ---- | ---------- | ------ |
+| Install | `sudo pacman -S docker` | `sudo apt install docker.io` |
+| Enable on boot | `sudo systemctl enable --now docker` | `sudo systemctl enable docker` |
+| Test | `sudo docker run hello-world` | `sudo docker run hello-world` |
+| Skip sudo | `sudo usermod -aG docker $USER` | `sudo usermod -aG docker $USER` |
+
+The Docker commands (`pull`, `run`, `ps`, etc.) are the same on both distros once it is installed.
+
+---
+
+## What's Next?
+
+Once Docker is installed, the next step is creating your own container. I wrote that up here: [Creating My First Docker Container](/posts/container_docker/).

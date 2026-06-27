@@ -3,7 +3,6 @@ title: "Ansible for Beginners: My First Real Automation"
 date: 2026-01-15
 tags: ["ansible", "devops", "automation", "linux", "configuration-management"]
 ---
-
 ## What is Ansible? (In Simple Words)
 
 Think of **Ansible as a remote control for your servers**.
@@ -12,7 +11,7 @@ Instead of:
 - SSH into server
 - Run commands manually
 - Forget what you changed
-- Repeat the same steps again and again 😵
+- Repeat the same steps again and again
 
 You tell Ansible:
 > “Hey, I want this server to look *like this*.”
@@ -39,7 +38,26 @@ This is exactly what I used:
 | Automation Tool | Ansible            |
 
 Yes — **control node and managed node can be different OSes**.
-That’s totally normal in DevOps.
+That is normal in DevOps.
+
+### Install Ansible on the Control Node
+
+**Arch Linux (control node):**
+
+```bash
+sudo pacman -S ansible
+ansible --version
+```
+
+**Ubuntu (if your control machine runs Ubuntu instead):**
+
+```bash
+sudo apt update
+sudo apt install ansible
+ansible --version
+```
+
+The managed Ubuntu server only needs Python and SSH — Ansible installs nothing extra there by default.
 
 ---
 
@@ -63,7 +81,7 @@ In plain English:
 
 ---
 
-## Step 2: First Test — Ping (Hello Server 👋)
+## Step 2: First Test — Ping the Server
 
 Before doing anything serious, always test connectivity:
 
@@ -170,7 +188,7 @@ Here is my beginner playbook `setup.yml`:
 This playbook says:
 
 - **Install useful tools**
-- **Remove nano** (bye bye 👋)
+- **Remove nano** (optional — use vim instead)
 - **Stop nginx**
 
 ### Running the Playbook
@@ -193,9 +211,9 @@ changed=0
 
 That means:
 
-- ✅ Playbook works
-- ✅ State is correct
-- ✅ Automation is reliable
+- Playbook works
+- State is correct
+- Automation is reliable
 
 ---
 
@@ -278,10 +296,7 @@ Because if you can explain it simply, you actually understand it.
 
 Ansible feels like:
 
-- Writing instructions for a very obedient robot 🤖
-  - Who never forgets
-  - Never gets tired
-  - And never says “works on my machine”
+- Writing instructions for a very obedient robot that never forgets, never gets tired, and never says “works on my machine”
 
 If you manage servers manually, Ansible is a life upgrade.
 

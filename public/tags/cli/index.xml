@@ -2,56 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Cli on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/cli/</link>
+    <link>http://localhost:1313/tags/cli/</link>
     <description>Recent content in Cli on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Dec 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
-      <link>https://ayyzenn.github.io/posts/gentoo/</link>
-      <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/gentoo/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
+      <title>Gentoo Install: What I Did on My Laptop</title>
+      <link>http://localhost:1313/posts/gentoo/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gentoo/</guid>
+      <description>&lt;h2 id=&#34;why-i-installed-gentoo&#34;&gt;Why I Installed Gentoo&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Processor:&lt;/strong&gt; Intel Core i5 4th Gen (4 cores)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; 8GB&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; 256GB SSD&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Optimizing GitHub Workflow: Mastering GitHub CLI and Personal Access Tokens</title>
-      <link>https://ayyzenn.github.io/posts/git_tools/</link>
-      <pubDate>Sat, 04 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/git_tools/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;GitHub has revolutionized software development collaboration. While Git remains the core tool for version control, GitHub CLI (&lt;code&gt;gh&lt;/code&gt;) and Personal Access Tokens (PATs) provide powerful ways to authenticate and manage GitHub operations directly from the terminal.&lt;/p&gt;
-&lt;p&gt;This guide covers everything from generating a secure PAT to leveraging GitHub CLI for seamless repository, issue, and workflow management.&lt;/p&gt;
+&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;creating-a-personal-access-token-pat&#34;&gt;Creating a Personal Access Token (PAT)&lt;/h2&gt;
-&lt;p&gt;A Personal Access Token (PAT) acts as a secure alternative to passwords for authentication when interacting with GitHub via the command line or API.&lt;/p&gt;</description>
+&lt;h2 id=&#34;step-1-grab-the-gentoo-iso&#34;&gt;Step 1: Grab the Gentoo ISO&lt;/h2&gt;
+&lt;p&gt;Head over to &lt;a href=&#34;https://www.gentoo.org/&#34;&gt;Gentoo’s official website&lt;/a&gt; and download the ISO. You’ll see two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GUI Installer&lt;/strong&gt; (if you want an easier time)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimal (CLI) Installer&lt;/strong&gt; (if you want to go full pro mode)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For this guide, we’re going &lt;strong&gt;Minimal&lt;/strong&gt;. Let’s get our hands dirty!&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Comprehensive Guide to GitHub: Getting Started and Uploading Files via Command Line</title>
-      <link>https://ayyzenn.github.io/posts/git_cli/</link>
-      <pubDate>Fri, 03 Sep 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/git_cli/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;This guide provides a comprehensive introduction to GitHub, covering:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;What is GitHub?&lt;/li&gt;
-&lt;li&gt;Why use GitHub?&lt;/li&gt;
-&lt;li&gt;How to use GitHub?&lt;/li&gt;
-&lt;li&gt;Installing and configuring Git&lt;/li&gt;
-&lt;li&gt;Uploading files to GitHub using the command line&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;what-is-github&#34;&gt;What is GitHub?&lt;/h2&gt;
-&lt;p&gt;Before diving into GitHub, it is essential to understand Git and Open-Source Projects.&lt;/p&gt;
-&lt;h3 id=&#34;1-git&#34;&gt;1. Git&lt;/h3&gt;
-&lt;p&gt;Git is a distributed version control system that allows developers to track changes in their projects, revert to previous versions, and collaborate efficiently.&lt;/p&gt;</description>
+      <title>GitHub CLI and Personal Access Tokens: What I Use Daily</title>
+      <link>http://localhost:1313/posts/git_tools/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git_tools/</guid>
+      <description>&lt;h2 id=&#34;why-i-bother-with-this&#34;&gt;Why I Bother With This&lt;/h2&gt;
+&lt;p&gt;I got tired of opening the browser every time I wanted to create a repo, check a PR, or trigger a workflow. &lt;strong&gt;GitHub CLI&lt;/strong&gt; (&lt;code&gt;gh&lt;/code&gt;) lets me do most of that from the terminal. &lt;strong&gt;Personal Access Tokens (PATs)&lt;/strong&gt; are how Git authenticates when you push over HTTPS.&lt;/p&gt;
+&lt;p&gt;This post covers both — how I generate a PAT and how I use &lt;code&gt;gh&lt;/code&gt; day to day.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub from the Command Line: How I Push My Code</title>
+      <link>http://localhost:1313/posts/git_cli/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git_cli/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-github&#34;&gt;Why I Use GitHub&lt;/h2&gt;
+&lt;p&gt;I use &lt;strong&gt;Git&lt;/strong&gt; to track changes in my code and &lt;strong&gt;GitHub&lt;/strong&gt; to host it online. Git runs on my machine. GitHub is the website that stores my repos and lets me share them.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re new: Git is the tool, GitHub is where the repos live.&lt;/p&gt;
+&lt;h2 id=&#34;install-git&#34;&gt;Install Git&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ubuntu:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Arch Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check it worked:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;set-your-name-and-email&#34;&gt;Set Your Name and Email&lt;/h2&gt;
+&lt;p&gt;Git attaches this info to every commit:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

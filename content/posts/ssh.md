@@ -1,126 +1,110 @@
-+++
-date = '2021-08-14T15:49:43+05:00'
-title = 'SSH: Connecting to a Remote Server in Linux'
-tags = ['ssh', 'ubuntu']
-+++
+---
+title: "SSH: How I Connect to Remote Servers"
+date: 2021-08-14
+tags: ["ssh", "ubuntu", "arch-linux", "linux"]
+---
 
-## Introduction
+## Why I Use SSH
 
-Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:
+SSH is how I control another machine from my terminal. I use it to manage servers, copy files, and run commands on remote systems without sitting in front of them.
 
-- **Secure Shell (SSH)** for Linux-based machines
-- **Remote Desktop Protocol (RDP)** for Windows-based machines
+For Windows remote desktop you use RDP. For Linux, SSH is the standard.
 
-Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.
+## How SSH Works (Short Version)
 
-## What is SSH?
+- **Client** — on your laptop (where you type)
+- **Server** — on the remote machine (what you connect to)
 
-SSH (Secure Shell) is a protocol that enables secure remote access to computers. Establishing an SSH connection requires two components: a client and a corresponding server-side component.
+You run `ssh user@ip`, enter your password (or use a key), and you get a shell on the remote box.
 
-- The **SSH client** is an application installed on the computer used to initiate the connection.
-- The **SSH server** runs a daemon that listens for incoming client connections on a specific TCP/IP port.
+## Install the SSH Client
 
-When a client attempts to connect, the SSH daemon on the server responds, exchanges credentials, and, if verified, establishes a secure encrypted session.
+Check if you already have it:
 
-## How to Enable an SSH Connection?
+```bash
+ssh
+```
 
-To create an SSH connection, both the client and server components must be installed on the respective machines. A widely used open-source SSH tool for Linux distributions is **OpenSSH**. It requires terminal access on both the local and remote machines.
+If you see usage info, you're set. If not:
 
-**Note:** Ubuntu does not have the SSH server installed by default.
+**Ubuntu:**
 
-## How to Install an OpenSSH Client?
+```bash
+sudo apt update
+sudo apt install openssh-client
+```
 
-Before installing an SSH client, check if it is already available on your Linux system:
+**Arch Linux:**
 
-1. Open a terminal by searching for "Terminal" or pressing `CTRL + ALT + T`.
-2. Type the following command and press `Enter`:
+```bash
+sudo pacman -S openssh
+```
 
-   ```bash
-   ssh
-   ```
+## Install the SSH Server
 
-3. If the client is installed, you will receive a response indicating SSH usage options.
+The machine you want to connect **to** needs the server package.
 
-If the SSH client is not installed, install it using the following command based on your distribution:
+On that remote machine, test:
 
-- **For Debian/Ubuntu-based systems:**
-  
-  ```bash
-  sudo apt-get install openssh-client
-  ```
+```bash
+ssh localhost
+```
 
-- **For Arch/Manjaro-based systems:**
-  
-  ```bash
-  sudo pacman -S openssh
-  ```
+If it fails, install the server:
 
-Once installed, you can SSH into any machine running an SSH server, provided you have the necessary access credentials.
+**Ubuntu:**
 
-## How to Install an OpenSSH Server?
+```bash
+sudo apt update
+sudo apt install openssh-server
+```
 
-To accept SSH connections, the remote machine must have the SSH server installed.
+**Arch Linux:**
 
-To check if OpenSSH server is available on your system:
+```bash
+sudo pacman -S openssh
+sudo systemctl enable --now sshd
+```
 
-1. Open a terminal on the remote machine.
-2. Type the following command and press `Enter`:
-
-   ```bash
-   ssh localhost
-   ```
-
-3. If the SSH server is not installed, an error message will appear.
-
-To install the OpenSSH server, use the appropriate command for your distribution:
-
-- **For Debian/Ubuntu-based systems:**
-  
-  ```bash
-  sudo apt-get install openssh-server
-  ```
-
-- **For Arch/Manjaro-based systems:**
-  
-  ```bash
-  sudo pacman -S openssh
-  ```
-
-After installation, verify that the SSH service is running:
+Check it's running:
 
 ```bash
 sudo systemctl status sshd
 ```
 
-If the SSH service is active, the system is ready to accept remote connections.
+Ubuntu does **not** ship with the SSH server installed — you have to add it yourself.
 
-## How to Connect via SSH?
+## Connect
 
-With both the OpenSSH client and server installed, you can establish a secure remote connection:
+From your local machine:
 
-1. Open a terminal on your local machine.
-2. Run the following command, replacing `<your_username>` and `<host_ip_address>` accordingly:
+```bash
+ssh your_username@host_ip_address
+```
 
-   ```bash
-   ssh your_username@host_ip_address
-   ```
+First time you connect, it asks you to trust the server's fingerprint. Type `yes`.
 
-3. If your local username matches the server’s username, you can simply use:
+## Real Example From My Setup
 
-   ```bash
-   ssh host_ip_address
-   ```
+I sometimes SSH from my Arch machine to an Ubuntu VM:
 
-4. Press `Enter` and enter the password when prompted.
+```bash
+ssh ubuntu@192.168.1.80
+```
 
-**Note:** Both client and server must be on the same network.
+And the other way:
 
-On first-time connections, SSH will prompt for confirmation to continue connecting. Type `yes` and press `Enter`. This process adds the server's ECDSA (Elliptic Curve Digital Signature Algorithm) key fingerprint to your local machine for future authentication.
+```bash
+ssh ayysaad@192.168.1.20
+```
 
-You are now securely connected to the remote server via SSH.
+Swap the username and IP for your own setup.
 
----
+## Quick Reference
 
-### Additional Notes
-
-Since I am primarily using **Manjaro**, my focus is on **Arch-based** systems. However, the guide includes commands for both **Debian/Ubuntu-based** and **Arch/Manjaro-based** distributions to ensure flexibility. If a command works universally across both systems, it has been mentioned once.
+| Task | Ubuntu | Arch Linux |
+| ---- | ------ | ---------- |
+| Install client | `sudo apt install openssh-client` | `sudo pacman -S openssh` |
+| Install server | `sudo apt install openssh-server` | `sudo pacman -S openssh` |
+| Enable server | starts automatically | `sudo systemctl enable --now sshd` |
+| Connect | `ssh user@ip` | `ssh user@ip` |

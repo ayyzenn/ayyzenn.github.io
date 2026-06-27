@@ -1,12 +1,10 @@
-+++
-date = '2022-12-03T15:49:43+05:00'
-title = 'Conquering Gentoo: Turning the "Impossible" into Reality'
-tags = ['gentoo', 'linux', 'cli']
-draft = false
-+++
-## Introduction
+---
+title: "Gentoo Install: What I Did on My Laptop"
+date: 2022-12-03
+tags: ["gentoo", "linux", "cli"]
+---
 
-Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:
+## Why I Installed Gentoo
 
 - **Processor:** Intel Core i5 4th Gen (4 cores)
 - **RAM:** 8GB
@@ -264,6 +262,6 @@ reboot
 
 ## Conclusion
 
-Congratulations! 🎉 You just installed **Gentoo Linux** from scratch. It wasn’t impossible after all, was it? Now, go flex on your friends and enjoy the pure performance of your custom-built system!
+Congratulations! You just installed **Gentoo Linux** from scratch. Enjoy your custom-built system.
 
-If you hit any snags, check out the [Gentoo Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64) or the forums. Happy hacking! 🐧
+If you hit any snags, check the [Gentoo Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64) or the forums.

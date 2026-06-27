@@ -1,28 +1,96 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Dual boot Ubuntu and Windows | ayyzenn</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Dual Boot Ubuntu and Windows: What I Did | ayyzenn</title>
 <meta name="keywords" content="dual boot, ubuntu, linux">
-<meta name="description" content="Introduction
-In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.
-What is Ubuntu?
-Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.
-Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.">
+<meta name="description" content="Why I Dual-Booted
+I needed Windows for some things and Linux for everything else. Instead of picking one, I installed Ubuntu alongside Windows on the same machine. This is the process I followed.
+
+Steps to Dual Boot Ubuntu with Windows
+Step 1: Prepare a Bootable USB Drive
+
+Download the latest Ubuntu ISO from the official Ubuntu website.
+Download and install Rufus or balenaEtcher to create a bootable USB.
+Insert a USB drive (at least 8GB) into your computer.
+Open Rufus or balenaEtcher:
+
+Select the Ubuntu ISO file.
+Choose the USB drive.
+Click &ldquo;Start&rdquo; to create the bootable drive.
+
+
+
+
+Step 2: Configure BIOS/UEFI Settings
+
+Restart your computer and enter BIOS/UEFI by pressing a specific key (usually F2, F12, Del, or Esc) during startup.
+Look for Boot Order/Boot Priority and set the USB drive as the first boot device.
+Disable Secure Boot (if enabled) under the Security tab.
+Enable UEFI mode (recommended) instead of Legacy mode.
+Save changes and exit BIOS.
+
+
+Step 3: Boot from the USB Drive
+
+Insert the bootable USB drive into your computer.
+Restart the system and press the Boot Menu key (F12, F9, Esc, or as per your motherboard).
+Select the bootable USB drive from the list.
+Press Enter to boot into Ubuntu Live.
+
+
+Step 4: Try or Install Ubuntu
+
+Once the Ubuntu installer loads, you will see two options:
+
+Try Ubuntu – Runs Ubuntu without installing it.
+Install Ubuntu – Proceeds with the installation.
+
+
+Click on Install Ubuntu to continue.
+
+
+Step 5: Select Keyboard Layout
+
+Choose your preferred keyboard layout and language.
+Click Continue.
+
+
+Step 6: Connect to Wi-Fi (Optional)
+
+Select your Wi-Fi network.
+Enter the password and click Continue.
+
+
+Step 7: Choose Installation Type
+
+Select Normal Installation (recommended).
+Check the box Install third-party software for graphics and Wi-Fi hardware, Flash, MP3, and other media.
+Click Continue.
+
+
+Step 8: Choose Installation Method
+
+Select Something else (for manual partitioning).
+Click Continue.
+
+
+Step 9: Create Partitions for Ubuntu
+Ubuntu requires three main partitions:">
 <meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/dual_boot/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/dual_boot/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/dual_boot/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/dual_boot/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,78 +127,7 @@ Ubuntu is developed by Canonical and a community of developers under a meritocra
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/dual_boot/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Dual boot Ubuntu and Windows">
-  <meta property="og:description" content="Introduction In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.
-What is Ubuntu? Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.
-Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-08-13T15:49:43+05:00">
-    <meta property="article:modified_time" content="2021-08-13T15:49:43+05:00">
-    <meta property="article:tag" content="Dual Boot">
-    <meta property="article:tag" content="Ubuntu">
-    <meta property="article:tag" content="Linux">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dual boot Ubuntu and Windows">
-<meta name="twitter:description" content="Introduction
-In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.
-What is Ubuntu?
-Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.
-Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Dual boot Ubuntu and Windows",
-      "item": "https://ayyzenn.github.io/posts/dual_boot/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Dual boot Ubuntu and Windows",
-  "name": "Dual boot Ubuntu and Windows",
-  "description": "Introduction In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.\nWhat is Ubuntu? Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.\nUbuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.\n",
-  "keywords": [
-    "dual boot", "ubuntu", "linux"
-  ],
-  "articleBody": "Introduction In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.\nWhat is Ubuntu? Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.\nUbuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.\nThe name “Ubuntu” comes from a Nguni philosophy meaning “humanity to others,” which Canonical interprets as “I am what I am because of who we all are.”\nNow, let’s move on to the installation process.\nSteps to Dual Boot Ubuntu with Windows Step 1: Prepare a Bootable USB Drive Download the latest Ubuntu ISO from the official Ubuntu website. Download and install Rufus or balenaEtcher to create a bootable USB. Insert a USB drive (at least 8GB) into your computer. Open Rufus or balenaEtcher: Select the Ubuntu ISO file. Choose the USB drive. Click “Start” to create the bootable drive. Step 2: Configure BIOS/UEFI Settings Restart your computer and enter BIOS/UEFI by pressing a specific key (usually F2, F12, Del, or Esc) during startup. Look for Boot Order/Boot Priority and set the USB drive as the first boot device. Disable Secure Boot (if enabled) under the Security tab. Enable UEFI mode (recommended) instead of Legacy mode. Save changes and exit BIOS. Step 3: Boot from the USB Drive Insert the bootable USB drive into your computer. Restart the system and press the Boot Menu key (F12, F9, Esc, or as per your motherboard). Select the bootable USB drive from the list. Press Enter to boot into Ubuntu Live. Step 4: Try or Install Ubuntu Once the Ubuntu installer loads, you will see two options: Try Ubuntu – Runs Ubuntu without installing it. Install Ubuntu – Proceeds with the installation. Click on Install Ubuntu to continue. Step 5: Select Keyboard Layout Choose your preferred keyboard layout and language. Click Continue. Step 6: Connect to Wi-Fi (Optional) Select your Wi-Fi network. Enter the password and click Continue. Step 7: Choose Installation Type Select Normal Installation (recommended). Check the box Install third-party software for graphics and Wi-Fi hardware, Flash, MP3, and other media. Click Continue. Step 8: Choose Installation Method Select Something else (for manual partitioning). Click Continue. Step 9: Create Partitions for Ubuntu Ubuntu requires three main partitions:\nBoot Loader Partition\nSelect Free Space and click Add. Assign 512MB to 1GB for the boot partition. Choose Ext4 as the filesystem type. Set Mount Point as /boot. Click OK. Swap Partition\nSelect Free Space and click Add. Allocate swap size (equal to or twice your RAM size). Choose Use as → Swap Area. Click OK. Root Partition\nSelect Free Space and click Add. Allocate remaining space for root (/). Choose Ext4 as the filesystem type. Set Mount Point as /. Click OK. Step 10: Begin Installation Verify all partitions. Click Install Now. A confirmation dialog will appear; click Continue. Step 11: Select Timezone Choose your region/time zone. Click Continue. Step 12: Create User Account Enter your name, username, and password. Click Continue. Step 13: Installation Process The installation will begin. Wait for the process to complete (it may take 10-30 minutes). Step 14: Restart the System Once the installation is completed, click Restart Now. Remove the bootable USB when prompted. Press Enter. Step 15: Choose Ubuntu at Boot When your system reboots, you will see a GRUB menu. Select Ubuntu to boot into Ubuntu. If you want to boot into Windows, choose Windows Boot Manager. Conclusion Congratulations! 🎉 You have successfully dual-booted Ubuntu alongside Windows. Now, you can switch between Windows and Ubuntu anytime by selecting the respective option in the boot menu.\n",
-  "wordCount" : "640",
-  "inLanguage": "en",
-  "datePublished": "2021-08-13T15:49:43+05:00",
-  "dateModified": "2021-08-13T15:49:43+05:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/dual_boot/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -148,7 +145,7 @@ Ubuntu is developed by Canonical and a community of developers under a meritocra
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -174,17 +171,17 @@ Ubuntu is developed by Canonical and a community of developers under a meritocra
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -195,11 +192,11 @@ Ubuntu is developed by Canonical and a community of developers under a meritocra
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Dual boot Ubuntu and Windows
+      Dual Boot Ubuntu and Windows: What I Did
     </h1>
-    <div class="post-meta"><span title='2021-08-13 15:49:43 +0500 PKT'>August 13, 2021</span>&nbsp;·&nbsp;4 min
+    <div class="post-meta"><span title='2021-08-13 00:00:00 +0000 UTC'>August 13, 2021</span>&nbsp;·&nbsp;3 min
 
 </div>
   </header> <div class="toc">
@@ -210,11 +207,7 @@ Ubuntu is developed by Canonical and a community of developers under a meritocra
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#introduction" aria-label="Introduction">Introduction</a><ul>
-                        
-                <li>
-                    <a href="#what-is-ubuntu" aria-label="What is Ubuntu?">What is Ubuntu?</a></li></ul>
-                </li>
+                    <a href="#why-i-dual-booted" aria-label="Why I Dual-Booted">Why I Dual-Booted</a></li>
                 <li>
                     <a href="#steps-to-dual-boot-ubuntu-with-windows" aria-label="Steps to Dual Boot Ubuntu with Windows">Steps to Dual Boot Ubuntu with Windows</a><ul>
                         
@@ -257,13 +250,8 @@ Ubuntu is developed by Canonical and a community of developers under a meritocra
     </details>
 </div>
 
-  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
-<p>In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.</p>
-<h3 id="what-is-ubuntu">What is Ubuntu?<a hidden class="anchor" aria-hidden="true" href="#what-is-ubuntu">#</a></h3>
-<p>Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.</p>
-<p>Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.</p>
-<p>The name &ldquo;Ubuntu&rdquo; comes from a Nguni philosophy meaning &ldquo;humanity to others,&rdquo; which Canonical interprets as &ldquo;I am what I am because of who we all are.&rdquo;</p>
-<p>Now, let&rsquo;s move on to the installation process.</p>
+  <div class="post-content"><h2 id="why-i-dual-booted">Why I Dual-Booted<a hidden class="anchor" aria-hidden="true" href="#why-i-dual-booted">#</a></h2>
+<p>I needed Windows for some things and Linux for everything else. Instead of picking one, I installed <strong>Ubuntu alongside Windows</strong> on the same machine. This is the process I followed.</p>
 <hr>
 <h2 id="steps-to-dual-boot-ubuntu-with-windows">Steps to Dual Boot Ubuntu with Windows<a hidden class="anchor" aria-hidden="true" href="#steps-to-dual-boot-ubuntu-with-windows">#</a></h2>
 <h3 id="step-1-prepare-a-bootable-usb-drive"><strong>Step 1: Prepare a Bootable USB Drive</strong><a hidden class="anchor" aria-hidden="true" href="#step-1-prepare-a-bootable-usb-drive">#</a></h3>
@@ -407,23 +395,23 @@ Ubuntu is developed by Canonical and a community of developers under a meritocra
 </ol>
 <hr>
 <h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
-<p>Congratulations! 🎉 You have successfully dual-booted Ubuntu alongside Windows. Now, you can switch between Windows and Ubuntu anytime by selecting the respective option in the boot menu.</p>
+<p>Congratulations! You have successfully dual-booted Ubuntu alongside Windows. You can switch between Windows and Ubuntu anytime by selecting the option in the boot menu.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/dual-boot/">Dual Boot</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/ubuntu/">Ubuntu</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/dual-boot/">Dual Boot</a></li>
+      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

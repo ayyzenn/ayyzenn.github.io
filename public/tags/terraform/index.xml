@@ -2,20 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Terraform on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/terraform/</link>
+    <link>http://localhost:1313/tags/terraform/</link>
     <description>Recent content in Terraform on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Terraform: Infrastructure as Code</title>
-      <link>https://ayyzenn.github.io/posts/terraform/</link>
+      <title>Terraform: How I Stopped Clicking Around in AWS</title>
+      <link>http://localhost:1313/posts/terraform/</link>
       <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/terraform/</guid>
-      <description>&lt;h2 id=&#34;what-is-terraform&#34;&gt;What is Terraform?&lt;/h2&gt;
-&lt;p&gt;Think of Terraform as a blueprint for your cloud infrastructure. Instead of clicking buttons in the AWS console, you write simple code that describes what you want (servers, databases, networks, etc.), and Terraform builds it for you. It&amp;rsquo;s like using a recipe instead of cooking from memory—repeatable and consistent every time.&lt;/p&gt;
-&lt;p&gt;Terraform works with major cloud providers like AWS, Azure, Google Cloud, and many others.&lt;/p&gt;
+      <guid>http://localhost:1313/posts/terraform/</guid>
+      <description>&lt;h2 id=&#34;what-terraform-is-for-me&#34;&gt;What Terraform Is (For Me)&lt;/h2&gt;
+&lt;p&gt;Terraform is how I describe cloud stuff in code instead of clicking through the AWS console. I write what I want in &lt;code&gt;.tf&lt;/code&gt; files, run &lt;code&gt;terraform apply&lt;/code&gt;, and it gets created. Same result every time.&lt;/p&gt;
 &lt;h2 id=&#34;why-use-terraform&#34;&gt;Why Use Terraform?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;No More Manual Clicking&lt;/strong&gt;: Automate infrastructure setup instead of clicking through AWS&lt;/li&gt;

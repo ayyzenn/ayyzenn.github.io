@@ -1,22 +1,11 @@
-+++
-date = '2021-08-13T15:49:43+05:00'
-title = 'Dual boot Ubuntu and Windows'
-tags = ['dual boot', 'ubuntu', 'linux']
-+++
+---
+title: "Dual Boot Ubuntu and Windows: What I Did"
+date: 2021-08-13
+tags: ["dual boot", "ubuntu", "linux"]
+---
+## Why I Dual-Booted
 
-## Introduction
-
-In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.
-
-### What is Ubuntu?
-
-Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack. 
-
-Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.
-
-The name "Ubuntu" comes from a Nguni philosophy meaning "humanity to others," which Canonical interprets as "I am what I am because of who we all are."
-
-Now, let's move on to the installation process.
+I needed Windows for some things and Linux for everything else. Instead of picking one, I installed **Ubuntu alongside Windows** on the same machine. This is the process I followed.
 
 ---
 
@@ -148,4 +137,4 @@ Ubuntu requires three main partitions:
 ---
 
 ## Conclusion
-Congratulations! 🎉 You have successfully dual-booted Ubuntu alongside Windows. Now, you can switch between Windows and Ubuntu anytime by selecting the respective option in the boot menu.
+Congratulations! You have successfully dual-booted Ubuntu alongside Windows. You can switch between Windows and Ubuntu anytime by selecting the option in the boot menu.

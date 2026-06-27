@@ -1,13 +1,13 @@
-+++
-date = '2022-08-07T15:49:43+05:00'
-title = 'Your Gateway to FTP: A Step-by-Step Guide to ProFTPD'
-tags = ['proftpd', 'ftp', 'linux']
-+++
+---
+title: "ProFTPD on Ubuntu: Setting Up FTP"
+date: 2022-08-07
+tags: ["proftpd", "ftp", "linux"]
+---
+## What I Set Up
 
-## Introduction
-FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.
+I needed a simple FTP server on Ubuntu for file transfers. **ProFTPD** did the job. This is my setup — on Arch you'd install with `sudo pacman -S proftpd` and edit the same config path.
 
-ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn't secure by default. It's a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.
+Plain FTP is **not encrypted**. For anything serious, use SFTP over SSH instead.
 
 ## Installing ProFTPD
 Getting ProFTPD set up is pretty simple. Just run:

@@ -1,9 +1,8 @@
 ---
-title: "Ansible: Automating Docker and Kubernetes Node Setup"
+title: "Ansible: Docker and Kubernetes Node Setup"
 date: 2026-01-17
 tags: ["ansible", "docker", "kubernetes", "devops", "automation"]
 ---
-
 ## Why This Post Exists
 
 After writing my **first real Ansible playbook**, I realized something:
@@ -188,11 +187,11 @@ Because Kubernetes has rules.
 
 ### Things Kubernetes Demands
 
-- ❌ Swap must be disabled
-- ❌ Wrong cgroup driver breaks kubelet
-- ❌ Kernel networking must be enabled
-- ❌ containerd must use systemd
-- ❌ kubelet versions must not auto-upgrade
+- Swap must be disabled
+- The cgroup driver must match what kubelet expects
+- Required kernel networking modules must be loaded
+- containerd must use the systemd cgroup driver
+- kubelet, kubeadm, and kubectl versions must stay pinned (no auto-upgrades)
 
 We automate all of this.
 

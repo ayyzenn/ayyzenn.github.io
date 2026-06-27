@@ -2,29 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Docker on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/docker/</link>
+    <link>http://localhost:1313/tags/docker/</link>
     <description>Recent content in Docker on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jenkins &#43; Docker Pipeline from GitHub</title>
-      <link>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</link>
+      <link>http://localhost:1313/posts/docker-pipeline-from-github/</link>
       <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</guid>
-      <description>&lt;h2 id=&#34;what-is-this-about&#34;&gt;What Is This About?&lt;/h2&gt;
-&lt;p&gt;In this post, I explain how I built a &lt;strong&gt;Jenkins pipeline&lt;/strong&gt; that:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pulls code from &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Builds a &lt;strong&gt;Docker image&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Runs a &lt;strong&gt;Docker container&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Executes a script automatically&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is a very common &lt;strong&gt;real-world CI/CD setup&lt;/strong&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.&lt;/p&gt;
-&lt;/blockquote&gt;
+      <guid>http://localhost:1313/posts/docker-pipeline-from-github/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I wanted Jenkins to pull code from GitHub, build a Docker image, and run a container automatically. This post is the pipeline I put together for that.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;goal-from-manual-to-automatic&#34;&gt;Goal: From Manual to Automatic&lt;/h2&gt;
 &lt;p&gt;Manually, we usually do this:&lt;/p&gt;
@@ -34,13 +24,14 @@
 &lt;li&gt;Run &lt;code&gt;docker run&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Check the output&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;</description>
+&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;
+&lt;p&gt;You click &lt;strong&gt;Build Now&lt;/strong&gt; (or trigger from GitHub), and Jenkins does the rest.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Ansible: Automating Docker and Kubernetes Node Setup</title>
-      <link>https://ayyzenn.github.io/posts/ansible_adv/</link>
+      <title>Ansible: Docker and Kubernetes Node Setup</title>
+      <link>http://localhost:1313/posts/ansible_adv/</link>
       <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/ansible_adv/</guid>
+      <guid>http://localhost:1313/posts/ansible_adv/</guid>
       <description>&lt;h2 id=&#34;why-this-post-exists&#34;&gt;Why This Post Exists&lt;/h2&gt;
 &lt;p&gt;After writing my &lt;strong&gt;first real Ansible playbook&lt;/strong&gt;, I realized something:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -58,6 +49,40 @@ Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is 
 &lt;hr&gt;
 &lt;h2 id=&#34;real-setup-same-as-before&#34;&gt;Real Setup (Same as Before)&lt;/h2&gt;
 &lt;p&gt;Nothing fancy. Just real machines.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating My First Docker Container</title>
+      <link>http://localhost:1313/posts/container_docker/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/container_docker/</guid>
+      <description>&lt;h2 id=&#34;what-i-did-here&#34;&gt;What I Did Here&lt;/h2&gt;
+&lt;p&gt;After installing Docker, I wanted to run an actual Ubuntu container — not just &lt;code&gt;hello-world&lt;/code&gt;. The steps inside this post are the same on &lt;strong&gt;Arch Linux&lt;/strong&gt; and &lt;strong&gt;Ubuntu&lt;/strong&gt; hosts. Only the Docker &lt;em&gt;installation&lt;/em&gt; differs — see &lt;a href=&#34;http://localhost:1313/posts/dockers/&#34;&gt;Docker on Arch Linux and Ubuntu&lt;/a&gt; for that part.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;arch-linux-host&#34;&gt;Arch Linux (host)&lt;/h2&gt;
+&lt;p&gt;Make sure Docker is installed and running on your Arch machine first:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable --now docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl status docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pull-the-ubuntu-image&#34;&gt;Pull the Ubuntu image&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-and-enter-a-container&#34;&gt;Create and enter a container&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What those flags mean:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker on Arch Linux and Ubuntu: How I Got It Running</title>
+      <link>http://localhost:1313/posts/dockers/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dockers/</guid>
+      <description>&lt;h2 id=&#34;why-i-started-using-docker&#34;&gt;Why I Started Using Docker&lt;/h2&gt;
+&lt;p&gt;I wanted a way to run apps without messing up my main system. Docker packs an app with everything it needs into a &lt;strong&gt;container&lt;/strong&gt; — a small, isolated environment that shares my kernel but stays separate from everything else.&lt;/p&gt;
+&lt;p&gt;If something breaks inside a container, I delete it and start over. No reinstalling the whole OS.&lt;/p&gt;
+&lt;h2 id=&#34;containers-vs-images-quick-version&#34;&gt;Containers vs Images (Quick Version)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Image&lt;/strong&gt; — a read-only template (like a recipe)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt; — a running instance of that image (like the actual dish you cooked)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You build or pull an image once. You can spin up as many containers from it as you want.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

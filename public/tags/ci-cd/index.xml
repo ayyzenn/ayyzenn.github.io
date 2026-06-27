@@ -2,29 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ci-Cd on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/ci-cd/</link>
+    <link>http://localhost:1313/tags/ci-cd/</link>
     <description>Recent content in Ci-Cd on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/ci-cd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ci-cd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jenkins &#43; Docker Pipeline from GitHub</title>
-      <link>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</link>
+      <link>http://localhost:1313/posts/docker-pipeline-from-github/</link>
       <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/docker-pipeline-from-github/</guid>
-      <description>&lt;h2 id=&#34;what-is-this-about&#34;&gt;What Is This About?&lt;/h2&gt;
-&lt;p&gt;In this post, I explain how I built a &lt;strong&gt;Jenkins pipeline&lt;/strong&gt; that:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pulls code from &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Builds a &lt;strong&gt;Docker image&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Runs a &lt;strong&gt;Docker container&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Executes a script automatically&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is a very common &lt;strong&gt;real-world CI/CD setup&lt;/strong&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Code lives in GitHub → Jenkins pulls it → Jenkins builds and runs a Docker image.&lt;/p&gt;
-&lt;/blockquote&gt;
+      <guid>http://localhost:1313/posts/docker-pipeline-from-github/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I wanted Jenkins to pull code from GitHub, build a Docker image, and run a container automatically. This post is the pipeline I put together for that.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;goal-from-manual-to-automatic&#34;&gt;Goal: From Manual to Automatic&lt;/h2&gt;
 &lt;p&gt;Manually, we usually do this:&lt;/p&gt;
@@ -34,22 +24,16 @@
 &lt;li&gt;Run &lt;code&gt;docker run&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Check the output&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;</description>
+&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;
+&lt;p&gt;You click &lt;strong&gt;Build Now&lt;/strong&gt; (or trigger from GitHub), and Jenkins does the rest.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project</title>
-      <link>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</link>
+      <title>Jenkins on Arch Linux: How I Set It Up on i3</title>
+      <link>http://localhost:1313/posts/jenkins-on-arch-linux/</link>
       <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</guid>
-      <description>&lt;h2 id=&#34;jenkins-on-arch-linux-i3&#34;&gt;Jenkins on Arch Linux (i3)&lt;/h2&gt;
-&lt;p&gt;This guide shows you how to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Install Jenkins&lt;/strong&gt; on Arch Linux (i3 window manager is fine)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Start and use Jenkins&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create a simple freestyle job&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create a real Jenkins Pipeline from a GitHub repo&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The language is simple and the examples are small and realistic.&lt;/p&gt;
+      <guid>http://localhost:1313/posts/jenkins-on-arch-linux/</guid>
+      <description>&lt;h2 id=&#34;why-i-wrote-this&#34;&gt;Why I Wrote This&lt;/h2&gt;
+&lt;p&gt;I run Arch Linux with i3 and wanted Jenkins locally for CI/CD experiments. This covers Java 21, the Jenkins install, a test job, and a GitHub pipeline — exactly what I ran on my machine.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-what-is-jenkins-simple-explanation&#34;&gt;1. What is Jenkins? (Simple Explanation)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Jenkins is an automation server.&lt;/strong&gt;&lt;/p&gt;

@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Docker on Ubuntu | ayyzenn</title>
-<meta name="keywords" content="dockers">
-<meta name="description" content="Introduction
-Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.
-By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.">
+<meta name="robots" content="noindex, nofollow">
+<title>Docker on Arch Linux and Ubuntu: How I Got It Running | ayyzenn</title>
+<meta name="keywords" content="docker, ubuntu, arch-linux, containers">
+<meta name="description" content="Why I Started Using Docker
+I wanted a way to run apps without messing up my main system. Docker packs an app with everything it needs into a container — a small, isolated environment that shares my kernel but stays separate from everything else.
+If something breaks inside a container, I delete it and start over. No reinstalling the whole OS.
+Containers vs Images (Quick Version)
+
+Image — a read-only template (like a recipe)
+Container — a running instance of that image (like the actual dish you cooked)
+
+You build or pull an image once. You can spin up as many containers from it as you want.">
 <meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/dockers/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/dockers/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/dockers/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/dockers/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,73 +63,7 @@ By taking advantage of Docker’s methodologies for shipping, testing, and deplo
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/dockers/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Docker on Ubuntu">
-  <meta property="og:description" content="Introduction Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.
-By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-07-26T15:49:43+05:00">
-    <meta property="article:modified_time" content="2022-07-26T15:49:43+05:00">
-    <meta property="article:tag" content="Dockers">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker on Ubuntu">
-<meta name="twitter:description" content="Introduction
-Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.
-By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Docker on Ubuntu",
-      "item": "https://ayyzenn.github.io/posts/dockers/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Docker on Ubuntu",
-  "name": "Docker on Ubuntu",
-  "description": "Introduction Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.\nBy taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.\n",
-  "keywords": [
-    "dockers"
-  ],
-  "articleBody": "Introduction Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.\nBy taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.\nContainer Unlike a virtual machine (VM) that provides hardware virtualization, a container provides lightweight, operating-system-level virtualization by abstracting the user space. Containers share the host system’s kernel with other containers. A container, which runs on the host operating system, is a standard software unit that packages code and all its dependencies, ensuring applications can run quickly and reliably across different environments. Containers are non-persistent and are instantiated from images.\nDocker Images A Docker image is a collection of software that is run as a container. It contains a set of instructions for creating a container that can run on the Docker platform. Images are immutable, and any modifications require building a new image.\nInstalling Docker on Ubuntu 20.04 To install Docker on Ubuntu 20.04, follow these steps:\nUpdate the package index:\nsudo apt update Install Docker:\nsudo apt install docker.io Start the Docker service:\nsudo systemctl start docker Enable Docker to start at boot:\nsudo systemctl enable docker Download the Docker test image:\nsudo docker pull hello-world Verify downloaded images:\nsudo docker images Run the hello-world container:\nsudo docker run hello-world Note: You need to run Docker with sudo privileges.\nFor creating a container, refer to my detailed blog post: Creating a Container in Docker.\n",
-  "wordCount" : "275",
-  "inLanguage": "en",
-  "datePublished": "2022-07-26T15:49:43+05:00",
-  "dateModified": "2022-07-26T15:49:43+05:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/dockers/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -141,7 +81,7 @@ By taking advantage of Docker’s methodologies for shipping, testing, and deplo
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -167,17 +107,17 @@ By taking advantage of Docker’s methodologies for shipping, testing, and deplo
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -188,11 +128,11 @@ By taking advantage of Docker’s methodologies for shipping, testing, and deplo
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Docker on Ubuntu
+      Docker on Arch Linux and Ubuntu: How I Got It Running
     </h1>
-    <div class="post-meta"><span title='2022-07-26 15:49:43 +0500 PKT'>July 26, 2022</span>&nbsp;·&nbsp;2 min
+    <div class="post-meta"><span title='2022-07-26 00:00:00 +0000 UTC'>July 26, 2022</span>&nbsp;·&nbsp;2 min
 
 </div>
   </header> <div class="toc">
@@ -203,74 +143,142 @@ By taking advantage of Docker’s methodologies for shipping, testing, and deplo
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                    <a href="#why-i-started-using-docker" aria-label="Why I Started Using Docker">Why I Started Using Docker</a></li>
                 <li>
-                    <a href="#container" aria-label="Container">Container</a></li>
+                    <a href="#containers-vs-images-quick-version" aria-label="Containers vs Images (Quick Version)">Containers vs Images (Quick Version)</a></li>
                 <li>
-                    <a href="#docker-images" aria-label="Docker Images">Docker Images</a></li>
+                    <a href="#arch-linux" aria-label="Arch Linux">Arch Linux</a><ul>
+                        
                 <li>
-                    <a href="#installing-docker-on-ubuntu-2004" aria-label="Installing Docker on Ubuntu 20.04">Installing Docker on Ubuntu 20.04</a>
+                    <a href="#install-docker" aria-label="Install Docker">Install Docker</a></li>
+                <li>
+                    <a href="#test-with-hello-world" aria-label="Test with hello-world">Test with hello-world</a></li>
+                <li>
+                    <a href="#run-docker-without-sudo-optional" aria-label="Run Docker without sudo (optional)">Run Docker without sudo (optional)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#ubuntu" aria-label="Ubuntu">Ubuntu</a><ul>
+                        
+                <li>
+                    <a href="#install-docker-1" aria-label="Install Docker">Install Docker</a></li>
+                <li>
+                    <a href="#test-with-hello-world-1" aria-label="Test with hello-world">Test with hello-world</a></li>
+                <li>
+                    <a href="#run-docker-without-sudo-optional-1" aria-label="Run Docker without sudo (optional)">Run Docker without sudo (optional)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#quick-reference" aria-label="Quick Reference">Quick Reference</a></li>
+                <li>
+                    <a href="#whats-next" aria-label="What&rsquo;s Next?">What&rsquo;s Next?</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
-<p>Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.</p>
-<p>By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.</p>
-<h2 id="container">Container<a hidden class="anchor" aria-hidden="true" href="#container">#</a></h2>
-<p>Unlike a virtual machine (VM) that provides hardware virtualization, a container provides lightweight, operating-system-level virtualization by abstracting the user space. Containers share the host system’s kernel with other containers. A container, which runs on the host operating system, is a standard software unit that packages code and all its dependencies, ensuring applications can run quickly and reliably across different environments. Containers are non-persistent and are instantiated from images.</p>
-<h2 id="docker-images">Docker Images<a hidden class="anchor" aria-hidden="true" href="#docker-images">#</a></h2>
-<p>A Docker image is a collection of software that is run as a container. It contains a set of instructions for creating a container that can run on the Docker platform. Images are immutable, and any modifications require building a new image.</p>
-<h2 id="installing-docker-on-ubuntu-2004">Installing Docker on Ubuntu 20.04<a hidden class="anchor" aria-hidden="true" href="#installing-docker-on-ubuntu-2004">#</a></h2>
-<p>To install Docker on Ubuntu 20.04, follow these steps:</p>
-<ol>
-<li>
-<p>Update the package index:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
-</span></span></code></pre></div></li>
-<li>
-<p>Install Docker:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install docker.io
-</span></span></code></pre></div></li>
-<li>
-<p>Start the Docker service:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl start docker
-</span></span></code></pre></div></li>
-<li>
-<p>Enable Docker to start at boot:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable docker
-</span></span></code></pre></div></li>
-<li>
-<p>Download the Docker test image:</p>
+  <div class="post-content"><h2 id="why-i-started-using-docker">Why I Started Using Docker<a hidden class="anchor" aria-hidden="true" href="#why-i-started-using-docker">#</a></h2>
+<p>I wanted a way to run apps without messing up my main system. Docker packs an app with everything it needs into a <strong>container</strong> — a small, isolated environment that shares my kernel but stays separate from everything else.</p>
+<p>If something breaks inside a container, I delete it and start over. No reinstalling the whole OS.</p>
+<h2 id="containers-vs-images-quick-version">Containers vs Images (Quick Version)<a hidden class="anchor" aria-hidden="true" href="#containers-vs-images-quick-version">#</a></h2>
+<ul>
+<li><strong>Image</strong> — a read-only template (like a recipe)</li>
+<li><strong>Container</strong> — a running instance of that image (like the actual dish you cooked)</li>
+</ul>
+<p>You build or pull an image once. You can spin up as many containers from it as you want.</p>
+<hr>
+<h2 id="arch-linux">Arch Linux<a hidden class="anchor" aria-hidden="true" href="#arch-linux">#</a></h2>
+<p>This is what I use on my main machine now.</p>
+<h3 id="install-docker">Install Docker<a hidden class="anchor" aria-hidden="true" href="#install-docker">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S docker
+</span></span><span style="display:flex;"><span>sudo systemctl enable --now docker
+</span></span></code></pre></div><p>Check the service is running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status docker
+</span></span></code></pre></div><p>You should see <code>active (running)</code>.</p>
+<h3 id="test-with-hello-world">Test with hello-world<a hidden class="anchor" aria-hidden="true" href="#test-with-hello-world">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker pull hello-world
-</span></span></code></pre></div></li>
-<li>
-<p>Verify downloaded images:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker images
-</span></span></code></pre></div></li>
-<li>
-<p>Run the <code>hello-world</code> container:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker run hello-world
-</span></span></code></pre></div></li>
-</ol>
-<p><strong>Note:</strong> You need to run Docker with <code>sudo</code> privileges.</p>
-<p>For creating a container, refer to my detailed blog post: <a href="/posts/container_docker/">Creating a Container in Docker</a>.</p>
+</span></span><span style="display:flex;"><span>sudo docker images
+</span></span><span style="display:flex;"><span>sudo docker run hello-world
+</span></span></code></pre></div><p>If you see a friendly message from Docker, it works.</p>
+<h3 id="run-docker-without-sudo-optional">Run Docker without sudo (optional)<a hidden class="anchor" aria-hidden="true" href="#run-docker-without-sudo-optional">#</a></h3>
+<p>I got tired of typing <code>sudo</code> every time:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo usermod -aG docker $USER
+</span></span></code></pre></div><p>Log out and log back in. Then test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps
+</span></span></code></pre></div><p>If that works without sudo, you&rsquo;re set.</p>
+<hr>
+<h2 id="ubuntu">Ubuntu<a hidden class="anchor" aria-hidden="true" href="#ubuntu">#</a></h2>
+<p>This is what I used first when I was learning Docker on Ubuntu 22.04.</p>
+<h3 id="install-docker-1">Install Docker<a hidden class="anchor" aria-hidden="true" href="#install-docker-1">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install docker.io
+</span></span><span style="display:flex;"><span>sudo systemctl start docker
+</span></span><span style="display:flex;"><span>sudo systemctl enable docker
+</span></span></code></pre></div><p>Check the service is running:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status docker
+</span></span></code></pre></div><p>You should see <code>active (running)</code>.</p>
+<h3 id="test-with-hello-world-1">Test with hello-world<a hidden class="anchor" aria-hidden="true" href="#test-with-hello-world-1">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker pull hello-world
+</span></span><span style="display:flex;"><span>sudo docker images
+</span></span><span style="display:flex;"><span>sudo docker run hello-world
+</span></span></code></pre></div><p>Same test as Arch — if hello-world prints a success message, Docker is working.</p>
+<h3 id="run-docker-without-sudo-optional-1">Run Docker without sudo (optional)<a hidden class="anchor" aria-hidden="true" href="#run-docker-without-sudo-optional-1">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo usermod -aG docker $USER
+</span></span></code></pre></div><p>Log out and log back in. Then test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps
+</span></span></code></pre></div><hr>
+<h2 id="quick-reference">Quick Reference<a hidden class="anchor" aria-hidden="true" href="#quick-reference">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>Step</th>
+					<th>Arch Linux</th>
+					<th>Ubuntu</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Install</td>
+					<td><code>sudo pacman -S docker</code></td>
+					<td><code>sudo apt install docker.io</code></td>
+			</tr>
+			<tr>
+					<td>Enable on boot</td>
+					<td><code>sudo systemctl enable --now docker</code></td>
+					<td><code>sudo systemctl enable docker</code></td>
+			</tr>
+			<tr>
+					<td>Test</td>
+					<td><code>sudo docker run hello-world</code></td>
+					<td><code>sudo docker run hello-world</code></td>
+			</tr>
+			<tr>
+					<td>Skip sudo</td>
+					<td><code>sudo usermod -aG docker $USER</code></td>
+					<td><code>sudo usermod -aG docker $USER</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>The Docker commands (<code>pull</code>, <code>run</code>, <code>ps</code>, etc.) are the same on both distros once it is installed.</p>
+<hr>
+<h2 id="whats-next">What&rsquo;s Next?<a hidden class="anchor" aria-hidden="true" href="#whats-next">#</a></h2>
+<p>Once Docker is installed, the next step is creating your own container. I wrote that up here: <a href="/posts/container_docker/">Creating My First Docker Container</a>.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/dockers/">Dockers</a></li>
+      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
+      <li><a href="http://localhost:1313/tags/ubuntu/">Ubuntu</a></li>
+      <li><a href="http://localhost:1313/tags/arch-linux/">Arch-Linux</a></li>
+      <li><a href="http://localhost:1313/tags/containers/">Containers</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

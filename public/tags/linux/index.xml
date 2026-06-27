@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Linux on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/linux/</link>
+    <link>http://localhost:1313/tags/linux/</link>
     <description>Recent content in Linux on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ansible for Beginners: My First Real Automation</title>
-      <link>https://ayyzenn.github.io/posts/ansible/</link>
+      <link>http://localhost:1313/posts/ansible/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/ansible/</guid>
+      <guid>http://localhost:1313/posts/ansible/</guid>
       <description>&lt;h2 id=&#34;what-is-ansible-in-simple-words&#34;&gt;What is Ansible? (In Simple Words)&lt;/h2&gt;
 &lt;p&gt;Think of &lt;strong&gt;Ansible as a remote control for your servers&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Instead of:&lt;/p&gt;
@@ -20,7 +20,7 @@
 &lt;li&gt;SSH into server&lt;/li&gt;
 &lt;li&gt;Run commands manually&lt;/li&gt;
 &lt;li&gt;Forget what you changed&lt;/li&gt;
-&lt;li&gt;Repeat the same steps again and again 😵&lt;/li&gt;
+&lt;li&gt;Repeat the same steps again and again&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You tell Ansible:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -39,38 +39,133 @@
 &lt;p&gt;This is exactly what I used:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Conquering Gentoo: Turning the &#34;Impossible&#34; into Reality</title>
-      <link>https://ayyzenn.github.io/posts/gentoo/</link>
-      <pubDate>Sat, 03 Dec 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/gentoo/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Gentoo Linux has a reputation—some say it’s impossible to install, others say it’s a rite of passage. Well, I’m here to prove that it’s not just possible but totally worth it! In this blog, I’ll take you through the process of installing Gentoo on my HP laptop with these specs:&lt;/p&gt;
+      <title>Gentoo Install: What I Did on My Laptop</title>
+      <link>http://localhost:1313/posts/gentoo/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gentoo/</guid>
+      <description>&lt;h2 id=&#34;why-i-installed-gentoo&#34;&gt;Why I Installed Gentoo&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Processor:&lt;/strong&gt; Intel Core i5 4th Gen (4 cores)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; 8GB&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; 256GB SSD&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;</description>
+&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-1-grab-the-gentoo-iso&#34;&gt;Step 1: Grab the Gentoo ISO&lt;/h2&gt;
+&lt;p&gt;Head over to &lt;a href=&#34;https://www.gentoo.org/&#34;&gt;Gentoo’s official website&lt;/a&gt; and download the ISO. You’ll see two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GUI Installer&lt;/strong&gt; (if you want an easier time)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimal (CLI) Installer&lt;/strong&gt; (if you want to go full pro mode)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For this guide, we’re going &lt;strong&gt;Minimal&lt;/strong&gt;. Let’s get our hands dirty!&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Your Gateway to FTP: A Step-by-Step Guide to ProFTPD</title>
-      <link>https://ayyzenn.github.io/posts/proftpd/</link>
-      <pubDate>Sun, 07 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/proftpd/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;FTP (File Transfer Protocol) is a way to move files between computers on a network. You can use it to swap files between accounts, transfer stuff between your computer and a remote server, or even grab files from online repositories.&lt;/p&gt;
-&lt;p&gt;ProFTPD (Professional File Transfer Protocol Daemon) is a powerful and flexible FTP server. But keep in mind, FTP isn&amp;rsquo;t secure by default. It&amp;rsquo;s a good idea to configure ProFTPD to use SFTP (Secure File Transfer Protocol) instead, which runs over SSH.&lt;/p&gt;</description>
+      <title>ProFTPD on Ubuntu: Setting Up FTP</title>
+      <link>http://localhost:1313/posts/proftpd/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/proftpd/</guid>
+      <description>&lt;h2 id=&#34;what-i-set-up&#34;&gt;What I Set Up&lt;/h2&gt;
+&lt;p&gt;I needed a simple FTP server on Ubuntu for file transfers. &lt;strong&gt;ProFTPD&lt;/strong&gt; did the job. This is my setup — on Arch you&amp;rsquo;d install with &lt;code&gt;sudo pacman -S proftpd&lt;/code&gt; and edit the same config path.&lt;/p&gt;
+&lt;p&gt;Plain FTP is &lt;strong&gt;not encrypted&lt;/strong&gt;. For anything serious, use SFTP over SSH instead.&lt;/p&gt;
+&lt;h2 id=&#34;installing-proftpd&#34;&gt;Installing ProFTPD&lt;/h2&gt;
+&lt;p&gt;Getting ProFTPD set up is pretty simple. Just run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install proftpd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;configuring-proftpd&#34;&gt;Configuring ProFTPD&lt;/h2&gt;
+&lt;p&gt;Once it&amp;rsquo;s installed, you&amp;rsquo;ll need to tweak the config file. Open it up with:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Dual boot Ubuntu and Windows</title>
-      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
-      <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
-&lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;
-&lt;p&gt;Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.&lt;/p&gt;
-&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description>
+      <title>SSH: How I Connect to Remote Servers</title>
+      <link>http://localhost:1313/posts/ssh/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ssh/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ssh&#34;&gt;Why I Use SSH&lt;/h2&gt;
+&lt;p&gt;SSH is how I control another machine from my terminal. I use it to manage servers, copy files, and run commands on remote systems without sitting in front of them.&lt;/p&gt;
+&lt;p&gt;For Windows remote desktop you use RDP. For Linux, SSH is the standard.&lt;/p&gt;
+&lt;h2 id=&#34;how-ssh-works-short-version&#34;&gt;How SSH Works (Short Version)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt; — on your laptop (where you type)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt; — on the remote machine (what you connect to)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You run &lt;code&gt;ssh user@ip&lt;/code&gt;, enter your password (or use a key), and you get a shell on the remote box.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dual Boot Ubuntu and Windows: What I Did</title>
+      <link>http://localhost:1313/posts/dual_boot/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dual_boot/</guid>
+      <description>&lt;h2 id=&#34;why-i-dual-booted&#34;&gt;Why I Dual-Booted&lt;/h2&gt;
+&lt;p&gt;I needed Windows for some things and Linux for everything else. Instead of picking one, I installed &lt;strong&gt;Ubuntu alongside Windows&lt;/strong&gt; on the same machine. This is the process I followed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;steps-to-dual-boot-ubuntu-with-windows&#34;&gt;Steps to Dual Boot Ubuntu with Windows&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-prepare-a-bootable-usb-drive&#34;&gt;&lt;strong&gt;Step 1: Prepare a Bootable USB Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the latest Ubuntu ISO from the &lt;a href=&#34;https://ubuntu.com/download&#34;&gt;official Ubuntu website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download and install &lt;a href=&#34;https://rufus.ie&#34;&gt;Rufus&lt;/a&gt; or &lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;balenaEtcher&lt;/a&gt; to create a bootable USB.&lt;/li&gt;
+&lt;li&gt;Insert a USB drive (at least 8GB) into your computer.&lt;/li&gt;
+&lt;li&gt;Open Rufus or balenaEtcher:
+&lt;ul&gt;
+&lt;li&gt;Select the Ubuntu ISO file.&lt;/li&gt;
+&lt;li&gt;Choose the USB drive.&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Start&amp;rdquo; to create the bootable drive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-2-configure-biosuefi-settings&#34;&gt;&lt;strong&gt;Step 2: Configure BIOS/UEFI Settings&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Restart your computer and enter BIOS/UEFI by pressing a specific key (usually &lt;strong&gt;F2, F12, Del, or Esc&lt;/strong&gt;) during startup.&lt;/li&gt;
+&lt;li&gt;Look for &lt;strong&gt;Boot Order/Boot Priority&lt;/strong&gt; and set the USB drive as the first boot device.&lt;/li&gt;
+&lt;li&gt;Disable &lt;strong&gt;Secure Boot&lt;/strong&gt; (if enabled) under the Security tab.&lt;/li&gt;
+&lt;li&gt;Enable &lt;strong&gt;UEFI mode&lt;/strong&gt; (recommended) instead of Legacy mode.&lt;/li&gt;
+&lt;li&gt;Save changes and exit BIOS.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-3-boot-from-the-usb-drive&#34;&gt;&lt;strong&gt;Step 3: Boot from the USB Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Insert the bootable USB drive into your computer.&lt;/li&gt;
+&lt;li&gt;Restart the system and press the &lt;strong&gt;Boot Menu key&lt;/strong&gt; (F12, F9, Esc, or as per your motherboard).&lt;/li&gt;
+&lt;li&gt;Select the bootable USB drive from the list.&lt;/li&gt;
+&lt;li&gt;Press &lt;strong&gt;Enter&lt;/strong&gt; to boot into Ubuntu Live.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-4-try-or-install-ubuntu&#34;&gt;&lt;strong&gt;Step 4: Try or Install Ubuntu&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Once the Ubuntu installer loads, you will see two options:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Try Ubuntu&lt;/strong&gt; – Runs Ubuntu without installing it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Install Ubuntu&lt;/strong&gt; – Proceeds with the installation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Install Ubuntu&lt;/strong&gt; to continue.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-5-select-keyboard-layout&#34;&gt;&lt;strong&gt;Step 5: Select Keyboard Layout&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Choose your preferred &lt;strong&gt;keyboard layout&lt;/strong&gt; and language.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-6-connect-to-wi-fi-optional&#34;&gt;&lt;strong&gt;Step 6: Connect to Wi-Fi (Optional)&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select your Wi-Fi network.&lt;/li&gt;
+&lt;li&gt;Enter the password and click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-7-choose-installation-type&#34;&gt;&lt;strong&gt;Step 7: Choose Installation Type&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select &lt;strong&gt;Normal Installation&lt;/strong&gt; (recommended).&lt;/li&gt;
+&lt;li&gt;Check the box &lt;strong&gt;Install third-party software for graphics and Wi-Fi hardware, Flash, MP3, and other media&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-8-choose-installation-method&#34;&gt;&lt;strong&gt;Step 8: Choose Installation Method&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select &lt;strong&gt;Something else&lt;/strong&gt; (for manual partitioning).&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-9-create-partitions-for-ubuntu&#34;&gt;&lt;strong&gt;Step 9: Create Partitions for Ubuntu&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Ubuntu requires three main partitions:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

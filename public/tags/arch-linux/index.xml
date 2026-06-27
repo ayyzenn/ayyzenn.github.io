@@ -2,26 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Arch-Linux on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/arch-linux/</link>
+    <link>http://localhost:1313/tags/arch-linux/</link>
     <description>Recent content in Arch-Linux on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/arch-linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/arch-linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Jenkins on Arch Linux (i3): Install, Run, and Create Your First Project</title>
-      <link>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</link>
+      <title>Jenkins on Arch Linux: How I Set It Up on i3</title>
+      <link>http://localhost:1313/posts/jenkins-on-arch-linux/</link>
       <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/jenkins-on-arch-linux/</guid>
-      <description>&lt;h2 id=&#34;jenkins-on-arch-linux-i3&#34;&gt;Jenkins on Arch Linux (i3)&lt;/h2&gt;
-&lt;p&gt;This guide shows you how to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Install Jenkins&lt;/strong&gt; on Arch Linux (i3 window manager is fine)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Start and use Jenkins&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create a simple freestyle job&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create a real Jenkins Pipeline from a GitHub repo&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The language is simple and the examples are small and realistic.&lt;/p&gt;
+      <guid>http://localhost:1313/posts/jenkins-on-arch-linux/</guid>
+      <description>&lt;h2 id=&#34;why-i-wrote-this&#34;&gt;Why I Wrote This&lt;/h2&gt;
+&lt;p&gt;I run Arch Linux with i3 and wanted Jenkins locally for CI/CD experiments. This covers Java 21, the Jenkins install, a test job, and a GitHub pipeline — exactly what I ran on my machine.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-what-is-jenkins-simple-explanation&#34;&gt;1. What is Jenkins? (Simple Explanation)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Jenkins is an automation server.&lt;/strong&gt;&lt;/p&gt;
@@ -32,6 +25,74 @@
 &lt;li&gt;Show you if things passed or failed&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Instead of you running commands manually every time, Jenkins does it &lt;strong&gt;automatically&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ollama &#43; DeepSeek: How I Run LLMs Locally</title>
+      <link>http://localhost:1313/posts/ollama/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ollama/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ollama&#34;&gt;Why I Use Ollama&lt;/h2&gt;
+&lt;p&gt;I wanted to run LLMs on my own hardware without paying for API calls or sending data to the cloud. &lt;strong&gt;Ollama&lt;/strong&gt; made that straightforward — install, pull a model, start chatting.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;install-ollama&#34;&gt;Install Ollama&lt;/h2&gt;
+&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux&lt;/h3&gt;
+&lt;p&gt;Update your system, then install Ollama:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enable and start the service:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl start ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl status ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should see &lt;code&gt;active (running)&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating My First Docker Container</title>
+      <link>http://localhost:1313/posts/container_docker/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/container_docker/</guid>
+      <description>&lt;h2 id=&#34;what-i-did-here&#34;&gt;What I Did Here&lt;/h2&gt;
+&lt;p&gt;After installing Docker, I wanted to run an actual Ubuntu container — not just &lt;code&gt;hello-world&lt;/code&gt;. The steps inside this post are the same on &lt;strong&gt;Arch Linux&lt;/strong&gt; and &lt;strong&gt;Ubuntu&lt;/strong&gt; hosts. Only the Docker &lt;em&gt;installation&lt;/em&gt; differs — see &lt;a href=&#34;http://localhost:1313/posts/dockers/&#34;&gt;Docker on Arch Linux and Ubuntu&lt;/a&gt; for that part.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;arch-linux-host&#34;&gt;Arch Linux (host)&lt;/h2&gt;
+&lt;p&gt;Make sure Docker is installed and running on your Arch machine first:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable --now docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl status docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pull-the-ubuntu-image&#34;&gt;Pull the Ubuntu image&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-and-enter-a-container&#34;&gt;Create and enter a container&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What those flags mean:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker on Arch Linux and Ubuntu: How I Got It Running</title>
+      <link>http://localhost:1313/posts/dockers/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dockers/</guid>
+      <description>&lt;h2 id=&#34;why-i-started-using-docker&#34;&gt;Why I Started Using Docker&lt;/h2&gt;
+&lt;p&gt;I wanted a way to run apps without messing up my main system. Docker packs an app with everything it needs into a &lt;strong&gt;container&lt;/strong&gt; — a small, isolated environment that shares my kernel but stays separate from everything else.&lt;/p&gt;
+&lt;p&gt;If something breaks inside a container, I delete it and start over. No reinstalling the whole OS.&lt;/p&gt;
+&lt;h2 id=&#34;containers-vs-images-quick-version&#34;&gt;Containers vs Images (Quick Version)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Image&lt;/strong&gt; — a read-only template (like a recipe)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt; — a running instance of that image (like the actual dish you cooked)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You build or pull an image once. You can spin up as many containers from it as you want.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH: How I Connect to Remote Servers</title>
+      <link>http://localhost:1313/posts/ssh/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ssh/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ssh&#34;&gt;Why I Use SSH&lt;/h2&gt;
+&lt;p&gt;SSH is how I control another machine from my terminal. I use it to manage servers, copy files, and run commands on remote systems without sitting in front of them.&lt;/p&gt;
+&lt;p&gt;For Windows remote desktop you use RDP. For Linux, SSH is the standard.&lt;/p&gt;
+&lt;h2 id=&#34;how-ssh-works-short-version&#34;&gt;How SSH Works (Short Version)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt; — on your laptop (where you type)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt; — on the remote machine (what you connect to)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You run &lt;code&gt;ssh user@ip&lt;/code&gt;, enter your password (or use a key), and you get a shell on the remote box.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

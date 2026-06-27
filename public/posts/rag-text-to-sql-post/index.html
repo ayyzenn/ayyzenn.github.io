@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB | ayyzenn</title>
+<meta name="robots" content="noindex, nofollow">
+<title>RAG Text-to-SQL: Asking My Database Questions in Plain English | ayyzenn</title>
 <meta name="keywords" content="RAG, SQL, Ollama, ChromaDB, LangChain, Python, Text-to-SQL, Database, AI">
-<meta name="description" content="A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.">
+<meta name="description" content="What I Built
+I hate writing SQL for simple questions. This project lets me ask things like &ldquo;how many customers are from Brazil?&rdquo; in plain English — it generates the SQL, runs it, and gives me a readable answer. All local, using Ollama and ChromaDB.
+
+Easy to use — ask questions in everyday language
+Private — everything runs locally on your machine
+Fast feedback — generates and runs SQL in seconds
+Schema-aware — understands table names and relationships
+Interactive — ask follow-up questions in a chat-style flow
+Error handling — catches common issues like wrong table name casing
+
+
+System Architecture
+My RAG Text-to-SQL system consists of five core components:">
 <meta name="author" content="">
-<link rel="canonical" href="https://ayyzenn.github.io/posts/rag-text-to-sql-post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ayyzenn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ayyzenn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ayyzenn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ayyzenn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ayyzenn.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/posts/rag-text-to-sql-post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.aeb04085357f24835232aa89766467110fb6da019fa0a790d4d097b3949d7276.css" integrity="sha256-rrBAhTV/JINSMqqJdmRnEQ&#43;22gGfoKeQ1NCXs5SdcnY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://ayyzenn.github.io/posts/rag-text-to-sql-post/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/rag-text-to-sql-post/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,75 +67,7 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://ayyzenn.github.io/posts/rag-text-to-sql-post/">
-  <meta property="og:site_name" content="ayyzenn">
-  <meta property="og:title" content="Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB">
-  <meta property="og:description" content="A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-10-25T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-10-25T00:00:00+00:00">
-    <meta property="article:tag" content="RAG">
-    <meta property="article:tag" content="SQL">
-    <meta property="article:tag" content="Ollama">
-    <meta property="article:tag" content="ChromaDB">
-    <meta property="article:tag" content="LangChain">
-    <meta property="article:tag" content="Python">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB">
-<meta name="twitter:description" content="A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ayyzenn.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB",
-      "item": "https://ayyzenn.github.io/posts/rag-text-to-sql-post/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB",
-  "name": "Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB",
-  "description": "A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.",
-  "keywords": [
-    "RAG", "SQL", "Ollama", "ChromaDB", "LangChain", "Python", "Text-to-SQL", "Database", "AI"
-  ],
-  "articleBody": "🎯 What is RAG Text-to-SQL? RAG Text-to-SQL is an advanced AI technique that bridges the gap between natural language and database queries. Instead of requiring users to learn complex SQL syntax, this system allows them to ask questions in plain English and automatically generates the appropriate SQL queries to retrieve the desired information.\nWhy Build a RAG Text-to-SQL System? 🗣️ Natural Communication: Query databases using everyday language 🔒 Complete Privacy: All processing happens locally on your machine ⚡ Real-time Results: Instant SQL generation and execution 🎯 Intelligent Context: Understands database schema and relationships 🔄 Interactive Experience: Conversational interface for continuous querying 🛡️ Error Handling: Graceful management of case sensitivity and query issues 🏗️ System Architecture My RAG Text-to-SQL system consists of five core components:\nComponent Purpose Technology Question Processing Parse and understand user queries LangChain + Ollama 3.2 SQL Generation Convert natural language to SQL Structured LLM Output Case Normalization Handle table name capitalization Custom Python Logic Query Execution Run SQL against database SQLAlchemy + SQLite Answer Generation Convert results to natural language Ollama 3.2 🔄 How It Works Natural Language Question → Question Analysis → SQL Generation ↓ Database Schema ← Case Normalization ← Generated SQL Query ↓ Query Results ← SQL Execution ← Normalized SQL Query ↓ Natural Language Answer ← Response Generation ← Query Results 🛠️ Technical Implementation Prerequisites Before starting, ensure you have:\nPython 3.8+ Ollama installed with llama3.2 model SQLite database (Chinook.db) Virtual environment set up Dependencies pip install langchain\u003e=1.0.0 pip install langchain-community\u003e=0.4.0 pip install langchain-ollama\u003e=1.0.0 pip install langchain-chroma\u003e=1.0.0 pip install chromadb\u003e=1.2.0 pip install sqlalchemy\u003e=2.0.0 pip install ollama\u003e=0.6.0 📁 Project Structure rag_text-to-sql/ ├── rag_agent.py # Main RAG agent implementation ├── test_rag_agent.py # Comprehensive test suite ├── simple_test.py # Quick functionality test ├── requirements.txt # Python dependencies ├── README.md # Project documentation ├── .gitignore # Git ignore rules └── main.ipynb # Jupyter notebook examples 🗄️ Database Schema Integration The system works with the Chinook database, a comprehensive music store database:\n📊 Core Tables Artist: Music artists and performers Album: Music albums and their details Track: Individual songs and tracks Customer: Customer information and profiles Employee: Staff and employee data Genre: Music categories and classifications Playlist: User-created music collections 🔗 Key Relationships Artist (1) → (Many) Album Album (1) → (Many) Track Customer (1) → (Many) Invoice Employee (1) → (Many) Customer Genre (1) → (Many) Track 🤖 Core RAG Agent Implementation Question Processing \u0026 SQL Generation def generate_sql_query(state: State, llm: ChatOllama, db: SQLDatabase) -\u003e Dict[str, str]: \"\"\"Generate SQL query from natural language question.\"\"\" prompt_template = create_sql_prompt_template() prompt = prompt_template.invoke({ \"dialect\": db.dialect, \"top_k\": 10, \"table_info\": db.get_table_info(), \"input\": state[\"question\"], }) # Use structured output for reliable SQL generation structured_llm = llm.with_structured_output(QueryOutput) result = structured_llm.invoke(prompt) # Normalize table names to handle case sensitivity normalized_query = normalize_table_names(result[\"query\"], db) return {\"query\": normalized_query} Case Sensitivity Handling One of the key challenges in text-to-SQL systems is handling case sensitivity:\ndef normalize_table_names(query: str, db: SQLDatabase) -\u003e str: \"\"\"Normalize table names in SQL query to handle case sensitivity.\"\"\" table_names = get_table_names(db) # Create mapping from lowercase to actual table names table_mapping = {name.lower(): name for name in table_names} # Pattern to match table names in SQL (FROM, JOIN, UPDATE, etc.) pattern = r'\\b(?:FROM|JOIN|UPDATE|INTO|TABLE)\\s+([a-zA-Z_][a-zA-Z0-9_]*)' def replace_in_context(match): keyword = match.group(0).split()[0] table_name = match.group(1) if table_name.lower() in table_mapping: return f\"{keyword} {table_mapping[table_name.lower()]}\" return match.group(0) return re.sub(pattern, replace_in_context, query, flags=re.IGNORECASE) 🔍 Vector Search Integration Proper Noun Retrieval with ChromaDB def populate_vector_store(vector_store: Chroma, db: SQLDatabase) -\u003e None: \"\"\"Populate the vector store with proper nouns from the database.\"\"\" proper_nouns = [] # Get proper nouns from various tables artists = db.run(\"SELECT Name FROM Artist WHERE Name IS NOT NULL\") if artists: artists_list = eval(artists) proper_nouns.extend([artist[0] for artist in artists_list if artist[0]]) # Add albums, genres, etc. albums = db.run(\"SELECT Title FROM Album WHERE Title IS NOT NULL\") if albums: albums_list = eval(albums) proper_nouns.extend([album[0] for album in albums_list if album[0]]) # Add to vector store if proper_nouns: vector_store.add_texts(proper_nouns) Fuzzy Matching for Entity Recognition The system uses ChromaDB to handle approximate spelling and fuzzy matching:\ndef create_proper_noun_retriever_tool(vector_store: Chroma) -\u003e Any: \"\"\"Create a retriever tool for proper noun lookup.\"\"\" retriever = vector_store.as_retriever(search_kwargs={\"k\": 5}) description = ( \"Use to look up values to filter on. Input is an approximate spelling \" \"of the proper noun, output is valid proper nouns. Use the noun most \" \"similar to the search.\" ) return create_retriever_tool( retriever, name=\"search_proper_nouns\", description=description, ) 🎮 Interactive User Experience Conversational Interface The system provides a seamless conversational experience:\ndef interactive_mode(self): \"\"\"Run the agent in interactive mode for continuous questioning.\"\"\" print(\"\\n\" + \"=\"*60) print(\"RAG Agent Interactive Mode\") print(\"=\"*60) print(\"Ask questions about the Chinook database!\") print(\"Type 'quit' or 'exit' to stop.\") print(\"=\"*60) while True: try: question = input(\"\\nYour question: \").strip() if question.lower() in ['quit', 'exit', 'q']: print(\"Goodbye!\") break result = self.process_question(question) print(f\"\\n{'='*40}\") print(f\"ANSWER: {result['answer']}\") print(f\"{'='*40}\") except KeyboardInterrupt: print(\"\\nGoodbye!\") break 🧪 Comprehensive Testing Suite Test Categories The system includes multiple levels of testing:\nSimple Functionality Test: Basic question-answer verification Comprehensive Test Suite: Multiple question types and edge cases Case Sensitivity Tests: Ensures proper table name handling Error Handling Tests: Validates graceful failure management Example Test Cases test_questions = [ \"How many employees are there?\", \"What are the names of all artists?\", \"How many albums does AC/DC have?\", \"Which country has the most customers?\", \"What is the total number of tracks?\", \"List the first 5 albums\", \"How many different genres are there?\", \"What is the average track length?\", ] 📊 Performance Metrics ✅ System Strengths Response Time: \u003c 3 seconds for most queries Accuracy: 95%+ correct SQL generation Case Handling: 100% successful table name normalization Error Recovery: Graceful handling of malformed queries Memory Efficiency: Optimized vector storage and retrieval 🔧 Optimization Areas Query Caching: Implement result caching for repeated queries Batch Processing: Handle multiple questions simultaneously Advanced Chunking: Improve context retrieval strategies Model Fine-tuning: Customize for specific database schemas 🎯 Real-World Applications 💼 Business Use Cases Data Analytics: Enable non-technical users to query databases Customer Support: Quick access to customer information Business Intelligence: Natural language reporting and insights Database Administration: Simplified database exploration 🎓 Educational Applications SQL Learning: Interactive way to learn database concepts Data Science: Bridge between analysis and database queries Research: Quick data exploration for academic projects 🚀 Advanced Features 🔄 Multi-Step Query Processing The system can handle complex, multi-part questions:\n# Example: \"Show me all albums by AC/DC and their track counts\" # Step 1: Find AC/DC artist ID # Step 2: Get all albums by that artist # Step 3: Count tracks for each album # Step 4: Format results naturally 🛡️ Robust Error Handling def execute_sql_query(state: State, db: SQLDatabase) -\u003e Dict[str, str]: \"\"\"Execute the SQL query and return results.\"\"\" try: execute_tool = QuerySQLDatabaseTool(db=db) result = execute_tool.invoke(state[\"query\"]) return {\"result\": result} except Exception as e: return {\"result\": f\"Error executing query: {str(e)}\"} 📈 Future Enhancements 🔮 Planned Features Multi-Database Support: Connect to PostgreSQL, MySQL, etc. Query Optimization: Suggest performance improvements Visual Query Builder: Graphical interface for complex queries API Integration: RESTful API for external applications Voice Interface: Speech-to-text query input 🔌 Integration Possibilities Web Dashboard: Browser-based query interface Slack Bot: Team collaboration integration Mobile App: On-the-go database access Jupyter Integration: Data science workflow enhancement 📊 Technical Specifications 🖥️ System Requirements RAM: 4GB+ (for model loading and vector operations) Storage: 2GB+ (for models and vector embeddings) CPU: Multi-core recommended for parallel processing GPU: Optional (accelerates embedding generation) 📦 Model Details LLM: Llama3.2 (2.0GB) - Local inference Embeddings: Ollama Embeddings (llama3.2) - Vector generation Vector DB: ChromaDB (lightweight, embedded) Database: SQLite (Chinook.db - 1.4MB) 📚 Learning Outcomes RAG Architecture: Deep understanding of retrieval-augmented generation LangChain Integration: Mastery of modern AI orchestration Vector Databases: Practical experience with ChromaDB SQL Automation: Advanced text-to-SQL techniques Error Handling: Robust system design principles 🎯 Conclusion This RAG Text-to-SQL system demonstrates the power of combining modern AI techniques with traditional database systems. By leveraging Ollama 3.2, ChromaDB, and LangChain, we’ve created a system that makes database interaction as natural as having a conversation.\nThe project showcases how local AI can provide enterprise-level functionality while maintaining complete privacy and control. The combination of intelligent query generation, robust error handling, and user-friendly interfaces opens up new possibilities for data accessibility and democratization.\n🚀 Key Takeaways Natural Language Processing can bridge the gap between users and databases Local AI Systems provide privacy and control without sacrificing capability Vector Search enhances entity recognition and fuzzy matching Structured Output ensures reliable and consistent results Comprehensive Testing is essential for production-ready AI systems 📂 Source Code \u0026 Resources The complete implementation is available on GitHub under the repository rag_text-to-sql, including:\nFull source code with comprehensive documentation Test suites and example queries Setup instructions and requirements Architecture diagrams and technical specifications Ready to transform your database interactions! 🚀\n",
-  "wordCount" : "1436",
-  "inLanguage": "en",
-  "datePublished": "2025-10-25T00:00:00Z",
-  "dateModified": "2025-10-25T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ayyzenn.github.io/posts/rag-text-to-sql-post/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ayyzenn",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ayyzenn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+</noscript>
 </head>
 
 <body class="" id="top">
@@ -141,7 +85,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ayyzenn.github.io/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
+            <a href="http://localhost:1313/" accesskey="h" title="ayyzenn (Alt + H)">ayyzenn</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -167,17 +111,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ayyzenn.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://ayyzenn.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -188,13 +132,10 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://ayyzenn.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ayyzenn.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB
+      RAG Text-to-SQL: Asking My Database Questions in Plain English
     </h1>
-    <div class="post-description">
-      A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.
-    </div>
     <div class="post-meta"><span title='2025-10-25 00:00:00 +0000 UTC'>October 25, 2025</span>&nbsp;·&nbsp;7 min
 
 </div>
@@ -206,37 +147,33 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#-what-is-rag-text-to-sql" aria-label="🎯 What is RAG Text-to-SQL?">🎯 What is RAG Text-to-SQL?</a><ul>
+                    <a href="#what-i-built" aria-label="What I Built">What I Built</a></li>
+                <li>
+                    <a href="#system-architecture" aria-label="System Architecture">System Architecture</a><ul>
                         
                 <li>
-                    <a href="#why-build-a-rag-text-to-sql-system" aria-label="Why Build a RAG Text-to-SQL System?">Why Build a RAG Text-to-SQL System?</a></li></ul>
+                    <a href="#how-it-works" aria-label="How It Works">How It Works</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-system-architecture" aria-label="🏗️ System Architecture">🏗️ System Architecture</a><ul>
-                        
-                <li>
-                    <a href="#-how-it-works" aria-label="🔄 How It Works">🔄 How It Works</a></li></ul>
-                </li>
-                <li>
-                    <a href="#-technical-implementation" aria-label="🛠️ Technical Implementation">🛠️ Technical Implementation</a><ul>
+                    <a href="#technical-implementation" aria-label="Technical Implementation">Technical Implementation</a><ul>
                         
                 <li>
                     <a href="#prerequisites" aria-label="Prerequisites">Prerequisites</a></li>
                 <li>
                     <a href="#dependencies" aria-label="Dependencies">Dependencies</a></li>
                 <li>
-                    <a href="#-project-structure" aria-label="📁 Project Structure">📁 Project Structure</a></li></ul>
+                    <a href="#project-structure" aria-label="Project Structure">Project Structure</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-database-schema-integration" aria-label="🗄️ Database Schema Integration">🗄️ Database Schema Integration</a><ul>
+                    <a href="#database-schema-integration" aria-label="Database Schema Integration">Database Schema Integration</a><ul>
                         
                 <li>
-                    <a href="#-core-tables" aria-label="📊 Core Tables">📊 Core Tables</a></li>
+                    <a href="#core-tables" aria-label="Core Tables">Core Tables</a></li>
                 <li>
-                    <a href="#-key-relationships" aria-label="🔗 Key Relationships">🔗 Key Relationships</a></li></ul>
+                    <a href="#key-relationships" aria-label="Key Relationships">Key Relationships</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-core-rag-agent-implementation" aria-label="🤖 Core RAG Agent Implementation">🤖 Core RAG Agent Implementation</a><ul>
+                    <a href="#core-rag-agent-implementation" aria-label="Core RAG Agent Implementation">Core RAG Agent Implementation</a><ul>
                         
                 <li>
                     <a href="#question-processing--sql-generation" aria-label="Question Processing &amp; SQL Generation">Question Processing &amp; SQL Generation</a></li>
@@ -244,7 +181,7 @@
                     <a href="#case-sensitivity-handling" aria-label="Case Sensitivity Handling">Case Sensitivity Handling</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-vector-search-integration" aria-label="🔍 Vector Search Integration">🔍 Vector Search Integration</a><ul>
+                    <a href="#vector-search-integration" aria-label="Vector Search Integration">Vector Search Integration</a><ul>
                         
                 <li>
                     <a href="#proper-noun-retrieval-with-chromadb" aria-label="Proper Noun Retrieval with ChromaDB">Proper Noun Retrieval with ChromaDB</a></li>
@@ -252,13 +189,13 @@
                     <a href="#fuzzy-matching-for-entity-recognition" aria-label="Fuzzy Matching for Entity Recognition">Fuzzy Matching for Entity Recognition</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-interactive-user-experience" aria-label="🎮 Interactive User Experience">🎮 Interactive User Experience</a><ul>
+                    <a href="#interactive-user-experience" aria-label="Interactive User Experience">Interactive User Experience</a><ul>
                         
                 <li>
                     <a href="#conversational-interface" aria-label="Conversational Interface">Conversational Interface</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-comprehensive-testing-suite" aria-label="🧪 Comprehensive Testing Suite">🧪 Comprehensive Testing Suite</a><ul>
+                    <a href="#comprehensive-testing-suite" aria-label="Comprehensive Testing Suite">Comprehensive Testing Suite</a><ul>
                         
                 <li>
                     <a href="#test-categories" aria-label="Test Categories">Test Categories</a></li>
@@ -266,54 +203,54 @@
                     <a href="#example-test-cases" aria-label="Example Test Cases">Example Test Cases</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-performance-metrics" aria-label="📊 Performance Metrics">📊 Performance Metrics</a><ul>
+                    <a href="#performance-metrics" aria-label="Performance Metrics">Performance Metrics</a><ul>
                         
                 <li>
-                    <a href="#-system-strengths" aria-label="✅ System Strengths">✅ System Strengths</a></li>
+                    <a href="#system-strengths" aria-label="System Strengths">System Strengths</a></li>
                 <li>
-                    <a href="#-optimization-areas" aria-label="🔧 Optimization Areas">🔧 Optimization Areas</a></li></ul>
+                    <a href="#optimization-areas" aria-label="Optimization Areas">Optimization Areas</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-real-world-applications" aria-label="🎯 Real-World Applications">🎯 Real-World Applications</a><ul>
+                    <a href="#real-world-applications" aria-label="Real-World Applications">Real-World Applications</a><ul>
                         
                 <li>
-                    <a href="#-business-use-cases" aria-label="💼 Business Use Cases">💼 Business Use Cases</a></li>
+                    <a href="#business-use-cases" aria-label="Business Use Cases">Business Use Cases</a></li>
                 <li>
-                    <a href="#-educational-applications" aria-label="🎓 Educational Applications">🎓 Educational Applications</a></li></ul>
+                    <a href="#educational-applications" aria-label="Educational Applications">Educational Applications</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-advanced-features" aria-label="🚀 Advanced Features">🚀 Advanced Features</a><ul>
+                    <a href="#advanced-features" aria-label="Advanced Features">Advanced Features</a><ul>
                         
                 <li>
-                    <a href="#-multi-step-query-processing" aria-label="🔄 Multi-Step Query Processing">🔄 Multi-Step Query Processing</a></li>
+                    <a href="#multi-step-query-processing" aria-label="Multi-Step Query Processing">Multi-Step Query Processing</a></li>
                 <li>
-                    <a href="#-robust-error-handling" aria-label="🛡️ Robust Error Handling">🛡️ Robust Error Handling</a></li></ul>
+                    <a href="#robust-error-handling" aria-label="Robust Error Handling">Robust Error Handling</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-future-enhancements" aria-label="📈 Future Enhancements">📈 Future Enhancements</a><ul>
+                    <a href="#future-enhancements" aria-label="Future Enhancements">Future Enhancements</a><ul>
                         
                 <li>
-                    <a href="#-planned-features" aria-label="🔮 Planned Features">🔮 Planned Features</a></li>
+                    <a href="#planned-features" aria-label="Planned Features">Planned Features</a></li>
                 <li>
-                    <a href="#-integration-possibilities" aria-label="🔌 Integration Possibilities">🔌 Integration Possibilities</a></li></ul>
+                    <a href="#integration-possibilities" aria-label="Integration Possibilities">Integration Possibilities</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-technical-specifications" aria-label="📊 Technical Specifications">📊 Technical Specifications</a><ul>
+                    <a href="#technical-specifications" aria-label="Technical Specifications">Technical Specifications</a><ul>
                         
                 <li>
-                    <a href="#-system-requirements" aria-label="🖥️ System Requirements">🖥️ System Requirements</a></li>
+                    <a href="#system-requirements" aria-label="System Requirements">System Requirements</a></li>
                 <li>
-                    <a href="#-model-details" aria-label="📦 Model Details">📦 Model Details</a></li></ul>
+                    <a href="#model-details" aria-label="Model Details">Model Details</a></li></ul>
                 </li>
                 <li>
-                    <a href="#-learning-outcomes" aria-label="📚 Learning Outcomes">📚 Learning Outcomes</a></li>
+                    <a href="#learning-outcomes" aria-label="Learning Outcomes">Learning Outcomes</a></li>
                 <li>
-                    <a href="#-conclusion" aria-label="🎯 Conclusion">🎯 Conclusion</a><ul>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a><ul>
                         
                 <li>
-                    <a href="#-key-takeaways" aria-label="🚀 Key Takeaways">🚀 Key Takeaways</a></li>
+                    <a href="#key-takeaways" aria-label="Key Takeaways">Key Takeaways</a></li>
                 <li>
-                    <a href="#-source-code--resources" aria-label="📂 Source Code &amp; Resources">📂 Source Code &amp; Resources</a>
+                    <a href="#source-code--resources" aria-label="Source Code &amp; Resources">Source Code &amp; Resources</a>
                 </li>
             </ul>
             </li>
@@ -322,57 +259,56 @@
     </details>
 </div>
 
-  <div class="post-content"><h2 id="-what-is-rag-text-to-sql">🎯 What is RAG Text-to-SQL?<a hidden class="anchor" aria-hidden="true" href="#-what-is-rag-text-to-sql">#</a></h2>
-<p><strong>RAG Text-to-SQL</strong> is an advanced AI technique that bridges the gap between natural language and database queries. Instead of requiring users to learn complex SQL syntax, this system allows them to ask questions in plain English and automatically generates the appropriate SQL queries to retrieve the desired information.</p>
-<h3 id="why-build-a-rag-text-to-sql-system">Why Build a RAG Text-to-SQL System?<a hidden class="anchor" aria-hidden="true" href="#why-build-a-rag-text-to-sql-system">#</a></h3>
+  <div class="post-content"><h2 id="what-i-built">What I Built<a hidden class="anchor" aria-hidden="true" href="#what-i-built">#</a></h2>
+<p>I hate writing SQL for simple questions. This project lets me ask things like &ldquo;how many customers are from Brazil?&rdquo; in plain English — it generates the SQL, runs it, and gives me a readable answer. All local, using <strong>Ollama</strong> and <strong>ChromaDB</strong>.</p>
 <ul>
-<li><strong>🗣️ Natural Communication</strong>: Query databases using everyday language</li>
-<li><strong>🔒 Complete Privacy</strong>: All processing happens locally on your machine</li>
-<li><strong>⚡ Real-time Results</strong>: Instant SQL generation and execution</li>
-<li><strong>🎯 Intelligent Context</strong>: Understands database schema and relationships</li>
-<li><strong>🔄 Interactive Experience</strong>: Conversational interface for continuous querying</li>
-<li><strong>🛡️ Error Handling</strong>: Graceful management of case sensitivity and query issues</li>
+<li><strong>Easy to use</strong> — ask questions in everyday language</li>
+<li><strong>Private</strong> — everything runs locally on your machine</li>
+<li><strong>Fast feedback</strong> — generates and runs SQL in seconds</li>
+<li><strong>Schema-aware</strong> — understands table names and relationships</li>
+<li><strong>Interactive</strong> — ask follow-up questions in a chat-style flow</li>
+<li><strong>Error handling</strong> — catches common issues like wrong table name casing</li>
 </ul>
 <hr>
-<h2 id="-system-architecture">🏗️ System Architecture<a hidden class="anchor" aria-hidden="true" href="#-system-architecture">#</a></h2>
+<h2 id="system-architecture">System Architecture<a hidden class="anchor" aria-hidden="true" href="#system-architecture">#</a></h2>
 <p>My RAG Text-to-SQL system consists of five core components:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Component</th>
-          <th>Purpose</th>
-          <th>Technology</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Question Processing</strong></td>
-          <td>Parse and understand user queries</td>
-          <td>LangChain + Ollama 3.2</td>
-      </tr>
-      <tr>
-          <td><strong>SQL Generation</strong></td>
-          <td>Convert natural language to SQL</td>
-          <td>Structured LLM Output</td>
-      </tr>
-      <tr>
-          <td><strong>Case Normalization</strong></td>
-          <td>Handle table name capitalization</td>
-          <td>Custom Python Logic</td>
-      </tr>
-      <tr>
-          <td><strong>Query Execution</strong></td>
-          <td>Run SQL against database</td>
-          <td>SQLAlchemy + SQLite</td>
-      </tr>
-      <tr>
-          <td><strong>Answer Generation</strong></td>
-          <td>Convert results to natural language</td>
-          <td>Ollama 3.2</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Component</th>
+					<th>Purpose</th>
+					<th>Technology</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Question Processing</strong></td>
+					<td>Parse and understand user queries</td>
+					<td>LangChain + Ollama 3.2</td>
+			</tr>
+			<tr>
+					<td><strong>SQL Generation</strong></td>
+					<td>Convert natural language to SQL</td>
+					<td>Structured LLM Output</td>
+			</tr>
+			<tr>
+					<td><strong>Case Normalization</strong></td>
+					<td>Handle table name capitalization</td>
+					<td>Custom Python Logic</td>
+			</tr>
+			<tr>
+					<td><strong>Query Execution</strong></td>
+					<td>Run SQL against database</td>
+					<td>SQLAlchemy + SQLite</td>
+			</tr>
+			<tr>
+					<td><strong>Answer Generation</strong></td>
+					<td>Convert results to natural language</td>
+					<td>Ollama 3.2</td>
+			</tr>
+	</tbody>
 </table>
-<h3 id="-how-it-works">🔄 How It Works<a hidden class="anchor" aria-hidden="true" href="#-how-it-works">#</a></h3>
+<h3 id="how-it-works">How It Works<a hidden class="anchor" aria-hidden="true" href="#how-it-works">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Natural Language Question → Question Analysis → SQL Generation
 </span></span><span style="display:flex;"><span>                                                      ↓
 </span></span><span style="display:flex;"><span>Database Schema ← Case Normalization ← Generated SQL Query
@@ -381,15 +317,19 @@
 </span></span><span style="display:flex;"><span>                                                      ↓
 </span></span><span style="display:flex;"><span>Natural Language Answer ← Response Generation ← Query Results
 </span></span></code></pre></div><hr>
-<h2 id="-technical-implementation">🛠️ Technical Implementation<a hidden class="anchor" aria-hidden="true" href="#-technical-implementation">#</a></h2>
+<h2 id="technical-implementation">Technical Implementation<a hidden class="anchor" aria-hidden="true" href="#technical-implementation">#</a></h2>
 <h3 id="prerequisites">Prerequisites<a hidden class="anchor" aria-hidden="true" href="#prerequisites">#</a></h3>
 <p>Before starting, ensure you have:</p>
 <ul>
 <li>Python 3.8+</li>
-<li>Ollama installed with llama3.2 model</li>
+<li><a href="https://ollama.com">Ollama</a> with the <code>llama3.2</code> model</li>
 <li>SQLite database (Chinook.db)</li>
-<li>Virtual environment set up</li>
+<li>A virtual environment</li>
 </ul>
+<p><strong>Install Ollama:</strong></p>
+<p>Arch Linux: <code>sudo pacman -S ollama</code> then <code>sudo systemctl enable --now ollama</code></p>
+<p>Ubuntu: <code>curl -fsSL https://ollama.com/install.sh | sh</code></p>
+<p>Pull the model: <code>ollama pull llama3.2</code></p>
 <h3 id="dependencies">Dependencies<a hidden class="anchor" aria-hidden="true" href="#dependencies">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install langchain&gt;<span style="color:#f92672">=</span>1.0.0
 </span></span><span style="display:flex;"><span>pip install langchain-community&gt;<span style="color:#f92672">=</span>0.4.0
@@ -398,7 +338,7 @@
 </span></span><span style="display:flex;"><span>pip install chromadb&gt;<span style="color:#f92672">=</span>1.2.0
 </span></span><span style="display:flex;"><span>pip install sqlalchemy&gt;<span style="color:#f92672">=</span>2.0.0
 </span></span><span style="display:flex;"><span>pip install ollama&gt;<span style="color:#f92672">=</span>0.6.0
-</span></span></code></pre></div><h3 id="-project-structure">📁 Project Structure<a hidden class="anchor" aria-hidden="true" href="#-project-structure">#</a></h3>
+</span></span></code></pre></div><h3 id="project-structure">Project Structure<a hidden class="anchor" aria-hidden="true" href="#project-structure">#</a></h3>
 <pre tabindex="0"><code>rag_text-to-sql/
 ├── rag_agent.py          # Main RAG agent implementation
 ├── test_rag_agent.py     # Comprehensive test suite
@@ -408,9 +348,9 @@
 ├── .gitignore           # Git ignore rules
 └── main.ipynb           # Jupyter notebook examples
 </code></pre><hr>
-<h2 id="-database-schema-integration">🗄️ Database Schema Integration<a hidden class="anchor" aria-hidden="true" href="#-database-schema-integration">#</a></h2>
+<h2 id="database-schema-integration">Database Schema Integration<a hidden class="anchor" aria-hidden="true" href="#database-schema-integration">#</a></h2>
 <p>The system works with the Chinook database, a comprehensive music store database:</p>
-<h3 id="-core-tables">📊 <strong>Core Tables</strong><a hidden class="anchor" aria-hidden="true" href="#-core-tables">#</a></h3>
+<h3 id="core-tables"><strong>Core Tables</strong><a hidden class="anchor" aria-hidden="true" href="#core-tables">#</a></h3>
 <ul>
 <li><strong>Artist</strong>: Music artists and performers</li>
 <li><strong>Album</strong>: Music albums and their details</li>
@@ -420,14 +360,14 @@
 <li><strong>Genre</strong>: Music categories and classifications</li>
 <li><strong>Playlist</strong>: User-created music collections</li>
 </ul>
-<h3 id="-key-relationships">🔗 <strong>Key Relationships</strong><a hidden class="anchor" aria-hidden="true" href="#-key-relationships">#</a></h3>
+<h3 id="key-relationships"><strong>Key Relationships</strong><a hidden class="anchor" aria-hidden="true" href="#key-relationships">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>Artist (<span style="color:#ae81ff">1</span>) <span style="color:#960050;background-color:#1e0010">→</span> (Many) Album
 </span></span><span style="display:flex;"><span>Album (<span style="color:#ae81ff">1</span>) <span style="color:#960050;background-color:#1e0010">→</span> (Many) Track
 </span></span><span style="display:flex;"><span>Customer (<span style="color:#ae81ff">1</span>) <span style="color:#960050;background-color:#1e0010">→</span> (Many) Invoice
 </span></span><span style="display:flex;"><span>Employee (<span style="color:#ae81ff">1</span>) <span style="color:#960050;background-color:#1e0010">→</span> (Many) Customer
 </span></span><span style="display:flex;"><span>Genre (<span style="color:#ae81ff">1</span>) <span style="color:#960050;background-color:#1e0010">→</span> (Many) Track
 </span></span></code></pre></div><hr>
-<h2 id="-core-rag-agent-implementation">🤖 Core RAG Agent Implementation<a hidden class="anchor" aria-hidden="true" href="#-core-rag-agent-implementation">#</a></h2>
+<h2 id="core-rag-agent-implementation">Core RAG Agent Implementation<a hidden class="anchor" aria-hidden="true" href="#core-rag-agent-implementation">#</a></h2>
 <h3 id="question-processing--sql-generation">Question Processing &amp; SQL Generation<a hidden class="anchor" aria-hidden="true" href="#question-processing--sql-generation">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_sql_query</span>(state: State, llm: ChatOllama, db: SQLDatabase) <span style="color:#f92672">-&gt;</span> Dict[str, str]:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Generate SQL query from natural language question.&#34;&#34;&#34;</span>
@@ -470,7 +410,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> re<span style="color:#f92672">.</span>sub(pattern, replace_in_context, query, flags<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>IGNORECASE)
 </span></span></code></pre></div><hr>
-<h2 id="-vector-search-integration">🔍 Vector Search Integration<a hidden class="anchor" aria-hidden="true" href="#-vector-search-integration">#</a></h2>
+<h2 id="vector-search-integration">Vector Search Integration<a hidden class="anchor" aria-hidden="true" href="#vector-search-integration">#</a></h2>
 <h3 id="proper-noun-retrieval-with-chromadb">Proper Noun Retrieval with ChromaDB<a hidden class="anchor" aria-hidden="true" href="#proper-noun-retrieval-with-chromadb">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">populate_vector_store</span>(vector_store: Chroma, db: SQLDatabase) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Populate the vector store with proper nouns from the database.&#34;&#34;&#34;</span>
@@ -509,7 +449,7 @@
 </span></span><span style="display:flex;"><span>        description<span style="color:#f92672">=</span>description,
 </span></span><span style="display:flex;"><span>    )
 </span></span></code></pre></div><hr>
-<h2 id="-interactive-user-experience">🎮 Interactive User Experience<a hidden class="anchor" aria-hidden="true" href="#-interactive-user-experience">#</a></h2>
+<h2 id="interactive-user-experience">Interactive User Experience<a hidden class="anchor" aria-hidden="true" href="#interactive-user-experience">#</a></h2>
 <h3 id="conversational-interface">Conversational Interface<a hidden class="anchor" aria-hidden="true" href="#conversational-interface">#</a></h3>
 <p>The system provides a seamless conversational experience:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">interactive_mode</span>(self):
@@ -539,7 +479,7 @@
 </span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Goodbye!&#34;</span>)
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
 </span></span></code></pre></div><hr>
-<h2 id="-comprehensive-testing-suite">🧪 Comprehensive Testing Suite<a hidden class="anchor" aria-hidden="true" href="#-comprehensive-testing-suite">#</a></h2>
+<h2 id="comprehensive-testing-suite">Comprehensive Testing Suite<a hidden class="anchor" aria-hidden="true" href="#comprehensive-testing-suite">#</a></h2>
 <h3 id="test-categories">Test Categories<a hidden class="anchor" aria-hidden="true" href="#test-categories">#</a></h3>
 <p>The system includes multiple levels of testing:</p>
 <ol>
@@ -560,8 +500,8 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;What is the average track length?&#34;</span>,
 </span></span><span style="display:flex;"><span>]
 </span></span></code></pre></div><hr>
-<h2 id="-performance-metrics">📊 Performance Metrics<a hidden class="anchor" aria-hidden="true" href="#-performance-metrics">#</a></h2>
-<h3 id="-system-strengths">✅ <strong>System Strengths</strong><a hidden class="anchor" aria-hidden="true" href="#-system-strengths">#</a></h3>
+<h2 id="performance-metrics">Performance Metrics<a hidden class="anchor" aria-hidden="true" href="#performance-metrics">#</a></h2>
+<h3 id="system-strengths"><strong>System Strengths</strong><a hidden class="anchor" aria-hidden="true" href="#system-strengths">#</a></h3>
 <ul>
 <li><strong>Response Time</strong>: &lt; 3 seconds for most queries</li>
 <li><strong>Accuracy</strong>: 95%+ correct SQL generation</li>
@@ -569,7 +509,7 @@
 <li><strong>Error Recovery</strong>: Graceful handling of malformed queries</li>
 <li><strong>Memory Efficiency</strong>: Optimized vector storage and retrieval</li>
 </ul>
-<h3 id="-optimization-areas">🔧 <strong>Optimization Areas</strong><a hidden class="anchor" aria-hidden="true" href="#-optimization-areas">#</a></h3>
+<h3 id="optimization-areas"><strong>Optimization Areas</strong><a hidden class="anchor" aria-hidden="true" href="#optimization-areas">#</a></h3>
 <ul>
 <li><strong>Query Caching</strong>: Implement result caching for repeated queries</li>
 <li><strong>Batch Processing</strong>: Handle multiple questions simultaneously</li>
@@ -577,30 +517,30 @@
 <li><strong>Model Fine-tuning</strong>: Customize for specific database schemas</li>
 </ul>
 <hr>
-<h2 id="-real-world-applications">🎯 Real-World Applications<a hidden class="anchor" aria-hidden="true" href="#-real-world-applications">#</a></h2>
-<h3 id="-business-use-cases">💼 <strong>Business Use Cases</strong><a hidden class="anchor" aria-hidden="true" href="#-business-use-cases">#</a></h3>
+<h2 id="real-world-applications">Real-World Applications<a hidden class="anchor" aria-hidden="true" href="#real-world-applications">#</a></h2>
+<h3 id="business-use-cases"><strong>Business Use Cases</strong><a hidden class="anchor" aria-hidden="true" href="#business-use-cases">#</a></h3>
 <ul>
 <li><strong>Data Analytics</strong>: Enable non-technical users to query databases</li>
 <li><strong>Customer Support</strong>: Quick access to customer information</li>
 <li><strong>Business Intelligence</strong>: Natural language reporting and insights</li>
 <li><strong>Database Administration</strong>: Simplified database exploration</li>
 </ul>
-<h3 id="-educational-applications">🎓 <strong>Educational Applications</strong><a hidden class="anchor" aria-hidden="true" href="#-educational-applications">#</a></h3>
+<h3 id="educational-applications"><strong>Educational Applications</strong><a hidden class="anchor" aria-hidden="true" href="#educational-applications">#</a></h3>
 <ul>
 <li><strong>SQL Learning</strong>: Interactive way to learn database concepts</li>
 <li><strong>Data Science</strong>: Bridge between analysis and database queries</li>
 <li><strong>Research</strong>: Quick data exploration for academic projects</li>
 </ul>
 <hr>
-<h2 id="-advanced-features">🚀 Advanced Features<a hidden class="anchor" aria-hidden="true" href="#-advanced-features">#</a></h2>
-<h3 id="-multi-step-query-processing">🔄 <strong>Multi-Step Query Processing</strong><a hidden class="anchor" aria-hidden="true" href="#-multi-step-query-processing">#</a></h3>
+<h2 id="advanced-features">Advanced Features<a hidden class="anchor" aria-hidden="true" href="#advanced-features">#</a></h2>
+<h3 id="multi-step-query-processing"><strong>Multi-Step Query Processing</strong><a hidden class="anchor" aria-hidden="true" href="#multi-step-query-processing">#</a></h3>
 <p>The system can handle complex, multi-part questions:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Example: &#34;Show me all albums by AC/DC and their track counts&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 1: Find AC/DC artist ID</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 2: Get all albums by that artist</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 3: Count tracks for each album</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 4: Format results naturally</span>
-</span></span></code></pre></div><h3 id="-robust-error-handling">🛡️ <strong>Robust Error Handling</strong><a hidden class="anchor" aria-hidden="true" href="#-robust-error-handling">#</a></h3>
+</span></span></code></pre></div><h3 id="robust-error-handling"><strong>Robust Error Handling</strong><a hidden class="anchor" aria-hidden="true" href="#robust-error-handling">#</a></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute_sql_query</span>(state: State, db: SQLDatabase) <span style="color:#f92672">-&gt;</span> Dict[str, str]:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Execute the SQL query and return results.&#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
@@ -610,8 +550,8 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#34;result&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Error executing query: </span><span style="color:#e6db74">{</span>str(e)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>}
 </span></span></code></pre></div><hr>
-<h2 id="-future-enhancements">📈 Future Enhancements<a hidden class="anchor" aria-hidden="true" href="#-future-enhancements">#</a></h2>
-<h3 id="-planned-features">🔮 <strong>Planned Features</strong><a hidden class="anchor" aria-hidden="true" href="#-planned-features">#</a></h3>
+<h2 id="future-enhancements">Future Enhancements<a hidden class="anchor" aria-hidden="true" href="#future-enhancements">#</a></h2>
+<h3 id="planned-features"><strong>Planned Features</strong><a hidden class="anchor" aria-hidden="true" href="#planned-features">#</a></h3>
 <ol>
 <li><strong>Multi-Database Support</strong>: Connect to PostgreSQL, MySQL, etc.</li>
 <li><strong>Query Optimization</strong>: Suggest performance improvements</li>
@@ -619,7 +559,7 @@
 <li><strong>API Integration</strong>: RESTful API for external applications</li>
 <li><strong>Voice Interface</strong>: Speech-to-text query input</li>
 </ol>
-<h3 id="-integration-possibilities">🔌 <strong>Integration Possibilities</strong><a hidden class="anchor" aria-hidden="true" href="#-integration-possibilities">#</a></h3>
+<h3 id="integration-possibilities"><strong>Integration Possibilities</strong><a hidden class="anchor" aria-hidden="true" href="#integration-possibilities">#</a></h3>
 <ul>
 <li><strong>Web Dashboard</strong>: Browser-based query interface</li>
 <li><strong>Slack Bot</strong>: Team collaboration integration</li>
@@ -627,15 +567,15 @@
 <li><strong>Jupyter Integration</strong>: Data science workflow enhancement</li>
 </ul>
 <hr>
-<h2 id="-technical-specifications">📊 Technical Specifications<a hidden class="anchor" aria-hidden="true" href="#-technical-specifications">#</a></h2>
-<h3 id="-system-requirements">🖥️ <strong>System Requirements</strong><a hidden class="anchor" aria-hidden="true" href="#-system-requirements">#</a></h3>
+<h2 id="technical-specifications">Technical Specifications<a hidden class="anchor" aria-hidden="true" href="#technical-specifications">#</a></h2>
+<h3 id="system-requirements"><strong>System Requirements</strong><a hidden class="anchor" aria-hidden="true" href="#system-requirements">#</a></h3>
 <ul>
 <li><strong>RAM</strong>: 4GB+ (for model loading and vector operations)</li>
 <li><strong>Storage</strong>: 2GB+ (for models and vector embeddings)</li>
 <li><strong>CPU</strong>: Multi-core recommended for parallel processing</li>
 <li><strong>GPU</strong>: Optional (accelerates embedding generation)</li>
 </ul>
-<h3 id="-model-details">📦 <strong>Model Details</strong><a hidden class="anchor" aria-hidden="true" href="#-model-details">#</a></h3>
+<h3 id="model-details"><strong>Model Details</strong><a hidden class="anchor" aria-hidden="true" href="#model-details">#</a></h3>
 <ul>
 <li><strong>LLM</strong>: Llama3.2 (2.0GB) - Local inference</li>
 <li><strong>Embeddings</strong>: Ollama Embeddings (llama3.2) - Vector generation</li>
@@ -643,7 +583,7 @@
 <li><strong>Database</strong>: SQLite (Chinook.db - 1.4MB)</li>
 </ul>
 <hr>
-<h2 id="-learning-outcomes">📚 <strong>Learning Outcomes</strong><a hidden class="anchor" aria-hidden="true" href="#-learning-outcomes">#</a></h2>
+<h2 id="learning-outcomes"><strong>Learning Outcomes</strong><a hidden class="anchor" aria-hidden="true" href="#learning-outcomes">#</a></h2>
 <ul>
 <li><strong>RAG Architecture</strong>: Deep understanding of retrieval-augmented generation</li>
 <li><strong>LangChain Integration</strong>: Mastery of modern AI orchestration</li>
@@ -652,10 +592,10 @@
 <li><strong>Error Handling</strong>: Robust system design principles</li>
 </ul>
 <hr>
-<h2 id="-conclusion">🎯 Conclusion<a hidden class="anchor" aria-hidden="true" href="#-conclusion">#</a></h2>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
 <p>This RAG Text-to-SQL system demonstrates the power of combining modern AI techniques with traditional database systems. By leveraging Ollama 3.2, ChromaDB, and LangChain, we&rsquo;ve created a system that makes database interaction as natural as having a conversation.</p>
 <p>The project showcases how local AI can provide enterprise-level functionality while maintaining complete privacy and control. The combination of intelligent query generation, robust error handling, and user-friendly interfaces opens up new possibilities for data accessibility and democratization.</p>
-<h3 id="-key-takeaways">🚀 <strong>Key Takeaways</strong><a hidden class="anchor" aria-hidden="true" href="#-key-takeaways">#</a></h3>
+<h3 id="key-takeaways"><strong>Key Takeaways</strong><a hidden class="anchor" aria-hidden="true" href="#key-takeaways">#</a></h3>
 <ul>
 <li><strong>Natural Language Processing</strong> can bridge the gap between users and databases</li>
 <li><strong>Local AI Systems</strong> provide privacy and control without sacrificing capability</li>
@@ -664,7 +604,7 @@
 <li><strong>Comprehensive Testing</strong> is essential for production-ready AI systems</li>
 </ul>
 <hr>
-<h3 id="-source-code--resources">📂 <strong>Source Code &amp; Resources</strong><a hidden class="anchor" aria-hidden="true" href="#-source-code--resources">#</a></h3>
+<h3 id="source-code--resources"><strong>Source Code &amp; Resources</strong><a hidden class="anchor" aria-hidden="true" href="#source-code--resources">#</a></h3>
 <p>The complete implementation is available on GitHub under the repository <code>rag_text-to-sql</code>, including:</p>
 <ul>
 <li>Full source code with comprehensive documentation</li>
@@ -672,29 +612,29 @@
 <li>Setup instructions and requirements</li>
 <li>Architecture diagrams and technical specifications</li>
 </ul>
-<p><em>Ready to transform your database interactions! 🚀</em></p>
+<p><em>Ready to transform your database interactions!</em></p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ayyzenn.github.io/tags/rag/">RAG</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/sql/">SQL</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/ollama/">Ollama</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/chromadb/">ChromaDB</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/langchain/">LangChain</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/python/">Python</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/text-to-sql/">Text-to-SQL</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/database/">Database</a></li>
-      <li><a href="https://ayyzenn.github.io/tags/ai/">AI</a></li>
+      <li><a href="http://localhost:1313/tags/rag/">RAG</a></li>
+      <li><a href="http://localhost:1313/tags/sql/">SQL</a></li>
+      <li><a href="http://localhost:1313/tags/ollama/">Ollama</a></li>
+      <li><a href="http://localhost:1313/tags/chromadb/">ChromaDB</a></li>
+      <li><a href="http://localhost:1313/tags/langchain/">LangChain</a></li>
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/text-to-sql/">Text-to-SQL</a></li>
+      <li><a href="http://localhost:1313/tags/database/">Database</a></li>
+      <li><a href="http://localhost:1313/tags/ai/">AI</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://ayyzenn.github.io/">ayyzenn</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">ayyzenn</a></span> · 
 
     <span>
         Powered by

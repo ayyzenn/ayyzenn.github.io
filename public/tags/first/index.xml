@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>First on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/first/</link>
+    <link>http://localhost:1313/tags/first/</link>
     <description>Recent content in First on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2020 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/first/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/first/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>https://ayyzenn.github.io/posts/first_post/</link>
-      <pubDate>Tue, 15 Sep 2020 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/first_post/</guid>
-      <description>&lt;p&gt;Hello, this is my first blog post on Hugo!&lt;/p&gt;</description>
+      <link>http://localhost:1313/posts/first_post/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/first_post/</guid>
+      <description>&lt;p&gt;Hello — this is my first blog post on Hugo. I set this site up to document what I&amp;rsquo;m learning as I go. More posts coming soon.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

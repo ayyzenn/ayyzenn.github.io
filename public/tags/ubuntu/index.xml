@@ -2,19 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ubuntu on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/ubuntu/</link>
+    <link>http://localhost:1313/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Aug 2022 15:49:43 +0500</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Setting Up Odoo: A Beginner’s Guide</title>
-      <link>https://ayyzenn.github.io/posts/odoo/</link>
-      <pubDate>Thu, 11 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/odoo/</guid>
-      <description>&lt;h2 id=&#34;update-your-system&#34;&gt;Update Your System&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s start by updating your package repository:&lt;/p&gt;
+      <title>Ollama &#43; DeepSeek: How I Run LLMs Locally</title>
+      <link>http://localhost:1313/posts/ollama/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ollama/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ollama&#34;&gt;Why I Use Ollama&lt;/h2&gt;
+&lt;p&gt;I wanted to run LLMs on my own hardware without paying for API calls or sending data to the cloud. &lt;strong&gt;Ollama&lt;/strong&gt; made that straightforward — install, pull a model, start chatting.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;install-ollama&#34;&gt;Install Ollama&lt;/h2&gt;
+&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux&lt;/h3&gt;
+&lt;p&gt;Update your system, then install Ollama:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enable and start the service:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl start ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl status ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should see &lt;code&gt;active (running)&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Odoo on Ubuntu: How I Installed It</title>
+      <link>http://localhost:1313/posts/odoo/</link>
+      <pubDate>Thu, 11 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/odoo/</guid>
+      <description>&lt;h2 id=&#34;what-i-did&#34;&gt;What I Did&lt;/h2&gt;
+&lt;p&gt;I installed &lt;strong&gt;Odoo&lt;/strong&gt; (open-source ERP) on Ubuntu for a project. These are the exact steps I ran — all &lt;code&gt;apt&lt;/code&gt; commands on Ubuntu.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-an-odoo-user&#34;&gt;Create an Odoo User&lt;/h2&gt;
 &lt;p&gt;Run this command to create a system user for Odoo:&lt;/p&gt;
@@ -28,47 +47,155 @@
 &lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cooking Up Automation: A Guide to Chef Server &amp; Workstations</title>
-      <link>https://ayyzenn.github.io/posts/chef/</link>
-      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/chef/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.&lt;/p&gt;
-&lt;p&gt;Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.&lt;/p&gt;</description>
+      <title>Chef Server Setup: What I Did on Ubuntu</title>
+      <link>http://localhost:1313/posts/chef/</link>
+      <pubDate>Tue, 02 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/chef/</guid>
+      <description>&lt;h2 id=&#34;why-i-looked-into-chef&#34;&gt;Why I Looked Into Chef&lt;/h2&gt;
+&lt;p&gt;Managing servers one by one doesn&amp;rsquo;t scale. I set up &lt;strong&gt;Chef&lt;/strong&gt; to store server configs as code — a Chef server, a workstation where I write recipes, and a node that pulls its config automatically.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; I did this on &lt;strong&gt;Ubuntu 18.04&lt;/strong&gt; using &lt;code&gt;.deb&lt;/code&gt; packages and &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;chef-server&#34;&gt;Chef Server&lt;/h2&gt;
+&lt;p&gt;The Chef server acts as the central hub for all workstations and nodes under Chef management. Configuration changes made on workstations are pushed to the Chef server, where they are pulled by nodes using &lt;code&gt;chef-client&lt;/code&gt; to apply the configurations.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>VoIP with Asterisk: Ditch the Landline &amp; Build Your Own Phone System!</title>
-      <link>https://ayyzenn.github.io/posts/voip/</link>
-      <pubDate>Tue, 02 Aug 2022 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/voip/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Voice over Internet Protocol (VoIP) is a technology that enables voice and video communication over the internet instead of traditional landlines. With an internet connection, users can make calls without relying on local phone services or physical copper wiring. A VoIP service provider manages the call transmission over the internet.&lt;/p&gt;
-&lt;h1 id=&#34;how-voip-works&#34;&gt;How VoIP Works&lt;/h1&gt;
-&lt;p&gt;VoIP converts voice into a digital format, compresses it, and transmits it over the internet. A VoIP service provider facilitates the call setup. Many users prefer VoIP over traditional landlines due to its lower startup costs and reduced expenses for long-distance calls. VoIP operates using Internet Protocol, a fundamental component of modern internet infrastructure, offering significant advancements over traditional telecommunications.&lt;/p&gt;</description>
+      <title>VoIP with Asterisk: My Home Phone Setup on Ubuntu</title>
+      <link>http://localhost:1313/posts/voip/</link>
+      <pubDate>Tue, 02 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/voip/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I set up a home VoIP system using &lt;strong&gt;Asterisk&lt;/strong&gt; as the server and &lt;strong&gt;Twinkle&lt;/strong&gt; as the softphone client. Everything here runs on &lt;strong&gt;Ubuntu&lt;/strong&gt; — same network, two extensions, calls between machines.&lt;/p&gt;
+&lt;h2 id=&#34;how-voip-works&#34;&gt;How VoIP Works&lt;/h2&gt;
+&lt;p&gt;VoIP sends your voice as data over the internet instead of through a phone line. Cheaper than landlines, especially for long-distance — that&amp;rsquo;s why I tried it.&lt;/p&gt;
+&lt;h2 id=&#34;asterisk-as-the-server&#34;&gt;Asterisk as the Server&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Asterisk&lt;/strong&gt; is the PBX — it handles call routing between extensions. I compiled it from source on Ubuntu.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>SSH: Connecting to a Remote Server in Linux</title>
-      <link>https://ayyzenn.github.io/posts/ssh/</link>
-      <pubDate>Sat, 14 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/ssh/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Accessing machines remotely became a necessity a long time ago, and it is difficult to imagine managing computers without remote access. There are various ways to establish a connection with a remote machine, depending on the operating system in use. The two most commonly used protocols are:&lt;/p&gt;
+      <title>Creating My First Docker Container</title>
+      <link>http://localhost:1313/posts/container_docker/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/container_docker/</guid>
+      <description>&lt;h2 id=&#34;what-i-did-here&#34;&gt;What I Did Here&lt;/h2&gt;
+&lt;p&gt;After installing Docker, I wanted to run an actual Ubuntu container — not just &lt;code&gt;hello-world&lt;/code&gt;. The steps inside this post are the same on &lt;strong&gt;Arch Linux&lt;/strong&gt; and &lt;strong&gt;Ubuntu&lt;/strong&gt; hosts. Only the Docker &lt;em&gt;installation&lt;/em&gt; differs — see &lt;a href=&#34;http://localhost:1313/posts/dockers/&#34;&gt;Docker on Arch Linux and Ubuntu&lt;/a&gt; for that part.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;arch-linux-host&#34;&gt;Arch Linux (host)&lt;/h2&gt;
+&lt;p&gt;Make sure Docker is installed and running on your Arch machine first:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable --now docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl status docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pull-the-ubuntu-image&#34;&gt;Pull the Ubuntu image&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-and-enter-a-container&#34;&gt;Create and enter a container&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What those flags mean:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker on Arch Linux and Ubuntu: How I Got It Running</title>
+      <link>http://localhost:1313/posts/dockers/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dockers/</guid>
+      <description>&lt;h2 id=&#34;why-i-started-using-docker&#34;&gt;Why I Started Using Docker&lt;/h2&gt;
+&lt;p&gt;I wanted a way to run apps without messing up my main system. Docker packs an app with everything it needs into a &lt;strong&gt;container&lt;/strong&gt; — a small, isolated environment that shares my kernel but stays separate from everything else.&lt;/p&gt;
+&lt;p&gt;If something breaks inside a container, I delete it and start over. No reinstalling the whole OS.&lt;/p&gt;
+&lt;h2 id=&#34;containers-vs-images-quick-version&#34;&gt;Containers vs Images (Quick Version)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Secure Shell (SSH)&lt;/strong&gt; for Linux-based machines&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Remote Desktop Protocol (RDP)&lt;/strong&gt; for Windows-based machines&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Image&lt;/strong&gt; — a read-only template (like a recipe)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt; — a running instance of that image (like the actual dish you cooked)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Both protocols use client and server applications to establish remote connections. These tools allow you to remotely manage other computers, transfer files, and perform any task that would be possible if you were physically in front of the machine.&lt;/p&gt;</description>
+&lt;p&gt;You build or pull an image once. You can spin up as many containers from it as you want.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Dual boot Ubuntu and Windows</title>
-      <link>https://ayyzenn.github.io/posts/dual_boot/</link>
-      <pubDate>Fri, 13 Aug 2021 15:49:43 +0500</pubDate>
-      <guid>https://ayyzenn.github.io/posts/dual_boot/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this guide, we will discuss how to dual boot Ubuntu side by side with Windows. Before we proceed, let’s briefly understand what Ubuntu is.&lt;/p&gt;
-&lt;h3 id=&#34;what-is-ubuntu&#34;&gt;What is Ubuntu?&lt;/h3&gt;
-&lt;p&gt;Ubuntu is a Linux distribution based on Debian, composed mostly of free and open-source software. It is a popular operating system for cloud computing, with support for OpenStack.&lt;/p&gt;
-&lt;p&gt;Ubuntu is developed by Canonical and a community of developers under a meritocratic governance model. Canonical provides security updates and support for each Ubuntu release until it reaches its designated end-of-life (EOL) date.&lt;/p&gt;</description>
+      <title>SSH: How I Connect to Remote Servers</title>
+      <link>http://localhost:1313/posts/ssh/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ssh/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ssh&#34;&gt;Why I Use SSH&lt;/h2&gt;
+&lt;p&gt;SSH is how I control another machine from my terminal. I use it to manage servers, copy files, and run commands on remote systems without sitting in front of them.&lt;/p&gt;
+&lt;p&gt;For Windows remote desktop you use RDP. For Linux, SSH is the standard.&lt;/p&gt;
+&lt;h2 id=&#34;how-ssh-works-short-version&#34;&gt;How SSH Works (Short Version)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt; — on your laptop (where you type)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt; — on the remote machine (what you connect to)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You run &lt;code&gt;ssh user@ip&lt;/code&gt;, enter your password (or use a key), and you get a shell on the remote box.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dual Boot Ubuntu and Windows: What I Did</title>
+      <link>http://localhost:1313/posts/dual_boot/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dual_boot/</guid>
+      <description>&lt;h2 id=&#34;why-i-dual-booted&#34;&gt;Why I Dual-Booted&lt;/h2&gt;
+&lt;p&gt;I needed Windows for some things and Linux for everything else. Instead of picking one, I installed &lt;strong&gt;Ubuntu alongside Windows&lt;/strong&gt; on the same machine. This is the process I followed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;steps-to-dual-boot-ubuntu-with-windows&#34;&gt;Steps to Dual Boot Ubuntu with Windows&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-prepare-a-bootable-usb-drive&#34;&gt;&lt;strong&gt;Step 1: Prepare a Bootable USB Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the latest Ubuntu ISO from the &lt;a href=&#34;https://ubuntu.com/download&#34;&gt;official Ubuntu website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download and install &lt;a href=&#34;https://rufus.ie&#34;&gt;Rufus&lt;/a&gt; or &lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;balenaEtcher&lt;/a&gt; to create a bootable USB.&lt;/li&gt;
+&lt;li&gt;Insert a USB drive (at least 8GB) into your computer.&lt;/li&gt;
+&lt;li&gt;Open Rufus or balenaEtcher:
+&lt;ul&gt;
+&lt;li&gt;Select the Ubuntu ISO file.&lt;/li&gt;
+&lt;li&gt;Choose the USB drive.&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Start&amp;rdquo; to create the bootable drive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-2-configure-biosuefi-settings&#34;&gt;&lt;strong&gt;Step 2: Configure BIOS/UEFI Settings&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Restart your computer and enter BIOS/UEFI by pressing a specific key (usually &lt;strong&gt;F2, F12, Del, or Esc&lt;/strong&gt;) during startup.&lt;/li&gt;
+&lt;li&gt;Look for &lt;strong&gt;Boot Order/Boot Priority&lt;/strong&gt; and set the USB drive as the first boot device.&lt;/li&gt;
+&lt;li&gt;Disable &lt;strong&gt;Secure Boot&lt;/strong&gt; (if enabled) under the Security tab.&lt;/li&gt;
+&lt;li&gt;Enable &lt;strong&gt;UEFI mode&lt;/strong&gt; (recommended) instead of Legacy mode.&lt;/li&gt;
+&lt;li&gt;Save changes and exit BIOS.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-3-boot-from-the-usb-drive&#34;&gt;&lt;strong&gt;Step 3: Boot from the USB Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Insert the bootable USB drive into your computer.&lt;/li&gt;
+&lt;li&gt;Restart the system and press the &lt;strong&gt;Boot Menu key&lt;/strong&gt; (F12, F9, Esc, or as per your motherboard).&lt;/li&gt;
+&lt;li&gt;Select the bootable USB drive from the list.&lt;/li&gt;
+&lt;li&gt;Press &lt;strong&gt;Enter&lt;/strong&gt; to boot into Ubuntu Live.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-4-try-or-install-ubuntu&#34;&gt;&lt;strong&gt;Step 4: Try or Install Ubuntu&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Once the Ubuntu installer loads, you will see two options:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Try Ubuntu&lt;/strong&gt; – Runs Ubuntu without installing it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Install Ubuntu&lt;/strong&gt; – Proceeds with the installation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Install Ubuntu&lt;/strong&gt; to continue.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-5-select-keyboard-layout&#34;&gt;&lt;strong&gt;Step 5: Select Keyboard Layout&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Choose your preferred &lt;strong&gt;keyboard layout&lt;/strong&gt; and language.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-6-connect-to-wi-fi-optional&#34;&gt;&lt;strong&gt;Step 6: Connect to Wi-Fi (Optional)&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select your Wi-Fi network.&lt;/li&gt;
+&lt;li&gt;Enter the password and click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-7-choose-installation-type&#34;&gt;&lt;strong&gt;Step 7: Choose Installation Type&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select &lt;strong&gt;Normal Installation&lt;/strong&gt; (recommended).&lt;/li&gt;
+&lt;li&gt;Check the box &lt;strong&gt;Install third-party software for graphics and Wi-Fi hardware, Flash, MP3, and other media&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-8-choose-installation-method&#34;&gt;&lt;strong&gt;Step 8: Choose Installation Method&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select &lt;strong&gt;Something else&lt;/strong&gt; (for manual partitioning).&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-9-create-partitions-for-ubuntu&#34;&gt;&lt;strong&gt;Step 9: Create Partitions for Ubuntu&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Ubuntu requires three main partitions:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -2,25 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ollama on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/ollama/</link>
+    <link>http://localhost:1313/tags/ollama/</link>
     <description>Recent content in Ollama on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/ollama/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ollama/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title>
-      <link>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</link>
+      <title>RAG Text-to-SQL: Asking My Database Questions in Plain English</title>
+      <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</guid>
-      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
+      <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I hate writing SQL for simple questions. This project lets me ask things like &amp;ldquo;how many customers are from Brazil?&amp;rdquo; in plain English — it generates the SQL, runs it, and gives me a readable answer. All local, using &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy to use&lt;/strong&gt; — ask questions in everyday language&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private&lt;/strong&gt; — everything runs locally on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fast feedback&lt;/strong&gt; — generates and runs SQL in seconds&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Schema-aware&lt;/strong&gt; — understands table names and relationships&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interactive&lt;/strong&gt; — ask follow-up questions in a chat-style flow&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error handling&lt;/strong&gt; — catches common issues like wrong table name casing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;system-architecture&#34;&gt;System Architecture&lt;/h2&gt;
+&lt;p&gt;My RAG Text-to-SQL system consists of five core components:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
-      <link>https://ayyzenn.github.io/posts/local-rag-system/</link>
+      <title>Local RAG with Ollama and ChromaDB: Running AI Offline</title>
+      <link>http://localhost:1313/posts/local-rag-system/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/local-rag-system/</guid>
-      <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
+      <guid>http://localhost:1313/posts/local-rag-system/</guid>
+      <description>&lt;h2 id=&#34;why-i-built-this&#34;&gt;Why I Built This&lt;/h2&gt;
+&lt;p&gt;I wanted a chatbot that answers questions from &lt;strong&gt;my own documents&lt;/strong&gt; — without sending data to a cloud API. This RAG setup runs fully offline with &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt; on my machine.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt; — your data stays on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No API costs&lt;/strong&gt; — no usage fees or rate limits&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed&lt;/strong&gt; — no network delay for each query&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt; — you choose what goes into the knowledge base&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offline use&lt;/strong&gt; — works without internet after setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture Overview&lt;/h2&gt;
+&lt;p&gt;My local RAG system consists of four main components:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ollama &#43; DeepSeek: How I Run LLMs Locally</title>
+      <link>http://localhost:1313/posts/ollama/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ollama/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ollama&#34;&gt;Why I Use Ollama&lt;/h2&gt;
+&lt;p&gt;I wanted to run LLMs on my own hardware without paying for API calls or sending data to the cloud. &lt;strong&gt;Ollama&lt;/strong&gt; made that straightforward — install, pull a model, start chatting.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;install-ollama&#34;&gt;Install Ollama&lt;/h2&gt;
+&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux&lt;/h3&gt;
+&lt;p&gt;Update your system, then install Ollama:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enable and start the service:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl start ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl status ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should see &lt;code&gt;active (running)&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

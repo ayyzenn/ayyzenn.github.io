@@ -2,25 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Text-to-SQL on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/text-to-sql/</link>
+    <link>http://localhost:1313/tags/text-to-sql/</link>
     <description>Recent content in Text-to-SQL on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/text-to-sql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/text-to-sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A Guide to LlamaIndex &#43; Structured Data (Text-to-SQL)</title>
-      <link>https://ayyzenn.github.io/posts/llamaindex/</link>
+      <title>LlamaIndex &#43; Text-to-SQL: What I Learned</title>
+      <link>http://localhost:1313/posts/llamaindex/</link>
       <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/llamaindex/</guid>
-      <description>A detailed summary of how LlamaIndex handles structured data using natural language SQL queries and schema retrieval.</description>
+      <guid>http://localhost:1313/posts/llamaindex/</guid>
+      <description>&lt;h2 id=&#34;what-i-was-trying-to-do&#34;&gt;What I Was Trying to Do&lt;/h2&gt;
+&lt;p&gt;I had structured data in SQLite and didn&amp;rsquo;t want to write SQL for every question. &lt;strong&gt;LlamaIndex&lt;/strong&gt; let me ask things like &amp;ldquo;which city has the most people?&amp;rdquo; in plain English — it figures out the query, runs it, and returns the answer.&lt;/p&gt;
+&lt;p&gt;Key capabilities include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Translating &lt;strong&gt;natural language&lt;/strong&gt; into &lt;strong&gt;SQL queries&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Converting &lt;strong&gt;unstructured context&lt;/strong&gt; into structured insights.&lt;/li&gt;
+&lt;li&gt;Dynamically retrieving &lt;strong&gt;relevant schemas or tables&lt;/strong&gt; for complex databases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Never expose full write-access databases to LLMs. Always use &lt;strong&gt;read-only credentials&lt;/strong&gt; or &lt;strong&gt;sandboxed environments&lt;/strong&gt; for safety.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title>
-      <link>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</link>
+      <title>RAG Text-to-SQL: Asking My Database Questions in Plain English</title>
+      <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</guid>
-      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
+      <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I hate writing SQL for simple questions. This project lets me ask things like &amp;ldquo;how many customers are from Brazil?&amp;rdquo; in plain English — it generates the SQL, runs it, and gives me a readable answer. All local, using &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy to use&lt;/strong&gt; — ask questions in everyday language&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private&lt;/strong&gt; — everything runs locally on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fast feedback&lt;/strong&gt; — generates and runs SQL in seconds&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Schema-aware&lt;/strong&gt; — understands table names and relationships&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interactive&lt;/strong&gt; — ask follow-up questions in a chat-style flow&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error handling&lt;/strong&gt; — catches common issues like wrong table name casing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;system-architecture&#34;&gt;System Architecture&lt;/h2&gt;
+&lt;p&gt;My RAG Text-to-SQL system consists of five core components:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

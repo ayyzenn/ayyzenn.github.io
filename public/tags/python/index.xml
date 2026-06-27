@@ -2,50 +2,130 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Python on ayyzenn</title>
-    <link>https://ayyzenn.github.io/tags/python/</link>
+    <link>http://localhost:1313/tags/python/</link>
     <description>Recent content in Python on ayyzenn</description>
-    <generator>Hugo -- 0.157.0</generator>
+    <generator>Hugo -- 0.163.3</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ayyzenn.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>RESTful API with Web Scraping Pipelines: FastAPI, Flask, PostgreSQL, and MongoDB</title>
-      <link>https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/</link>
+      <title>RESTful API with Web Scraping: My FastAPI &#43; Flask Project</title>
+      <link>http://localhost:1313/posts/restful-api-web-scraping-pipelines/</link>
       <pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/restful-api-web-scraping-pipelines/</guid>
-      <description>&lt;h2 id=&#34;restful-api-with-web-scraping-pipelines&#34;&gt;RESTful API with Web Scraping Pipelines&lt;/h2&gt;
-&lt;p&gt;This guide shows you how to build a backend API project that:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Uses FastAPI and Flask&lt;/strong&gt; for RESTful APIs&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Scrapes data from websites&lt;/strong&gt; with BeautifulSoup and Selenium&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stores data&lt;/strong&gt; in PostgreSQL and MongoDB&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrates with external services&lt;/strong&gt; like JSONPlaceholder&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The project is useful for learning, portfolios, and job interviews. The language is simple and the steps are clear.&lt;/p&gt;
+      <guid>http://localhost:1313/posts/restful-api-web-scraping-pipelines/</guid>
+      <description>&lt;h2 id=&#34;what-this-project-is&#34;&gt;What This Project Is&lt;/h2&gt;
+&lt;p&gt;I built a backend that scrapes websites, stores data in PostgreSQL and MongoDB, and exposes REST APIs through FastAPI and Flask. I made it as a portfolio piece — something I could demo and actually run on my machine.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-what-does-this-project-do-simple-explanation&#34;&gt;1. What Does This Project Do? (Simple Explanation)&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;This project is a data aggregator backend.&lt;/strong&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;This project is a data aggregator backend.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scrape&lt;/strong&gt; product or article data from websites&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Store&lt;/strong&gt; that data in two databases (PostgreSQL for structured data, MongoDB for flexible logs)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Expose REST APIs&lt;/strong&gt; so other apps can create, read, update, and delete data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Call external APIs&lt;/strong&gt; and return the results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can think of it as:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Building a RAG Text-to-SQL Agent: Natural Language Database Queries with Ollama and ChromaDB</title>
-      <link>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</link>
+      <title>RAG Text-to-SQL: Asking My Database Questions in Plain English</title>
+      <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/rag-text-to-sql-post/</guid>
-      <description>A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system that converts natural language questions into SQL queries using Ollama 3.2, ChromaDB, and LangChain.</description>
+      <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I hate writing SQL for simple questions. This project lets me ask things like &amp;ldquo;how many customers are from Brazil?&amp;rdquo; in plain English — it generates the SQL, runs it, and gives me a readable answer. All local, using &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy to use&lt;/strong&gt; — ask questions in everyday language&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private&lt;/strong&gt; — everything runs locally on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fast feedback&lt;/strong&gt; — generates and runs SQL in seconds&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Schema-aware&lt;/strong&gt; — understands table names and relationships&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interactive&lt;/strong&gt; — ask follow-up questions in a chat-style flow&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error handling&lt;/strong&gt; — catches common issues like wrong table name casing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;system-architecture&#34;&gt;System Architecture&lt;/h2&gt;
+&lt;p&gt;My RAG Text-to-SQL system consists of five core components:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Building a Local RAG System: Complete Offline AI Knowledge Base with Ollama &amp; ChromaDB</title>
-      <link>https://ayyzenn.github.io/posts/local-rag-system/</link>
+      <title>Local RAG with Ollama and ChromaDB: Running AI Offline</title>
+      <link>http://localhost:1313/posts/local-rag-system/</link>
       <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/local-rag-system/</guid>
-      <description>A complete guide to building a Retrieval-Augmented Generation (RAG) system that runs entirely offline using Ollama, ChromaDB, and Python.</description>
+      <guid>http://localhost:1313/posts/local-rag-system/</guid>
+      <description>&lt;h2 id=&#34;why-i-built-this&#34;&gt;Why I Built This&lt;/h2&gt;
+&lt;p&gt;I wanted a chatbot that answers questions from &lt;strong&gt;my own documents&lt;/strong&gt; — without sending data to a cloud API. This RAG setup runs fully offline with &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt; on my machine.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt; — your data stays on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No API costs&lt;/strong&gt; — no usage fees or rate limits&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed&lt;/strong&gt; — no network delay for each query&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt; — you choose what goes into the knowledge base&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offline use&lt;/strong&gt; — works without internet after setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture Overview&lt;/h2&gt;
+&lt;p&gt;My local RAG system consists of four main components:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Building a YouTube Transcript Summarizer with LangGraph and Gemini</title>
-      <link>https://ayyzenn.github.io/posts/agent/</link>
+      <title>YouTube Summarizer: What I Built with LangGraph and Gemini</title>
+      <link>http://localhost:1313/posts/agent/</link>
       <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://ayyzenn.github.io/posts/agent/</guid>
-      <description>A walkthrough of how I built an AI-powered summarizer for YouTube videos using LangGraph and Gemini API.</description>
+      <guid>http://localhost:1313/posts/agent/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I wanted to paste a YouTube URL and get a summary — or ask questions about the video — without watching the whole thing. This project uses &lt;strong&gt;LangGraph&lt;/strong&gt; for the workflow and &lt;strong&gt;Gemini&lt;/strong&gt; for the actual summarizing and Q&amp;amp;A.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-features-of-agentic-workflows&#34;&gt;Key Features of Agentic Workflows&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modularity&lt;/strong&gt; — each step can be built and tested on its own&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State&lt;/strong&gt; — data flows from step to step in a structured way&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusability&lt;/strong&gt; — the same steps can be reused in other projects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Autonomy&lt;/strong&gt; — each step can decide what to do based on the input it receives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;popular-tools-for-agentic-workflows&#34;&gt;Popular Tools for Agentic Workflows&lt;/h2&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Tool&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Language&lt;/th&gt;
+					&lt;th&gt;Best For&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LangGraph&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Graph-based AI workflow framework with state management.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Custom step-by-step pipelines&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;CrewAI&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Agent orchestration tool inspired by human teams and role delegation.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Role-based agent collaboration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Autogen&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Microsoft&amp;rsquo;s multi-agent framework for goal-oriented dialogue and tasks.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Conversational multi-agent systems&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LangChain&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;General framework for chaining LLMs with tools, memory, and logic.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Broader LLM apps beyond just agents&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;AgentOps&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Infra layer for deploying and monitoring agentic systems.&lt;/td&gt;
+					&lt;td&gt;Platform&lt;/td&gt;
+					&lt;td&gt;Scaling, testing, and managing agents&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-i-chose-langgraph&#34;&gt;Why I Chose LangGraph&lt;/h2&gt;
+&lt;p&gt;For this project, I chose &lt;strong&gt;LangGraph&lt;/strong&gt; because:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

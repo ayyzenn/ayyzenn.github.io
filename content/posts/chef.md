@@ -1,16 +1,13 @@
-+++
-date = '2022-08-02T15:49:43+05:00'
-title = 'Cooking Up Automation: A Guide to Chef Server & Workstations'
-tags = ['chef', 'automation', 'ubuntu']
-+++
+---
+title: "Chef Server Setup: What I Did on Ubuntu"
+date: 2022-08-02
+tags: ["chef", "automation", "ubuntu"]
+---
+## Why I Looked Into Chef
 
-## Introduction
+Managing servers one by one doesn't scale. I set up **Chef** to store server configs as code — a Chef server, a workstation where I write recipes, and a node that pulls its config automatically.
 
-As your infrastructure requirements expand, managing each server manually becomes increasingly difficult. This difficulty is compounded by the need for reproducibility, which becomes necessary if a node fails or if horizontal scaling is required.
-
-Configuration management solutions address these challenges by transforming infrastructure administration into a code-based approach. Instead of executing tasks on multiple machines individually, these tools enable central management of configurations. Nodes can then connect, pull down their configurations, and apply them.
-
-In this guide, we will set up a Chef server to store and serve configuration instructions and node profiling information. Additionally, we will configure a workstation where the administrator can manage the code base and modify the infrastructure. Finally, we will bootstrap a new node to integrate it into the Chef ecosystem.
+**Note:** I did this on **Ubuntu 18.04** using `.deb` packages and `apt`.
 
 ## Chef Server
 

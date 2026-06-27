@@ -1,8 +1,11 @@
 baseURL = 'https://ayyzenn.github.io/'
-languageCode = 'en-us'
+defaultContentLanguage = 'en'
 title = 'ayyzenn'
 
 theme = 'hugo-PaperMod'
+
+[languages.en]
+locale = 'en-us'
 
 [params]
     dateform        = "Jan 2, 2006"

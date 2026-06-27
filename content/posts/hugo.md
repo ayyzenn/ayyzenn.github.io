@@ -37,8 +37,8 @@ sudo apt install hugo
 Or install the extended edition from the official release page (recommended for themes that use Sass):
 
 ```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.147.9/hugo_extended_0.147.9_linux-amd64.deb
-sudo dpkg -i hugo_extended_0.147.9_linux-amd64.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.163.3/hugo_extended_0.163.3_linux-amd64.deb
+sudo dpkg -i hugo_extended_0.163.3_linux-amd64.deb
 ```
 
 #### On macOS (Using Homebrew)
@@ -153,7 +153,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.147.9
+      HUGO_VERSION: 0.163.3
     steps:
       - name: Install Hugo CLI
         run: |

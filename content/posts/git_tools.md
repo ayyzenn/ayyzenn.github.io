@@ -1,7 +1,9 @@
 ---
 title: "GitHub CLI and Personal Access Tokens: What I Use Daily"
+author: "Saad"
 date: 2021-09-04
 tags: ["gh", "github", "cli", "pat", "tokens"]
+categories: ["DevOps"]
 ---
 
 ## Why I Bother With This

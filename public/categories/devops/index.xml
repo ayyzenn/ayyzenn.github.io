@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevOps on ayyzenn</title>
+    <link>http://localhost:1313/categories/devops/</link>
+    <description>Recent content in DevOps on ayyzenn</description>
+    <generator>Hugo -- 0.164.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins &#43; Docker Pipeline from GitHub</title>
+      <link>http://localhost:1313/posts/docker-pipeline-from-github/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/docker-pipeline-from-github/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I wanted Jenkins to pull code from GitHub, build a Docker image, and run a container automatically. This post is the pipeline I put together for that.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;goal-from-manual-to-automatic&#34;&gt;Goal: From Manual to Automatic&lt;/h2&gt;
+&lt;p&gt;Manually, we usually do this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone a GitHub repository&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;docker build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;docker run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Check the output&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With Jenkins, all of this happens &lt;strong&gt;automatically&lt;/strong&gt; when the pipeline runs.&lt;/p&gt;
+&lt;p&gt;You click &lt;strong&gt;Build Now&lt;/strong&gt; (or trigger from GitHub), and Jenkins does the rest.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jenkins on Arch Linux: How I Set It Up on i3</title>
+      <link>http://localhost:1313/posts/jenkins-on-arch-linux/</link>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/jenkins-on-arch-linux/</guid>
+      <description>&lt;h2 id=&#34;why-i-wrote-this&#34;&gt;Why I Wrote This&lt;/h2&gt;
+&lt;p&gt;I run Arch Linux with i3 and wanted Jenkins locally for CI/CD experiments. This covers Java 21, the Jenkins install, a test job, and a GitHub pipeline — exactly what I ran on my machine.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-what-is-jenkins-simple-explanation&#34;&gt;1. What is Jenkins? (Simple Explanation)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Jenkins is an automation server.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can tell Jenkins to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get your code (for example from GitHub)&lt;/li&gt;
+&lt;li&gt;Run commands (build, test, scripts)&lt;/li&gt;
+&lt;li&gt;Show you if things passed or failed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Instead of you running commands manually every time, Jenkins does it &lt;strong&gt;automatically&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ansible: Docker and Kubernetes Node Setup</title>
+      <link>http://localhost:1313/posts/ansible_adv/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ansible_adv/</guid>
+      <description>&lt;h2 id=&#34;why-this-post-exists&#34;&gt;Why This Post Exists&lt;/h2&gt;
+&lt;p&gt;After writing my &lt;strong&gt;first real Ansible playbook&lt;/strong&gt;, I realized something:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Installing software manually once is easy.
+Installing it &lt;strong&gt;correctly, repeatedly, and safely&lt;/strong&gt; is not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So I decided to automate something &lt;strong&gt;real&lt;/strong&gt; and &lt;strong&gt;useful&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;strong&gt;Docker Engine (official way)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Prepare an Ubuntu server to become a &lt;strong&gt;Kubernetes node&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Do everything using &lt;strong&gt;Ansible&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No SSH-ing into the server again and again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This post documents that journey.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;real-setup-same-as-before&#34;&gt;Real Setup (Same as Before)&lt;/h2&gt;
+&lt;p&gt;Nothing fancy. Just real machines.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ansible for Beginners: My First Real Automation</title>
+      <link>http://localhost:1313/posts/ansible/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ansible/</guid>
+      <description>&lt;h2 id=&#34;what-is-ansible-in-simple-words&#34;&gt;What is Ansible? (In Simple Words)&lt;/h2&gt;
+&lt;p&gt;Think of &lt;strong&gt;Ansible as a remote control for your servers&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Instead of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SSH into server&lt;/li&gt;
+&lt;li&gt;Run commands manually&lt;/li&gt;
+&lt;li&gt;Forget what you changed&lt;/li&gt;
+&lt;li&gt;Repeat the same steps again and again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You tell Ansible:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Hey, I want this server to look &lt;em&gt;like this&lt;/em&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And Ansible makes it happen — &lt;strong&gt;again and again&lt;/strong&gt;, without breaking things.&lt;/p&gt;
+&lt;p&gt;The best part?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No agent needed&lt;/li&gt;
+&lt;li&gt;Just SSH&lt;/li&gt;
+&lt;li&gt;Simple YAML files&lt;/li&gt;
+&lt;li&gt;Very human-readable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;my-setup-real-world&#34;&gt;My Setup (Real World)&lt;/h2&gt;
+&lt;p&gt;This is exactly what I used:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraform: How I Stopped Clicking Around in AWS</title>
+      <link>http://localhost:1313/posts/terraform/</link>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/terraform/</guid>
+      <description>&lt;h2 id=&#34;what-terraform-is-for-me&#34;&gt;What Terraform Is (For Me)&lt;/h2&gt;
+&lt;p&gt;Terraform is how I describe cloud stuff in code instead of clicking through the AWS console. I write what I want in &lt;code&gt;.tf&lt;/code&gt; files, run &lt;code&gt;terraform apply&lt;/code&gt;, and it gets created. Same result every time.&lt;/p&gt;
+&lt;h2 id=&#34;why-use-terraform&#34;&gt;Why Use Terraform?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No More Manual Clicking&lt;/strong&gt;: Automate infrastructure setup instead of clicking through AWS&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Easy Updates&lt;/strong&gt;: Change your code and run &lt;code&gt;terraform apply&lt;/code&gt; to update everything&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backup Your Infrastructure&lt;/strong&gt;: Keep your setup in version control (like Git)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reuse Everywhere&lt;/strong&gt;: Run the same setup in dev, staging, and production without changes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost Preview&lt;/strong&gt;: See what resources cost before you create them&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Work with Multiple Clouds&lt;/strong&gt;: Manage AWS, Azure, and Google Cloud from one tool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;basic-concepts-made-simple&#34;&gt;Basic Concepts (Made Simple)&lt;/h2&gt;
+&lt;h3 id=&#34;providers&#34;&gt;Providers&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;provider&lt;/strong&gt; tells Terraform which cloud service to use. Think of it as picking AWS, Google Cloud, or Azure before you start building.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chef Server Setup: What I Did on Ubuntu</title>
+      <link>http://localhost:1313/posts/chef/</link>
+      <pubDate>Tue, 02 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/chef/</guid>
+      <description>&lt;h2 id=&#34;why-i-looked-into-chef&#34;&gt;Why I Looked Into Chef&lt;/h2&gt;
+&lt;p&gt;Managing servers one by one doesn&amp;rsquo;t scale. I set up &lt;strong&gt;Chef&lt;/strong&gt; to store server configs as code — a Chef server, a workstation where I write recipes, and a node that pulls its config automatically.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; I did this on &lt;strong&gt;Ubuntu 18.04&lt;/strong&gt; using &lt;code&gt;.deb&lt;/code&gt; packages and &lt;code&gt;apt&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;chef-server&#34;&gt;Chef Server&lt;/h2&gt;
+&lt;p&gt;The Chef server acts as the central hub for all workstations and nodes under Chef management. Configuration changes made on workstations are pushed to the Chef server, where they are pulled by nodes using &lt;code&gt;chef-client&lt;/code&gt; to apply the configurations.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Puppet with Docker: How I Tested Master and Agent</title>
+      <link>http://localhost:1313/posts/puppet/</link>
+      <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/puppet/</guid>
+      <description>&lt;h2 id=&#34;what-i-did&#34;&gt;What I Did&lt;/h2&gt;
+&lt;p&gt;I wanted to try &lt;strong&gt;Puppet&lt;/strong&gt; without dedicating two full VMs. I ran a Puppet master and agent in separate &lt;strong&gt;Ubuntu Docker containers&lt;/strong&gt; on my machine. Docker host commands work the same on Ubuntu and Arch.&lt;/p&gt;
+&lt;h2 id=&#34;installing-puppet-master&#34;&gt;Installing Puppet Master&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Download the Ubuntu image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a container for Puppet master:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker run --name puppet-master -it ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start the container:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker start puppet-master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open the bash shell of the Puppet master container:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating My First Docker Container</title>
+      <link>http://localhost:1313/posts/container_docker/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/container_docker/</guid>
+      <description>&lt;h2 id=&#34;what-i-did-here&#34;&gt;What I Did Here&lt;/h2&gt;
+&lt;p&gt;After installing Docker, I wanted to run an actual Ubuntu container — not just &lt;code&gt;hello-world&lt;/code&gt;. The steps inside this post are the same on &lt;strong&gt;Arch Linux&lt;/strong&gt; and &lt;strong&gt;Ubuntu&lt;/strong&gt; hosts. Only the Docker &lt;em&gt;installation&lt;/em&gt; differs — see &lt;a href=&#34;http://localhost:1313/posts/dockers/&#34;&gt;Docker on Arch Linux and Ubuntu&lt;/a&gt; for that part.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;arch-linux-host&#34;&gt;Arch Linux (host)&lt;/h2&gt;
+&lt;p&gt;Make sure Docker is installed and running on your Arch machine first:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable --now docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl status docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pull-the-ubuntu-image&#34;&gt;Pull the Ubuntu image&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker pull ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-and-enter-a-container&#34;&gt;Create and enter a container&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker run --name my-container -it ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What those flags mean:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker on Arch Linux and Ubuntu: How I Got It Running</title>
+      <link>http://localhost:1313/posts/dockers/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dockers/</guid>
+      <description>&lt;h2 id=&#34;why-i-started-using-docker&#34;&gt;Why I Started Using Docker&lt;/h2&gt;
+&lt;p&gt;I wanted a way to run apps without messing up my main system. Docker packs an app with everything it needs into a &lt;strong&gt;container&lt;/strong&gt; — a small, isolated environment that shares my kernel but stays separate from everything else.&lt;/p&gt;
+&lt;p&gt;If something breaks inside a container, I delete it and start over. No reinstalling the whole OS.&lt;/p&gt;
+&lt;h2 id=&#34;containers-vs-images-quick-version&#34;&gt;Containers vs Images (Quick Version)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Image&lt;/strong&gt; — a read-only template (like a recipe)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt; — a running instance of that image (like the actual dish you cooked)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You build or pull an image once. You can spin up as many containers from it as you want.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub CLI and Personal Access Tokens: What I Use Daily</title>
+      <link>http://localhost:1313/posts/git_tools/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git_tools/</guid>
+      <description>&lt;h2 id=&#34;why-i-bother-with-this&#34;&gt;Why I Bother With This&lt;/h2&gt;
+&lt;p&gt;I got tired of opening the browser every time I wanted to create a repo, check a PR, or trigger a workflow. &lt;strong&gt;GitHub CLI&lt;/strong&gt; (&lt;code&gt;gh&lt;/code&gt;) lets me do most of that from the terminal. &lt;strong&gt;Personal Access Tokens (PATs)&lt;/strong&gt; are how Git authenticates when you push over HTTPS.&lt;/p&gt;
+&lt;p&gt;This post covers both — how I generate a PAT and how I use &lt;code&gt;gh&lt;/code&gt; day to day.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub from the Command Line: How I Push My Code</title>
+      <link>http://localhost:1313/posts/git_cli/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git_cli/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-github&#34;&gt;Why I Use GitHub&lt;/h2&gt;
+&lt;p&gt;I use &lt;strong&gt;Git&lt;/strong&gt; to track changes in my code and &lt;strong&gt;GitHub&lt;/strong&gt; to host it online. Git runs on my machine. GitHub is the website that stores my repos and lets me share them.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re new: Git is the tool, GitHub is where the repos live.&lt;/p&gt;
+&lt;h2 id=&#34;install-git&#34;&gt;Install Git&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ubuntu:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Arch Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check it worked:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;set-your-name-and-email&#34;&gt;Set Your Name and Email&lt;/h2&gt;
+&lt;p&gt;Git attaches this info to every commit:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating a VM on Microsoft Azure</title>
+      <link>http://localhost:1313/posts/azure/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/azure/</guid>
+      <description>&lt;h2 id=&#34;what-i-did&#34;&gt;What I Did&lt;/h2&gt;
+&lt;p&gt;I needed a cloud server to test things without using my local machine. I spun up an &lt;strong&gt;Ubuntu 20.04 VM&lt;/strong&gt; on Azure and connected via SSH. Here&amp;rsquo;s the exact process I followed.&lt;/p&gt;
+&lt;h2 id=&#34;create-the-vm&#34;&gt;Create the VM&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Log in to &lt;a href=&#34;https://portal.azure.com&#34;&gt;Azure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Create a Resource&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Pick &lt;strong&gt;Ubuntu 20.04 LTS&lt;/strong&gt; → &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Name the VM&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Administration Account&lt;/strong&gt;, choose &lt;strong&gt;SSH Public Key&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Set a username and key pair name&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Inbound Port Rules&lt;/strong&gt;, open &lt;strong&gt;SSH (22)&lt;/strong&gt; and &lt;strong&gt;HTTP (80)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Review and Create&lt;/strong&gt; → &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Download the &lt;strong&gt;key pair&lt;/strong&gt; file when prompted&lt;/li&gt;
+&lt;li&gt;Wait for deployment, then click &lt;strong&gt;Go to Resource&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;connect-via-ssh&#34;&gt;Connect via SSH&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd ~/Downloads
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;400&lt;/span&gt; pair_key_name.pem
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh -i pair_key_name.pem username@your_ip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Type &lt;code&gt;yes&lt;/code&gt; when SSH asks about the fingerprint.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH: How I Connect to Remote Servers</title>
+      <link>http://localhost:1313/posts/ssh/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ssh/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ssh&#34;&gt;Why I Use SSH&lt;/h2&gt;
+&lt;p&gt;SSH is how I control another machine from my terminal. I use it to manage servers, copy files, and run commands on remote systems without sitting in front of them.&lt;/p&gt;
+&lt;p&gt;For Windows remote desktop you use RDP. For Linux, SSH is the standard.&lt;/p&gt;
+&lt;h2 id=&#34;how-ssh-works-short-version&#34;&gt;How SSH Works (Short Version)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt; — on your laptop (where you type)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;/strong&gt; — on the remote machine (what you connect to)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You run &lt;code&gt;ssh user@ip&lt;/code&gt;, enter your password (or use a key), and you get a shell on the remote box.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -105,6 +105,11 @@
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
@@ -136,7 +141,7 @@ sudo pacman -Syu sudo pacman -S ollama Enable and start the service:
 sudo systemctl enable ollama sudo systemctl start ollama sudo systemctl status ollama You should see active (running).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-02-03 00:00:00 +0000 UTC'>February 3, 2025</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2025-02-03 00:00:00 +0000 UTC'>February 3, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Saad</footer>
   <a class="entry-link" aria-label="post link to Ollama &#43; DeepSeek: How I Run LLMs Locally" href="http://localhost:1313/posts/ollama/"></a>
 </article>
 
@@ -152,7 +157,7 @@ sudo adduser -system -home=/opt/odoo -group odoo Install PostgreSQL Odoo needs P
 sudo apt-get install postgresql -y Create a PostgreSQL User for Odoo sudo su - postgres -c &#34;createuser -s odoo&#34; 2&gt; /dev/null || true Install Python Dependencies Odoo requires some Python packages. Install them with:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-08-11 00:00:00 +0000 UTC'>August 11, 2022</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2022-08-11 00:00:00 +0000 UTC'>August 11, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Saad</footer>
   <a class="entry-link" aria-label="post link to Odoo on Ubuntu: How I Installed It" href="http://localhost:1313/posts/odoo/"></a>
 </article>
 
@@ -167,7 +172,7 @@ Note: I did this on Ubuntu 18.04 using .deb packages and apt.
 Chef Server The Chef server acts as the central hub for all workstations and nodes under Chef management. Configuration changes made on workstations are pushed to the Chef server, where they are pulled by nodes using chef-client to apply the configurations.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-08-02 00:00:00 +0000 UTC'>August 2, 2022</span>&nbsp;·&nbsp;3 min</footer>
+  <footer class="entry-footer"><span title='2022-08-02 00:00:00 +0000 UTC'>August 2, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Saad</footer>
   <a class="entry-link" aria-label="post link to Chef Server Setup: What I Did on Ubuntu" href="http://localhost:1313/posts/chef/"></a>
 </article>
 
@@ -182,7 +187,7 @@ How VoIP Works VoIP sends your voice as data over the internet instead of throug
 Asterisk as the Server Asterisk is the PBX — it handles call routing between extensions. I compiled it from source on Ubuntu.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-08-02 00:00:00 +0000 UTC'>August 2, 2022</span>&nbsp;·&nbsp;3 min</footer>
+  <footer class="entry-footer"><span title='2022-08-02 00:00:00 +0000 UTC'>August 2, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Saad</footer>
   <a class="entry-link" aria-label="post link to VoIP with Asterisk: My Home Phone Setup on Ubuntu" href="http://localhost:1313/posts/voip/"></a>
 </article>
 
@@ -197,7 +202,7 @@ Arch Linux (host) Make sure Docker is installed and running on your Arch machine
 sudo pacman -S docker sudo systemctl enable --now docker systemctl status docker Pull the Ubuntu image sudo docker pull ubuntu Create and enter a container sudo docker run --name my-container -it ubuntu What those flags mean:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-07-27 00:00:00 +0000 UTC'>July 27, 2022</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2022-07-27 00:00:00 +0000 UTC'>July 27, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Saad</footer>
   <a class="entry-link" aria-label="post link to Creating My First Docker Container" href="http://localhost:1313/posts/container_docker/"></a>
 </article>
 
@@ -212,7 +217,7 @@ If something breaks inside a container, I delete it and start over. No reinstall
 Containers vs Images (Quick Version) Image — a read-only template (like a recipe) Container — a running instance of that image (like the actual dish you cooked) You build or pull an image once. You can spin up as many containers from it as you want.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-07-26 00:00:00 +0000 UTC'>July 26, 2022</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2022-07-26 00:00:00 +0000 UTC'>July 26, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Saad</footer>
   <a class="entry-link" aria-label="post link to Docker on Arch Linux and Ubuntu: How I Got It Running" href="http://localhost:1313/posts/dockers/"></a>
 </article>
 
@@ -227,7 +232,7 @@ For Windows remote desktop you use RDP. For Linux, SSH is the standard.
 How SSH Works (Short Version) Client — on your laptop (where you type) Server — on the remote machine (what you connect to) You run ssh user@ip, enter your password (or use a key), and you get a shell on the remote box.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-08-14 00:00:00 +0000 UTC'>August 14, 2021</span>&nbsp;·&nbsp;2 min</footer>
+  <footer class="entry-footer"><span title='2021-08-14 00:00:00 +0000 UTC'>August 14, 2021</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Saad</footer>
   <a class="entry-link" aria-label="post link to SSH: How I Connect to Remote Servers" href="http://localhost:1313/posts/ssh/"></a>
 </article>
 
@@ -241,20 +246,11 @@ How SSH Works (Short Version) Client — on your laptop (where you type) Server 
 Steps to Dual Boot Ubuntu with Windows Step 1: Prepare a Bootable USB Drive Download the latest Ubuntu ISO from the official Ubuntu website. Download and install Rufus or balenaEtcher to create a bootable USB. Insert a USB drive (at least 8GB) into your computer. Open Rufus or balenaEtcher: Select the Ubuntu ISO file. Choose the USB drive. Click “Start” to create the bootable drive. Step 2: Configure BIOS/UEFI Settings Restart your computer and enter BIOS/UEFI by pressing a specific key (usually F2, F12, Del, or Esc) during startup. Look for Boot Order/Boot Priority and set the USB drive as the first boot device. Disable Secure Boot (if enabled) under the Security tab. Enable UEFI mode (recommended) instead of Legacy mode. Save changes and exit BIOS. Step 3: Boot from the USB Drive Insert the bootable USB drive into your computer. Restart the system and press the Boot Menu key (F12, F9, Esc, or as per your motherboard). Select the bootable USB drive from the list. Press Enter to boot into Ubuntu Live. Step 4: Try or Install Ubuntu Once the Ubuntu installer loads, you will see two options: Try Ubuntu – Runs Ubuntu without installing it. Install Ubuntu – Proceeds with the installation. Click on Install Ubuntu to continue. Step 5: Select Keyboard Layout Choose your preferred keyboard layout and language. Click Continue. Step 6: Connect to Wi-Fi (Optional) Select your Wi-Fi network. Enter the password and click Continue. Step 7: Choose Installation Type Select Normal Installation (recommended). Check the box Install third-party software for graphics and Wi-Fi hardware, Flash, MP3, and other media. Click Continue. Step 8: Choose Installation Method Select Something else (for manual partitioning). Click Continue. Step 9: Create Partitions for Ubuntu Ubuntu requires three main partitions:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-08-13 00:00:00 +0000 UTC'>August 13, 2021</span>&nbsp;·&nbsp;3 min</footer>
+  <footer class="entry-footer"><span title='2021-08-13 00:00:00 +0000 UTC'>August 13, 2021</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Saad</footer>
   <a class="entry-link" aria-label="post link to Dual Boot Ubuntu and Windows: What I Did" href="http://localhost:1313/posts/dual_boot/"></a>
 </article>
     </main>
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">ayyzenn</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />

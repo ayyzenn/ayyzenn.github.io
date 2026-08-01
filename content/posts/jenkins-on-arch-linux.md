@@ -1,7 +1,9 @@
 ---
 title: "Jenkins on Arch Linux: How I Set It Up on i3"
+author: "Saad"
 date: 2026-02-09
 tags: ["jenkins", "devops", "arch-linux", "ci-cd", "automation"]
+categories: ["DevOps"]
 ---
 ## Why I Wrote This
 

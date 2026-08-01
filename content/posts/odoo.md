@@ -1,7 +1,9 @@
 ---
 title: "Odoo on Ubuntu: How I Installed It"
+author: "Saad"
 date: 2022-08-11
 tags: ["odoo", "installation", "ubuntu"]
+categories: ["Others"]
 ---
 ## What I Did
 

@@ -1,7 +1,9 @@
 ---
 title: "LlamaIndex + Text-to-SQL: What I Learned"
+author: "Saad"
 date: 2025-10-27
 tags: ["llamaindex", "text-to-sql", "llm", "sql", "ai agents", "langchain"]
+categories: ["AI-ML"]
 ---
 ## What I Was Trying to Do
 

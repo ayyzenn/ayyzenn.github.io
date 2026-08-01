@@ -1,7 +1,9 @@
 ---
 title: "Gentoo Install: What I Did on My Laptop"
+author: "Saad"
 date: 2022-12-03
 tags: ["gentoo", "linux", "cli"]
+categories: ["Others"]
 ---
 
 ## Why I Installed Gentoo

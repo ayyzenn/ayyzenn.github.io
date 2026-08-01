@@ -1,7 +1,9 @@
 ---
 title: "Local RAG with Ollama and ChromaDB: Running AI Offline"
+author: "Saad"
 date: 2025-06-29
 tags: ["rag", "ollama", "chromadb", "ai", "python", "llm", "vector database"]
+categories: ["AI-ML"]
 ---
 ## Why I Built This
 

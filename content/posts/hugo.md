@@ -1,7 +1,9 @@
 ---
 title: "Hugo: The Static Site Generator I Use for This Blog"
+author: "Saad"
 date: 2020-12-03
 tags: ["hugo", "github"]
+categories: ["Others"]
 ---
 
 ## Why I Picked Hugo

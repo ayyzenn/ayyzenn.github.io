@@ -1,7 +1,9 @@
 ---
 title: "SSH: How I Connect to Remote Servers"
+author: "Saad"
 date: 2021-08-14
 tags: ["ssh", "ubuntu", "arch-linux", "linux"]
+categories: ["DevOps"]
 ---
 
 ## Why I Use SSH

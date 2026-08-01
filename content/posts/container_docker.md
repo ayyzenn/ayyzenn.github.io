@@ -1,7 +1,9 @@
 ---
 title: "Creating My First Docker Container"
+author: "Saad"
 date: 2022-07-27
 tags: ["docker", "containers", "ubuntu", "arch-linux"]
+categories: ["DevOps"]
 ---
 
 ## What I Did Here

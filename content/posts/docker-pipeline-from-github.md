@@ -1,7 +1,9 @@
 ---
 title: "Jenkins + Docker Pipeline from GitHub"
+author: "Saad"
 date: 2026-02-10
 tags: ["jenkins", "docker", "ci-cd", "github", "devops"]
+categories: ["DevOps"]
 ---
 ## What I Built
 

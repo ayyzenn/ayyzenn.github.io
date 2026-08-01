@@ -1,7 +1,9 @@
 ---
 title: "Terraform: How I Stopped Clicking Around in AWS"
+author: "Saad"
 date: 2025-12-14
 tags: ["terraform", "infrastructure", "cloud", "automation", "iac"]
+categories: ["DevOps"]
 ---
 ## What Terraform Is (For Me)
 

@@ -20,6 +20,7 @@ locale = 'en-us'
     defaultTheme = 'auto'
     lazyLoadImages = true
     mainSections = ["posts"]
+    hideFooter = true
 
 [params.profileMode]
     enabled = true
@@ -53,10 +54,16 @@ locale = 'en-us'
     weight     = 100
 
 [[menu.main]]
+    name       = "Categories"
+    identifier = "categories"
+    url        = "/categories/"
+    weight     = 200
+
+[[menu.main]]
     name       = "Tags"
     identifier = "tags"
     url        = "/tags/"
-    weight     = 200
+    weight     = 250
 
 [[menu.main]]
     name   = "Search"

@@ -1,7 +1,9 @@
 ---
 title: "RAG Text-to-SQL: Asking My Database Questions in Plain English"
+author: "Saad"
 date: 2025-10-25
 tags: ["rag", "sql", "ollama", "chromadb", "langchain", "python", "text-to-sql", "database", "ai"]
+categories: ["AI-ML"]
 ---
 ## What I Built
 

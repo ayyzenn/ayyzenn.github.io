@@ -8,6 +8,9 @@
     <loc>http://localhost:1313/tags/beautifulsoup/</loc>
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-03-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/fastapi/</loc>
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -15,6 +18,9 @@
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/mongodb/</loc>
+    <lastmod>2026-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/others/</loc>
     <lastmod>2026-03-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/postgresql/</loc>
@@ -45,6 +51,9 @@
     <lastmod>2026-02-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/devops/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/devops/</loc>
     <lastmod>2026-02-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/docker/</loc>
@@ -108,6 +117,9 @@
     <lastmod>2025-10-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ai-agents/</loc>
+    <lastmod>2025-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/ai-ml/</loc>
     <lastmod>2025-10-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/chromadb/</loc>
@@ -293,8 +305,6 @@
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url>

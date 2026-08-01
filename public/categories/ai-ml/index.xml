@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI-ML on ayyzenn</title>
+    <link>http://localhost:1313/categories/ai-ml/</link>
+    <description>Recent content in AI-ML on ayyzenn</description>
+    <generator>Hugo -- 0.164.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai-ml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic RAG: My Multi-Agent Setup with Gemini and ChromaDB</title>
+      <link>http://localhost:1313/posts/agentic_rag/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/agentic_rag/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;Basic RAG retrieves docs and generates an answer. I wanted something smarter — a system that picks the right strategy and retries with heavier techniques when the first answer isn&amp;rsquo;t good enough.&lt;/p&gt;
+&lt;p&gt;This project uses &lt;strong&gt;three agents&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Router Agent&lt;/strong&gt; — reads the question and checks answer quality&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Basic Generator Agent&lt;/strong&gt; — fast retrieval for simple questions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advanced Generator Agent&lt;/strong&gt; — uses heavier techniques for hard questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The system tries the fast path first. If the answer is weak, it automatically switches to advanced methods like query decomposition, HyDE, and multi-query retrieval.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LlamaIndex &#43; Text-to-SQL: What I Learned</title>
+      <link>http://localhost:1313/posts/llamaindex/</link>
+      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/llamaindex/</guid>
+      <description>&lt;h2 id=&#34;what-i-was-trying-to-do&#34;&gt;What I Was Trying to Do&lt;/h2&gt;
+&lt;p&gt;I had structured data in SQLite and didn&amp;rsquo;t want to write SQL for every question. &lt;strong&gt;LlamaIndex&lt;/strong&gt; let me ask things like &amp;ldquo;which city has the most people?&amp;rdquo; in plain English — it figures out the query, runs it, and returns the answer.&lt;/p&gt;
+&lt;p&gt;Key capabilities include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Translating &lt;strong&gt;natural language&lt;/strong&gt; into &lt;strong&gt;SQL queries&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Converting &lt;strong&gt;unstructured context&lt;/strong&gt; into structured insights.&lt;/li&gt;
+&lt;li&gt;Dynamically retrieving &lt;strong&gt;relevant schemas or tables&lt;/strong&gt; for complex databases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Never expose full write-access databases to LLMs. Always use &lt;strong&gt;read-only credentials&lt;/strong&gt; or &lt;strong&gt;sandboxed environments&lt;/strong&gt; for safety.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RAG Text-to-SQL: Asking My Database Questions in Plain English</title>
+      <link>http://localhost:1313/posts/rag-text-to-sql-post/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rag-text-to-sql-post/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I hate writing SQL for simple questions. This project lets me ask things like &amp;ldquo;how many customers are from Brazil?&amp;rdquo; in plain English — it generates the SQL, runs it, and gives me a readable answer. All local, using &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy to use&lt;/strong&gt; — ask questions in everyday language&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private&lt;/strong&gt; — everything runs locally on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fast feedback&lt;/strong&gt; — generates and runs SQL in seconds&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Schema-aware&lt;/strong&gt; — understands table names and relationships&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interactive&lt;/strong&gt; — ask follow-up questions in a chat-style flow&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error handling&lt;/strong&gt; — catches common issues like wrong table name casing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;system-architecture&#34;&gt;System Architecture&lt;/h2&gt;
+&lt;p&gt;My RAG Text-to-SQL system consists of five core components:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Local RAG with Ollama and ChromaDB: Running AI Offline</title>
+      <link>http://localhost:1313/posts/local-rag-system/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/local-rag-system/</guid>
+      <description>&lt;h2 id=&#34;why-i-built-this&#34;&gt;Why I Built This&lt;/h2&gt;
+&lt;p&gt;I wanted a chatbot that answers questions from &lt;strong&gt;my own documents&lt;/strong&gt; — without sending data to a cloud API. This RAG setup runs fully offline with &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;ChromaDB&lt;/strong&gt; on my machine.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt; — your data stays on your machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No API costs&lt;/strong&gt; — no usage fees or rate limits&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed&lt;/strong&gt; — no network delay for each query&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Control&lt;/strong&gt; — you choose what goes into the knowledge base&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offline use&lt;/strong&gt; — works without internet after setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture Overview&lt;/h2&gt;
+&lt;p&gt;My local RAG system consists of four main components:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>YouTube Summarizer: What I Built with LangGraph and Gemini</title>
+      <link>http://localhost:1313/posts/agent/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/agent/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I wanted to paste a YouTube URL and get a summary — or ask questions about the video — without watching the whole thing. This project uses &lt;strong&gt;LangGraph&lt;/strong&gt; for the workflow and &lt;strong&gt;Gemini&lt;/strong&gt; for the actual summarizing and Q&amp;amp;A.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-features-of-agentic-workflows&#34;&gt;Key Features of Agentic Workflows&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modularity&lt;/strong&gt; — each step can be built and tested on its own&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State&lt;/strong&gt; — data flows from step to step in a structured way&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusability&lt;/strong&gt; — the same steps can be reused in other projects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Autonomy&lt;/strong&gt; — each step can decide what to do based on the input it receives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;popular-tools-for-agentic-workflows&#34;&gt;Popular Tools for Agentic Workflows&lt;/h2&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Tool&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Language&lt;/th&gt;
+					&lt;th&gt;Best For&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LangGraph&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Graph-based AI workflow framework with state management.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Custom step-by-step pipelines&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;CrewAI&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Agent orchestration tool inspired by human teams and role delegation.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Role-based agent collaboration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Autogen&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Microsoft&amp;rsquo;s multi-agent framework for goal-oriented dialogue and tasks.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Conversational multi-agent systems&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LangChain&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;General framework for chaining LLMs with tools, memory, and logic.&lt;/td&gt;
+					&lt;td&gt;Python&lt;/td&gt;
+					&lt;td&gt;Broader LLM apps beyond just agents&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;AgentOps&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Infra layer for deploying and monitoring agentic systems.&lt;/td&gt;
+					&lt;td&gt;Platform&lt;/td&gt;
+					&lt;td&gt;Scaling, testing, and managing agents&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-i-chose-langgraph&#34;&gt;Why I Chose LangGraph&lt;/h2&gt;
+&lt;p&gt;For this project, I chose &lt;strong&gt;LangGraph&lt;/strong&gt; because:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ollama &#43; DeepSeek: How I Run LLMs Locally</title>
+      <link>http://localhost:1313/posts/ollama/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ollama/</guid>
+      <description>&lt;h2 id=&#34;why-i-use-ollama&#34;&gt;Why I Use Ollama&lt;/h2&gt;
+&lt;p&gt;I wanted to run LLMs on my own hardware without paying for API calls or sending data to the cloud. &lt;strong&gt;Ollama&lt;/strong&gt; made that straightforward — install, pull a model, start chatting.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;install-ollama&#34;&gt;Install Ollama&lt;/h2&gt;
+&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux&lt;/h3&gt;
+&lt;p&gt;Update your system, then install Ollama:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -Syu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enable and start the service:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl enable ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl start ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl status ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should see &lt;code&gt;active (running)&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

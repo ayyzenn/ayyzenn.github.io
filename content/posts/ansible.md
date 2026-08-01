@@ -1,7 +1,9 @@
 ---
 title: "Ansible for Beginners: My First Real Automation"
+author: "Saad"
 date: 2026-01-15
 tags: ["ansible", "devops", "automation", "linux", "configuration-management"]
+categories: ["DevOps"]
 ---
 ## What is Ansible? (In Simple Words)
 

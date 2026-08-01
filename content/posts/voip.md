@@ -1,7 +1,9 @@
 ---
 title: "VoIP with Asterisk: My Home Phone Setup on Ubuntu"
+author: "Saad"
 date: 2022-08-02
 tags: ["voip", "asterisk", "ubuntu"]
+categories: ["Others"]
 ---
 ## What I Built
 

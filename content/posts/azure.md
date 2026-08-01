@@ -1,7 +1,9 @@
 ---
 title: "Creating a VM on Microsoft Azure"
+author: "Saad"
 date: 2021-08-16
 tags: ["cloud", "azure", "ssh"]
+categories: ["DevOps"]
 ---
 
 ## What I Did

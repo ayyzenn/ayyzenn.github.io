@@ -1,7 +1,9 @@
 ---
 title: "GitHub from the Command Line: How I Push My Code"
+author: "Saad"
 date: 2021-09-03
 tags: ["git", "github", "cli"]
+categories: ["DevOps"]
 ---
 
 ## Why I Use GitHub

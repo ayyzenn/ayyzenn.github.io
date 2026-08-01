@@ -1,7 +1,9 @@
 ---
 title: "Puppet with Docker: How I Tested Master and Agent"
+author: "Saad"
 date: 2022-07-28
 tags: ["dockers", "containers", "puppet"]
+categories: ["DevOps"]
 ---
 ## What I Did
 

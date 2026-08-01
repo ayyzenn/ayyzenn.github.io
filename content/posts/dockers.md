@@ -1,7 +1,9 @@
 ---
 title: "Docker on Arch Linux and Ubuntu: How I Got It Running"
+author: "Saad"
 date: 2022-07-26
 tags: ["docker", "ubuntu", "arch-linux", "containers"]
+categories: ["DevOps"]
 ---
 
 ## Why I Started Using Docker

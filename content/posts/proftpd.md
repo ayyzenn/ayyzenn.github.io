@@ -1,7 +1,9 @@
 ---
 title: "ProFTPD on Ubuntu: Setting Up FTP"
+author: "Saad"
 date: 2022-08-07
 tags: ["proftpd", "ftp", "linux"]
+categories: ["Others"]
 ---
 ## What I Set Up
 

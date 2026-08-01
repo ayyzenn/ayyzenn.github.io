@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Others on ayyzenn</title>
+    <link>http://localhost:1313/categories/others/</link>
+    <description>Recent content in Others on ayyzenn</description>
+    <generator>Hugo -- 0.164.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/others/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RESTful API with Web Scraping: My FastAPI &#43; Flask Project</title>
+      <link>http://localhost:1313/posts/restful-api-web-scraping-pipelines/</link>
+      <pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/restful-api-web-scraping-pipelines/</guid>
+      <description>&lt;h2 id=&#34;what-this-project-is&#34;&gt;What This Project Is&lt;/h2&gt;
+&lt;p&gt;I built a backend that scrapes websites, stores data in PostgreSQL and MongoDB, and exposes REST APIs through FastAPI and Flask. I made it as a portfolio piece — something I could demo and actually run on my machine.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-what-does-this-project-do-simple-explanation&#34;&gt;1. What Does This Project Do? (Simple Explanation)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;This project is a data aggregator backend.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scrape&lt;/strong&gt; product or article data from websites&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Store&lt;/strong&gt; that data in two databases (PostgreSQL for structured data, MongoDB for flexible logs)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Expose REST APIs&lt;/strong&gt; so other apps can create, read, update, and delete data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Call external APIs&lt;/strong&gt; and return the results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can think of it as:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gentoo Install: What I Did on My Laptop</title>
+      <link>http://localhost:1313/posts/gentoo/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gentoo/</guid>
+      <description>&lt;h2 id=&#34;why-i-installed-gentoo&#34;&gt;Why I Installed Gentoo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Processor:&lt;/strong&gt; Intel Core i5 4th Gen (4 cores)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAM:&lt;/strong&gt; 8GB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage:&lt;/strong&gt; 256GB SSD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ll be using the &lt;strong&gt;Minimal ISO&lt;/strong&gt; because I like full control over my system, but if you prefer a GUI installer, that’s totally fine too!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-1-grab-the-gentoo-iso&#34;&gt;Step 1: Grab the Gentoo ISO&lt;/h2&gt;
+&lt;p&gt;Head over to &lt;a href=&#34;https://www.gentoo.org/&#34;&gt;Gentoo’s official website&lt;/a&gt; and download the ISO. You’ll see two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GUI Installer&lt;/strong&gt; (if you want an easier time)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimal (CLI) Installer&lt;/strong&gt; (if you want to go full pro mode)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For this guide, we’re going &lt;strong&gt;Minimal&lt;/strong&gt;. Let’s get our hands dirty!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Odoo on Ubuntu: How I Installed It</title>
+      <link>http://localhost:1313/posts/odoo/</link>
+      <pubDate>Thu, 11 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/odoo/</guid>
+      <description>&lt;h2 id=&#34;what-i-did&#34;&gt;What I Did&lt;/h2&gt;
+&lt;p&gt;I installed &lt;strong&gt;Odoo&lt;/strong&gt; (open-source ERP) on Ubuntu for a project. These are the exact steps I ran — all &lt;code&gt;apt&lt;/code&gt; commands on Ubuntu.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-an-odoo-user&#34;&gt;Create an Odoo User&lt;/h2&gt;
+&lt;p&gt;Run this command to create a system user for Odoo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo adduser -system -home&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/odoo -group odoo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-postgresql&#34;&gt;Install PostgreSQL&lt;/h2&gt;
+&lt;p&gt;Odoo needs PostgreSQL as its database, so install it with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install postgresql -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;create-a-postgresql-user-for-odoo&#34;&gt;Create a PostgreSQL User for Odoo&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo su - postgres -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;createuser -s odoo&amp;#34;&lt;/span&gt; 2&amp;gt; /dev/null &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-python-dependencies&#34;&gt;Install Python Dependencies&lt;/h2&gt;
+&lt;p&gt;Odoo requires some Python packages. Install them with:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ProFTPD on Ubuntu: Setting Up FTP</title>
+      <link>http://localhost:1313/posts/proftpd/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/proftpd/</guid>
+      <description>&lt;h2 id=&#34;what-i-set-up&#34;&gt;What I Set Up&lt;/h2&gt;
+&lt;p&gt;I needed a simple FTP server on Ubuntu for file transfers. &lt;strong&gt;ProFTPD&lt;/strong&gt; did the job. This is my setup — on Arch you&amp;rsquo;d install with &lt;code&gt;sudo pacman -S proftpd&lt;/code&gt; and edit the same config path.&lt;/p&gt;
+&lt;p&gt;Plain FTP is &lt;strong&gt;not encrypted&lt;/strong&gt;. For anything serious, use SFTP over SSH instead.&lt;/p&gt;
+&lt;h2 id=&#34;installing-proftpd&#34;&gt;Installing ProFTPD&lt;/h2&gt;
+&lt;p&gt;Getting ProFTPD set up is pretty simple. Just run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install proftpd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;configuring-proftpd&#34;&gt;Configuring ProFTPD&lt;/h2&gt;
+&lt;p&gt;Once it&amp;rsquo;s installed, you&amp;rsquo;ll need to tweak the config file. Open it up with:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VoIP with Asterisk: My Home Phone Setup on Ubuntu</title>
+      <link>http://localhost:1313/posts/voip/</link>
+      <pubDate>Tue, 02 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/voip/</guid>
+      <description>&lt;h2 id=&#34;what-i-built&#34;&gt;What I Built&lt;/h2&gt;
+&lt;p&gt;I set up a home VoIP system using &lt;strong&gt;Asterisk&lt;/strong&gt; as the server and &lt;strong&gt;Twinkle&lt;/strong&gt; as the softphone client. Everything here runs on &lt;strong&gt;Ubuntu&lt;/strong&gt; — same network, two extensions, calls between machines.&lt;/p&gt;
+&lt;h2 id=&#34;how-voip-works&#34;&gt;How VoIP Works&lt;/h2&gt;
+&lt;p&gt;VoIP sends your voice as data over the internet instead of through a phone line. Cheaper than landlines, especially for long-distance — that&amp;rsquo;s why I tried it.&lt;/p&gt;
+&lt;h2 id=&#34;asterisk-as-the-server&#34;&gt;Asterisk as the Server&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Asterisk&lt;/strong&gt; is the PBX — it handles call routing between extensions. I compiled it from source on Ubuntu.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dual Boot Ubuntu and Windows: What I Did</title>
+      <link>http://localhost:1313/posts/dual_boot/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dual_boot/</guid>
+      <description>&lt;h2 id=&#34;why-i-dual-booted&#34;&gt;Why I Dual-Booted&lt;/h2&gt;
+&lt;p&gt;I needed Windows for some things and Linux for everything else. Instead of picking one, I installed &lt;strong&gt;Ubuntu alongside Windows&lt;/strong&gt; on the same machine. This is the process I followed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;steps-to-dual-boot-ubuntu-with-windows&#34;&gt;Steps to Dual Boot Ubuntu with Windows&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-prepare-a-bootable-usb-drive&#34;&gt;&lt;strong&gt;Step 1: Prepare a Bootable USB Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the latest Ubuntu ISO from the &lt;a href=&#34;https://ubuntu.com/download&#34;&gt;official Ubuntu website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download and install &lt;a href=&#34;https://rufus.ie&#34;&gt;Rufus&lt;/a&gt; or &lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;balenaEtcher&lt;/a&gt; to create a bootable USB.&lt;/li&gt;
+&lt;li&gt;Insert a USB drive (at least 8GB) into your computer.&lt;/li&gt;
+&lt;li&gt;Open Rufus or balenaEtcher:
+&lt;ul&gt;
+&lt;li&gt;Select the Ubuntu ISO file.&lt;/li&gt;
+&lt;li&gt;Choose the USB drive.&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Start&amp;rdquo; to create the bootable drive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-2-configure-biosuefi-settings&#34;&gt;&lt;strong&gt;Step 2: Configure BIOS/UEFI Settings&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Restart your computer and enter BIOS/UEFI by pressing a specific key (usually &lt;strong&gt;F2, F12, Del, or Esc&lt;/strong&gt;) during startup.&lt;/li&gt;
+&lt;li&gt;Look for &lt;strong&gt;Boot Order/Boot Priority&lt;/strong&gt; and set the USB drive as the first boot device.&lt;/li&gt;
+&lt;li&gt;Disable &lt;strong&gt;Secure Boot&lt;/strong&gt; (if enabled) under the Security tab.&lt;/li&gt;
+&lt;li&gt;Enable &lt;strong&gt;UEFI mode&lt;/strong&gt; (recommended) instead of Legacy mode.&lt;/li&gt;
+&lt;li&gt;Save changes and exit BIOS.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-3-boot-from-the-usb-drive&#34;&gt;&lt;strong&gt;Step 3: Boot from the USB Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Insert the bootable USB drive into your computer.&lt;/li&gt;
+&lt;li&gt;Restart the system and press the &lt;strong&gt;Boot Menu key&lt;/strong&gt; (F12, F9, Esc, or as per your motherboard).&lt;/li&gt;
+&lt;li&gt;Select the bootable USB drive from the list.&lt;/li&gt;
+&lt;li&gt;Press &lt;strong&gt;Enter&lt;/strong&gt; to boot into Ubuntu Live.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-4-try-or-install-ubuntu&#34;&gt;&lt;strong&gt;Step 4: Try or Install Ubuntu&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Once the Ubuntu installer loads, you will see two options:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Try Ubuntu&lt;/strong&gt; – Runs Ubuntu without installing it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Install Ubuntu&lt;/strong&gt; – Proceeds with the installation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click on &lt;strong&gt;Install Ubuntu&lt;/strong&gt; to continue.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-5-select-keyboard-layout&#34;&gt;&lt;strong&gt;Step 5: Select Keyboard Layout&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Choose your preferred &lt;strong&gt;keyboard layout&lt;/strong&gt; and language.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-6-connect-to-wi-fi-optional&#34;&gt;&lt;strong&gt;Step 6: Connect to Wi-Fi (Optional)&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select your Wi-Fi network.&lt;/li&gt;
+&lt;li&gt;Enter the password and click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-7-choose-installation-type&#34;&gt;&lt;strong&gt;Step 7: Choose Installation Type&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select &lt;strong&gt;Normal Installation&lt;/strong&gt; (recommended).&lt;/li&gt;
+&lt;li&gt;Check the box &lt;strong&gt;Install third-party software for graphics and Wi-Fi hardware, Flash, MP3, and other media&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-8-choose-installation-method&#34;&gt;&lt;strong&gt;Step 8: Choose Installation Method&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Select &lt;strong&gt;Something else&lt;/strong&gt; (for manual partitioning).&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-9-create-partitions-for-ubuntu&#34;&gt;&lt;strong&gt;Step 9: Create Partitions for Ubuntu&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Ubuntu requires three main partitions:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo: The Static Site Generator I Use for This Blog</title>
+      <link>http://localhost:1313/posts/hugo/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo/</guid>
+      <description>&lt;h2 id=&#34;why-i-picked-hugo&#34;&gt;Why I Picked Hugo&lt;/h2&gt;
+&lt;p&gt;I wanted a blog that loads fast, doesn&amp;rsquo;t need a database, and lets me write posts in Markdown. &lt;strong&gt;Hugo&lt;/strong&gt; does exactly that — it builds plain HTML files from my content, and I host them on GitHub Pages.&lt;/p&gt;
+&lt;p&gt;No WordPress, no PHP, no MySQL. Just markdown files and a &lt;code&gt;hugo&lt;/code&gt; command.&lt;/p&gt;
+&lt;h2 id=&#34;what-i-like-about-it&#34;&gt;What I Like About It&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fast builds&lt;/strong&gt; — my whole site compiles in under a second&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Markdown posts&lt;/strong&gt; — write in any editor, commit to Git&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Themes&lt;/strong&gt; — I&amp;rsquo;m using PaperMod&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt; — free hosting, deploys on push&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-i-set-up-hugo&#34;&gt;How I Set Up Hugo&lt;/h2&gt;
+&lt;h3 id=&#34;1-install-hugo&#34;&gt;1. Install Hugo&lt;/h3&gt;
+&lt;h4 id=&#34;on-arch-linux&#34;&gt;On Arch Linux&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;on-ubuntu&#34;&gt;On Ubuntu&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Or install the extended edition from the official release page (recommended for themes that use Sass):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/first_post/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/first_post/</guid>
+      <description>&lt;p&gt;Hello — this is my first blog post on Hugo. I set this site up to document what I&amp;rsquo;m learning as I go. More posts coming soon.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

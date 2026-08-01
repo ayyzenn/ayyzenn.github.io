@@ -1,7 +1,9 @@
 ---
 title: "Dual Boot Ubuntu and Windows: What I Did"
+author: "Saad"
 date: 2021-08-13
 tags: ["dual boot", "ubuntu", "linux"]
+categories: ["Others"]
 ---
 ## Why I Dual-Booted
 

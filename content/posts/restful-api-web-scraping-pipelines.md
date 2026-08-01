@@ -1,7 +1,9 @@
 ---
 title: "RESTful API with Web Scraping: My FastAPI + Flask Project"
+author: "Saad"
 date: 2026-03-07
 tags: ["python", "fastapi", "flask", "web-scraping", "postgresql", "mongodb", "rest-api", "beautifulsoup", "selenium"]
+categories: ["Others"]
 ---
 ## What This Project Is
 

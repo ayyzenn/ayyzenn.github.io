@@ -1,7 +1,9 @@
 ---
 title: "Ollama + DeepSeek: How I Run LLMs Locally"
+author: "Saad"
 date: 2025-02-03
 tags: ["ollama", "deepseek", "llm", "arch-linux", "ubuntu"]
+categories: ["AI-ML"]
 ---
 ## Why I Use Ollama
 

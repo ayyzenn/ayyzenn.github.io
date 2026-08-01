@@ -1,7 +1,9 @@
 ---
 title: "Ansible: Docker and Kubernetes Node Setup"
+author: "Saad"
 date: 2026-01-17
 tags: ["ansible", "docker", "kubernetes", "devops", "automation"]
+categories: ["DevOps"]
 ---
 ## Why This Post Exists
 

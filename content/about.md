@@ -1,68 +1,60 @@
 ---
-title: "About Me"
+title: "About"
 layout: "about"
 url: "/about/"
 summary: about
 ShowToc: false
 ---
 
-# I'm Saad Ahmad.
+# Saad Ahmad
 
-Most people meet Linux and walk away. I met Linux and never came back.
+**Software engineer in training** — DevOps, infrastructure automation, and applied AI.
 
-I go by **Ayyzenn** online. I'm a student at **FAST NUCES**, and I spend most of my time building things that automate other things — or teaching machines to talk to databases, scrape websites, and answer questions from documents they've never seen before.
+I go by **Ayyzenn** online. I'm a student at **FAST NUCES**, and I build systems that are meant to run — not demos that only work in a screenshot.
 
-I run **Arch Linux with i3**. No desktop environment. No hand-holding. Just a tiling window manager, a terminal, and whatever I'm building that week.
-
----
-
-## The Short Version
-
-I work at the intersection of two worlds that don't usually overlap:
-
-**DevOps & Infrastructure** — I automate servers, build CI/CD pipelines, write playbooks, and deploy containers. If a task has to be done more than once, I write a script. If the script has to run on more than one machine, I use Ansible.
-
-**AI & Intelligent Systems** — I build RAG pipelines, multi-agent architectures, and systems that let you query databases using plain English. All of it runs locally. No cloud APIs. No data leaving your machine.
-
-The fun part is when both worlds collide — Jenkins pulling code from GitHub, building Docker images, and running them automatically. Or an AI agent that routes your question to the right tool, decomposes it into sub-queries, and synthesizes an answer from multiple sources.
+My daily environment is **Arch Linux with i3**: a terminal-first setup where I design, automate, break things, and document what actually works.
 
 ---
 
-## What I've Actually Built
+## What I Do
 
-Here's a taste. Every one of these has a blog post on this site with full walkthroughs:
+I work across two areas that reinforce each other:
 
-- **Multi-Agent RAG System** — Three AI agents (Router, Basic Generator, Advanced Generator) working together. Uses ChromaDB, HyDE, and query decomposition to handle everything from simple lookups to complex multi-hop questions.
+**DevOps & Infrastructure**  
+I automate servers, ship CI/CD pipelines, write Ansible playbooks, and deploy with containers. If a task repeats, it becomes code. If it has to run across machines, it becomes infrastructure.
 
-- **Text-to-SQL Agent** — Ask a question in English, get an answer from a database. Built with Ollama, LangChain, and SQLAlchemy. No SQL knowledge required from the user.
+**AI & Intelligent Systems**  
+I build RAG pipelines, multi-agent workflows, and systems that answer questions from documents or databases — often fully local, with no data leaving the machine.
 
-- **Local RAG Knowledge Base** — Fully offline. Ollama + ChromaDB + sentence-transformers. Your documents stay on your machine. Works without internet.
-
-- **YouTube Transcript Summarizer** — Agentic workflow using LangGraph and Gemini API. Multiple agents handle fetching, summarizing, and Q&A.
-
-- **Jenkins + Docker CI/CD Pipeline** — Code lives in GitHub. Jenkins pulls it, builds a Docker image, runs the container, and reports back. One click.
-
-- **Ansible Automation for Docker & Kubernetes** — Playbooks that prepare Ubuntu servers to become Kubernetes nodes. Written from my Arch machine, targeting real servers.
-
-- **RESTful API with Web Scraping** — FastAPI + Flask backend that scrapes websites using BeautifulSoup and Selenium, stores data in PostgreSQL and MongoDB.
-
-- **Gentoo Linux Installation** — Installed Gentoo from the minimal CLI ISO on an old HP laptop. Compiled everything from source. Because why not.
+When those worlds meet, the work gets interesting: Jenkins pulling from GitHub, building images, and deploying automatically; agents that route questions, decompose them, and return grounded answers.
 
 ---
 
-## How I Learn
+## Selected Work
 
-I don't read documentation and move on. I build something, break it, fix it, and then write about it.
+Each item below has a full write-up in the [posts](/posts/).
 
-Every post on this blog is a real project I actually completed — on real machines, with real configurations, solving real problems. No hypothetical setups. No "in theory this should work."
-
-My Ansible posts use my actual inventory files. My Jenkins posts run on my actual Arch Linux machine. My RAG systems process actual documents.
-
-If I can't get it working on my own hardware, I don't write about it.
+- **Multi-Agent RAG** — Router + generator agents with ChromaDB, HyDE, and query decomposition for simple lookups through multi-hop questions.
+- **Text-to-SQL** — Natural-language questions over a database with Ollama, LangChain, and SQLAlchemy.
+- **Local RAG Knowledge Base** — Offline retrieval with Ollama, ChromaDB, and sentence-transformers.
+- **YouTube Summarizer** — LangGraph + Gemini agentic workflow for fetch, summarize, and Q&A.
+- **Jenkins + Docker CI/CD** — GitHub → build image → run container, end to end.
+- **Ansible for Docker & Kubernetes** — Playbooks that prepare Ubuntu servers as Kubernetes nodes.
+- **Scraping + REST API** — FastAPI/Flask backend with BeautifulSoup, Selenium, PostgreSQL, and MongoDB.
 
 ---
 
-## The Tech I Use
+## How I Work
+
+I learn by shipping. I build on real machines, with real configs, against real failure modes — then I write it down so the next pass is cleaner.
+
+If it doesn’t run on my hardware, it doesn’t make the blog.
+
+Browse by focus: [DevOps](/categories/devops/), [AI-ML](/categories/ai-ml/), or [Others](/categories/others/).
+
+---
+
+## Stack
 
 ### Linux & Systems
 
@@ -94,15 +86,15 @@ If I can't get it working on my own hardware, I don't write about it.
 
 ---
 
-## The Timeline
+## Timeline
 
-| When | What Happened |
+| When | What |
 | --- | --- |
-| **2020** | Started this blog. Wrote "Hello, this is my first blog post." |
-| **2021** | Dual-booted Ubuntu. Learned SSH, Git, Azure. First taste of real infrastructure. |
-| **2022** | Deep dive into DevOps — Docker, Puppet, Chef, FTP servers, VoIP, Odoo. Installed Gentoo from scratch. |
-| **2025** | Pivoted into AI. Built local LLM setups, RAG systems, agentic workflows, and Text-to-SQL agents. |
-| **2026** | Combined both worlds. Ansible automation, Jenkins CI/CD, web scraping APIs, and multi-agent architectures. |
+| **2020** | Started this site and began writing in public. |
+| **2021** | Dual-boot Ubuntu. SSH, Git, Azure — first real infrastructure work. |
+| **2022** | Deep DevOps: Docker, Puppet, Chef, services, Gentoo from source. |
+| **2025** | Applied AI: local LLMs, RAG, agentic workflows, Text-to-SQL. |
+| **2026** | Combining both: Ansible, Jenkins CI/CD, APIs, multi-agent systems. |
 
 ---
 

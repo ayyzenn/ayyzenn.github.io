@@ -1,7 +1,9 @@
 ---
 title: "Chef Server Setup: What I Did on Ubuntu"
+author: "Saad"
 date: 2022-08-02
 tags: ["chef", "automation", "ubuntu"]
+categories: ["DevOps"]
 ---
 ## Why I Looked Into Chef
 

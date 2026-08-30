@@ -8,47 +8,53 @@ ShowToc: false
 
 # Saad Ahmad
 
-**Software engineer in training** — DevOps, infrastructure automation, and applied AI.
+**AI / ML engineer in training.**
 
-I go by **Ayyzenn** online. I'm a student at **FAST NUCES**, and I build systems that are meant to run — not demos that only work in a screenshot.
+I go by **Ayyzenn**. I'm a student at **FAST NUCES**. I work on machine learning systems that have to hold up outside the notebook — especially anomaly detection, deep learning, and the infrastructure those systems depend on.
 
-My daily environment is **Arch Linux with i3**: a terminal-first setup where I design, automate, break things, and document what actually works.
+I use **Arch Linux with i3**. Most of my work starts in the terminal: design, break, fix, then write down what survived.
 
 ---
 
 ## What I Do
 
-I work across two areas that reinforce each other:
+AI and machine learning come first. Systems work is what keeps those models honest.
 
-**DevOps & Infrastructure**  
-I automate servers, ship CI/CD pipelines, write Ansible playbooks, and deploy with containers. If a task repeats, it becomes code. If it has to run across machines, it becomes infrastructure.
+**AI & Machine Learning**  
+I work across classical ML and deep learning — SVM, KNN, XGBoost, ANN, CNN, RNN, LSTM, transformers — and applied pipelines for RAG, multi-agent workflows, and time-series anomaly detection. Where it makes sense, I keep inference and retrieval local.
 
-**AI & Intelligent Systems**  
-I build RAG pipelines, multi-agent workflows, and systems that answer questions from documents or databases — often fully local, with no data leaving the machine.
+**Systems & Infrastructure**  
+I automate with Ansible, ship CI/CD with Jenkins and Docker, and deploy on Kubernetes. For observability and load, I’ve used Prometheus, Grafana, InfluxDB, Telegraf, and Locust. The point is simple: if a model or service runs in a cluster, it should be measurable.
 
-When those worlds meet, the work gets interesting: Jenkins pulling from GitHub, building images, and deploying automatically; agents that route questions, decompose them, and return grounded answers.
+The interesting work sits where these meet — detection pipelines in live environments, agents grounded in real data, and infrastructure that can be reproduced.
 
 ---
 
 ## Selected Work
 
-Each item below has a full write-up in the [posts](/posts/).
+Full write-ups are in the [posts](/posts/). A few projects matter enough to list even when they are not posts yet.
 
-- **Multi-Agent RAG** — Router + generator agents with ChromaDB, HyDE, and query decomposition for simple lookups through multi-hop questions.
+**On the blog**
+- **Multi-Agent RAG** — Router and generator agents with ChromaDB, HyDE, and query decomposition.
 - **Text-to-SQL** — Natural-language questions over a database with Ollama, LangChain, and SQLAlchemy.
 - **Local RAG Knowledge Base** — Offline retrieval with Ollama, ChromaDB, and sentence-transformers.
-- **YouTube Summarizer** — LangGraph + Gemini agentic workflow for fetch, summarize, and Q&A.
-- **Jenkins + Docker CI/CD** — GitHub → build image → run container, end to end.
-- **Ansible for Docker & Kubernetes** — Playbooks that prepare Ubuntu servers as Kubernetes nodes.
-- **Scraping + REST API** — FastAPI/Flask backend with BeautifulSoup, Selenium, PostgreSQL, and MongoDB.
+- **YouTube Summarizer** — LangGraph and Gemini for fetch, summarize, and Q&A.
+- **Jenkins + Docker CI/CD** — GitHub to image build to running container.
+- **Ansible for Docker & Kubernetes** — Playbooks to prepare Ubuntu servers as Kubernetes nodes.
+- **Scraping + REST API** — FastAPI/Flask with BeautifulSoup, Selenium, PostgreSQL, and MongoDB.
+
+**Also worked on**
+- **Final Year Project — Real-time anomaly detection in a Kubernetes cluster** — Detection over cluster metrics and time series, including statistical sliding-window methods and models such as ARIMA, LSTM, SVM, One-Class SVM, KNN, and XGBoost, with a three-way decision formulation for uncertain cases.
+- **Time-series anomaly detection** — Broader experimentation on benchmarks such as Yahoo S5 / A1 / A4, supervised and unsupervised setups, scaling, and evaluation.
+- **Cloud-native monitoring & load testing** — Sock Shop on Minikube, Prometheus/Grafana-style observability, and Locust load tests.
 
 ---
 
 ## How I Work
 
-I learn by shipping. I build on real machines, with real configs, against real failure modes — then I write it down so the next pass is cleaner.
+I learn by shipping. I prefer real machines, real configs, and real failure modes. Then I write it down so the next pass is cleaner.
 
-If it doesn’t run on my hardware, it doesn’t make the blog.
+If it does not run on my hardware, it does not make the blog.
 
 Browse by focus: [DevOps](/categories/devops/), [AI-ML](/categories/ai-ml/), or [Others](/categories/others/).
 
@@ -93,8 +99,9 @@ Browse by focus: [DevOps](/categories/devops/), [AI-ML](/categories/ai-ml/), or 
 | **2020** | Started this site and began writing in public. |
 | **2021** | Dual-boot Ubuntu. SSH, Git, Azure — first real infrastructure work. |
 | **2022** | Deep DevOps: Docker, Puppet, Chef, services, Gentoo from source. |
-| **2025** | Applied AI: local LLMs, RAG, agentic workflows, Text-to-SQL. |
-| **2026** | Combining both: Ansible, Jenkins CI/CD, APIs, multi-agent systems. |
+| **2023–2024** | Final Year Project: real-time anomaly detection in a Kubernetes cluster using a three-way decision approach and ML-based detectors. |
+| **2025** | Applied AI in public: local LLMs, RAG, agentic workflows, Text-to-SQL. |
+| **2026** | AI/ML-first focus — deep learning, anomaly detection, CI/CD, Ansible, Kubernetes, multi-agent systems. |
 
 ---
 

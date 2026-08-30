@@ -134,33 +134,40 @@
 </div>
   </header> 
   <div class="post-content"><h1 id="saad-ahmad">Saad Ahmad<a hidden class="anchor" aria-hidden="true" href="#saad-ahmad">#</a></h1>
-<p><strong>Software engineer in training</strong> — DevOps, infrastructure automation, and applied AI.</p>
-<p>I go by <strong>Ayyzenn</strong> online. I&rsquo;m a student at <strong>FAST NUCES</strong>, and I build systems that are meant to run — not demos that only work in a screenshot.</p>
-<p>My daily environment is <strong>Arch Linux with i3</strong>: a terminal-first setup where I design, automate, break things, and document what actually works.</p>
+<p><strong>AI / ML engineer in training.</strong></p>
+<p>I go by <strong>Ayyzenn</strong>. I&rsquo;m a student at <strong>FAST NUCES</strong>. I work on machine learning systems that have to hold up outside the notebook — especially anomaly detection, deep learning, and the infrastructure those systems depend on.</p>
+<p>I use <strong>Arch Linux with i3</strong>. Most of my work starts in the terminal: design, break, fix, then write down what survived.</p>
 <hr>
 <h2 id="what-i-do">What I Do<a hidden class="anchor" aria-hidden="true" href="#what-i-do">#</a></h2>
-<p>I work across two areas that reinforce each other:</p>
-<p><strong>DevOps &amp; Infrastructure</strong><br>
-I automate servers, ship CI/CD pipelines, write Ansible playbooks, and deploy with containers. If a task repeats, it becomes code. If it has to run across machines, it becomes infrastructure.</p>
-<p><strong>AI &amp; Intelligent Systems</strong><br>
-I build RAG pipelines, multi-agent workflows, and systems that answer questions from documents or databases — often fully local, with no data leaving the machine.</p>
-<p>When those worlds meet, the work gets interesting: Jenkins pulling from GitHub, building images, and deploying automatically; agents that route questions, decompose them, and return grounded answers.</p>
+<p>AI and machine learning come first. Systems work is what keeps those models honest.</p>
+<p><strong>AI &amp; Machine Learning</strong><br>
+I work across classical ML and deep learning — SVM, KNN, XGBoost, ANN, CNN, RNN, LSTM, transformers — and applied pipelines for RAG, multi-agent workflows, and time-series anomaly detection. Where it makes sense, I keep inference and retrieval local.</p>
+<p><strong>Systems &amp; Infrastructure</strong><br>
+I automate with Ansible, ship CI/CD with Jenkins and Docker, and deploy on Kubernetes. For observability and load, I’ve used Prometheus, Grafana, InfluxDB, Telegraf, and Locust. The point is simple: if a model or service runs in a cluster, it should be measurable.</p>
+<p>The interesting work sits where these meet — detection pipelines in live environments, agents grounded in real data, and infrastructure that can be reproduced.</p>
 <hr>
 <h2 id="selected-work">Selected Work<a hidden class="anchor" aria-hidden="true" href="#selected-work">#</a></h2>
-<p>Each item below has a full write-up in the <a href="/posts/">posts</a>.</p>
+<p>Full write-ups are in the <a href="/posts/">posts</a>. A few projects matter enough to list even when they are not posts yet.</p>
+<p><strong>On the blog</strong></p>
 <ul>
-<li><strong>Multi-Agent RAG</strong> — Router + generator agents with ChromaDB, HyDE, and query decomposition for simple lookups through multi-hop questions.</li>
+<li><strong>Multi-Agent RAG</strong> — Router and generator agents with ChromaDB, HyDE, and query decomposition.</li>
 <li><strong>Text-to-SQL</strong> — Natural-language questions over a database with Ollama, LangChain, and SQLAlchemy.</li>
 <li><strong>Local RAG Knowledge Base</strong> — Offline retrieval with Ollama, ChromaDB, and sentence-transformers.</li>
-<li><strong>YouTube Summarizer</strong> — LangGraph + Gemini agentic workflow for fetch, summarize, and Q&amp;A.</li>
-<li><strong>Jenkins + Docker CI/CD</strong> — GitHub → build image → run container, end to end.</li>
-<li><strong>Ansible for Docker &amp; Kubernetes</strong> — Playbooks that prepare Ubuntu servers as Kubernetes nodes.</li>
-<li><strong>Scraping + REST API</strong> — FastAPI/Flask backend with BeautifulSoup, Selenium, PostgreSQL, and MongoDB.</li>
+<li><strong>YouTube Summarizer</strong> — LangGraph and Gemini for fetch, summarize, and Q&amp;A.</li>
+<li><strong>Jenkins + Docker CI/CD</strong> — GitHub to image build to running container.</li>
+<li><strong>Ansible for Docker &amp; Kubernetes</strong> — Playbooks to prepare Ubuntu servers as Kubernetes nodes.</li>
+<li><strong>Scraping + REST API</strong> — FastAPI/Flask with BeautifulSoup, Selenium, PostgreSQL, and MongoDB.</li>
+</ul>
+<p><strong>Also worked on</strong></p>
+<ul>
+<li><strong>Final Year Project — Real-time anomaly detection in a Kubernetes cluster</strong> — Detection over cluster metrics and time series, including statistical sliding-window methods and models such as ARIMA, LSTM, SVM, One-Class SVM, KNN, and XGBoost, with a three-way decision formulation for uncertain cases.</li>
+<li><strong>Time-series anomaly detection</strong> — Broader experimentation on benchmarks such as Yahoo S5 / A1 / A4, supervised and unsupervised setups, scaling, and evaluation.</li>
+<li><strong>Cloud-native monitoring &amp; load testing</strong> — Sock Shop on Minikube, Prometheus/Grafana-style observability, and Locust load tests.</li>
 </ul>
 <hr>
 <h2 id="how-i-work">How I Work<a hidden class="anchor" aria-hidden="true" href="#how-i-work">#</a></h2>
-<p>I learn by shipping. I build on real machines, with real configs, against real failure modes — then I write it down so the next pass is cleaner.</p>
-<p>If it doesn’t run on my hardware, it doesn’t make the blog.</p>
+<p>I learn by shipping. I prefer real machines, real configs, and real failure modes. Then I write it down so the next pass is cleaner.</p>
+<p>If it does not run on my hardware, it does not make the blog.</p>
 <p>Browse by focus: <a href="/categories/devops/">DevOps</a>, <a href="/categories/ai-ml/">AI-ML</a>, or <a href="/categories/others/">Others</a>.</p>
 <hr>
 <h2 id="stack">Stack<a hidden class="anchor" aria-hidden="true" href="#stack">#</a></h2>
@@ -299,12 +306,16 @@ I build RAG pipelines, multi-agent workflows, and systems that answer questions 
 					<td>Deep DevOps: Docker, Puppet, Chef, services, Gentoo from source.</td>
 			</tr>
 			<tr>
+					<td><strong>2023–2024</strong></td>
+					<td>Final Year Project: real-time anomaly detection in a Kubernetes cluster using a three-way decision approach and ML-based detectors.</td>
+			</tr>
+			<tr>
 					<td><strong>2025</strong></td>
-					<td>Applied AI: local LLMs, RAG, agentic workflows, Text-to-SQL.</td>
+					<td>Applied AI in public: local LLMs, RAG, agentic workflows, Text-to-SQL.</td>
 			</tr>
 			<tr>
 					<td><strong>2026</strong></td>
-					<td>Combining both: Ansible, Jenkins CI/CD, APIs, multi-agent systems.</td>
+					<td>AI/ML-first focus — deep learning, anomaly detection, CI/CD, Ansible, Kubernetes, multi-agent systems.</td>
 			</tr>
 	</tbody>
 </table>
